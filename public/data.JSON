@@ -1,0 +1,38 @@
+[
+    {
+        "name":"Masoud Aghaeei",
+        "src":"image/1.jpeg",
+        "intro":"Product Owner",
+        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        "time": "21:06 12 Feb 2021",
+        "email": "inolinx@info.com",
+        "captaion": ""
+    },
+    {
+        "name":"Mojtaba Akbari",
+        "src":"image/4.jpeg",
+        "intro":"Junior Backend",
+        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        "time": "21:06 12 Feb 2021",
+        "email": "inolinx@info.com",
+        "captaion": ""
+    },
+    {
+        "name":"Seyed Abbas Mossavi",
+        "src":"image/5.JPG",
+        "intro":"Junior Frontend",
+        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        "time": "21:06 12 Feb 2021",
+        "email": "inolinx@info.com",
+        "captaion": ""
+    },
+    {
+        "name":"Mohammad Yadollah Pour",
+        "src":"image/2.jpeg",
+        "intro":"Junior UI & UX ",
+        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        "time": "21:06 12 Feb 2021",
+        "email": "inolinx@info.com",
+        "captaion": ""
+    }
+]
