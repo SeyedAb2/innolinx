@@ -39,7 +39,7 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	font-family: 'BYekan';
+	font-family: 'Vazir', Arial, sans-serif;
 	background: rgb(250,217,178);
 	background: linear-gradient(90deg, rgba(250,217,178,1) 0%, rgba(255,255,255,1) 50%, rgba(190,229,254,1) 100%);
     -webkit-text-size-adjust: 100%;
@@ -187,4 +187,131 @@ body {
 	color: green;
 	direction: rtl;
 	text-align: center;
+}
+/******* Inolinx Article Pin Up site Under Navbar ******/
+.pin-parent{
+	margin-top: 100px;
+}
+.pin-article{
+	border-radius: 15px;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	background-color: gray;
+	box-shadow: 0 0 20px 1px black;
+}
+
+.img-pin{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	transition: all 0.35s;
+	z-index: 1;
+	
+}
+.pin-article:hover .pin-title{
+	color: red;
+}
+.img-pin:hover {
+	transform: scale(1.2,1.2);
+	cursor: pointer;
+	filter: brightness(50%);
+}
+.pin-article h5 a {
+	text-decoration: none;
+	position: absolute;
+	height: 70px;
+	width: 100%;
+	z-index: 100;
+	color: white;
+	right: 0;
+	padding:1px 20px 20px 20px ;
+	font-weight: bold;
+	text-align: right;
+	bottom: 0px;
+	box-shadow: 0 1px 30px 30px black;
+	background-color: black;
+}
+.pin-article:hover .img-pin{
+	transform: scale(1.2,1.2);
+	cursor: pointer;
+	filter: brightness(50%);
+}
+.content-pin{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	right: 0;
+}
+.category{
+	position: absolute;
+	color: white;
+	border-radius: 15px;
+	padding: 2px 20px;
+	width: auto;
+	z-index: 3;
+	font-size: 13px;
+	cursor: pointer;
+	right: 10px;
+	top: 10px;
+
+}
+.mag-img{
+	position: absolute;
+	z-index: 3;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	bottom: 13px;
+	right: 13px;
+	transition: all 0.2s;
+}
+.mag-img:hover{
+	opacity: 0.5;
+}
+.author-time-pin{
+	position: absolute;
+	z-index: 3;
+	width: 80%;
+	height: 30px;
+	right: 50px;
+	line-height: 32px;
+	bottom: 10px;
+	direction: rtl;
+	color: white;
+	font-size: 13px;
+}
+.pin-title{
+	transition: all 0.3s;
+	line-height: 20px;
+}
+.pin-title:hover{
+	color: red;
+}
+@media (max-width:1124px){
+	.pin-title{
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
+
+}
+@media(max-width:767px){
+	.height-main{
+		height: 650px;
+	}
+	.height-pin{
+		height: 300px;
+	}
+	.height-pin1{
+		top: 10px;
+		width: 9px;
+	}
+	.height-pin2{
+		top: 20px;
+	}
+	.height-pin3{
+		top: px;
+	}
 }

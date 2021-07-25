@@ -8,10 +8,10 @@
 	let y=0;
 	$: console.log(y);	
 	///
-	let loading = true;
+	let loading = false;
 	setTimeout(function(){
 		loading = false;
-	}, 3000);
+	}, 2000);
 </script>
 
 
@@ -20,8 +20,8 @@
 	@import "/global.css";
 </style>
 {#if loading===true}
-	<div style="direction: rtl;text-align:center;margin: auto;">
-		<Wave size="100" color="green" unit="px" duration="1s" ></Wave><span class="loading-snipper">لطفا کمی صبر کنید...</span>
+	<div style="direction: rtl;text-align:center;margin: auto;width: 100%;height: 100%;">
+		<Wave  size="100" color="green" unit="px" duration="1s" ></Wave><span class="loading-snipper">لطفا کمی صبر کنید...</span>
 	</div>
 {/if}
 <svelte:window bind:scrollY={y}/>

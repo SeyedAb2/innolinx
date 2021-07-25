@@ -2713,38 +2713,330 @@ var app = (function () {
     	};
 
     	let scrolling_timeout;
+    	let section;
+    	let div10;
+    	let article2;
+    	let div6;
+    	let article0;
+    	let div0;
+    	let img0;
+    	let img0_src_value;
+    	let t0;
+    	let div1;
+    	let h50;
+    	let a0;
+    	let t2;
+    	let a1;
+    	let img1;
+    	let img1_src_value;
+    	let t3;
+    	let div2;
+    	let span0;
+    	let t4;
+    	let i0;
+    	let t5;
+    	let i1;
+    	let t6;
+    	let t7;
+    	let article1;
+    	let div3;
+    	let img2;
+    	let img2_src_value;
+    	let t8;
+    	let div4;
+    	let h51;
+    	let a2;
+    	let t10;
+    	let a3;
+    	let img3;
+    	let img3_src_value;
+    	let t11;
+    	let div5;
+    	let span1;
+    	let t12;
+    	let i2;
+    	let t13;
+    	let i3;
+    	let t14;
+    	let t15;
+    	let article3;
+    	let div7;
+    	let img4;
+    	let img4_src_value;
+    	let t16;
+    	let div8;
+    	let h52;
+    	let a4;
+    	let t18;
+    	let a5;
+    	let img5;
+    	let img5_src_value;
+    	let t19;
+    	let div9;
+    	let span2;
+    	let t20;
+    	let i4;
+    	let t21;
+    	let i5;
+    	let t22;
+    	let section_transition;
+    	let t23;
     	let br0;
     	let hr;
     	let br1;
     	let br2;
     	let br3;
+    	let current;
     	let mounted;
     	let dispose;
     	add_render_callback(/*onwindowscroll*/ ctx[2]);
 
     	const block = {
     		c: function create() {
+    			section = element("section");
+    			div10 = element("div");
+    			article2 = element("article");
+    			div6 = element("div");
+    			article0 = element("article");
+    			div0 = element("div");
+    			img0 = element("img");
+    			t0 = space();
+    			div1 = element("div");
+    			h50 = element("h5");
+    			a0 = element("a");
+    			a0.textContent = "سلام به اینولینکس خوش آمدید";
+    			t2 = space();
+    			a1 = element("a");
+    			img1 = element("img");
+    			t3 = space();
+    			div2 = element("div");
+    			span0 = element("span");
+    			t4 = text("خبرگذاری تسنیم ");
+    			i0 = element("i");
+    			t5 = text("    ");
+    			i1 = element("i");
+    			t6 = text(" ۲ ماه قبل");
+    			t7 = space();
+    			article1 = element("article");
+    			div3 = element("div");
+    			img2 = element("img");
+    			t8 = space();
+    			div4 = element("div");
+    			h51 = element("h5");
+    			a2 = element("a");
+    			a2.textContent = "شبکه اجتماعی فیس بوک فیلتر شد";
+    			t10 = space();
+    			a3 = element("a");
+    			img3 = element("img");
+    			t11 = space();
+    			div5 = element("div");
+    			span1 = element("span");
+    			t12 = text("فیس بوک ");
+    			i2 = element("i");
+    			t13 = text("    ");
+    			i3 = element("i");
+    			t14 = text(" ۱ دقیقه قبل");
+    			t15 = space();
+    			article3 = element("article");
+    			div7 = element("div");
+    			img4 = element("img");
+    			t16 = space();
+    			div8 = element("div");
+    			h52 = element("h5");
+    			a4 = element("a");
+    			a4.textContent = "نسل جدید تبلت های هوشمند قابلیت بهره گیری از اینترمنت 5G";
+    			t18 = space();
+    			a5 = element("a");
+    			img5 = element("img");
+    			t19 = space();
+    			div9 = element("div");
+    			span2 = element("span");
+    			t20 = text("برنامه تلویزیونی جهان آرا ");
+    			i4 = element("i");
+    			t21 = text("    ");
+    			i5 = element("i");
+    			t22 = text(" ۴ روز قبل");
+    			t23 = space();
     			br0 = element("br");
     			hr = element("hr");
     			br1 = element("br");
     			br2 = element("br");
     			br3 = element("br");
-    			add_location(br0, file$4, 16, 0, 432);
+    			attr_dev(img0, "class", "w-100 d-flex img-pin");
+    			if (img0.src !== (img0_src_value = "20.jpg")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "");
+    			add_location(img0, file$4, 21, 24, 854);
+    			attr_dev(div0, "class", "img-pin-div");
+    			add_location(div0, file$4, 20, 20, 804);
+    			set_style(a0, "font-size", "15px");
+    			attr_dev(a0, "class", "pin-title");
+    			attr_dev(a0, "href", "");
+    			add_location(a0, file$4, 25, 27, 1038);
+    			add_location(h50, file$4, 24, 24, 1006);
+    			attr_dev(div1, "class", "content-pin");
+    			add_location(div1, file$4, 23, 20, 956);
+    			if (img1.src !== (img1_src_value = "/image/25.jpg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "class", "mag-img");
+    			attr_dev(img1, "alt", "");
+    			add_location(img1, file$4, 29, 24, 1239);
+    			attr_dev(a1, "href", "#");
+    			add_location(a1, file$4, 28, 20, 1202);
+    			set_style(i0, "color", "mediumspringgreen");
+    			attr_dev(i0, "class", "fas fa-check-circle");
+    			add_location(i0, file$4, 32, 45, 1408);
+    			add_location(span0, file$4, 32, 24, 1387);
+    			attr_dev(i1, "class", "fas fa-clock");
+    			add_location(i1, file$4, 32, 129, 1492);
+    			attr_dev(div2, "class", "author-time-pin");
+    			add_location(div2, file$4, 31, 20, 1333);
+    			attr_dev(article0, "class", "col-12 mx-2 ml-md-2 ml-lg-0 mx-md-0 p-0 pin-article height-pin height-pin1 mb-2 mb-lg-2");
+    			add_location(article0, file$4, 19, 16, 678);
+    			attr_dev(img2, "class", "w-100 d-flex img-pin");
+    			if (img2.src !== (img2_src_value = "image/28.jpg")) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "alt", "");
+    			add_location(img2, file$4, 37, 24, 1753);
+    			attr_dev(div3, "class", "img-pin-div");
+    			add_location(div3, file$4, 36, 20, 1703);
+    			set_style(a2, "font-size", "15px");
+    			attr_dev(a2, "class", "pin-title");
+    			attr_dev(a2, "href", "");
+    			add_location(a2, file$4, 41, 27, 1943);
+    			add_location(h51, file$4, 40, 24, 1911);
+    			attr_dev(div4, "class", "content-pin");
+    			add_location(div4, file$4, 39, 20, 1861);
+    			if (img3.src !== (img3_src_value = "/image/27.png")) attr_dev(img3, "src", img3_src_value);
+    			attr_dev(img3, "class", "mag-img");
+    			attr_dev(img3, "alt", "");
+    			add_location(img3, file$4, 45, 24, 2146);
+    			attr_dev(a3, "href", "#");
+    			add_location(a3, file$4, 44, 20, 2109);
+    			set_style(i2, "color", "mediumspringgreen");
+    			attr_dev(i2, "class", "fas fa-check-circle");
+    			add_location(i2, file$4, 48, 38, 2308);
+    			add_location(span1, file$4, 48, 24, 2294);
+    			attr_dev(i3, "class", "fas fa-clock");
+    			add_location(i3, file$4, 48, 122, 2392);
+    			attr_dev(div5, "class", "author-time-pin");
+    			add_location(div5, file$4, 47, 20, 2240);
+    			attr_dev(article1, "class", "col-12 ml-2 ml-lg-0 p-0 pin-article height-pin height-pin2 mt-1");
+    			add_location(article1, file$4, 35, 16, 1601);
+    			attr_dev(div6, "class", "row mr-0 px-2 px-lg-0");
+    			set_style(div6, "height", "63vh");
+    			add_location(div6, file$4, 18, 12, 604);
+    			attr_dev(article2, "class", "col-md-3 col-12 height-main");
+    			add_location(article2, file$4, 17, 8, 546);
+    			attr_dev(img4, "class", "w-100 d-flex img-pin");
+    			if (img4.src !== (img4_src_value = "image/30.jpg")) attr_dev(img4, "src", img4_src_value);
+    			attr_dev(img4, "alt", "");
+    			add_location(img4, file$4, 55, 16, 2684);
+    			attr_dev(div7, "class", "img-pin-div");
+    			add_location(div7, file$4, 54, 12, 2642);
+    			attr_dev(a4, "class", "pin-title");
+    			attr_dev(a4, "href", "");
+    			set_style(a4, "direction", "rtl");
+    			add_location(a4, file$4, 59, 19, 2842);
+    			add_location(h52, file$4, 58, 16, 2818);
+    			attr_dev(div8, "class", "content-pin");
+    			add_location(div8, file$4, 57, 12, 2776);
+    			if (img5.src !== (img5_src_value = "/image/26.jpeg")) attr_dev(img5, "src", img5_src_value);
+    			attr_dev(img5, "class", "mag-img");
+    			attr_dev(img5, "alt", "");
+    			add_location(img5, file$4, 63, 16, 3039);
+    			attr_dev(a5, "href", "#");
+    			add_location(a5, file$4, 62, 12, 3010);
+    			set_style(i4, "color", "mediumspringgreen");
+    			attr_dev(i4, "class", "fas fa-check-circle");
+    			add_location(i4, file$4, 66, 48, 3196);
+    			add_location(span2, file$4, 66, 16, 3164);
+    			attr_dev(i5, "class", "fas fa-clock");
+    			add_location(i5, file$4, 66, 132, 3280);
+    			attr_dev(div9, "class", "author-time-pin");
+    			add_location(div9, file$4, 65, 12, 3118);
+    			set_style(article3, "height", "63vh");
+    			attr_dev(article3, "class", "col-md-6 col-11 ml-1 ml-md-0 p-0 height-pin3 pin-article");
+    			add_location(article3, file$4, 53, 8, 2533);
+    			attr_dev(div10, "class", "row justify-content-center");
+    			add_location(div10, file$4, 16, 4, 497);
+    			attr_dev(section, "class", "container-fluid pin-parent");
+    			add_location(section, file$4, 15, 0, 431);
+    			add_location(br0, file$4, 71, 0, 3379);
     			attr_dev(hr, "class", "col-10 offset-1");
-    			add_location(hr, file$4, 16, 4, 436);
-    			add_location(br1, file$4, 16, 32, 464);
-    			add_location(br2, file$4, 16, 36, 468);
-    			add_location(br3, file$4, 16, 40, 472);
+    			add_location(hr, file$4, 71, 4, 3383);
+    			add_location(br1, file$4, 71, 32, 3411);
+    			add_location(br2, file$4, 71, 36, 3415);
+    			add_location(br3, file$4, 71, 40, 3419);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+    			append_dev(section, div10);
+    			append_dev(div10, article2);
+    			append_dev(article2, div6);
+    			append_dev(div6, article0);
+    			append_dev(article0, div0);
+    			append_dev(div0, img0);
+    			append_dev(article0, t0);
+    			append_dev(article0, div1);
+    			append_dev(div1, h50);
+    			append_dev(h50, a0);
+    			append_dev(article0, t2);
+    			append_dev(article0, a1);
+    			append_dev(a1, img1);
+    			append_dev(article0, t3);
+    			append_dev(article0, div2);
+    			append_dev(div2, span0);
+    			append_dev(span0, t4);
+    			append_dev(span0, i0);
+    			append_dev(div2, t5);
+    			append_dev(div2, i1);
+    			append_dev(div2, t6);
+    			append_dev(div6, t7);
+    			append_dev(div6, article1);
+    			append_dev(article1, div3);
+    			append_dev(div3, img2);
+    			append_dev(article1, t8);
+    			append_dev(article1, div4);
+    			append_dev(div4, h51);
+    			append_dev(h51, a2);
+    			append_dev(article1, t10);
+    			append_dev(article1, a3);
+    			append_dev(a3, img3);
+    			append_dev(article1, t11);
+    			append_dev(article1, div5);
+    			append_dev(div5, span1);
+    			append_dev(span1, t12);
+    			append_dev(span1, i2);
+    			append_dev(div5, t13);
+    			append_dev(div5, i3);
+    			append_dev(div5, t14);
+    			append_dev(div10, t15);
+    			append_dev(div10, article3);
+    			append_dev(article3, div7);
+    			append_dev(div7, img4);
+    			append_dev(article3, t16);
+    			append_dev(article3, div8);
+    			append_dev(div8, h52);
+    			append_dev(h52, a4);
+    			append_dev(article3, t18);
+    			append_dev(article3, a5);
+    			append_dev(a5, img5);
+    			append_dev(article3, t19);
+    			append_dev(article3, div9);
+    			append_dev(div9, span2);
+    			append_dev(span2, t20);
+    			append_dev(span2, i4);
+    			append_dev(div9, t21);
+    			append_dev(div9, i5);
+    			append_dev(div9, t22);
+    			insert_dev(target, t23, anchor);
     			insert_dev(target, br0, anchor);
     			insert_dev(target, hr, anchor);
     			insert_dev(target, br1, anchor);
     			insert_dev(target, br2, anchor);
     			insert_dev(target, br3, anchor);
+    			current = true;
 
     			if (!mounted) {
     				dispose = listen_dev(window, "scroll", () => {
@@ -2765,9 +3057,25 @@ var app = (function () {
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
     			}
     		},
-    		i: noop,
-    		o: noop,
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!section_transition) section_transition = create_bidirectional_transition(section, scale, {}, true);
+    				section_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!section_transition) section_transition = create_bidirectional_transition(section, scale, {}, false);
+    			section_transition.run(0);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(section);
+    			if (detaching && section_transition) section_transition.end();
+    			if (detaching) detach_dev(t23);
     			if (detaching) detach_dev(br0);
     			if (detaching) detach_dev(hr);
     			if (detaching) detach_dev(br1);
@@ -4234,11 +4542,13 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "لطفا کمی صبر کنید...";
     			attr_dev(span, "class", "loading-snipper");
-    			add_location(span, file, 23, 65, 564);
+    			add_location(span, file, 23, 66, 591);
     			set_style(div, "direction", "rtl");
     			set_style(div, "text-align", "center");
     			set_style(div, "margin", "auto");
-    			add_location(div, file, 22, 1, 438);
+    			set_style(div, "width", "100%");
+    			set_style(div, "height", "100%");
+    			add_location(div, file, 22, 1, 439);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4297,7 +4607,7 @@ var app = (function () {
     			t = space();
     			create_component(footer.$$.fragment);
     			attr_dev(div, "class", "class");
-    			add_location(div, file, 28, 0, 692);
+    			add_location(div, file, 28, 0, 719);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4478,13 +4788,13 @@ var app = (function () {
     	let y = 0;
 
     	///
-    	let loading = true;
+    	let loading = false;
 
     	setTimeout(
     		function () {
     			$$invalidate(1, loading = false);
     		},
-    		3000
+    		2000
     	);
 
     	const writable_props = [];
