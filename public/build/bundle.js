@@ -2505,20 +2505,24 @@ var app = (function () {
     const file$5 = "src/pages/about.svelte";
 
     function create_fragment$7(ctx) {
+    	let t0;
     	let div;
     	let div_transition;
     	let current;
 
     	const block = {
     		c: function create() {
+    			t0 = space();
     			div = element("div");
     			div.textContent = "about us";
-    			add_location(div, file$5, 3, 0, 79);
+    			document.title = "\n        درباره ما\n    ";
+    			add_location(div, file$5, 8, 0, 151);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, div, anchor);
     			current = true;
     		},
@@ -2539,6 +2543,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div);
     			if (detaching && div_transition) div_transition.end();
     		}
@@ -2589,7 +2594,8 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("contact us");
+    			t = text("\ncontact us");
+    			document.title = "\n        تماس باما\n    ";
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2713,74 +2719,76 @@ var app = (function () {
     	};
 
     	let scrolling_timeout;
+    	let t0;
     	let section;
     	let div10;
-    	let article2;
-    	let div6;
-    	let article0;
     	let div0;
+    	let t2;
+    	let div8;
+    	let div7;
+    	let div2;
+    	let article0;
     	let img0;
     	let img0_src_value;
-    	let t0;
-    	let div1;
-    	let h50;
+    	let t3;
     	let a0;
-    	let t2;
+    	let h50;
+    	let t5;
     	let a1;
     	let img1;
     	let img1_src_value;
-    	let t3;
-    	let div2;
-    	let span0;
-    	let t4;
-    	let i0;
-    	let t5;
-    	let i1;
     	let t6;
+    	let div1;
+    	let span0;
     	let t7;
+    	let i0;
+    	let t8;
+    	let i1;
+    	let t9;
+    	let t10;
+    	let div4;
     	let article1;
-    	let div3;
     	let img2;
     	let img2_src_value;
-    	let t8;
-    	let div4;
-    	let h51;
+    	let t11;
     	let a2;
-    	let t10;
+    	let h51;
+    	let t13;
     	let a3;
     	let img3;
     	let img3_src_value;
-    	let t11;
-    	let div5;
-    	let span1;
-    	let t12;
-    	let i2;
-    	let t13;
-    	let i3;
     	let t14;
+    	let div3;
+    	let span1;
     	let t15;
-    	let article3;
-    	let div7;
+    	let i2;
+    	let t16;
+    	let i3;
+    	let t17;
+    	let t18;
+    	let div6;
+    	let article2;
     	let img4;
     	let img4_src_value;
-    	let t16;
-    	let div8;
-    	let h52;
+    	let t19;
     	let a4;
-    	let t18;
+    	let h52;
+    	let t21;
     	let a5;
     	let img5;
     	let img5_src_value;
-    	let t19;
-    	let div9;
-    	let span2;
-    	let t20;
-    	let i4;
-    	let t21;
-    	let i5;
     	let t22;
-    	let section_transition;
+    	let div5;
+    	let span2;
     	let t23;
+    	let i4;
+    	let t24;
+    	let i5;
+    	let t25;
+    	let t26;
+    	let div9;
+    	let section_transition;
+    	let t28;
     	let br0;
     	let hr;
     	let br1;
@@ -2793,244 +2801,250 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			t0 = space();
     			section = element("section");
     			div10 = element("div");
-    			article2 = element("article");
-    			div6 = element("div");
-    			article0 = element("article");
     			div0 = element("div");
-    			img0 = element("img");
-    			t0 = space();
-    			div1 = element("div");
-    			h50 = element("h5");
-    			a0 = element("a");
-    			a0.textContent = "سلام به اینولینکس خوش آمدید";
+    			div0.textContent = "hello";
     			t2 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			div2 = element("div");
+    			article0 = element("article");
+    			img0 = element("img");
+    			t3 = space();
+    			a0 = element("a");
+    			h50 = element("h5");
+    			h50.textContent = "جدیدترین اخبار از تحریم فیس بوک توسط آمریکا";
+    			t5 = space();
     			a1 = element("a");
     			img1 = element("img");
-    			t3 = space();
-    			div2 = element("div");
+    			t6 = space();
+    			div1 = element("div");
     			span0 = element("span");
-    			t4 = text("خبرگذاری تسنیم ");
+    			t7 = text("برنامه تلویزیونی جهان آرا ");
     			i0 = element("i");
-    			t5 = text("    ");
+    			t8 = text("    ");
     			i1 = element("i");
-    			t6 = text(" ۲ ماه قبل");
-    			t7 = space();
-    			article1 = element("article");
-    			div3 = element("div");
-    			img2 = element("img");
-    			t8 = space();
-    			div4 = element("div");
-    			h51 = element("h5");
-    			a2 = element("a");
-    			a2.textContent = "شبکه اجتماعی فیس بوک فیلتر شد";
+    			t9 = text(" ۲ ماه قبل");
     			t10 = space();
+    			div4 = element("div");
+    			article1 = element("article");
+    			img2 = element("img");
+    			t11 = space();
+    			a2 = element("a");
+    			h51 = element("h5");
+    			h51.textContent = "جدیدترین اخبار از تحریم فیس بوک توسط آمریکا";
+    			t13 = space();
     			a3 = element("a");
     			img3 = element("img");
-    			t11 = space();
-    			div5 = element("div");
+    			t14 = space();
+    			div3 = element("div");
     			span1 = element("span");
-    			t12 = text("فیس بوک ");
+    			t15 = text("فیس بوک ");
     			i2 = element("i");
-    			t13 = text("    ");
+    			t16 = text("    ");
     			i3 = element("i");
-    			t14 = text(" ۱ دقیقه قبل");
-    			t15 = space();
-    			article3 = element("article");
-    			div7 = element("div");
-    			img4 = element("img");
-    			t16 = space();
-    			div8 = element("div");
-    			h52 = element("h5");
-    			a4 = element("a");
-    			a4.textContent = "نسل جدید تبلت های هوشمند قابلیت بهره گیری از اینترمنت 5G";
+    			t17 = text(" ۲ ماه قبل");
     			t18 = space();
+    			div6 = element("div");
+    			article2 = element("article");
+    			img4 = element("img");
+    			t19 = space();
+    			a4 = element("a");
+    			h52 = element("h5");
+    			h52.textContent = "به اینولینکس خوش آمدید";
+    			t21 = space();
     			a5 = element("a");
     			img5 = element("img");
-    			t19 = space();
-    			div9 = element("div");
+    			t22 = space();
+    			div5 = element("div");
     			span2 = element("span");
-    			t20 = text("برنامه تلویزیونی جهان آرا ");
+    			t23 = text("خبرگذاری تسنیم ");
     			i4 = element("i");
-    			t21 = text("    ");
+    			t24 = text("    ");
     			i5 = element("i");
-    			t22 = text(" ۴ روز قبل");
-    			t23 = space();
+    			t25 = text(" ۲ ماه قبل");
+    			t26 = space();
+    			div9 = element("div");
+    			div9.textContent = "hello";
+    			t28 = space();
     			br0 = element("br");
     			hr = element("hr");
     			br1 = element("br");
     			br2 = element("br");
     			br3 = element("br");
-    			attr_dev(img0, "class", "w-100 d-flex img-pin");
-    			if (img0.src !== (img0_src_value = "20.jpg")) attr_dev(img0, "src", img0_src_value);
+    			document.title = "\n        اینولینکس\n    ";
+    			attr_dev(div0, "class", "col-12 col-md-2  mx-1 mt-5 mt-md-0");
+    			set_style(div0, "border-radius", "7px");
+    			set_style(div0, "box-shadow", "0 0 4px 0.1px #494949");
+    			add_location(div0, file$4, 22, 8, 627);
+    			attr_dev(img0, "class", "image-pin-top");
+    			if (img0.src !== (img0_src_value = "image/30.jpg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$4, 21, 24, 854);
-    			attr_dev(div0, "class", "img-pin-div");
-    			add_location(div0, file$4, 20, 20, 804);
-    			set_style(a0, "font-size", "15px");
-    			attr_dev(a0, "class", "pin-title");
-    			attr_dev(a0, "href", "");
-    			add_location(a0, file$4, 25, 27, 1038);
-    			add_location(h50, file$4, 24, 24, 1006);
-    			attr_dev(div1, "class", "content-pin");
-    			add_location(div1, file$4, 23, 20, 956);
-    			if (img1.src !== (img1_src_value = "/image/25.jpg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "mag-img");
+    			add_location(img0, file$4, 27, 24, 1099);
+    			add_location(h50, file$4, 29, 28, 1248);
+    			attr_dev(a0, "class", "w-100 content-pin-top");
+    			attr_dev(a0, "href", "#");
+    			add_location(a0, file$4, 28, 24, 1177);
+    			if (img1.src !== (img1_src_value = "/image/26.jpeg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "class", "mag-img-top");
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$4, 29, 24, 1239);
+    			add_location(img1, file$4, 32, 28, 1395);
     			attr_dev(a1, "href", "#");
-    			add_location(a1, file$4, 28, 20, 1202);
+    			add_location(a1, file$4, 31, 24, 1354);
     			set_style(i0, "color", "mediumspringgreen");
     			attr_dev(i0, "class", "fas fa-check-circle");
-    			add_location(i0, file$4, 32, 45, 1408);
-    			add_location(span0, file$4, 32, 24, 1387);
+    			add_location(i0, file$4, 35, 60, 1596);
+    			add_location(span0, file$4, 35, 28, 1564);
     			attr_dev(i1, "class", "fas fa-clock");
-    			add_location(i1, file$4, 32, 129, 1492);
-    			attr_dev(div2, "class", "author-time-pin");
-    			add_location(div2, file$4, 31, 20, 1333);
-    			attr_dev(article0, "class", "col-12 mx-2 ml-md-2 ml-lg-0 mx-md-0 p-0 pin-article height-pin height-pin1 mb-2 mb-lg-2");
-    			add_location(article0, file$4, 19, 16, 678);
-    			attr_dev(img2, "class", "w-100 d-flex img-pin");
+    			add_location(i1, file$4, 35, 144, 1680);
+    			attr_dev(div1, "class", "author-time-pin-top");
+    			add_location(div1, file$4, 34, 24, 1502);
+    			attr_dev(article0, "class", "col-12 bg-danger mb-md-4 first-article-main");
+    			add_location(article0, file$4, 26, 20, 1013);
+    			attr_dev(div2, "class", "col-12 mb-4 my-md-0");
+    			add_location(div2, file$4, 25, 16, 959);
+    			attr_dev(img2, "class", "image-pin w-100");
     			if (img2.src !== (img2_src_value = "image/28.jpg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
-    			add_location(img2, file$4, 37, 24, 1753);
-    			attr_dev(div3, "class", "img-pin-div");
-    			add_location(div3, file$4, 36, 20, 1703);
-    			set_style(a2, "font-size", "15px");
-    			attr_dev(a2, "class", "pin-title");
-    			attr_dev(a2, "href", "");
-    			add_location(a2, file$4, 41, 27, 1943);
-    			add_location(h51, file$4, 40, 24, 1911);
-    			attr_dev(div4, "class", "content-pin");
-    			add_location(div4, file$4, 39, 20, 1861);
+    			add_location(img2, file$4, 41, 24, 1949);
+    			add_location(h51, file$4, 43, 28, 2096);
+    			attr_dev(a2, "class", "w-100 content-pin");
+    			attr_dev(a2, "href", "#");
+    			add_location(a2, file$4, 42, 24, 2029);
     			if (img3.src !== (img3_src_value = "/image/27.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "class", "mag-img");
     			attr_dev(img3, "alt", "");
-    			add_location(img3, file$4, 45, 24, 2146);
+    			add_location(img3, file$4, 46, 28, 2243);
     			attr_dev(a3, "href", "#");
-    			add_location(a3, file$4, 44, 20, 2109);
+    			add_location(a3, file$4, 45, 24, 2202);
     			set_style(i2, "color", "mediumspringgreen");
     			attr_dev(i2, "class", "fas fa-check-circle");
-    			add_location(i2, file$4, 48, 38, 2308);
-    			add_location(span1, file$4, 48, 24, 2294);
+    			add_location(i2, file$4, 49, 42, 2417);
+    			add_location(span1, file$4, 49, 28, 2403);
     			attr_dev(i3, "class", "fas fa-clock");
-    			add_location(i3, file$4, 48, 122, 2392);
-    			attr_dev(div5, "class", "author-time-pin");
-    			add_location(div5, file$4, 47, 20, 2240);
-    			attr_dev(article1, "class", "col-12 ml-2 ml-lg-0 p-0 pin-article height-pin height-pin2 mt-1");
-    			add_location(article1, file$4, 35, 16, 1601);
-    			attr_dev(div6, "class", "row mr-0 px-2 px-lg-0");
-    			set_style(div6, "height", "63vh");
-    			add_location(div6, file$4, 18, 12, 604);
-    			attr_dev(article2, "class", "col-md-3 col-12 height-main");
-    			add_location(article2, file$4, 17, 8, 546);
-    			attr_dev(img4, "class", "w-100 d-flex img-pin");
-    			if (img4.src !== (img4_src_value = "image/30.jpg")) attr_dev(img4, "src", img4_src_value);
+    			add_location(i3, file$4, 49, 126, 2501);
+    			attr_dev(div3, "class", "author-time-pin");
+    			add_location(div3, file$4, 48, 24, 2345);
+    			attr_dev(article1, "class", "col-12");
+    			add_location(article1, file$4, 40, 20, 1900);
+    			attr_dev(div4, "class", "col-12 col-xl-6 mb-4 my-md-0 pin-article-main");
+    			add_location(div4, file$4, 39, 16, 1820);
+    			attr_dev(img4, "class", "image-pin w-100");
+    			if (img4.src !== (img4_src_value = "20.jpg")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
-    			add_location(img4, file$4, 55, 16, 2684);
-    			attr_dev(div7, "class", "img-pin-div");
-    			add_location(div7, file$4, 54, 12, 2642);
-    			attr_dev(a4, "class", "pin-title");
-    			attr_dev(a4, "href", "");
-    			set_style(a4, "direction", "rtl");
-    			add_location(a4, file$4, 59, 19, 2842);
-    			add_location(h52, file$4, 58, 16, 2818);
-    			attr_dev(div8, "class", "content-pin");
-    			add_location(div8, file$4, 57, 12, 2776);
-    			if (img5.src !== (img5_src_value = "/image/26.jpeg")) attr_dev(img5, "src", img5_src_value);
+    			add_location(img4, file$4, 55, 24, 2779);
+    			add_location(h52, file$4, 57, 28, 2920);
+    			attr_dev(a4, "class", "w-100 content-pin");
+    			attr_dev(a4, "href", "#");
+    			add_location(a4, file$4, 56, 24, 2853);
+    			if (img5.src !== (img5_src_value = "/image/25.jpg")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "class", "mag-img");
     			attr_dev(img5, "alt", "");
-    			add_location(img5, file$4, 63, 16, 3039);
+    			add_location(img5, file$4, 60, 28, 3046);
     			attr_dev(a5, "href", "#");
-    			add_location(a5, file$4, 62, 12, 3010);
+    			add_location(a5, file$4, 59, 24, 3005);
     			set_style(i4, "color", "mediumspringgreen");
     			attr_dev(i4, "class", "fas fa-check-circle");
-    			add_location(i4, file$4, 66, 48, 3196);
-    			add_location(span2, file$4, 66, 16, 3164);
+    			add_location(i4, file$4, 63, 49, 3227);
+    			add_location(span2, file$4, 63, 28, 3206);
     			attr_dev(i5, "class", "fas fa-clock");
-    			add_location(i5, file$4, 66, 132, 3280);
-    			attr_dev(div9, "class", "author-time-pin");
-    			add_location(div9, file$4, 65, 12, 3118);
-    			set_style(article3, "height", "63vh");
-    			attr_dev(article3, "class", "col-md-6 col-11 ml-1 ml-md-0 p-0 height-pin3 pin-article");
-    			add_location(article3, file$4, 53, 8, 2533);
-    			attr_dev(div10, "class", "row justify-content-center");
-    			add_location(div10, file$4, 16, 4, 497);
-    			attr_dev(section, "class", "container-fluid pin-parent");
-    			add_location(section, file$4, 15, 0, 431);
-    			add_location(br0, file$4, 71, 0, 3379);
+    			add_location(i5, file$4, 63, 133, 3311);
+    			attr_dev(div5, "class", "author-time-pin");
+    			add_location(div5, file$4, 62, 24, 3148);
+    			attr_dev(article2, "class", "col-12");
+    			add_location(article2, file$4, 54, 20, 2730);
+    			attr_dev(div6, "class", "col-12 col-xl-6 mb-4 mt-lg-0 mt-md-4  pin-article-main");
+    			add_location(div6, file$4, 53, 16, 2641);
+    			attr_dev(div7, "class", "row justify-content-md-center mx-0 pt-3");
+    			set_style(div7, "border-radius", "7px");
+    			set_style(div7, "box-shadow", "0 0 4px 0.1px #494949");
+    			add_location(div7, file$4, 24, 12, 827);
+    			attr_dev(div8, "class", "col-12 col-md-7 mx-2 order-first order-md-0");
+    			add_location(div8, file$4, 23, 8, 757);
+    			attr_dev(div9, "class", "col-12 col-md-2 mx-1 mt-5 mt-md-0");
+    			set_style(div9, "border-radius", "7px");
+    			set_style(div9, "box-shadow", "0 0 4px 0.1px #494949");
+    			add_location(div9, file$4, 69, 8, 3477);
+    			attr_dev(div10, "class", "row justify-content-center mx-lg-2");
+    			add_location(div10, file$4, 21, 4, 570);
+    			attr_dev(section, "class", "container-fluid pin-parent ");
+    			add_location(section, file$4, 20, 0, 503);
+    			add_location(br0, file$4, 72, 0, 3620);
     			attr_dev(hr, "class", "col-10 offset-1");
-    			add_location(hr, file$4, 71, 4, 3383);
-    			add_location(br1, file$4, 71, 32, 3411);
-    			add_location(br2, file$4, 71, 36, 3415);
-    			add_location(br3, file$4, 71, 40, 3419);
+    			add_location(hr, file$4, 72, 4, 3624);
+    			add_location(br1, file$4, 72, 32, 3652);
+    			add_location(br2, file$4, 72, 36, 3656);
+    			add_location(br3, file$4, 72, 40, 3660);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, section, anchor);
     			append_dev(section, div10);
-    			append_dev(div10, article2);
-    			append_dev(article2, div6);
-    			append_dev(div6, article0);
-    			append_dev(article0, div0);
-    			append_dev(div0, img0);
-    			append_dev(article0, t0);
-    			append_dev(article0, div1);
-    			append_dev(div1, h50);
-    			append_dev(h50, a0);
-    			append_dev(article0, t2);
+    			append_dev(div10, div0);
+    			append_dev(div10, t2);
+    			append_dev(div10, div8);
+    			append_dev(div8, div7);
+    			append_dev(div7, div2);
+    			append_dev(div2, article0);
+    			append_dev(article0, img0);
+    			append_dev(article0, t3);
+    			append_dev(article0, a0);
+    			append_dev(a0, h50);
+    			append_dev(article0, t5);
     			append_dev(article0, a1);
     			append_dev(a1, img1);
-    			append_dev(article0, t3);
-    			append_dev(article0, div2);
-    			append_dev(div2, span0);
-    			append_dev(span0, t4);
+    			append_dev(article0, t6);
+    			append_dev(article0, div1);
+    			append_dev(div1, span0);
+    			append_dev(span0, t7);
     			append_dev(span0, i0);
-    			append_dev(div2, t5);
-    			append_dev(div2, i1);
-    			append_dev(div2, t6);
-    			append_dev(div6, t7);
-    			append_dev(div6, article1);
-    			append_dev(article1, div3);
-    			append_dev(div3, img2);
-    			append_dev(article1, t8);
-    			append_dev(article1, div4);
-    			append_dev(div4, h51);
-    			append_dev(h51, a2);
-    			append_dev(article1, t10);
+    			append_dev(div1, t8);
+    			append_dev(div1, i1);
+    			append_dev(div1, t9);
+    			append_dev(div7, t10);
+    			append_dev(div7, div4);
+    			append_dev(div4, article1);
+    			append_dev(article1, img2);
+    			append_dev(article1, t11);
+    			append_dev(article1, a2);
+    			append_dev(a2, h51);
+    			append_dev(article1, t13);
     			append_dev(article1, a3);
     			append_dev(a3, img3);
-    			append_dev(article1, t11);
-    			append_dev(article1, div5);
-    			append_dev(div5, span1);
-    			append_dev(span1, t12);
+    			append_dev(article1, t14);
+    			append_dev(article1, div3);
+    			append_dev(div3, span1);
+    			append_dev(span1, t15);
     			append_dev(span1, i2);
-    			append_dev(div5, t13);
-    			append_dev(div5, i3);
-    			append_dev(div5, t14);
-    			append_dev(div10, t15);
-    			append_dev(div10, article3);
-    			append_dev(article3, div7);
-    			append_dev(div7, img4);
-    			append_dev(article3, t16);
-    			append_dev(article3, div8);
-    			append_dev(div8, h52);
-    			append_dev(h52, a4);
-    			append_dev(article3, t18);
-    			append_dev(article3, a5);
+    			append_dev(div3, t16);
+    			append_dev(div3, i3);
+    			append_dev(div3, t17);
+    			append_dev(div7, t18);
+    			append_dev(div7, div6);
+    			append_dev(div6, article2);
+    			append_dev(article2, img4);
+    			append_dev(article2, t19);
+    			append_dev(article2, a4);
+    			append_dev(a4, h52);
+    			append_dev(article2, t21);
+    			append_dev(article2, a5);
     			append_dev(a5, img5);
-    			append_dev(article3, t19);
-    			append_dev(article3, div9);
-    			append_dev(div9, span2);
-    			append_dev(span2, t20);
+    			append_dev(article2, t22);
+    			append_dev(article2, div5);
+    			append_dev(div5, span2);
+    			append_dev(span2, t23);
     			append_dev(span2, i4);
-    			append_dev(div9, t21);
-    			append_dev(div9, i5);
-    			append_dev(div9, t22);
-    			insert_dev(target, t23, anchor);
+    			append_dev(div5, t24);
+    			append_dev(div5, i5);
+    			append_dev(div5, t25);
+    			append_dev(div10, t26);
+    			append_dev(div10, div9);
+    			insert_dev(target, t28, anchor);
     			insert_dev(target, br0, anchor);
     			insert_dev(target, hr, anchor);
     			insert_dev(target, br1, anchor);
@@ -3073,9 +3087,10 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(section);
     			if (detaching && section_transition) section_transition.end();
-    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(t28);
     			if (detaching) detach_dev(br0);
     			if (detaching) detach_dev(hr);
     			if (detaching) detach_dev(br1);
@@ -3184,8 +3199,8 @@ var app = (function () {
     /* src/layout/Nav.svelte generated by Svelte v3.38.3 */
     const file$3 = "src/layout/Nav.svelte";
 
-    // (18:17) <Link to="/" style="float:left">
-    function create_default_slot_5(ctx) {
+    // (19:17) <Link to="/" style="float:left">
+    function create_default_slot_4(ctx) {
     	let img;
     	let img_src_value;
 
@@ -3195,7 +3210,7 @@ var app = (function () {
     			if (img.src !== (img_src_value = "1.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "class", "brand-icon navbar-brand");
     			attr_dev(img, "alt", "");
-    			add_location(img, file$3, 18, 21, 634);
+    			add_location(img, file$3, 19, 21, 701);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -3207,17 +3222,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5.name,
+    		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(18:17) <Link to=\\\"/\\\" style=\\\"float:left\\\">",
+    		source: "(19:17) <Link to=\\\"/\\\" style=\\\"float:left\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (32:25) <Link class="nav-link li-item-color" to="/">
-    function create_default_slot_4(ctx) {
+    // (33:25) <Link class="nav-link li-item-color" to="/">
+    function create_default_slot_3(ctx) {
     	let i;
     	let t;
 
@@ -3226,7 +3241,7 @@ var app = (function () {
     			i = element("i");
     			t = text("  خانه");
     			attr_dev(i, "class", "fas fa-home text-light");
-    			add_location(i, file$3, 31, 69, 1640);
+    			add_location(i, file$3, 32, 69, 1707);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -3240,43 +3255,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4.name,
-    		type: "slot",
-    		source: "(32:25) <Link class=\\\"nav-link li-item-color\\\" to=\\\"/\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (35:25) <Link class="nav-link li-item-color" to="blog">
-    function create_default_slot_3(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("بلاگ خبر");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(35:25) <Link class=\\\"nav-link li-item-color\\\" to=\\\"blog\\\">",
+    		source: "(33:25) <Link class=\\\"nav-link li-item-color\\\" to=\\\"/\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:25) <Link class="nav-link li-item-color" to="contact">
+    // (36:25) <Link class="nav-link li-item-color" to="contact">
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -3296,14 +3284,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(38:25) <Link class=\\\"nav-link li-item-color\\\" to=\\\"contact\\\">",
+    		source: "(36:25) <Link class=\\\"nav-link li-item-color\\\" to=\\\"contact\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:25) <Link class="nav-link li-item-color" to="about">
+    // (39:25) <Link class="nav-link li-item-color" to="about">
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -3323,14 +3311,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(41:25) <Link class=\\\"nav-link li-item-color\\\" to=\\\"about\\\">",
+    		source: "(39:25) <Link class=\\\"nav-link li-item-color\\\" to=\\\"about\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (13:0) <Router url="{url}">
+    // (14:0) <Router url="{url}">
     function create_default_slot(ctx) {
     	let header;
     	let nav;
@@ -3356,24 +3344,19 @@ var app = (function () {
     	let li2;
     	let link3;
     	let t7;
-    	let li3;
-    	let link4;
-    	let t8;
     	let div4;
     	let route0;
-    	let t9;
+    	let t8;
     	let route1;
-    	let t10;
+    	let t9;
     	let route2;
-    	let t11;
-    	let route3;
     	let current;
 
     	link0 = new Link({
     			props: {
     				to: "/",
     				style: "float:left",
-    				$$slots: { default: [create_default_slot_5] },
+    				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -3383,23 +3366,13 @@ var app = (function () {
     			props: {
     				class: "nav-link li-item-color",
     				to: "/",
-    				$$slots: { default: [create_default_slot_4] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	link2 = new Link({
-    			props: {
-    				class: "nav-link li-item-color",
-    				to: "blog",
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	link3 = new Link({
+    	link2 = new Link({
     			props: {
     				class: "nav-link li-item-color",
     				to: "contact",
@@ -3409,7 +3382,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	link4 = new Link({
+    	link3 = new Link({
     			props: {
     				class: "nav-link li-item-color",
     				to: "about",
@@ -3430,11 +3403,6 @@ var app = (function () {
     		});
 
     	route2 = new Route({
-    			props: { path: "blog", component: Blog },
-    			$$inline: true
-    		});
-
-    	route3 = new Route({
     			props: { path: "/", component: Home },
     			$$inline: true
     		});
@@ -3467,31 +3435,26 @@ var app = (function () {
     			li2 = element("li");
     			create_component(link3.$$.fragment);
     			t7 = space();
-    			li3 = element("li");
-    			create_component(link4.$$.fragment);
-    			t8 = space();
     			div4 = element("div");
     			create_component(route0.$$.fragment);
-    			t9 = space();
+    			t8 = space();
     			create_component(route1.$$.fragment);
-    			t10 = space();
+    			t9 = space();
     			create_component(route2.$$.fragment);
-    			t11 = space();
-    			create_component(route3.$$.fragment);
     			attr_dev(span0, "class", "brand-icon-custome");
     			set_style(span0, "color", "#F7A63C");
-    			add_location(span0, file$3, 21, 20, 811);
+    			add_location(span0, file$3, 22, 20, 878);
     			attr_dev(span1, "class", "brand-icon-custome");
     			set_style(span1, "color", "#27a7f9");
-    			add_location(span1, file$3, 21, 88, 879);
+    			add_location(span1, file$3, 22, 88, 946);
     			attr_dev(div0, "class", "brand-text");
     			set_style(div0, "width", "300px");
     			set_style(div0, "float", "left");
-    			add_location(div0, file$3, 20, 17, 733);
+    			add_location(div0, file$3, 21, 17, 800);
     			set_style(div1, "width", "75%");
-    			add_location(div1, file$3, 16, 15, 538);
+    			add_location(div1, file$3, 17, 15, 605);
     			attr_dev(span2, "class", "navbar-toggler-icon");
-    			add_location(span2, file$3, 26, 15, 1267);
+    			add_location(span2, file$3, 27, 15, 1334);
     			attr_dev(button, "class", "navbar-toggler navbar-toggler-right");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-toggle", "collapse");
@@ -3499,31 +3462,29 @@ var app = (function () {
     			attr_dev(button, "aria-controls", "navbarsExampleCenteredNav");
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-label", "Toggle navigation");
-    			add_location(button, file$3, 25, 15, 1026);
+    			add_location(button, file$3, 26, 15, 1093);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file$3, 30, 21, 1549);
-    			attr_dev(li1, "class", "nav-item ");
-    			add_location(li1, file$3, 33, 21, 1751);
+    			add_location(li0, file$3, 31, 21, 1616);
+    			attr_dev(li1, "class", "nav-item");
+    			add_location(li1, file$3, 34, 21, 1818);
     			attr_dev(li2, "class", "nav-item");
-    			add_location(li2, file$3, 36, 21, 1910);
-    			attr_dev(li3, "class", "nav-item");
-    			add_location(li3, file$3, 39, 21, 2073);
+    			add_location(li2, file$3, 37, 21, 1981);
     			attr_dev(ul, "class", "navbar-nav");
     			set_style(ul, "direction", "rtl");
-    			add_location(ul, file$3, 29, 18, 1480);
+    			add_location(ul, file$3, 30, 18, 1547);
     			attr_dev(div2, "class", "collapse navbar-collapse navbar-collapse justify-content-md-end");
     			attr_dev(div2, "id", "navbarsExampleCenteredNav");
-    			add_location(div2, file$3, 28, 15, 1353);
+    			add_location(div2, file$3, 29, 15, 1420);
     			attr_dev(div3, "class", "container");
-    			add_location(div3, file$3, 15, 12, 499);
+    			add_location(div3, file$3, 16, 12, 565);
     			attr_dev(nav, "class", "navbar navbar-inverse navbar-toggleable-md ");
-    			add_location(nav, file$3, 14, 8, 429);
+    			add_location(nav, file$3, 15, 8, 495);
     			attr_dev(header, "class", "sticky-top shadow");
     			set_style(header, "position", "fixed");
     			set_style(header, "right", "0");
     			set_style(header, "left", "0");
-    			add_location(header, file$3, 13, 4, 343);
-    			add_location(div4, file$3, 47, 4, 2311);
+    			add_location(header, file$3, 14, 4, 409);
+    			add_location(div4, file$3, 45, 4, 2219);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -3549,18 +3510,13 @@ var app = (function () {
     			append_dev(ul, t6);
     			append_dev(ul, li2);
     			mount_component(link3, li2, null);
-    			append_dev(ul, t7);
-    			append_dev(ul, li3);
-    			mount_component(link4, li3, null);
-    			insert_dev(target, t8, anchor);
+    			insert_dev(target, t7, anchor);
     			insert_dev(target, div4, anchor);
     			mount_component(route0, div4, null);
-    			append_dev(div4, t9);
+    			append_dev(div4, t8);
     			mount_component(route1, div4, null);
-    			append_dev(div4, t10);
+    			append_dev(div4, t9);
     			mount_component(route2, div4, null);
-    			append_dev(div4, t11);
-    			mount_component(route3, div4, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -3592,13 +3548,6 @@ var app = (function () {
     			}
 
     			link3.$set(link3_changes);
-    			const link4_changes = {};
-
-    			if (dirty & /*$$scope*/ 4) {
-    				link4_changes.$$scope = { dirty, ctx };
-    			}
-
-    			link4.$set(link4_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -3606,11 +3555,9 @@ var app = (function () {
     			transition_in(link1.$$.fragment, local);
     			transition_in(link2.$$.fragment, local);
     			transition_in(link3.$$.fragment, local);
-    			transition_in(link4.$$.fragment, local);
     			transition_in(route0.$$.fragment, local);
     			transition_in(route1.$$.fragment, local);
     			transition_in(route2.$$.fragment, local);
-    			transition_in(route3.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -3618,11 +3565,9 @@ var app = (function () {
     			transition_out(link1.$$.fragment, local);
     			transition_out(link2.$$.fragment, local);
     			transition_out(link3.$$.fragment, local);
-    			transition_out(link4.$$.fragment, local);
     			transition_out(route0.$$.fragment, local);
     			transition_out(route1.$$.fragment, local);
     			transition_out(route2.$$.fragment, local);
-    			transition_out(route3.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -3631,13 +3576,11 @@ var app = (function () {
     			destroy_component(link1);
     			destroy_component(link2);
     			destroy_component(link3);
-    			destroy_component(link4);
-    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(t7);
     			if (detaching) detach_dev(div4);
     			destroy_component(route0);
     			destroy_component(route1);
     			destroy_component(route2);
-    			destroy_component(route3);
     		}
     	};
 
@@ -3645,7 +3588,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(13:0) <Router url=\\\"{url}\\\">",
+    		source: "(14:0) <Router url=\\\"{url}\\\">",
     		ctx
     	});
 
@@ -3731,6 +3674,10 @@ var app = (function () {
     		Router,
     		Link,
     		Route,
+    		fade,
+    		slide,
+    		scale,
+    		fly,
     		about: About,
     		contact: Contact,
     		blog: Blog,

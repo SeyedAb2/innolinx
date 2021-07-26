@@ -40,8 +40,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	font-family: 'Vazir', Arial, sans-serif;
-	background: rgb(250,217,178);
-	background: linear-gradient(90deg, rgba(250,217,178,1) 0%, rgba(255,255,255,1) 50%, rgba(190,229,254,1) 100%);
+	background: #cccccc;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -188,79 +187,60 @@ body {
 	direction: rtl;
 	text-align: center;
 }
+
 /******* Inolinx Article Pin Up site Under Navbar ******/
 .pin-parent{
-	margin-top: 100px;
+	margin-top: 130px;
 }
-.pin-article{
-	border-radius: 15px;
-	height: auto;
-	overflow: hidden;
+.pin-article-main article{
 	position: relative;
-	background-color: gray;
-	box-shadow: 0 0 20px 1px black;
+	overflow: hidden;
+	height: 33vh;
+	border-radius: 7px;
 }
-
-.img-pin{
-	position: absolute;
+.pin-article-main article .image-pin {
 	width: 100%;
 	height: 100%;
-	top: 0;
-	transition: all 0.35s;
-	z-index: 1;
+	cursor: pointer;
+	border-radius: 7px;
+	position: absolute;
+	left: 0;
+	transition: all 0.4s ;
 	
 }
-.pin-article:hover .pin-title{
+.pin-article-main article:hover .image-pin {
+	filter: brightness(35%);
+	transform: scale(1.2,1.2);
+}
+.pin-article-main article:hover h5{
 	color: red;
 }
-.img-pin:hover {
-	transform: scale(1.2,1.2);
-	cursor: pointer;
-	filter: brightness(50%);
-}
-.pin-article h5 a {
-	text-decoration: none;
-	position: absolute;
-	height: 70px;
-	width: 100%;
-	z-index: 100;
-	color: white;
-	right: 0;
-	padding:1px 20px 20px 20px ;
-	font-weight: bold;
-	text-align: right;
-	bottom: 0px;
-	box-shadow: 0 1px 30px 30px black;
-	background-color: black;
-}
-.pin-article:hover .img-pin{
-	transform: scale(1.2,1.2);
-	cursor: pointer;
-	filter: brightness(50%);
-}
 .content-pin{
-	width: 100%;
 	position: absolute;
-	bottom: 0;
-	z-index: 2;
-	right: 0;
+	bottom: 18%;
+	left: 0;
+	background-color: #161616;
+	box-shadow: 0 0 50px 70px #161616;
+	padding-bottom: 10px;
 }
-.category{
+a,a:hover{
+	text-decoration: none;
+}
+.content-pin h5{
 	position: absolute;
-	color: white;
-	border-radius: 15px;
-	padding: 2px 20px;
-	width: auto;
-	z-index: 3;
-	font-size: 13px;
-	cursor: pointer;
-	right: 10px;
-	top: 10px;
-
+	line-height: 30px;
+	color: blanchedalmond;
+	transition: all 0.4s;
+	text-align: right;
+	bottom: 20%;
+	right: 4%;
+}
+.content-pin:hover h5 {
+	color: red;
 }
 .mag-img{
 	position: absolute;
-	z-index: 3;
+	z-index: 1;
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
@@ -268,6 +248,7 @@ body {
 	right: 13px;
 	transition: all 0.2s;
 }
+.mag-img img{width: 100%;height: 100%;}
 .mag-img:hover{
 	opacity: 0.5;
 }
@@ -283,35 +264,91 @@ body {
 	color: white;
 	font-size: 13px;
 }
-.pin-title{
-	transition: all 0.3s;
-	line-height: 20px;
+
+.first-article-main{
+	position: relative;
+	overflow: hidden;
+	height: 55vh;
+	border-radius: 7px;
+	overflow: hidden;
 }
-.pin-title:hover{
+.image-pin-top{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.image-pin-top:hover{
+	transform: scale(1.2,1.2);
+	filter: brightness(35%);
+}
+.first-article-main:hover h5{
 	color: red;
 }
-@media (max-width:1124px){
-	.pin-title{
-		font-size: 15px;
-		margin-bottom: 20px;
-	}
-
+.content-pin-top{
+	position: absolute;
+	bottom: 14%;
+	left: 0;
+	background-color: #161616;
+	box-shadow: 0 0 50px 70px #161616;
+	padding-bottom: 10px;
 }
-@media(max-width:767px){
-	.height-main{
-		height: 650px;
+.content-pin-top h5{
+	position: absolute;
+	line-height: 30px;
+	color: blanchedalmond;
+	transition: all 0.4s;
+	text-align: right;
+	bottom: 20%;
+	right: 3.1%;
+	font-size: 24px;
+}
+.content-pin-top:hover h5 {
+	color: red;
+}
+.mag-img-top{
+	position: absolute;
+	z-index: 1;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	bottom: 15px;
+	right: 15px;
+	transition: all 0.2s;
+}
+.mag-img-top img{width: 100%;height: 100%;}
+.mag-img-top:hover{
+	opacity: 0.5;
+}
+.author-time-pin-top{
+	position: absolute;
+	z-index: 3;
+	width: 80%;
+	height: 30px;
+	right: 55px;
+	line-height: 32px;
+	bottom: 13px;
+	direction: rtl;
+	color: white;
+	font-size: 13px;
+}
+@media(max-width:1200px){
+	.pin-article-main article{
+		height: 60vh;
 	}
-	.height-pin{
-		height: 300px;
+	.content-pin-top h5{
+		font-size: 1.25rem;
 	}
-	.height-pin1{
-		top: 10px;
-		width: 9px;
+	.content-pin{
+		position: absolute;
+		bottom: 13%;
+		left: 0;
+		background-color: #161616;
+		box-shadow: 0 0 50px 70px #161616;
+		padding-bottom: 10px;
 	}
-	.height-pin2{
-		top: 20px;
-	}
-	.height-pin3{
-		top: px;
-	}
+	
+	
 }

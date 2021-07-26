@@ -1,5 +1,6 @@
 <script>
     import { Router, Link, Route } from "svelte-routing";
+    import {fade , slide , scale , fly} from "svelte/transition";
 	import about from "../pages/about.svelte";
 	import contact from "../pages/contact.svelte";
 	import blog from "../pages/blog.svelte";
@@ -13,7 +14,7 @@
 <Router url="{url}">
     <header class="sticky-top shadow" style="position: fixed;right: 0;left: 0;"> 
         <nav class="navbar navbar-inverse navbar-toggleable-md ">
-            <div class="container">
+            <div  class="container">
                <div style="width: 75%">
                  <Link to="/" style="float:left">
                      <img src="1.png" class="brand-icon navbar-brand" alt="">
@@ -31,9 +32,6 @@
                      <li class="nav-item">
                          <Link class="nav-link li-item-color" to="/"><i class="fas fa-home text-light" ></i>&nbsp;&nbsp;خانه</Link>
                      </li>
-                     <li class="nav-item ">
-                         <Link class="nav-link li-item-color" to="blog">بلاگ خبر</Link>
-                     </li>
                      <li class="nav-item">
                          <Link class="nav-link li-item-color" to="contact">تماس با ما</Link>
                      </li>
@@ -48,7 +46,6 @@
     <div>
         <Route path="contact" component="{contact}" />
         <Route path="about" component="{about}" />
-        <Route path="blog" component="{blog}" />
         <Route path="/" component="{home}"/>
     </div>
     </Router>
