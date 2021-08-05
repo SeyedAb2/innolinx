@@ -6,7 +6,7 @@
 	import { Wave } from 'svelte-loading-spinners'
 	
 	let y=0;
-	$: console.log(y);	
+	//$: console.log(y);	
 	///
 	let loading = false;
 	setTimeout(function(){
@@ -26,7 +26,7 @@
 {/if}
 <svelte:window bind:scrollY={y}/>
 {#if loading===false}
-<div class="class">
+<div class="class ">
 	<Nav {y}/>
 	<Footer {y}/>
 </div>

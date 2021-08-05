@@ -5,8 +5,15 @@
     import {circIn} from "svelte/easing";
     import { Router, Link, Route } from "svelte-routing";
     import about from "./about.svelte";
+    import showDetail from "./show-detail.svelte";
     export let url = "";
+    export let id =1;
     export let y;
+    var currentLocation = window.location.href;
+    var splitUrl = currentLocation.split("/");
+    var lastSugment = splitUrl[splitUrl.length - 1];
+    //$ : console.log(lastSugment);
+    
     //let y=0;
 </script>
 <style>
@@ -20,8 +27,8 @@
 </svelte:head>
 <main transition:scale class="container-fluid pin-parent ">
     <div class="row justify-content-center mx-lg-2">
-        <aside class="col-12 col-md-2  mx-1 mt-5 mt-md-0 bg-light shadow-radius-section">hello</aside>
-        <aside class="col-12 col-md-7 mx-2 order-first order-md-0 ">
+        <aside class="col-12 col-md-3  mx-1 mt-5 mt-md-0 bg-light shadow-radius-section">hello</aside>
+        <aside class="col-12 col-md-6 mx-2 order-first order-md-0 ">
             <section class="row justify-content-md-center mx-0 pt-3 bg-light shadow-radius-section" >
                 <div class="col-12 mb-4 my-md-0">
                     <article class="col-12 bg-danger mb-md-4 first-article-main">
@@ -53,7 +60,7 @@
                 </div>
                 <div class="col-12 col-xl-6 mb-4 mt-lg-0 mt-md-4  pin-article-main">
                     <article class="col-12">
-                        <img class="image-pin w-100" src="20.jpg" alt="">
+                        <img class="image-pin w-100" src="image/20.jpg" alt="">
                         <a class="w-100 content-pin" href="#">
                             <h5>به اینولینکس خوش آمدید</h5>
                         </a>
@@ -74,7 +81,7 @@
                                 <div class="col-11 col-md-11" >
                                     <div class="row ">
                                         <div class="col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1" >
-                                            <img class="cu-image-com mr-1 " src="image/afarine.jpg" alt="">
+                                           <a href="profile"><img class="cu-image-com mr-1 " src="image/afarine.jpg" alt=""> </a> 
                                         </div>
                                         <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center">
                                             <div class="cu-intro mt-2">
@@ -218,7 +225,7 @@
                             <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a href="#">راه های مدیریت کسب و کار الکترونیکی</a></h3>
                         </div>
                         <div class="col-12 p-0 mx-0 responsive-imagePost-height">
-                            <img src="20.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
+                            <img src="image/20.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
                         </div>
                         
                         <p class="col-12 mt-3 post-text">
@@ -253,7 +260,7 @@
                 </div>
             </section>
         </aside>
-        <aside class="col-12 col-md-2 mx-1 mt-5 mt-md-0 bg-light shadow-radius-section" >hello</aside>
+        <aside class="col-12 col-md-2 mx-1 mt-5 mt-md-0 bg-light shadow-radius-section" >hello1</aside>
         
     </div>
     

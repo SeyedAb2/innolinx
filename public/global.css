@@ -1,7 +1,9 @@
+@import "css/bootstrap.custom.css";
 @import "css/fonts.css";
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Ramaraja&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -41,7 +43,7 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	font-family: 'Vazir', 'BYekan', sans-serif;
+	font-family: 'vazir' ,sans-serif;
 	background: #f3f2f2  ;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -73,12 +75,22 @@ header{
 	height: 60px;
 	color: red;
 }
+.nav-custome-bottom{
+	border-bottom: 1px solid rgb(216, 215, 215);
+}
+.nav-custome-top{
+	border-top: 1px solid rgb(216, 215, 215);
+}
+.custome-shadow-navbar{
+	box-shadow: 0 0 10px rgb(196, 196, 196);
+}
 .brand-icon-custome , .brand-icon-custome:hover{
 	text-decoration: none;
 	font-size: 17px;
 	direction: rtl;
-	color: red;
-	font-family: vazir;
+	color: #475159;
+	font-family: 'vazir', serif;
+	font-weight: ;
 	margin-top: 26%;
 	float: left;
 }
@@ -153,7 +165,6 @@ header{
 @media (max-width:767px){
 	.brand-icon-custome , .brand-icon-custome:hover{
 		text-decoration: none;
-		color: red;
 		display: none;
 		font-family: 'Bowlby One', cursive;
 		margin-top: 0.5%;
@@ -164,6 +175,7 @@ header{
 	.brand-text{
 		position: absolute;
 		left: 15%;
+		color: black;
 	}
 	.text-header-custom h1{
 		font-size:60px;
@@ -302,6 +314,9 @@ a,a:hover{
 	color: white;
 	font-size: 13px;
 }
+.author-show-box{
+	border-top: 1px solid rgb(216, 215, 215);
+}
 
 .first-article-main{
 	position: relative;
@@ -375,7 +390,7 @@ a,a:hover{
 .shadow-radius-section{
 	border-radius: 7px;
 	border:1.5px solid #b5b5b578;
-	background-color: #f3f2f2;
+	background-color: #fff;
 }
 .shadow-section{
 	transition: all 0.5s;
@@ -443,6 +458,22 @@ a,a:hover{
 }
 .title-post a{
 	color: #292B2C;
+	
+}
+.visit-btn{
+	width: 5%;
+}
+.padding-button{
+	margin-top: -5px;
+}
+.icon-size{
+	font-size: 13px;
+}
+.icon-size-scroll{
+	font-size:12px
+}
+.title-post-link:link{
+	text-decoration: none;
 }
 .post-text{
 	text-align: justify;
@@ -510,6 +541,24 @@ a,a:hover{
 .header-image-main{
 	position: relative;
 }
+.tab-header-main{
+	border-top: 1px solid rgb(209, 209, 209);
+	font-size: 16px;
+}
+
+.border-active-tab-item{
+	border-bottom: 2px solid green;
+	font-weight: bold;
+
+}
+.text-color-tab{
+	color: rgb(133, 133, 133);
+	transition: all 0.2s;
+	font-weight: bold;
+}
+ .text-color-tab:hover {
+	 color: black;
+ } 
 .header-logo-image{
 	position: absolute;
 	width: 100px;
@@ -517,18 +566,47 @@ a,a:hover{
 	z-index: 2;
 	top: -55px;
 	right: 25px;
-	border: 2px solid rgb(119, 119, 119);
+	border: 2px solid rgb(204 203 203);
+	border-radius: 4px;
+}
+.btn-mw{
+	background-color: #0080ff;
+	color: blanchedalmond;
+	font-size: 100%;
+	width: auto;
+	height: 30px;
+	line-height: 0px;
+}
+.btn-mw-scroll{
+	background-color: #0080ff;
+	color: blanchedalmond;
+	font-size: 14px;
+	width: auto;
+	height: 30px;
+	line-height: 0px;
+}
+.pt-custome-more-btn {
+	padding-top: 4px;
+}
+.banner{
+	border-radius: 7px 7px 0 0;
+	padding-right: 1px !important;
 }
 .header-image{
+	width: 820px;
 	height: 135px;
 	border-radius: 7px 7px 0 0;
 }
 .header-detail{
 	direction: rtl;
-	margin: 55px 50px 70px -13px;
+	margin: 55px 50px 0px -13px;
 }
 .text-bold{
 	font-weight: bold;
+}
+.text-logo-scroll{
+	font-weight: bold;
+	font-size: 20px;
 }
 .explain-about-page{
 	line-height: 23px;
@@ -550,3 +628,140 @@ a,a:hover{
 	}
 }
 /* start post article */
+
+.scroll-div{
+	position: fixed;
+	z-index: 10000;
+}
+.direction{
+	direction:rtl;
+}
+.logo-cu-scroll{
+	border: 1px solid rgb(141, 141, 141);
+	width: 35px;
+	height: 35px;
+}
+.scroll-main-height{
+	height: 42px;
+}
+.nav-item-scroll{
+	padding: 0 15px 0 15px;
+	
+}
+.word-space{
+	word-spacing: -1.8px;
+}
+.nav-link-scroll{
+	color: #757575;
+	font-weight: bold;
+	line-height: -10px;
+}
+.nav-link-scroll:hover{
+	color: #2c2c2c;
+	font-weight: bold;
+}
+.nav-link-scroll:link{
+	color: #2c2c2c;
+	font-weight: bold;
+	text-decoration: none;
+}
+.nav-link-scroll.active {
+	color: #407c00;
+	border-bottom: 2px solid #407c00;
+}
+.nav-link-scroll-click{
+	color: black;
+	
+}
+
+#accordion5 .panel{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 0 0;
+}
+.category_button{
+    display: block;
+	width: 0%;
+	margin-right: 30px;
+    background: #ff9d2e;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight:400;
+    color: #fff;
+    position: relative;
+	padding: 2px;
+	text-decoration: none;
+}
+.category_button.collapsed{
+    
+    background: #fff;
+    color: #bbb;
+	width: 80%;
+}
+.category_button:before,
+.category_button.collapsed:before{
+    content: "\f068";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 12px;
+    color: #ff9d2e;
+    text-align: center;
+    border: 1px solid #ff9d2e;
+    position: absolute;
+    top: 0px;
+    right: -25px;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.category_button.collapsed:before{
+    content: "\f067";
+    background: #ff9d2e;
+	color: #fff;
+    border: 1px solid #ff9d2e;
+}
+#accordion5 .panel-body{
+    padding: 10px 27px 0;
+    margin: 0 0 0 30px;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+    position: relative;
+}
+#accordion5 .panel-body:before{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 95%;
+    background: #ff9d2e;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+.border-bottom{
+	border-bottom: 1px solid #bfbfbf;
+}
+.border-right{
+	border-right: 2px solid #ff9d2e;
+}
+.category-main-text-link:link{
+	font-size: 14.5px;
+	color: #444444;
+	text-decoration: none;
+}
+.category-main-text:link{
+	font-size: 14.5px;
+	color: #444444;
+	text-decoration: none;
+}
+.category-main-text ,.category-main-text:hover{
+	font-size: 14.5px;
+	color: #444444;
+	text-decoration: none;
+}
