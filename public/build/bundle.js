@@ -3759,7 +3759,7 @@ var app = (function () {
     			add_location(div48, file$6, 358, 24, 30626);
     			attr_dev(section2, "class", "row mx-0 mt-3 mr-0 pt-0  ");
     			add_location(section2, file$6, 357, 20, 30558);
-    			attr_dev(aside4, "class", "col-10 order-first justify-content-between order-md-0 mx-0 ");
+    			attr_dev(aside4, "class", "col-12 order-first justify-content-between order-md-0 mx-0 ");
     			add_location(aside4, file$6, 356, 16, 30462);
     			attr_dev(div49, "class", "row px-0 mx-0");
     			add_location(div49, file$6, 355, 12, 30417);
