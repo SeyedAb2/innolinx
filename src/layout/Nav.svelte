@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="col-1 h-100">
-                            <img {src} class="brand-icon my-2" alt="">
+                            <img {src} class="brand-icon" alt="">
                         </div>
                     </Link>
                     
@@ -95,7 +95,7 @@
         <Route path="about" component="{about}" />
         <Route path="/" component="{home}"/>
         <Route path="profile" component="{profile}"/>
-        <Route path="show-detail/" component="{showDetail}"/>
+        <Route path="profile/show-detail" component="{showDetail}"/>
     </div>
     </Router>
     <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

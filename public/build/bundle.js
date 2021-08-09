@@ -8255,7 +8255,7 @@ var app = (function () {
     			attr_dev(div1, "class", "col-7 ");
     			add_location(div1, file$3, 78, 24, 4291);
     			if (img.src !== (img_src_value = /*src*/ ctx[2])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "brand-icon my-2");
+    			attr_dev(img, "class", "brand-icon");
     			attr_dev(img, "alt", "");
     			add_location(img, file$3, 84, 28, 4597);
     			attr_dev(div2, "class", "col-1 h-100");
@@ -8408,7 +8408,7 @@ var app = (function () {
 
     	route4 = new Route({
     			props: {
-    				path: "show-detail/",
+    				path: "profile/show-detail",
     				component: Show_detail
     			},
     			$$inline: true
@@ -8499,7 +8499,7 @@ var app = (function () {
     			attr_dev(header, "class", "sticky-top ");
     			toggle_class(header, "nav-custome-bottom", /*y*/ ctx[1] <= 600);
     			add_location(header, file$3, 28, 4, 786);
-    			add_location(div13, file$3, 92, 4, 4795);
+    			add_location(div13, file$3, 92, 4, 4790);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -8678,27 +8678,27 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Close";
     			attr_dev(div0, "class", "nav flex-sm-column flex-row text-center");
-    			add_location(div0, file$3, 104, 20, 5378);
+    			add_location(div0, file$3, 104, 20, 5380);
     			attr_dev(div1, "class", "modal-body");
-    			add_location(div1, file$3, 103, 16, 5333);
+    			add_location(div1, file$3, 103, 16, 5335);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "btn btn-secondary");
     			attr_dev(button, "data-dismiss", "modal");
-    			add_location(button, file$3, 109, 20, 5590);
+    			add_location(button, file$3, 109, 20, 5592);
     			attr_dev(div2, "class", "modal-footer");
-    			add_location(div2, file$3, 108, 16, 5543);
+    			add_location(div2, file$3, 108, 16, 5545);
     			attr_dev(div3, "class", "modal-content");
-    			add_location(div3, file$3, 102, 12, 5289);
+    			add_location(div3, file$3, 102, 12, 5291);
     			attr_dev(div4, "class", "modal-dialog");
     			attr_dev(div4, "role", "document");
-    			add_location(div4, file$3, 101, 8, 5234);
+    			add_location(div4, file$3, 101, 8, 5236);
     			attr_dev(div5, "class", "modal left fade");
     			attr_dev(div5, "id", "exampleModal");
     			attr_dev(div5, "tabindex", "");
     			attr_dev(div5, "role", "dialog");
     			attr_dev(div5, "aria-labelledby", "exampleModalLabel");
     			attr_dev(div5, "aria-hidden", "true");
-    			add_location(div5, file$3, 100, 4, 5097);
+    			add_location(div5, file$3, 100, 4, 5099);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
