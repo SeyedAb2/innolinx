@@ -841,6 +841,13 @@ var app = (function () {
         else
             dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
     }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.wholeText === data)
+            return;
+        dispatch_dev('SvelteDOMSetData', { node: text, data });
+        text.data = data;
+    }
     function validate_each_argument(arg) {
         if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
             let msg = '{#each} only iterates over array-like objects.';
@@ -1730,7 +1737,7 @@ var app = (function () {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block_1$1, create_else_block];
+    	const if_block_creators = [create_if_block_1$2, create_else_block];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -1854,7 +1861,7 @@ var app = (function () {
     }
 
     // (41:2) {#if component !== null}
-    function create_if_block_1$1(ctx) {
+    function create_if_block_1$2(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -1947,7 +1954,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$1.name,
+    		id: create_if_block_1$2.name,
     		type: "if",
     		source: "(41:2) {#if component !== null}",
     		ctx
@@ -4171,8 +4178,8 @@ var app = (function () {
     const { console: console_1$1, window: window_1$1 } = globals;
     const file$5 = "src/pages/profile.svelte";
 
-    // (36:0) {#if y>600}
-    function create_if_block$1(ctx) {
+    // (40:0) {#if y>600}
+    function create_if_block_1$1(ctx) {
     	let section;
     	let div10;
     	let div7;
@@ -4217,6 +4224,8 @@ var app = (function () {
     	let a3;
     	let div10_transition;
     	let current;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
@@ -4265,74 +4274,76 @@ var app = (function () {
     			a3 = element("a");
     			a3.textContent = "درباره";
     			attr_dev(i0, "class", "fas fa-external-link-alt padding-button ml-2 icon-size-scroll");
-    			add_location(i0, file$5, 42, 103, 1469);
-    			attr_dev(button0, "class", "btn  rounded-pill  font btn-mw-scroll  text-center visit-btn mx-0 ");
-    			add_location(button0, file$5, 42, 20, 1386);
+    			add_location(i0, file$5, 46, 100, 1560);
+    			attr_dev(button0, "class", "btn rounded-pill font btn-mw-scroll text-center visit-btn mx-0 ");
+    			add_location(button0, file$5, 46, 20, 1480);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "data-toggle", "dropdown");
     			attr_dev(button1, "class", "pt-0 pl-md-5 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll rounded-pill col-12 font text-center col-md-7");
-    			add_location(button1, file$5, 45, 24, 1683);
+    			add_location(button1, file$5, 49, 24, 1774);
     			attr_dev(i1, "class", "fas fa-share-alt");
-    			add_location(i1, file$5, 48, 44, 1987);
+    			add_location(i1, file$5, 52, 44, 2078);
     			attr_dev(a0, "href", "#");
-    			add_location(a0, file$5, 48, 32, 1975);
-    			add_location(li0, file$5, 48, 28, 1971);
+    			add_location(a0, file$5, 52, 32, 2066);
+    			add_location(li0, file$5, 52, 28, 2062);
     			attr_dev(i2, "class", "fas fa-flag");
-    			add_location(i2, file$5, 49, 44, 2086);
+    			add_location(i2, file$5, 53, 44, 2177);
     			attr_dev(a1, "href", "#");
-    			add_location(a1, file$5, 49, 32, 2074);
-    			add_location(li1, file$5, 49, 28, 2070);
+    			add_location(a1, file$5, 53, 32, 2165);
+    			add_location(li1, file$5, 53, 28, 2161);
     			attr_dev(ul0, "class", "dropdown-menu  ellipsis-menu");
-    			add_location(ul0, file$5, 47, 24, 1901);
+    			add_location(ul0, file$5, 51, 24, 1992);
     			attr_dev(div0, "class", "col-5 mr-0 justify-content-start dropdown dropleft px-2");
-    			add_location(div0, file$5, 44, 20, 1589);
+    			add_location(div0, file$5, 48, 20, 1680);
     			attr_dev(div1, "class", "row justify-content-end");
-    			add_location(div1, file$5, 41, 16, 1328);
+    			add_location(div1, file$5, 45, 16, 1422);
     			attr_dev(div2, "class", "col-8 col-md-4 direction my-auto");
-    			add_location(div2, file$5, 40, 12, 1264);
+    			add_location(div2, file$5, 44, 12, 1358);
     			if (img.src !== (img_src_value = "image/afarine.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "class", "logo-cu-scroll");
     			attr_dev(img, "alt", "");
-    			add_location(img, file$5, 57, 24, 2420);
+    			add_location(img, file$5, 61, 24, 2511);
     			attr_dev(div3, "class", "col-1 mr-3  my-auto");
-    			add_location(div3, file$5, 56, 20, 2362);
+    			add_location(div3, file$5, 60, 20, 2453);
     			set_style(i3, "color", "#048af7");
     			set_style(i3, "font-size", "13px");
     			attr_dev(i3, "class", "fas fa-check-circle");
-    			add_location(i3, file$5, 60, 75, 2623);
+    			add_location(i3, file$5, 64, 75, 2714);
     			attr_dev(h5, "class", "text-logo-scroll mt-2 mr-2");
-    			add_location(h5, file$5, 60, 24, 2572);
+    			add_location(h5, file$5, 64, 24, 2663);
     			attr_dev(div4, "class", "col-10");
-    			add_location(div4, file$5, 59, 20, 2527);
+    			add_location(div4, file$5, 63, 20, 2618);
     			attr_dev(div5, "class", "row mr-3 ");
-    			add_location(div5, file$5, 55, 16, 2318);
+    			add_location(div5, file$5, 59, 16, 2409);
     			attr_dev(div6, "class", "col-6  col-md-5 bg-light py-2  direction ");
-    			add_location(div6, file$5, 54, 12, 2245);
-    			attr_dev(div7, "class", "row justify-content-between shadow-sm");
-    			add_location(div7, file$5, 39, 8, 1200);
-    			attr_dev(a2, "class", "nav-link-scroll py-2 active ");
+    			add_location(div6, file$5, 58, 12, 2336);
+    			attr_dev(div7, "class", "row justify-content-between shadow-sm mr-0");
+    			add_location(div7, file$5, 43, 8, 1289);
+    			attr_dev(a2, "class", "py-2 nav-link-scroll");
     			attr_dev(a2, "data-toggle", "tab");
     			attr_dev(a2, "href", "#post");
-    			add_location(a2, file$5, 68, 53, 3027);
+    			toggle_class(a2, "active", /*current*/ ctx[3] === "post");
+    			add_location(a2, file$5, 72, 53, 3118);
     			attr_dev(li2, "class", "nav-item-scroll mt-2");
-    			add_location(li2, file$5, 68, 20, 2994);
-    			attr_dev(a3, "class", "nav-link-scroll  py-2");
+    			add_location(li2, file$5, 72, 20, 3085);
+    			attr_dev(a3, "class", "py-2 nav-link-scroll");
     			attr_dev(a3, "data-toggle", "tab");
     			attr_dev(a3, "href", "#about");
-    			add_location(a3, file$5, 69, 53, 3164);
+    			toggle_class(a3, "active", /*current*/ ctx[3] === "about");
+    			add_location(a3, file$5, 73, 53, 3315);
     			attr_dev(li3, "class", "nav-item-scroll mt-2");
-    			add_location(li3, file$5, 69, 20, 3131);
+    			add_location(li3, file$5, 73, 20, 3282);
     			attr_dev(ul1, "class", "nav nav-tabs direction text-center");
     			attr_dev(ul1, "role", "tablist");
-    			add_location(ul1, file$5, 67, 16, 2911);
+    			add_location(ul1, file$5, 71, 16, 3002);
     			attr_dev(div8, "class", "row  mx-4 scroll-main-height");
-    			add_location(div8, file$5, 66, 12, 2852);
+    			add_location(div8, file$5, 70, 12, 2943);
     			attr_dev(div9, "class", "col-12 mt-0 scroll-main-height");
-    			add_location(div9, file$5, 65, 8, 2795);
+    			add_location(div9, file$5, 69, 8, 2886);
     			attr_dev(div10, "class", "col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top");
-    			add_location(div10, file$5, 38, 4, 1108);
+    			add_location(div10, file$5, 42, 4, 1197);
     			attr_dev(section, "class", "row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-md-inline");
-    			add_location(section, file$5, 36, 0, 1018);
+    			add_location(section, file$5, 40, 0, 1106);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
@@ -4377,6 +4388,24 @@ var app = (function () {
     			append_dev(ul1, li3);
     			append_dev(li3, a3);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(a2, "click", /*click_handler*/ ctx[6], false, false, false),
+    					listen_dev(a3, "click", /*click_handler_1*/ ctx[7], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*current*/ 8) {
+    				toggle_class(a2, "active", /*current*/ ctx[3] === "post");
+    			}
+
+    			if (dirty & /*current*/ 8) {
+    				toggle_class(a3, "active", /*current*/ ctx[3] === "about");
+    			}
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -4396,6 +4425,47 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(section);
     			if (detaching && div10_transition) div10_transition.end();
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(40:0) {#if y>600}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (358:40) {#if x<=767}
+    function create_if_block$1(ctx) {
+    	let button;
+    	let span;
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			span = element("span");
+    			span.textContent = "×";
+    			attr_dev(span, "class", "col-1 mt-1");
+    			attr_dev(span, "aria-hidden", "true");
+    			add_location(span, file$5, 362, 48, 27189);
+    			attr_dev(button, "type", "button");
+    			attr_dev(button, "class", "close row mx-2 justify-content-end");
+    			attr_dev(button, "data-dismiss", "modal");
+    			attr_dev(button, "aria-label", "Close");
+    			add_location(button, file$5, 358, 44, 26924);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+    			append_dev(button, span);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
     		}
     	};
 
@@ -4403,14 +4473,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(36:0) {#if y>600}",
+    		source: "(358:40) {#if x<=767}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:0) <Router url="{url}">
+    // (38:0) <Router url="{url}">
     function create_default_slot$1(ctx) {
     	let t0;
     	let main;
@@ -4710,17 +4780,26 @@ var app = (function () {
     	let t115;
     	let div98;
     	let div59;
-    	let t117;
+    	let a26;
+    	let i26;
+    	let t116;
+    	let a26_type_value;
+    	let a26_data_toggle_value;
+    	let a26_data_target_value;
+    	let span15;
+    	let div59_class_value;
+    	let t118;
     	let div97;
     	let div96;
+    	let t119;
     	let div87;
     	let div60;
     	let h50;
-    	let a26;
-    	let t118;
     	let a27;
-    	let p3;
     	let t120;
+    	let a28;
+    	let p3;
+    	let t122;
     	let div86;
     	let div85;
     	let div84;
@@ -4728,33 +4807,33 @@ var app = (function () {
     	let div64;
     	let div61;
     	let h51;
-    	let a28;
-    	let t121;
     	let a29;
-    	let p4;
     	let t123;
+    	let a30;
+    	let p4;
+    	let t125;
     	let div63;
     	let div62;
-    	let t125;
+    	let t127;
     	let div68;
     	let div65;
     	let h52;
-    	let a30;
-    	let t126;
     	let a31;
-    	let p5;
     	let t128;
+    	let a32;
+    	let p5;
+    	let t130;
     	let div67;
     	let div66;
-    	let t130;
+    	let t132;
     	let div82;
     	let div69;
     	let h53;
-    	let a32;
-    	let t131;
     	let a33;
-    	let p6;
     	let t133;
+    	let a34;
+    	let p6;
+    	let t135;
     	let div81;
     	let div80;
     	let div79;
@@ -4762,99 +4841,107 @@ var app = (function () {
     	let div73;
     	let div70;
     	let h54;
-    	let a34;
-    	let t134;
     	let a35;
-    	let p7;
     	let t136;
+    	let a36;
+    	let p7;
+    	let t138;
     	let div72;
     	let div71;
-    	let t138;
+    	let t140;
     	let div77;
     	let div74;
     	let h55;
-    	let a36;
+    	let a37;
     	let p8;
-    	let t140;
+    	let t142;
     	let div76;
     	let div75;
-    	let t142;
+    	let t144;
     	let div91;
     	let div88;
     	let h56;
-    	let a37;
-    	let t143;
     	let a38;
-    	let p9;
     	let t145;
+    	let a39;
+    	let p9;
+    	let t147;
     	let div90;
     	let div89;
-    	let t147;
+    	let t149;
     	let div95;
     	let div92;
     	let h57;
-    	let a39;
-    	let t148;
     	let a40;
-    	let p10;
     	let t150;
+    	let a41;
+    	let p10;
+    	let t152;
     	let div94;
     	let div93;
-    	let t152;
+    	let div96_class_value;
+    	let div96_role_value;
+    	let div97_class_value;
+    	let div97_id_value;
+    	let div97_tabindex_value;
+    	let div97_role_value;
+    	let div98_class_value;
+    	let t154;
     	let div121;
     	let div120;
     	let div116;
     	let div115;
     	let h58;
-    	let t154;
-    	let p11;
     	let t156;
+    	let p11;
+    	let t158;
     	let div114;
     	let div113;
     	let div101;
-    	let t158;
-    	let div102;
-    	let a41;
     	let t160;
-    	let div103;
+    	let div102;
+    	let a42;
     	let t162;
-    	let div104;
+    	let div103;
     	let t164;
-    	let div105;
+    	let div104;
     	let t166;
-    	let div106;
+    	let div105;
     	let t168;
-    	let div107;
+    	let div106;
     	let t170;
-    	let div108;
+    	let div107;
     	let t172;
-    	let div109;
+    	let div108;
     	let t174;
-    	let div110;
+    	let div109;
     	let t176;
-    	let div111;
+    	let div110;
     	let t178;
-    	let div112;
+    	let div111;
     	let t180;
+    	let div112;
+    	let t182;
     	let div119;
     	let div118;
     	let h59;
-    	let t182;
-    	let p12;
     	let t184;
+    	let p12;
+    	let t186;
     	let div117;
     	let main_transition;
-    	let t185;
+    	let t187;
     	let br0;
     	let br1;
     	let current;
     	let mounted;
     	let dispose;
-    	let if_block = /*y*/ ctx[0] > 600 && create_if_block$1(ctx);
+    	let if_block0 = /*y*/ ctx[1] > 600 && create_if_block_1$1(ctx);
+    	let if_block1 = /*x*/ ctx[0] <= 767 && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
-    			if (if_block) if_block.c();
+    			if (if_block0) if_block0.c();
     			t0 = space();
     			main = element("main");
     			div123 = element("div");
@@ -5164,19 +5251,25 @@ var app = (function () {
     			t115 = space();
     			div98 = element("div");
     			div59 = element("div");
-    			div59.textContent = "دسته بندی";
-    			t117 = space();
+    			a26 = element("a");
+    			i26 = element("i");
+    			t116 = space();
+    			span15 = element("span");
+    			span15.textContent = "دسته بندی";
+    			t118 = space();
     			div97 = element("div");
     			div96 = element("div");
+    			if (if_block1) if_block1.c();
+    			t119 = space();
     			div87 = element("div");
     			div60 = element("div");
     			h50 = element("h5");
-    			a26 = element("a");
-    			t118 = space();
     			a27 = element("a");
+    			t120 = space();
+    			a28 = element("a");
     			p3 = element("p");
     			p3.textContent = "بازاریابی";
-    			t120 = space();
+    			t122 = space();
     			div86 = element("div");
     			div85 = element("div");
     			div84 = element("div");
@@ -5184,38 +5277,38 @@ var app = (function () {
     			div64 = element("div");
     			div61 = element("div");
     			h51 = element("h5");
-    			a28 = element("a");
-    			t121 = space();
     			a29 = element("a");
+    			t123 = space();
+    			a30 = element("a");
     			p4 = element("p");
     			p4.textContent = "کسب و کار";
-    			t123 = space();
+    			t125 = space();
     			div63 = element("div");
     			div62 = element("div");
     			div62.textContent = "فوتبال";
-    			t125 = space();
+    			t127 = space();
     			div68 = element("div");
     			div65 = element("div");
     			h52 = element("h5");
-    			a30 = element("a");
-    			t126 = space();
     			a31 = element("a");
+    			t128 = space();
+    			a32 = element("a");
     			p5 = element("p");
     			p5.textContent = "مدیریت تلکنولوژی";
-    			t128 = space();
+    			t130 = space();
     			div67 = element("div");
     			div66 = element("div");
     			div66.textContent = "خاورمیانه";
-    			t130 = space();
+    			t132 = space();
     			div82 = element("div");
     			div69 = element("div");
     			h53 = element("h5");
-    			a32 = element("a");
-    			t131 = space();
     			a33 = element("a");
+    			t133 = space();
+    			a34 = element("a");
     			p6 = element("p");
     			p6.textContent = "آرشیو کلیپ ها";
-    			t133 = space();
+    			t135 = space();
     			div81 = element("div");
     			div80 = element("div");
     			div79 = element("div");
@@ -5223,815 +5316,848 @@ var app = (function () {
     			div73 = element("div");
     			div70 = element("div");
     			h54 = element("h5");
-    			a34 = element("a");
-    			t134 = space();
     			a35 = element("a");
+    			t136 = space();
+    			a36 = element("a");
     			p7 = element("p");
     			p7.textContent = "کسب و کار";
-    			t136 = space();
+    			t138 = space();
     			div72 = element("div");
     			div71 = element("div");
     			div71.textContent = "فوتبال";
-    			t138 = space();
+    			t140 = space();
     			div77 = element("div");
     			div74 = element("div");
     			h55 = element("h5");
-    			a36 = element("a");
+    			a37 = element("a");
     			p8 = element("p");
     			p8.textContent = "مدیریت تلکنولوژی";
-    			t140 = space();
+    			t142 = space();
     			div76 = element("div");
     			div75 = element("div");
     			div75.textContent = "خاورمیانه";
-    			t142 = space();
+    			t144 = space();
     			div91 = element("div");
     			div88 = element("div");
     			h56 = element("h5");
-    			a37 = element("a");
-    			t143 = space();
     			a38 = element("a");
+    			t145 = space();
+    			a39 = element("a");
     			p9 = element("p");
     			p9.textContent = "مدیریت تلکنولوژی";
-    			t145 = space();
+    			t147 = space();
     			div90 = element("div");
     			div89 = element("div");
     			div89.textContent = "خاورمیانه";
-    			t147 = space();
+    			t149 = space();
     			div95 = element("div");
     			div92 = element("div");
     			h57 = element("h5");
-    			a39 = element("a");
-    			t148 = space();
     			a40 = element("a");
+    			t150 = space();
+    			a41 = element("a");
     			p10 = element("p");
     			p10.textContent = "آرشیو کلیپ ها";
-    			t150 = space();
+    			t152 = space();
     			div94 = element("div");
     			div93 = element("div");
     			div93.textContent = "راهیان نور";
-    			t152 = space();
+    			t154 = space();
     			div121 = element("div");
     			div120 = element("div");
     			div116 = element("div");
     			div115 = element("div");
     			h58 = element("h5");
     			h58.textContent = "درباره آفرینه";
-    			t154 = space();
+    			t156 = space();
     			p11 = element("p");
     			p11.textContent = "لورم ایپسوم یک متن ساختگی برای طراحی و نمایش محتوای بی ربط است اما این متن نوشته شده هیچ ربطی به لورم ایپسوم ندارد.\n                                    این چیزی که میبینید صرفا یک متن ساختگی تر نسبت به لورم ایپسوم است تا شما بتواندی با گرفتن خروجی در سایت و موبایل یا هر دستگاه دیگر خروجی بگیرید و نگاه کنید که ساختار کد نوشتاری سایت با لورم به چه صورتی در آمده است.\n                                    با تشکر از سایت ساختگی نوشتار لورم ایپسوم آقای بوق";
-    			t156 = space();
+    			t158 = space();
     			div114 = element("div");
     			div113 = element("div");
     			div101 = element("div");
     			div101.textContent = "وبسایت";
-    			t158 = space();
-    			div102 = element("div");
-    			a41 = element("a");
-    			a41.textContent = "http://afarine.com/";
     			t160 = space();
+    			div102 = element("div");
+    			a42 = element("a");
+    			a42.textContent = "http://afarine.com/";
+    			t162 = space();
     			div103 = element("div");
     			div103.textContent = "نوع فعالیت";
-    			t162 = space();
+    			t164 = space();
     			div104 = element("div");
     			div104.textContent = "کارآفرینی و کسب و کار - خصوصی";
-    			t164 = space();
+    			t166 = space();
     			div105 = element("div");
     			div105.textContent = "میزان استخدام";
-    			t166 = space();
+    			t168 = space();
     			div106 = element("div");
     			div106.textContent = "۱۲۰ + کارمند";
-    			t168 = space();
+    			t170 = space();
     			div107 = element("div");
     			div107.textContent = "تاریخ تاسیس";
-    			t170 = space();
+    			t172 = space();
     			div108 = element("div");
     			div108.textContent = "۲۰۱۸";
-    			t172 = space();
+    			t174 = space();
     			div109 = element("div");
     			div109.textContent = "تخصص ها";
-    			t174 = space();
+    			t176 = space();
     			div110 = element("div");
     			div110.textContent = "اشتغال/بازاریابی/کسب و کار/";
-    			t176 = space();
+    			t178 = space();
     			div111 = element("div");
     			div111.textContent = "آدرس اصلی";
-    			t178 = space();
+    			t180 = space();
     			div112 = element("div");
     			div112.textContent = "تهران,شهرک طالقانی,ساحتمان نگین";
-    			t180 = space();
+    			t182 = space();
     			div119 = element("div");
     			div118 = element("div");
     			h59 = element("h5");
     			h59.textContent = "موقعیت مکانی آفرینه";
-    			t182 = space();
+    			t184 = space();
     			p12 = element("p");
     			p12.textContent = "برای یافتن مکان دقیق باید زوم کنید";
-    			t184 = space();
+    			t186 = space();
     			div117 = element("div");
-    			t185 = space();
+    			t187 = space();
     			br0 = element("br");
     			br1 = element("br");
     			attr_dev(img0, "class", "w-100 dream-job-image");
     			if (img0.src !== (img0_src_value = "image/job.jpg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$5, 88, 32, 3781);
+    			add_location(img0, file$5, 93, 32, 4014);
     			attr_dev(a0, "href", "#");
-    			add_location(a0, file$5, 87, 28, 3736);
+    			add_location(a0, file$5, 92, 28, 3969);
     			attr_dev(div0, "class", "col-12 my-1");
-    			add_location(div0, file$5, 86, 24, 3682);
+    			add_location(div0, file$5, 91, 24, 3915);
     			attr_dev(div1, "class", "row ");
-    			add_location(div1, file$5, 85, 20, 3639);
+    			add_location(div1, file$5, 90, 20, 3872);
     			attr_dev(div2, "class", "col-12 shadow-radius-section bg-light");
-    			add_location(div2, file$5, 84, 16, 3567);
+    			add_location(div2, file$5, 89, 16, 3800);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$5, 83, 12, 3533);
-    			attr_dev(aside0, "class", "col-12 col-md-3 mr-2 d-none d-md-inline");
-    			add_location(aside0, file$5, 82, 8, 3464);
+    			add_location(div3, file$5, 88, 12, 3766);
+    			attr_dev(aside0, "class", "col-12 col-md-3 mr-2 d-none d-lg-inline");
+    			add_location(aside0, file$5, 87, 8, 3697);
     			attr_dev(img1, "class", " header-image bg-light");
     			if (img1.src !== (img1_src_value = "image/head.jpeg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$5, 100, 28, 4294);
+    			add_location(img1, file$5, 105, 28, 4530);
     			attr_dev(div4, "class", "col-12 p-0 banner");
     			set_style(div4, "overflow", "hidden");
-    			add_location(div4, file$5, 99, 24, 4208);
+    			add_location(div4, file$5, 104, 24, 4444);
     			attr_dev(img2, "class", "header-logo-image");
     			if (img2.src !== (img2_src_value = "image/afarine.jpg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
-    			add_location(img2, file$5, 103, 28, 4482);
+    			add_location(img2, file$5, 108, 28, 4718);
     			attr_dev(div5, "class", "col-12 header-image-main");
-    			add_location(div5, file$5, 102, 24, 4415);
+    			add_location(div5, file$5, 107, 24, 4651);
     			set_style(i0, "color", "#048af7");
     			set_style(i0, "font-size", "20px");
     			attr_dev(i0, "class", "fas fa-check-circle");
-    			add_location(i0, file$5, 108, 70, 4804);
+    			add_location(i0, file$5, 113, 70, 5040);
     			attr_dev(h30, "class", "text-bold");
-    			add_location(h30, file$5, 108, 36, 4770);
+    			add_location(h30, file$5, 113, 36, 5006);
     			attr_dev(i1, "class", "fas fa-map-marker-alt");
-    			add_location(i1, file$5, 109, 63, 4947);
+    			add_location(i1, file$5, 114, 63, 5183);
     			attr_dev(h60, "class", "text-secondary");
-    			add_location(h60, file$5, 109, 36, 4920);
+    			add_location(h60, file$5, 114, 36, 5156);
     			attr_dev(h61, "class", "explain-about-page");
-    			add_location(h61, file$5, 110, 36, 5063);
+    			add_location(h61, file$5, 115, 36, 5299);
     			attr_dev(i2, "class", "fas fa-external-link-alt padding-button ml-2 icon-size");
-    			add_location(i2, file$5, 113, 120, 5512);
+    			add_location(i2, file$5, 118, 120, 5748);
     			attr_dev(button0, "class", "btn  rounded-pill  font btn-mw text-center visit-btn mx-1  ");
-    			add_location(button0, file$5, 113, 44, 5436);
+    			add_location(button0, file$5, 118, 44, 5672);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "data-toggle", "dropdown");
     			attr_dev(button1, "class", "pt-custome-more-btn btn btn-mw rounded-pill col-12 font text-center col-md-6 ");
-    			add_location(button1, file$5, 115, 48, 5761);
+    			add_location(button1, file$5, 120, 48, 5997);
     			attr_dev(i3, "class", "fas fa-share-alt");
-    			add_location(i3, file$5, 117, 68, 6065);
+    			add_location(i3, file$5, 122, 68, 6301);
     			attr_dev(a1, "href", "#");
-    			add_location(a1, file$5, 117, 56, 6053);
-    			add_location(li0, file$5, 117, 52, 6049);
+    			add_location(a1, file$5, 122, 56, 6289);
+    			add_location(li0, file$5, 122, 52, 6285);
     			attr_dev(i4, "class", "fas fa-flag");
-    			add_location(i4, file$5, 118, 68, 6188);
+    			add_location(i4, file$5, 123, 68, 6424);
     			attr_dev(a2, "href", "#");
-    			add_location(a2, file$5, 118, 56, 6176);
-    			add_location(li1, file$5, 118, 52, 6172);
+    			add_location(a2, file$5, 123, 56, 6412);
+    			add_location(li1, file$5, 123, 52, 6408);
     			attr_dev(ul0, "class", "dropdown-menu  ellipsis-menu");
-    			add_location(ul0, file$5, 116, 48, 5955);
+    			add_location(ul0, file$5, 121, 48, 6191);
     			attr_dev(div6, "class", "col-5 justify-content-start dropdown dropleft pr-1");
-    			add_location(div6, file$5, 114, 44, 5648);
+    			add_location(div6, file$5, 119, 44, 5884);
     			attr_dev(div7, "class", "row");
-    			add_location(div7, file$5, 112, 40, 5374);
+    			add_location(div7, file$5, 117, 40, 5610);
     			attr_dev(div8, "class", "col-12 mt-4 font");
-    			add_location(div8, file$5, 111, 36, 5303);
+    			add_location(div8, file$5, 116, 36, 5539);
     			attr_dev(div9, "class", "col-10");
-    			add_location(div9, file$5, 107, 32, 4713);
+    			add_location(div9, file$5, 112, 32, 4949);
     			attr_dev(div10, "class", "row");
-    			add_location(div10, file$5, 106, 28, 4663);
+    			add_location(div10, file$5, 111, 28, 4899);
     			attr_dev(div11, "class", "header-detail col-12");
-    			add_location(div11, file$5, 105, 24, 4600);
-    			attr_dev(a3, "class", "nav-link-scroll py-2 active ");
+    			add_location(div11, file$5, 110, 24, 4836);
+    			attr_dev(a3, "class", "py-2 nav-link-scroll");
     			attr_dev(a3, "data-toggle", "tab");
     			attr_dev(a3, "href", "#post");
-    			add_location(a3, file$5, 131, 73, 6919);
+    			toggle_class(a3, "active", /*current*/ ctx[3] === "post");
+    			add_location(a3, file$5, 136, 73, 7155);
     			attr_dev(li2, "class", "nav-item-scroll mt-2");
-    			add_location(li2, file$5, 131, 40, 6886);
-    			attr_dev(a4, "class", "nav-link-scroll  py-2");
+    			add_location(li2, file$5, 136, 40, 7122);
+    			attr_dev(a4, "class", "py-2 nav-link-scroll");
     			attr_dev(a4, "data-toggle", "tab");
     			attr_dev(a4, "href", "#about");
-    			add_location(a4, file$5, 132, 73, 7076);
+    			toggle_class(a4, "active", /*current*/ ctx[3] === "about");
+    			add_location(a4, file$5, 137, 73, 7373);
     			attr_dev(li3, "class", "nav-item-scroll mt-2");
-    			add_location(li3, file$5, 132, 40, 7043);
+    			add_location(li3, file$5, 137, 40, 7340);
     			attr_dev(ul1, "class", "nav nav-tabs direction text-center");
     			attr_dev(ul1, "role", "tablist");
-    			add_location(ul1, file$5, 130, 36, 6783);
+    			add_location(ul1, file$5, 135, 36, 7019);
     			attr_dev(div12, "class", "row  scroll-main-height");
-    			add_location(div12, file$5, 129, 32, 6709);
+    			add_location(div12, file$5, 134, 32, 6945);
     			attr_dev(div13, "class", "col-12 tab-header-main mt-3 ");
-    			add_location(div13, file$5, 128, 28, 6634);
+    			add_location(div13, file$5, 133, 28, 6870);
     			attr_dev(div14, "class", "row p-0 shadow-radius-section bg-white");
-    			add_location(div14, file$5, 98, 20, 4130);
+    			add_location(div14, file$5, 103, 20, 4366);
     			attr_dev(div15, "class", "col-12 ");
-    			add_location(div15, file$5, 97, 16, 4088);
-    			attr_dev(div16, "class", "row ml-1 ");
-    			add_location(div16, file$5, 96, 12, 4048);
+    			add_location(div15, file$5, 102, 16, 4324);
+    			attr_dev(div16, "class", "row ml-md-1 ");
+    			add_location(div16, file$5, 101, 12, 4281);
     			attr_dev(img3, "class", "cu-image-com mr-1 ");
     			if (img3.src !== (img3_src_value = "image/afarine.jpg")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "");
-    			add_location(img3, file$5, 152, 60, 8370);
+    			add_location(img3, file$5, 157, 60, 8774);
     			attr_dev(div17, "class", "col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1");
-    			add_location(div17, file$5, 151, 56, 8253);
+    			add_location(div17, file$5, 156, 56, 8657);
     			set_style(i5, "color", "#048af7");
     			attr_dev(i5, "class", "fas fa-check-circle");
-    			add_location(i5, file$5, 156, 134, 8853);
+    			add_location(i5, file$5, 161, 134, 9257);
     			attr_dev(a5, "href", "#");
     			attr_dev(a5, "class", "title-post-link");
-    			add_location(a5, file$5, 156, 68, 8787);
-    			add_location(h62, file$5, 156, 64, 8783);
+    			add_location(a5, file$5, 161, 68, 9191);
+    			add_location(h62, file$5, 161, 64, 9187);
     			attr_dev(i6, "class", "fas fa-clock");
-    			add_location(i6, file$5, 157, 96, 9017);
+    			add_location(i6, file$5, 162, 96, 9421);
     			attr_dev(span0, "class", "show-time-custome");
-    			add_location(span0, file$5, 157, 64, 8985);
+    			add_location(span0, file$5, 162, 64, 9389);
     			attr_dev(div18, "class", "cu-intro mt-2");
-    			add_location(div18, file$5, 155, 60, 8691);
+    			add_location(div18, file$5, 160, 60, 9095);
     			attr_dev(div19, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center ");
-    			add_location(div19, file$5, 154, 56, 8553);
+    			add_location(div19, file$5, 159, 56, 8957);
     			attr_dev(div20, "class", "row ");
-    			add_location(div20, file$5, 150, 52, 8178);
+    			add_location(div20, file$5, 155, 52, 8582);
     			attr_dev(div21, "class", "col-11 col-md-11");
-    			add_location(div21, file$5, 149, 48, 8094);
+    			add_location(div21, file$5, 154, 48, 8498);
     			attr_dev(i7, "class", "fas fa-ellipsis-h -1 ");
     			attr_dev(i7, "type", "button");
     			attr_dev(i7, "data-toggle", "dropdown");
-    			add_location(i7, file$5, 163, 52, 9453);
+    			add_location(i7, file$5, 168, 52, 9874);
     			attr_dev(i8, "class", "far fa-bookmark");
-    			add_location(i8, file$5, 165, 136, 9757);
+    			add_location(i8, file$5, 170, 136, 10178);
     			attr_dev(a6, "class", "dropdown-item");
     			attr_dev(a6, "href", "#");
-    			add_location(a6, file$5, 165, 101, 9722);
-    			add_location(li4, file$5, 165, 56, 9677);
+    			add_location(a6, file$5, 170, 101, 10143);
+    			add_location(li4, file$5, 170, 56, 10098);
     			attr_dev(i9, "class", "fas fa-share-alt");
-    			add_location(i9, file$5, 166, 94, 9908);
+    			add_location(i9, file$5, 171, 94, 10329);
     			attr_dev(a7, "class", "dropdown-item");
     			attr_dev(a7, "href", "#");
-    			add_location(a7, file$5, 166, 60, 9874);
-    			add_location(li5, file$5, 166, 56, 9870);
+    			add_location(a7, file$5, 171, 60, 10295);
+    			add_location(li5, file$5, 171, 56, 10291);
     			attr_dev(i10, "class", "fas fa-flag");
-    			add_location(i10, file$5, 167, 94, 10059);
+    			add_location(i10, file$5, 172, 94, 10480);
     			attr_dev(a8, "class", "dropdown-item");
     			attr_dev(a8, "href", "#");
-    			add_location(a8, file$5, 167, 60, 10025);
-    			add_location(li6, file$5, 167, 56, 10021);
+    			add_location(a8, file$5, 172, 60, 10446);
+    			add_location(li6, file$5, 172, 56, 10442);
     			attr_dev(ul2, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul2, file$5, 164, 52, 9580);
-    			attr_dev(div22, "class", "col-1 ml-0 pl-0 pr-4 dropdown");
-    			add_location(div22, file$5, 162, 48, 9357);
+    			add_location(ul2, file$5, 169, 52, 10001);
+    			attr_dev(div22, "class", "col-1 ml-0 pl-0 pr-4  pr-md-3 pr-lg-4 dropdown");
+    			add_location(div22, file$5, 167, 48, 9761);
     			attr_dev(div23, "class", "row justify-content-between p-2 pl-4 pl-md-2");
-    			add_location(div23, file$5, 148, 44, 7987);
+    			add_location(div23, file$5, 153, 44, 8391);
     			attr_dev(div24, "class", "col-12");
-    			add_location(div24, file$5, 147, 40, 7922);
+    			add_location(div24, file$5, 152, 40, 8326);
     			attr_dev(a9, "class", "title-post-link");
     			attr_dev(a9, "href", "profile/show-detail");
-    			add_location(a9, file$5, 174, 88, 10512);
+    			add_location(a9, file$5, 179, 88, 10933);
     			attr_dev(h31, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h31, file$5, 174, 44, 10468);
+    			add_location(h31, file$5, 179, 44, 10889);
     			attr_dev(div25, "class", "col-12 p-0");
-    			add_location(div25, file$5, 173, 40, 10399);
+    			add_location(div25, file$5, 178, 40, 10820);
     			if (img4.src !== (img4_src_value = "image/30.jpg")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
     			attr_dev(img4, "alt", "");
-    			add_location(img4, file$5, 177, 44, 10787);
+    			add_location(img4, file$5, 182, 44, 11208);
     			attr_dev(div26, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div26, file$5, 176, 40, 10685);
+    			add_location(div26, file$5, 181, 40, 11106);
     			attr_dev(span1, "id", "dots");
-    			add_location(span1, file$5, 183, 130, 11430);
+    			add_location(span1, file$5, 188, 130, 11851);
     			attr_dev(span2, "id", "more");
-    			add_location(span2, file$5, 183, 156, 11456);
+    			add_location(span2, file$5, 188, 156, 11877);
     			attr_dev(span3, "id", "myBtn");
     			set_style(span3, "cursor", "pointer");
-    			add_location(span3, file$5, 190, 44, 12231);
+    			add_location(span3, file$5, 195, 44, 12652);
     			attr_dev(p0, "class", "col-12 mt-3 post-text");
-    			add_location(p0, file$5, 180, 40, 10998);
+    			add_location(p0, file$5, 185, 40, 11419);
     			attr_dev(button2, "id", "read-more");
     			attr_dev(button2, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button2, file$5, 195, 48, 12573);
+    			add_location(button2, file$5, 200, 48, 12994);
     			attr_dev(a10, "href", "#");
-    			add_location(a10, file$5, 194, 44, 12512);
+    			add_location(a10, file$5, 199, 44, 12933);
     			attr_dev(div27, "class", "col-12 ");
-    			add_location(div27, file$5, 193, 40, 12446);
+    			add_location(div27, file$5, 198, 40, 12867);
     			attr_dev(img5, "class", "personal-img");
     			if (img5.src !== (img5_src_value = "image/1.jpeg")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "");
-    			add_location(img5, file$5, 201, 48, 13040);
+    			add_location(img5, file$5, 206, 48, 13461);
     			attr_dev(span4, "class", "personal-name");
-    			add_location(span4, file$5, 202, 48, 13141);
+    			add_location(span4, file$5, 207, 48, 13562);
     			attr_dev(a11, "class", "a-clicked");
     			attr_dev(a11, "href", "#");
-    			add_location(a11, file$5, 200, 44, 12961);
+    			add_location(a11, file$5, 205, 44, 13382);
     			attr_dev(i11, "class", "fas fa-eye");
-    			add_location(i11, file$5, 204, 68, 13324);
+    			add_location(i11, file$5, 209, 68, 13745);
     			attr_dev(div28, "class", "view-count");
-    			add_location(div28, file$5, 204, 44, 13300);
+    			add_location(div28, file$5, 209, 44, 13721);
     			attr_dev(div29, "class", "col-12 mb-1 author-show-box pt-1");
-    			add_location(div29, file$5, 199, 40, 12870);
+    			add_location(div29, file$5, 204, 40, 13291);
     			attr_dev(article0, "class", "p-0  shadow-radius-section shadow-section mb-4 bg-light");
-    			add_location(article0, file$5, 146, 36, 7808);
+    			add_location(article0, file$5, 151, 36, 8212);
     			attr_dev(img6, "class", "cu-image-com mr-1 ");
     			if (img6.src !== (img6_src_value = "image/afarine.jpg")) attr_dev(img6, "src", img6_src_value);
     			attr_dev(img6, "alt", "");
-    			add_location(img6, file$5, 213, 60, 14038);
+    			add_location(img6, file$5, 218, 60, 14459);
     			attr_dev(div30, "class", "col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1");
-    			add_location(div30, file$5, 212, 56, 13921);
+    			add_location(div30, file$5, 217, 56, 14342);
     			set_style(i12, "color", "#048af7");
     			attr_dev(i12, "class", "fas fa-check-circle");
-    			add_location(i12, file$5, 217, 110, 14496);
+    			add_location(i12, file$5, 222, 110, 14917);
     			attr_dev(a12, "href", "#");
-    			add_location(a12, file$5, 217, 68, 14454);
-    			add_location(h63, file$5, 217, 64, 14450);
+    			add_location(a12, file$5, 222, 68, 14875);
+    			add_location(h63, file$5, 222, 64, 14871);
     			attr_dev(i13, "class", "fas fa-clock");
-    			add_location(i13, file$5, 218, 96, 14660);
+    			add_location(i13, file$5, 223, 96, 15081);
     			attr_dev(span5, "class", "show-time-custome");
-    			add_location(span5, file$5, 218, 64, 14628);
+    			add_location(span5, file$5, 223, 64, 15049);
     			attr_dev(div31, "class", "cu-intro mt-2");
-    			add_location(div31, file$5, 216, 60, 14358);
+    			add_location(div31, file$5, 221, 60, 14779);
     			attr_dev(div32, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center");
-    			add_location(div32, file$5, 215, 56, 14221);
+    			add_location(div32, file$5, 220, 56, 14642);
     			attr_dev(div33, "class", "row ");
-    			add_location(div33, file$5, 211, 52, 13846);
+    			add_location(div33, file$5, 216, 52, 14267);
     			attr_dev(div34, "class", "col-11 col-md-11");
-    			add_location(div34, file$5, 210, 48, 13762);
+    			add_location(div34, file$5, 215, 48, 14183);
     			attr_dev(i14, "class", "fas fa-ellipsis-v ");
     			attr_dev(i14, "type", "button");
     			attr_dev(i14, "data-toggle", "dropdown");
-    			add_location(i14, file$5, 224, 48, 15090);
+    			add_location(i14, file$5, 229, 48, 15511);
     			attr_dev(i15, "class", "far fa-bookmark");
-    			add_location(i15, file$5, 226, 109, 15360);
+    			add_location(i15, file$5, 231, 109, 15781);
     			attr_dev(a13, "href", "#");
-    			add_location(a13, file$5, 226, 97, 15348);
-    			add_location(li7, file$5, 226, 52, 15303);
+    			add_location(a13, file$5, 231, 97, 15769);
+    			add_location(li7, file$5, 231, 52, 15724);
     			attr_dev(i16, "class", "fas fa-share-alt");
-    			add_location(i16, file$5, 227, 68, 15485);
+    			add_location(i16, file$5, 232, 68, 15906);
     			attr_dev(a14, "href", "#");
-    			add_location(a14, file$5, 227, 56, 15473);
-    			add_location(li8, file$5, 227, 52, 15469);
+    			add_location(a14, file$5, 232, 56, 15894);
+    			add_location(li8, file$5, 232, 52, 15890);
     			attr_dev(i17, "class", "fas fa-flag");
-    			add_location(i17, file$5, 228, 68, 15610);
+    			add_location(i17, file$5, 233, 68, 16031);
     			attr_dev(a15, "href", "#");
-    			add_location(a15, file$5, 228, 56, 15598);
-    			add_location(li9, file$5, 228, 52, 15594);
+    			add_location(a15, file$5, 233, 56, 16019);
+    			add_location(li9, file$5, 233, 52, 16015);
     			attr_dev(ul3, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul3, file$5, 225, 48, 15210);
+    			add_location(ul3, file$5, 230, 48, 15631);
     			attr_dev(div35, "class", "col-1 ml-0 pl-0 pr-4 dropdown");
-    			add_location(div35, file$5, 223, 48, 14998);
+    			add_location(div35, file$5, 228, 48, 15419);
     			attr_dev(div36, "class", "row justify-content-between p-2");
-    			add_location(div36, file$5, 209, 44, 13668);
+    			add_location(div36, file$5, 214, 44, 14089);
     			attr_dev(div37, "class", "col-12");
-    			add_location(div37, file$5, 208, 40, 13603);
+    			add_location(div37, file$5, 213, 40, 14024);
     			attr_dev(a16, "href", "#");
-    			add_location(a16, file$5, 234, 88, 16018);
+    			add_location(a16, file$5, 239, 88, 16439);
     			attr_dev(h32, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h32, file$5, 234, 44, 15974);
+    			add_location(h32, file$5, 239, 44, 16395);
     			attr_dev(div38, "class", "col-12 p-0");
-    			add_location(div38, file$5, 233, 40, 15905);
+    			add_location(div38, file$5, 238, 40, 16326);
     			if (img7.src !== (img7_src_value = "image/28.jpg")) attr_dev(img7, "src", img7_src_value);
     			attr_dev(img7, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
     			attr_dev(img7, "alt", "");
-    			add_location(img7, file$5, 237, 44, 16283);
+    			add_location(img7, file$5, 242, 44, 16704);
     			attr_dev(div39, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div39, file$5, 236, 40, 16181);
+    			add_location(div39, file$5, 241, 40, 16602);
     			attr_dev(span6, "id", "dots");
-    			add_location(span6, file$5, 243, 130, 16926);
+    			add_location(span6, file$5, 248, 130, 17347);
     			attr_dev(span7, "id", "more");
-    			add_location(span7, file$5, 243, 156, 16952);
+    			add_location(span7, file$5, 248, 156, 17373);
     			attr_dev(span8, "id", "myBtn");
     			set_style(span8, "cursor", "pointer");
-    			add_location(span8, file$5, 250, 44, 17727);
+    			add_location(span8, file$5, 255, 44, 18148);
     			attr_dev(p1, "class", "col-12 mt-3 post-text");
-    			add_location(p1, file$5, 240, 40, 16494);
+    			add_location(p1, file$5, 245, 40, 16915);
     			attr_dev(button3, "id", "read-more");
     			attr_dev(button3, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button3, file$5, 255, 48, 18069);
+    			add_location(button3, file$5, 260, 48, 18490);
     			attr_dev(a17, "href", "#");
-    			add_location(a17, file$5, 254, 44, 18008);
+    			add_location(a17, file$5, 259, 44, 18429);
     			attr_dev(div40, "class", "col-12 ");
-    			add_location(div40, file$5, 253, 40, 17942);
+    			add_location(div40, file$5, 258, 40, 18363);
     			attr_dev(hr0, "class", "col-11 mx-auto");
-    			add_location(hr0, file$5, 258, 40, 18325);
+    			add_location(hr0, file$5, 263, 40, 18746);
     			attr_dev(img8, "class", "personal-img");
     			if (img8.src !== (img8_src_value = "image/1.jpeg")) attr_dev(img8, "src", img8_src_value);
     			attr_dev(img8, "alt", "");
-    			add_location(img8, file$5, 261, 48, 18542);
+    			add_location(img8, file$5, 266, 48, 18963);
     			attr_dev(span9, "class", "personal-name");
-    			add_location(span9, file$5, 262, 48, 18643);
+    			add_location(span9, file$5, 267, 48, 19064);
     			attr_dev(a18, "class", "a-clicked");
     			attr_dev(a18, "href", "#");
-    			add_location(a18, file$5, 260, 44, 18463);
+    			add_location(a18, file$5, 265, 44, 18884);
     			attr_dev(i18, "class", "fas fa-eye");
-    			add_location(i18, file$5, 264, 68, 18826);
+    			add_location(i18, file$5, 269, 68, 19247);
     			attr_dev(div41, "class", "view-count");
-    			add_location(div41, file$5, 264, 44, 18802);
+    			add_location(div41, file$5, 269, 44, 19223);
     			attr_dev(div42, "class", "col-12 mb-3");
-    			add_location(div42, file$5, 259, 40, 18393);
+    			add_location(div42, file$5, 264, 40, 18814);
     			attr_dev(article1, "class", "p-0 shadow-radius-section shadow-section mb-3 bg-light");
-    			add_location(article1, file$5, 207, 36, 13490);
+    			add_location(article1, file$5, 212, 36, 13911);
     			attr_dev(img9, "class", "cu-image-com mr-1 ");
     			if (img9.src !== (img9_src_value = "image/afarine.jpg")) attr_dev(img9, "src", img9_src_value);
     			attr_dev(img9, "alt", "");
-    			add_location(img9, file$5, 273, 60, 19541);
+    			add_location(img9, file$5, 278, 60, 19962);
     			attr_dev(div43, "class", "col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1");
-    			add_location(div43, file$5, 272, 56, 19424);
+    			add_location(div43, file$5, 277, 56, 19845);
     			set_style(i19, "color", "#048af7");
     			attr_dev(i19, "class", "fas fa-check-circle");
-    			add_location(i19, file$5, 277, 110, 19999);
+    			add_location(i19, file$5, 282, 110, 20420);
     			attr_dev(a19, "href", "#");
-    			add_location(a19, file$5, 277, 68, 19957);
-    			add_location(h64, file$5, 277, 64, 19953);
+    			add_location(a19, file$5, 282, 68, 20378);
+    			add_location(h64, file$5, 282, 64, 20374);
     			attr_dev(i20, "class", "fas fa-clock");
-    			add_location(i20, file$5, 278, 96, 20163);
+    			add_location(i20, file$5, 283, 96, 20584);
     			attr_dev(span10, "class", "show-time-custome");
-    			add_location(span10, file$5, 278, 64, 20131);
+    			add_location(span10, file$5, 283, 64, 20552);
     			attr_dev(div44, "class", "cu-intro mt-2");
-    			add_location(div44, file$5, 276, 60, 19861);
+    			add_location(div44, file$5, 281, 60, 20282);
     			attr_dev(div45, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center");
-    			add_location(div45, file$5, 275, 56, 19724);
+    			add_location(div45, file$5, 280, 56, 20145);
     			attr_dev(div46, "class", "row ");
-    			add_location(div46, file$5, 271, 52, 19349);
+    			add_location(div46, file$5, 276, 52, 19770);
     			attr_dev(div47, "class", "col-11 col-md-11");
-    			add_location(div47, file$5, 270, 48, 19265);
+    			add_location(div47, file$5, 275, 48, 19686);
     			attr_dev(i21, "class", "fas fa-ellipsis-v ");
     			attr_dev(i21, "type", "button");
     			attr_dev(i21, "data-toggle", "dropdown");
-    			add_location(i21, file$5, 284, 48, 20595);
+    			add_location(i21, file$5, 289, 48, 21016);
     			attr_dev(i22, "class", "far fa-bookmark");
-    			add_location(i22, file$5, 286, 109, 20865);
+    			add_location(i22, file$5, 291, 109, 21286);
     			attr_dev(a20, "href", "#");
-    			add_location(a20, file$5, 286, 97, 20853);
-    			add_location(li10, file$5, 286, 52, 20808);
+    			add_location(a20, file$5, 291, 97, 21274);
+    			add_location(li10, file$5, 291, 52, 21229);
     			attr_dev(i23, "class", "fas fa-share-alt");
-    			add_location(i23, file$5, 287, 68, 20990);
+    			add_location(i23, file$5, 292, 68, 21411);
     			attr_dev(a21, "href", "#");
-    			add_location(a21, file$5, 287, 56, 20978);
-    			add_location(li11, file$5, 287, 52, 20974);
+    			add_location(a21, file$5, 292, 56, 21399);
+    			add_location(li11, file$5, 292, 52, 21395);
     			attr_dev(i24, "class", "fas fa-flag");
-    			add_location(i24, file$5, 288, 68, 21115);
+    			add_location(i24, file$5, 293, 68, 21536);
     			attr_dev(a22, "href", "#");
-    			add_location(a22, file$5, 288, 56, 21103);
-    			add_location(li12, file$5, 288, 52, 21099);
+    			add_location(a22, file$5, 293, 56, 21524);
+    			add_location(li12, file$5, 293, 52, 21520);
     			attr_dev(ul4, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul4, file$5, 285, 48, 20715);
+    			add_location(ul4, file$5, 290, 48, 21136);
     			attr_dev(div48, "class", "col-1 ml-0 pl-0 pr-4 dropdown");
-    			add_location(div48, file$5, 283, 48, 20503);
+    			add_location(div48, file$5, 288, 48, 20924);
     			attr_dev(div49, "class", "row justify-content-between p-2");
-    			add_location(div49, file$5, 269, 44, 19171);
+    			add_location(div49, file$5, 274, 44, 19592);
     			attr_dev(div50, "class", "col-12");
-    			add_location(div50, file$5, 268, 40, 19106);
+    			add_location(div50, file$5, 273, 40, 19527);
     			attr_dev(a23, "href", "#");
-    			add_location(a23, file$5, 294, 88, 21523);
+    			add_location(a23, file$5, 299, 88, 21944);
     			attr_dev(h33, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h33, file$5, 294, 44, 21479);
+    			add_location(h33, file$5, 299, 44, 21900);
     			attr_dev(div51, "class", "col-12 p-0");
-    			add_location(div51, file$5, 293, 40, 21410);
-    			if (img10.src !== (img10_src_value = "../iamge/20.jpg")) attr_dev(img10, "src", img10_src_value);
+    			add_location(div51, file$5, 298, 40, 21831);
+    			if (img10.src !== (img10_src_value = "../image/20.jpg")) attr_dev(img10, "src", img10_src_value);
     			attr_dev(img10, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
     			attr_dev(img10, "alt", "");
-    			add_location(img10, file$5, 297, 44, 21769);
+    			add_location(img10, file$5, 302, 44, 22190);
     			attr_dev(div52, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div52, file$5, 296, 40, 21667);
+    			add_location(div52, file$5, 301, 40, 22088);
     			attr_dev(span11, "id", "dots");
-    			add_location(span11, file$5, 303, 130, 22415);
+    			add_location(span11, file$5, 308, 130, 22836);
     			attr_dev(span12, "id", "more");
-    			add_location(span12, file$5, 303, 156, 22441);
+    			add_location(span12, file$5, 308, 156, 22862);
     			attr_dev(span13, "id", "myBtn");
     			set_style(span13, "cursor", "pointer");
-    			add_location(span13, file$5, 310, 44, 23216);
+    			add_location(span13, file$5, 315, 44, 23637);
     			attr_dev(p2, "class", "col-12 mt-3 post-text");
-    			add_location(p2, file$5, 300, 40, 21983);
+    			add_location(p2, file$5, 305, 40, 22404);
     			attr_dev(button4, "id", "read-more");
     			attr_dev(button4, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button4, file$5, 315, 48, 23558);
+    			add_location(button4, file$5, 320, 48, 23979);
     			attr_dev(a24, "href", "#");
-    			add_location(a24, file$5, 314, 44, 23497);
+    			add_location(a24, file$5, 319, 44, 23918);
     			attr_dev(div53, "class", "col-12 ");
-    			add_location(div53, file$5, 313, 40, 23431);
+    			add_location(div53, file$5, 318, 40, 23852);
     			attr_dev(hr1, "class", "col-11 mx-auto");
-    			add_location(hr1, file$5, 318, 40, 23814);
+    			add_location(hr1, file$5, 323, 40, 24235);
     			attr_dev(img11, "class", "personal-img");
     			if (img11.src !== (img11_src_value = "image/4.jpeg")) attr_dev(img11, "src", img11_src_value);
     			attr_dev(img11, "alt", "");
-    			add_location(img11, file$5, 321, 48, 24031);
+    			add_location(img11, file$5, 326, 48, 24452);
     			attr_dev(span14, "class", "personal-name");
-    			add_location(span14, file$5, 322, 48, 24132);
+    			add_location(span14, file$5, 327, 48, 24553);
     			attr_dev(a25, "class", "a-clicked");
     			attr_dev(a25, "href", "#");
-    			add_location(a25, file$5, 320, 44, 23952);
+    			add_location(a25, file$5, 325, 44, 24373);
     			attr_dev(i25, "class", "fas fa-eye");
-    			add_location(i25, file$5, 324, 68, 24309);
+    			add_location(i25, file$5, 329, 68, 24730);
     			attr_dev(div54, "class", "view-count");
-    			add_location(div54, file$5, 324, 44, 24285);
+    			add_location(div54, file$5, 329, 44, 24706);
     			attr_dev(div55, "class", "col-12 mb-3");
-    			add_location(div55, file$5, 319, 40, 23882);
+    			add_location(div55, file$5, 324, 40, 24303);
     			attr_dev(article2, "class", "p-0 shadow-radius-section shadow-section mb-3 bg-light");
-    			add_location(article2, file$5, 267, 36, 18993);
+    			add_location(article2, file$5, 272, 36, 19414);
     			attr_dev(div56, "class", "col-12 p-0 main-article ");
-    			add_location(div56, file$5, 145, 32, 7733);
+    			add_location(div56, file$5, 150, 32, 8137);
     			attr_dev(section, "class", "row mx-0 mt-3 mr-0 pt-0  ");
-    			add_location(section, file$5, 144, 28, 7657);
+    			add_location(section, file$5, 149, 28, 8061);
     			attr_dev(aside1, "class", "col-12 col-md-9 order-first justify-content-between order-md-0 mx-0 ");
-    			add_location(aside1, file$5, 143, 24, 7544);
-    			attr_dev(img12, "class", "company-img ml-3");
+    			add_location(aside1, file$5, 148, 24, 7948);
+    			attr_dev(img12, "class", "company-img  w-100");
     			if (img12.src !== (img12_src_value = "image/afarine.jpg")) attr_dev(img12, "src", img12_src_value);
     			attr_dev(img12, "alt", "");
-    			add_location(img12, file$5, 335, 36, 24906);
-    			attr_dev(div57, "class", "col-10 ml-2 mt-5 mb-3 ");
-    			add_location(div57, file$5, 334, 32, 24833);
+    			add_location(img12, file$5, 340, 36, 25334);
+    			attr_dev(div57, "class", "col-10 mx-auto mt-5 mb-3 ");
+    			add_location(div57, file$5, 339, 32, 25258);
     			attr_dev(h34, "class", "col-12");
-    			add_location(h34, file$5, 337, 32, 25039);
+    			add_location(h34, file$5, 342, 32, 25469);
     			attr_dev(h65, "class", "col-12");
-    			add_location(h65, file$5, 340, 32, 25172);
+    			add_location(h65, file$5, 345, 32, 25602);
     			attr_dev(div58, "class", "row px-0 text-center shadow-radius-section bg-light ");
-    			add_location(div58, file$5, 333, 28, 24734);
-    			attr_dev(div59, "class", "col-12 font-weight-bold pb-2 border-bottom");
-    			add_location(div59, file$5, 345, 32, 25450);
-    			attr_dev(a26, "class", "p-0 d-inline category_button collapsed ");
-    			attr_dev(a26, "data-toggle", "collapse");
-    			attr_dev(a26, "data-target", "#collapseOne");
-    			attr_dev(a26, "aria-expanded", "true");
-    			attr_dev(a26, "aria-controls", "collapseOne");
-    			add_location(a26, file$5, 353, 46, 25982);
+    			toggle_class(div58, "d-none", /*x*/ ctx[0] <= 767);
+    			add_location(div58, file$5, 338, 28, 25137);
+    			attr_dev(i26, "class", "fas fa-list-ul category-icon-modal");
+    			toggle_class(i26, "category-fixed-icon-modal", /*x*/ ctx[0] <= 767 && /*y*/ ctx[1] >= 400);
+    			add_location(i26, file$5, 352, 40, 26222);
+    			attr_dev(a26, "type", a26_type_value = /*x*/ ctx[0] <= 767 ? "button" : "");
+    			attr_dev(a26, "class", "btn ");
+    			attr_dev(a26, "data-toggle", a26_data_toggle_value = /*x*/ ctx[0] <= 767 ? "modal" : "");
+    			attr_dev(a26, "data-target", a26_data_target_value = /*x*/ ctx[0] <= 767 ? "#myModal2" : "");
+    			add_location(a26, file$5, 351, 36, 26052);
+    			attr_dev(span15, "class", "d-none d-md-inline");
+    			add_location(span15, file$5, 353, 40, 26364);
+
+    			attr_dev(div59, "class", div59_class_value = /*x*/ ctx[0] >= 767
+    			? "col-12 font-weight-bold pb-2 border-bottom pr-0"
+    			: "col-12 font-weight-bold");
+
+    			add_location(div59, file$5, 350, 32, 25913);
+    			attr_dev(a27, "class", "p-0 d-inline category_button collapsed ");
+    			attr_dev(a27, "data-toggle", "collapse");
+    			attr_dev(a27, "data-target", "#collapseOne");
+    			attr_dev(a27, "aria-expanded", "true");
+    			attr_dev(a27, "aria-controls", "collapseOne");
+    			add_location(a27, file$5, 369, 46, 27655);
     			attr_dev(p3, "class", "category-main-text d-inline");
-    			add_location(p3, file$5, 355, 48, 26276);
-    			attr_dev(a27, "href", "#");
-    			attr_dev(a27, "class", "category-main-text-link");
-    			add_location(a27, file$5, 354, 46, 26183);
+    			add_location(p3, file$5, 371, 48, 27949);
+    			attr_dev(a28, "href", "#");
+    			attr_dev(a28, "class", "category-main-text-link");
+    			add_location(a28, file$5, 370, 46, 27856);
     			attr_dev(h50, "class", "mb-0");
-    			add_location(h50, file$5, 352, 44, 25918);
+    			add_location(h50, file$5, 368, 44, 27591);
     			attr_dev(div60, "class", "border-bottom pb-2");
     			attr_dev(div60, "id", "headingOne");
-    			add_location(div60, file$5, 351, 42, 25825);
-    			attr_dev(a28, "class", "p-0 d-inline category_button collapsed ");
-    			attr_dev(a28, "data-toggle", "collapse");
-    			attr_dev(a28, "data-target", "#collapseOneOne");
-    			attr_dev(a28, "aria-expanded", "true");
-    			attr_dev(a28, "aria-controls", "collapseOneOne");
-    			add_location(a28, file$5, 366, 62, 27181);
+    			add_location(div60, file$5, 367, 42, 27498);
+    			attr_dev(a29, "class", "p-0 d-inline category_button collapsed ");
+    			attr_dev(a29, "data-toggle", "collapse");
+    			attr_dev(a29, "data-target", "#collapseOneOne");
+    			attr_dev(a29, "aria-expanded", "true");
+    			attr_dev(a29, "aria-controls", "collapseOneOne");
+    			add_location(a29, file$5, 382, 62, 28854);
     			attr_dev(p4, "class", "category-main-text d-inline");
-    			add_location(p4, file$5, 368, 64, 27513);
-    			attr_dev(a29, "href", "#");
-    			attr_dev(a29, "class", "category-main-text-link");
-    			add_location(a29, file$5, 367, 62, 27404);
+    			add_location(p4, file$5, 384, 64, 29186);
+    			attr_dev(a30, "href", "#");
+    			attr_dev(a30, "class", "category-main-text-link");
+    			add_location(a30, file$5, 383, 62, 29077);
     			attr_dev(h51, "class", "mb-0");
-    			add_location(h51, file$5, 365, 60, 27101);
+    			add_location(h51, file$5, 381, 60, 28774);
     			attr_dev(div61, "class", "border-bottom pb-2");
     			attr_dev(div61, "id", "headingOneOne");
-    			add_location(div61, file$5, 364, 58, 26989);
+    			add_location(div61, file$5, 380, 58, 28662);
     			attr_dev(div62, "class", "");
-    			add_location(div62, file$5, 373, 60, 27989);
+    			add_location(div62, file$5, 389, 60, 29662);
     			attr_dev(div63, "id", "collapseOneOne");
     			attr_dev(div63, "class", "collapse mr-3 ");
     			attr_dev(div63, "aria-labelledby", "headingOneOne");
     			attr_dev(div63, "data-parent", "#accordion1");
-    			add_location(div63, file$5, 372, 58, 27822);
+    			add_location(div63, file$5, 388, 58, 29495);
     			attr_dev(div64, "class", "mb-2 pl-2");
-    			add_location(div64, file$5, 363, 56, 26907);
-    			attr_dev(a30, "href", "#");
-    			attr_dev(a30, "class", "p-0 d-inline category_button collapsed");
-    			attr_dev(a30, "data-toggle", "collapse");
-    			attr_dev(a30, "data-target", "#collapseTwoTwo");
-    			attr_dev(a30, "aria-expanded", "false");
-    			attr_dev(a30, "aria-controls", "collapseTwoTwo");
-    			add_location(a30, file$5, 381, 62, 28599);
-    			attr_dev(p5, "class", "category-main-text d-inline");
-    			add_location(p5, file$5, 383, 64, 28940);
+    			add_location(div64, file$5, 379, 56, 28580);
     			attr_dev(a31, "href", "#");
-    			attr_dev(a31, "class", "category-main-text-link");
-    			add_location(a31, file$5, 382, 62, 28831);
+    			attr_dev(a31, "class", "p-0 d-inline category_button collapsed");
+    			attr_dev(a31, "data-toggle", "collapse");
+    			attr_dev(a31, "data-target", "#collapseTwoTwo");
+    			attr_dev(a31, "aria-expanded", "false");
+    			attr_dev(a31, "aria-controls", "collapseTwoTwo");
+    			add_location(a31, file$5, 397, 62, 30272);
+    			attr_dev(p5, "class", "category-main-text d-inline");
+    			add_location(p5, file$5, 399, 64, 30613);
+    			attr_dev(a32, "href", "#");
+    			attr_dev(a32, "class", "category-main-text-link");
+    			add_location(a32, file$5, 398, 62, 30504);
     			attr_dev(h52, "class", "mb-0");
-    			add_location(h52, file$5, 380, 60, 28519);
+    			add_location(h52, file$5, 396, 60, 30192);
     			attr_dev(div65, "class", "border-bottom pb-2");
     			attr_dev(div65, "id", "headingTwoTwo");
-    			add_location(div65, file$5, 379, 58, 28407);
+    			add_location(div65, file$5, 395, 58, 30080);
     			attr_dev(div66, "class", "");
-    			add_location(div66, file$5, 388, 60, 29422);
+    			add_location(div66, file$5, 404, 60, 31095);
     			attr_dev(div67, "id", "collapseTwoTwo");
     			attr_dev(div67, "class", "collapse mr-3");
     			attr_dev(div67, "aria-labelledby", "headingTwoTwo");
     			attr_dev(div67, "data-parent", "#accordion1");
-    			add_location(div67, file$5, 387, 58, 29256);
+    			add_location(div67, file$5, 403, 58, 30929);
     			attr_dev(div68, "class", "mb-2 pl-2");
-    			add_location(div68, file$5, 378, 56, 28325);
-    			attr_dev(a32, "href", "#");
-    			attr_dev(a32, "class", "p-0 d-inline category_button collapsed");
-    			attr_dev(a32, "data-toggle", "collapse");
-    			attr_dev(a32, "data-target", "#collapseThreeThree");
-    			attr_dev(a32, "aria-expanded", "false");
-    			attr_dev(a32, "aria-controls", "collapseThreeThree");
-    			add_location(a32, file$5, 396, 62, 30038);
-    			attr_dev(p6, "class", "category-main-text d-inline");
-    			add_location(p6, file$5, 398, 64, 30387);
+    			add_location(div68, file$5, 394, 56, 29998);
     			attr_dev(a33, "href", "#");
-    			attr_dev(a33, "class", "category-main-text-link");
-    			add_location(a33, file$5, 397, 62, 30278);
+    			attr_dev(a33, "class", "p-0 d-inline category_button collapsed");
+    			attr_dev(a33, "data-toggle", "collapse");
+    			attr_dev(a33, "data-target", "#collapseThreeThree");
+    			attr_dev(a33, "aria-expanded", "false");
+    			attr_dev(a33, "aria-controls", "collapseThreeThree");
+    			add_location(a33, file$5, 412, 62, 31711);
+    			attr_dev(p6, "class", "category-main-text d-inline");
+    			add_location(p6, file$5, 414, 64, 32060);
+    			attr_dev(a34, "href", "#");
+    			attr_dev(a34, "class", "category-main-text-link");
+    			add_location(a34, file$5, 413, 62, 31951);
     			attr_dev(h53, "class", "mb-0");
-    			add_location(h53, file$5, 395, 60, 29958);
+    			add_location(h53, file$5, 411, 60, 31631);
     			attr_dev(div69, "class", "border-bottom pb-2");
     			attr_dev(div69, "id", "headingThreeThree");
-    			add_location(div69, file$5, 394, 58, 29842);
-    			attr_dev(a34, "class", "p-0 d-inline category_button collapsed ");
-    			attr_dev(a34, "data-toggle", "collapse");
-    			attr_dev(a34, "data-target", "#collapseOneOneOne");
-    			attr_dev(a34, "aria-expanded", "true");
-    			attr_dev(a34, "aria-controls", "collapseOneOneOne");
-    			add_location(a34, file$5, 409, 78, 31489);
+    			add_location(div69, file$5, 410, 58, 31515);
+    			attr_dev(a35, "class", "p-0 d-inline category_button collapsed ");
+    			attr_dev(a35, "data-toggle", "collapse");
+    			attr_dev(a35, "data-target", "#collapseOneOneOne");
+    			attr_dev(a35, "aria-expanded", "true");
+    			attr_dev(a35, "aria-controls", "collapseOneOneOne");
+    			add_location(a35, file$5, 425, 78, 33162);
     			attr_dev(p7, "class", "category-main-text d-inline");
-    			add_location(p7, file$5, 411, 80, 31859);
-    			attr_dev(a35, "href", "#");
-    			attr_dev(a35, "class", "category-main-text-link");
-    			add_location(a35, file$5, 410, 78, 31734);
+    			add_location(p7, file$5, 427, 80, 33532);
+    			attr_dev(a36, "href", "#");
+    			attr_dev(a36, "class", "category-main-text-link");
+    			add_location(a36, file$5, 426, 78, 33407);
     			attr_dev(h54, "class", "mb-0");
-    			add_location(h54, file$5, 408, 76, 31393);
+    			add_location(h54, file$5, 424, 76, 33066);
     			attr_dev(div70, "class", "border-bottom pb-2");
     			attr_dev(div70, "id", "headingOneOneOne");
-    			add_location(div70, file$5, 407, 74, 31262);
+    			add_location(div70, file$5, 423, 74, 32935);
     			attr_dev(div71, "class", "");
-    			add_location(div71, file$5, 416, 76, 32421);
+    			add_location(div71, file$5, 432, 76, 34094);
     			attr_dev(div72, "id", "collapseOneOneOne");
     			attr_dev(div72, "class", "collapse mr-3 ");
     			attr_dev(div72, "aria-labelledby", "headingOneOneOne");
     			attr_dev(div72, "data-parent", "#accordion2");
-    			add_location(div72, file$5, 415, 74, 32232);
+    			add_location(div72, file$5, 431, 74, 33905);
     			attr_dev(div73, "class", "mb-2 pl-2");
-    			add_location(div73, file$5, 406, 72, 31164);
+    			add_location(div73, file$5, 422, 72, 32837);
     			attr_dev(p8, "class", "category-main-text d-inline");
-    			add_location(p8, file$5, 425, 80, 33287);
-    			attr_dev(a36, "href", "#");
-    			attr_dev(a36, "class", "category-main-text-link");
-    			add_location(a36, file$5, 424, 78, 33162);
+    			add_location(p8, file$5, 441, 80, 34960);
+    			attr_dev(a37, "href", "#");
+    			attr_dev(a37, "class", "category-main-text-link");
+    			add_location(a37, file$5, 440, 78, 34835);
     			attr_dev(h55, "class", "mb-0");
-    			add_location(h55, file$5, 423, 76, 33066);
+    			add_location(h55, file$5, 439, 76, 34739);
     			attr_dev(div74, "class", "border-bottom pb-2");
     			attr_dev(div74, "id", "headingTwoTwoTwo");
-    			add_location(div74, file$5, 422, 74, 32935);
+    			add_location(div74, file$5, 438, 74, 34608);
     			attr_dev(div75, "class", "");
-    			add_location(div75, file$5, 430, 76, 33855);
+    			add_location(div75, file$5, 446, 76, 35528);
     			attr_dev(div76, "id", "collapseTwoTwoTwo");
     			attr_dev(div76, "class", "collapse mr-3");
     			attr_dev(div76, "aria-labelledby", "headingTwoTwoTwo");
     			attr_dev(div76, "data-parent", "#accordion2");
-    			add_location(div76, file$5, 429, 74, 33667);
+    			add_location(div76, file$5, 445, 74, 35340);
     			attr_dev(div77, "class", "mb-2 pl-2");
-    			add_location(div77, file$5, 421, 72, 32837);
+    			add_location(div77, file$5, 437, 72, 34510);
     			attr_dev(div78, "id", "accordion2");
-    			add_location(div78, file$5, 405, 68, 31070);
+    			add_location(div78, file$5, 421, 68, 32743);
     			attr_dev(div79, "class", " mt-2 mr-1 col-12 p-0 ");
-    			add_location(div79, file$5, 404, 64, 30965);
+    			add_location(div79, file$5, 420, 64, 32638);
     			attr_dev(div80, "class", "border-right");
-    			add_location(div80, file$5, 403, 60, 30874);
+    			add_location(div80, file$5, 419, 60, 32547);
     			attr_dev(div81, "id", "collapseThreeThree");
     			attr_dev(div81, "class", "collapse mr-3");
     			attr_dev(div81, "aria-labelledby", "headingThreeThree");
     			attr_dev(div81, "data-parent", "#accordion1");
-    			add_location(div81, file$5, 402, 58, 30700);
+    			add_location(div81, file$5, 418, 58, 32373);
     			attr_dev(div82, "class", "mb-2 pl-2");
-    			add_location(div82, file$5, 393, 56, 29760);
+    			add_location(div82, file$5, 409, 56, 31433);
     			attr_dev(div83, "id", "accordion1");
-    			add_location(div83, file$5, 362, 52, 26829);
+    			add_location(div83, file$5, 378, 52, 28502);
     			attr_dev(div84, "class", " mt-2 mr-1 col-12 p-0 ");
-    			add_location(div84, file$5, 361, 48, 26740);
+    			add_location(div84, file$5, 377, 48, 28413);
     			attr_dev(div85, "class", "border-right");
-    			add_location(div85, file$5, 360, 44, 26665);
+    			add_location(div85, file$5, 376, 44, 28338);
     			attr_dev(div86, "id", "collapseOne");
     			attr_dev(div86, "class", "collapse mr-3 ");
     			attr_dev(div86, "aria-labelledby", "headingOne");
     			attr_dev(div86, "data-parent", "#accordion");
-    			add_location(div86, file$5, 359, 42, 26521);
-    			attr_dev(div87, "class", "mb-2 pl-2");
-    			add_location(div87, file$5, 350, 40, 25759);
-    			attr_dev(a37, "href", "#");
-    			attr_dev(a37, "class", "p-0 d-inline category_button collapsed");
-    			attr_dev(a37, "data-toggle", "collapse");
-    			attr_dev(a37, "data-target", "#collapseTwo");
-    			attr_dev(a37, "aria-expanded", "false");
-    			attr_dev(a37, "aria-controls", "collapseTwo");
-    			add_location(a37, file$5, 448, 46, 35072);
-    			attr_dev(p9, "class", "category-main-text d-inline");
-    			add_location(p9, file$5, 450, 48, 35375);
+    			add_location(div86, file$5, 375, 42, 28194);
+    			attr_dev(div87, "class", "mb-2 pl-2 ");
+    			add_location(div87, file$5, 366, 40, 27431);
     			attr_dev(a38, "href", "#");
-    			attr_dev(a38, "class", "category-main-text-link");
-    			add_location(a38, file$5, 449, 46, 35282);
+    			attr_dev(a38, "class", "p-0 d-inline category_button collapsed");
+    			attr_dev(a38, "data-toggle", "collapse");
+    			attr_dev(a38, "data-target", "#collapseTwo");
+    			attr_dev(a38, "aria-expanded", "false");
+    			attr_dev(a38, "aria-controls", "collapseTwo");
+    			add_location(a38, file$5, 464, 46, 36745);
+    			attr_dev(p9, "class", "category-main-text d-inline");
+    			add_location(p9, file$5, 466, 48, 37048);
+    			attr_dev(a39, "href", "#");
+    			attr_dev(a39, "class", "category-main-text-link");
+    			add_location(a39, file$5, 465, 46, 36955);
     			attr_dev(h56, "class", "mb-0");
-    			add_location(h56, file$5, 447, 44, 35008);
+    			add_location(h56, file$5, 463, 44, 36681);
     			attr_dev(div88, "class", "border-bottom pb-2");
     			attr_dev(div88, "id", "headingTwo");
-    			add_location(div88, file$5, 446, 42, 34915);
+    			add_location(div88, file$5, 462, 42, 36588);
     			attr_dev(div89, "class", "");
-    			add_location(div89, file$5, 455, 44, 35770);
+    			add_location(div89, file$5, 471, 44, 37443);
     			attr_dev(div90, "id", "collapseTwo");
     			attr_dev(div90, "class", "collapse mr-3");
     			attr_dev(div90, "aria-labelledby", "headingTwo");
     			attr_dev(div90, "data-parent", "#accordion");
-    			add_location(div90, file$5, 454, 42, 35627);
+    			add_location(div90, file$5, 470, 42, 37300);
     			attr_dev(div91, "class", "mb-2 pl-2");
-    			add_location(div91, file$5, 445, 40, 34849);
-    			attr_dev(a39, "href", "#");
-    			attr_dev(a39, "class", "p-0 d-inline category_button collapsed");
-    			attr_dev(a39, "data-toggle", "collapse");
-    			attr_dev(a39, "data-target", "#collapseThree");
-    			attr_dev(a39, "aria-expanded", "false");
-    			attr_dev(a39, "aria-controls", "collapseThree");
-    			add_location(a39, file$5, 463, 46, 36253);
-    			attr_dev(p10, "class", "category-main-text d-inline");
-    			add_location(p10, file$5, 465, 48, 36560);
+    			add_location(div91, file$5, 461, 40, 36522);
     			attr_dev(a40, "href", "#");
-    			attr_dev(a40, "class", "category-main-text-link");
-    			add_location(a40, file$5, 464, 46, 36467);
+    			attr_dev(a40, "class", "p-0 d-inline category_button collapsed");
+    			attr_dev(a40, "data-toggle", "collapse");
+    			attr_dev(a40, "data-target", "#collapseThree");
+    			attr_dev(a40, "aria-expanded", "false");
+    			attr_dev(a40, "aria-controls", "collapseThree");
+    			add_location(a40, file$5, 479, 46, 37926);
+    			attr_dev(p10, "class", "category-main-text d-inline");
+    			add_location(p10, file$5, 481, 48, 38233);
+    			attr_dev(a41, "href", "#");
+    			attr_dev(a41, "class", "category-main-text-link");
+    			add_location(a41, file$5, 480, 46, 38140);
     			attr_dev(h57, "class", "mb-0");
-    			add_location(h57, file$5, 462, 44, 36189);
+    			add_location(h57, file$5, 478, 44, 37862);
     			attr_dev(div92, "class", "border-bottom pb-2");
     			attr_dev(div92, "id", "headingThree");
-    			add_location(div92, file$5, 461, 42, 36094);
+    			add_location(div92, file$5, 477, 42, 37767);
     			attr_dev(div93, "class", "");
-    			add_location(div93, file$5, 470, 44, 36956);
+    			add_location(div93, file$5, 486, 44, 38629);
     			attr_dev(div94, "id", "collapseThree");
     			attr_dev(div94, "class", "collapse mr-3");
     			attr_dev(div94, "aria-labelledby", "headingThree");
     			attr_dev(div94, "data-parent", "#accordion");
-    			add_location(div94, file$5, 469, 42, 36809);
+    			add_location(div94, file$5, 485, 42, 38482);
     			attr_dev(div95, "class", "mb-2 pl-2");
-    			add_location(div95, file$5, 460, 40, 36028);
+    			add_location(div95, file$5, 476, 40, 37701);
     			attr_dev(div96, "id", "accordion");
-    			add_location(div96, file$5, 349, 36, 25698);
-    			attr_dev(div97, "class", " mt-2 mr-1 col-12 p-0 ");
-    			add_location(div97, file$5, 348, 32, 25625);
-    			attr_dev(div98, "class", "row direction shadow-radius-section mt-4 py-2 bg-white");
-    			add_location(div98, file$5, 344, 28, 25349);
-    			attr_dev(aside2, "class", " col-12 col-md-3 mt-3 d-none d-md-inline");
-    			add_location(aside2, file$5, 332, 24, 24648);
+
+    			attr_dev(div96, "class", div96_class_value = /*x*/ ctx[0] <= 767
+    			? "modal-dialog modal-content pr-2"
+    			: "");
+
+    			attr_dev(div96, "role", div96_role_value = /*x*/ ctx[0] <= 767 ? "document" : "");
+    			add_location(div96, file$5, 356, 36, 26714);
+    			attr_dev(div97, "class", div97_class_value = "" + ((/*x*/ ctx[0] <= 767 ? "modal right" : "") + " mt-2 mr-1 col-12 p-0 d-lg-inline"));
+    			attr_dev(div97, "id", div97_id_value = /*x*/ ctx[0] <= 767 ? "myModal2" : "");
+    			attr_dev(div97, "tabindex", div97_tabindex_value = /*x*/ ctx[0] <= 767 ? "-1" : "");
+    			attr_dev(div97, "role", div97_role_value = /*x*/ ctx[0] <= 767 ? "dialog" : "");
+    			attr_dev(div97, "aria-hidden", "true");
+    			add_location(div97, file$5, 355, 32, 26486);
+
+    			attr_dev(div98, "class", div98_class_value = /*x*/ ctx[0] >= 767
+    			? "row direction shadow-radius-section mt-4 py-2 bg-white"
+    			: "row direction ");
+
+    			add_location(div98, file$5, 349, 28, 25779);
+    			attr_dev(aside2, "class", " col-12 col-md-3 mt-3 ");
+    			add_location(aside2, file$5, 337, 24, 25069);
     			attr_dev(div99, "class", "row px-0 mx-0");
-    			add_location(div99, file$5, 142, 20, 7491);
+    			add_location(div99, file$5, 147, 20, 7895);
     			attr_dev(div100, "id", "post");
-    			attr_dev(div100, "class", "row tab-pane active ");
-    			add_location(div100, file$5, 141, 16, 7426);
+    			attr_dev(div100, "class", "row tab-pane");
+    			toggle_class(div100, "active", /*current*/ ctx[3] === "post");
+    			add_location(div100, file$5, 146, 16, 7804);
     			attr_dev(h58, "class", "text-bold mb-2");
-    			add_location(h58, file$5, 485, 32, 37663);
+    			add_location(h58, file$5, 501, 32, 39385);
     			attr_dev(p11, "class", "text-secondary text-justify word-space");
-    			add_location(p11, file$5, 486, 32, 37741);
+    			add_location(p11, file$5, 502, 32, 39463);
     			attr_dev(div101, "class", "col-4 text-bold pr-0");
-    			add_location(div101, file$5, 493, 40, 38468);
-    			attr_dev(a41, "class", "text-primary");
-    			attr_dev(a41, "href", "#");
-    			add_location(a41, file$5, 495, 44, 38639);
+    			add_location(div101, file$5, 509, 40, 40190);
+    			attr_dev(a42, "class", "text-primary");
+    			attr_dev(a42, "href", "#");
+    			add_location(a42, file$5, 511, 44, 40361);
     			attr_dev(div102, "class", "col-8 text-bold pr-0 mb-4");
-    			add_location(div102, file$5, 494, 40, 38555);
+    			add_location(div102, file$5, 510, 40, 40277);
     			attr_dev(div103, "class", "col-4 text-bold pr-0");
-    			add_location(div103, file$5, 499, 40, 38877);
+    			add_location(div103, file$5, 515, 40, 40599);
     			attr_dev(div104, "class", "col-8 pr-0 mb-4 text-secondary");
-    			add_location(div104, file$5, 500, 40, 38968);
+    			add_location(div104, file$5, 516, 40, 40690);
     			attr_dev(div105, "class", "col-4 text-bold pr-0");
-    			add_location(div105, file$5, 503, 40, 39174);
+    			add_location(div105, file$5, 519, 40, 40896);
     			attr_dev(div106, "class", "col-8 pr-0 mb-4 text-secondary");
-    			add_location(div106, file$5, 504, 40, 39268);
+    			add_location(div106, file$5, 520, 40, 40990);
     			attr_dev(div107, "class", "col-4 text-bold pr-0");
-    			add_location(div107, file$5, 507, 40, 39457);
+    			add_location(div107, file$5, 523, 40, 41179);
     			attr_dev(div108, "class", "col-8 pr-0 mb-4 text-secondary");
-    			add_location(div108, file$5, 508, 40, 39549);
+    			add_location(div108, file$5, 524, 40, 41271);
     			attr_dev(div109, "class", "col-4 text-bold pr-0");
-    			add_location(div109, file$5, 511, 40, 39730);
+    			add_location(div109, file$5, 527, 40, 41452);
     			attr_dev(div110, "class", "col-8 pr-0 mb-4 text-secondary");
-    			add_location(div110, file$5, 512, 40, 39818);
+    			add_location(div110, file$5, 528, 40, 41540);
     			attr_dev(div111, "class", "col-4 text-bold pr-0");
-    			add_location(div111, file$5, 515, 40, 40021);
+    			add_location(div111, file$5, 531, 40, 41743);
     			attr_dev(div112, "class", "col-8 pr-0 mb-4 text-secondary");
-    			add_location(div112, file$5, 516, 40, 40111);
+    			add_location(div112, file$5, 532, 40, 41833);
     			attr_dev(div113, "class", "row ");
-    			add_location(div113, file$5, 492, 36, 38409);
+    			add_location(div113, file$5, 508, 36, 40131);
     			attr_dev(div114, "class", "col-12");
-    			add_location(div114, file$5, 491, 32, 38352);
+    			add_location(div114, file$5, 507, 32, 40074);
     			attr_dev(div115, "class", "col-12 ");
-    			add_location(div115, file$5, 484, 28, 37609);
+    			add_location(div115, file$5, 500, 28, 39331);
     			attr_dev(div116, "class", "row bg-white shadow-radius-section ml-1 py-4 px-1");
-    			add_location(div116, file$5, 483, 24, 37517);
+    			add_location(div116, file$5, 499, 24, 39239);
     			attr_dev(h59, "class", "text-bold ");
-    			add_location(h59, file$5, 525, 32, 40602);
+    			add_location(h59, file$5, 541, 32, 42324);
     			attr_dev(p12, "class", "text-secondary text-justify word-space");
-    			add_location(p12, file$5, 526, 32, 40682);
+    			add_location(p12, file$5, 542, 32, 42404);
     			attr_dev(div117, "class", "row");
-    			add_location(div117, file$5, 529, 32, 40873);
+    			add_location(div117, file$5, 545, 32, 42595);
     			attr_dev(div118, "class", "col-12 ");
-    			add_location(div118, file$5, 524, 28, 40548);
+    			add_location(div118, file$5, 540, 28, 42270);
     			attr_dev(div119, "class", "row bg-white shadow-radius-section ml-1 py-4 px-1 mt-3");
-    			add_location(div119, file$5, 523, 24, 40451);
+    			add_location(div119, file$5, 539, 24, 42173);
     			attr_dev(div120, "class", "col-12 direction ");
-    			add_location(div120, file$5, 482, 20, 37461);
+    			add_location(div120, file$5, 498, 20, 39183);
     			attr_dev(div121, "id", "about");
-    			attr_dev(div121, "class", "row tab-pane fade mt-3");
-    			add_location(div121, file$5, 481, 16, 37393);
-    			attr_dev(div122, "class", "tab-content");
-    			add_location(div122, file$5, 140, 12, 7384);
-    			attr_dev(aside3, "class", "col-12 col-md-8  ");
-    			add_location(aside3, file$5, 95, 8, 4002);
+    			attr_dev(div121, "class", "row tab-pane mt-3 margin-about-right");
+    			toggle_class(div121, "active", /*current*/ ctx[3] === "about");
+    			add_location(div121, file$5, 497, 16, 39066);
+    			attr_dev(div122, "class", "tab-content w-100 mr-0");
+    			add_location(div122, file$5, 145, 12, 7751);
+    			attr_dev(aside3, "class", "col-12 col-lg-8  ");
+    			add_location(aside3, file$5, 100, 8, 4235);
     			attr_dev(div123, "class", "row justify-content-center mx-0");
-    			add_location(div123, file$5, 80, 4, 3401);
-    			attr_dev(main, "class", "container-fluid pin-parent ");
-    			add_location(main, file$5, 79, 0, 3337);
-    			add_location(br0, file$5, 542, 0, 41156);
-    			add_location(br1, file$5, 542, 4, 41160);
+    			add_location(div123, file$5, 85, 4, 3634);
+    			attr_dev(main, "class", "container-fluid pin-parent px-0 px-md-3");
+    			add_location(main, file$5, 84, 0, 3558);
+    			add_location(br0, file$5, 558, 0, 42878);
+    			add_location(br1, file$5, 558, 4, 42882);
     		},
     		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
+    			if (if_block0) if_block0.m(target, anchor);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div123);
@@ -6317,17 +6443,23 @@ var app = (function () {
     			append_dev(aside2, t115);
     			append_dev(aside2, div98);
     			append_dev(div98, div59);
-    			append_dev(div98, t117);
+    			append_dev(div59, a26);
+    			append_dev(a26, i26);
+    			append_dev(a26, t116);
+    			append_dev(div59, span15);
+    			append_dev(div98, t118);
     			append_dev(div98, div97);
     			append_dev(div97, div96);
+    			if (if_block1) if_block1.m(div96, null);
+    			append_dev(div96, t119);
     			append_dev(div96, div87);
     			append_dev(div87, div60);
     			append_dev(div60, h50);
-    			append_dev(h50, a26);
-    			append_dev(h50, t118);
     			append_dev(h50, a27);
-    			append_dev(a27, p3);
-    			append_dev(div87, t120);
+    			append_dev(h50, t120);
+    			append_dev(h50, a28);
+    			append_dev(a28, p3);
+    			append_dev(div87, t122);
     			append_dev(div87, div86);
     			append_dev(div86, div85);
     			append_dev(div85, div84);
@@ -6335,33 +6467,33 @@ var app = (function () {
     			append_dev(div83, div64);
     			append_dev(div64, div61);
     			append_dev(div61, h51);
-    			append_dev(h51, a28);
-    			append_dev(h51, t121);
     			append_dev(h51, a29);
-    			append_dev(a29, p4);
-    			append_dev(div64, t123);
+    			append_dev(h51, t123);
+    			append_dev(h51, a30);
+    			append_dev(a30, p4);
+    			append_dev(div64, t125);
     			append_dev(div64, div63);
     			append_dev(div63, div62);
-    			append_dev(div83, t125);
+    			append_dev(div83, t127);
     			append_dev(div83, div68);
     			append_dev(div68, div65);
     			append_dev(div65, h52);
-    			append_dev(h52, a30);
-    			append_dev(h52, t126);
     			append_dev(h52, a31);
-    			append_dev(a31, p5);
-    			append_dev(div68, t128);
+    			append_dev(h52, t128);
+    			append_dev(h52, a32);
+    			append_dev(a32, p5);
+    			append_dev(div68, t130);
     			append_dev(div68, div67);
     			append_dev(div67, div66);
-    			append_dev(div83, t130);
+    			append_dev(div83, t132);
     			append_dev(div83, div82);
     			append_dev(div82, div69);
     			append_dev(div69, h53);
-    			append_dev(h53, a32);
-    			append_dev(h53, t131);
     			append_dev(h53, a33);
-    			append_dev(a33, p6);
-    			append_dev(div82, t133);
+    			append_dev(h53, t133);
+    			append_dev(h53, a34);
+    			append_dev(a34, p6);
+    			append_dev(div82, t135);
     			append_dev(div82, div81);
     			append_dev(div81, div80);
     			append_dev(div80, div79);
@@ -6369,94 +6501,96 @@ var app = (function () {
     			append_dev(div78, div73);
     			append_dev(div73, div70);
     			append_dev(div70, h54);
-    			append_dev(h54, a34);
-    			append_dev(h54, t134);
     			append_dev(h54, a35);
-    			append_dev(a35, p7);
-    			append_dev(div73, t136);
+    			append_dev(h54, t136);
+    			append_dev(h54, a36);
+    			append_dev(a36, p7);
+    			append_dev(div73, t138);
     			append_dev(div73, div72);
     			append_dev(div72, div71);
-    			append_dev(div78, t138);
+    			append_dev(div78, t140);
     			append_dev(div78, div77);
     			append_dev(div77, div74);
     			append_dev(div74, h55);
-    			append_dev(h55, a36);
-    			append_dev(a36, p8);
-    			append_dev(div77, t140);
+    			append_dev(h55, a37);
+    			append_dev(a37, p8);
+    			append_dev(div77, t142);
     			append_dev(div77, div76);
     			append_dev(div76, div75);
-    			append_dev(div96, t142);
+    			append_dev(div96, t144);
     			append_dev(div96, div91);
     			append_dev(div91, div88);
     			append_dev(div88, h56);
-    			append_dev(h56, a37);
-    			append_dev(h56, t143);
     			append_dev(h56, a38);
-    			append_dev(a38, p9);
-    			append_dev(div91, t145);
+    			append_dev(h56, t145);
+    			append_dev(h56, a39);
+    			append_dev(a39, p9);
+    			append_dev(div91, t147);
     			append_dev(div91, div90);
     			append_dev(div90, div89);
-    			append_dev(div96, t147);
+    			append_dev(div96, t149);
     			append_dev(div96, div95);
     			append_dev(div95, div92);
     			append_dev(div92, h57);
-    			append_dev(h57, a39);
-    			append_dev(h57, t148);
     			append_dev(h57, a40);
-    			append_dev(a40, p10);
-    			append_dev(div95, t150);
+    			append_dev(h57, t150);
+    			append_dev(h57, a41);
+    			append_dev(a41, p10);
+    			append_dev(div95, t152);
     			append_dev(div95, div94);
     			append_dev(div94, div93);
-    			append_dev(div122, t152);
+    			append_dev(div122, t154);
     			append_dev(div122, div121);
     			append_dev(div121, div120);
     			append_dev(div120, div116);
     			append_dev(div116, div115);
     			append_dev(div115, h58);
-    			append_dev(div115, t154);
-    			append_dev(div115, p11);
     			append_dev(div115, t156);
+    			append_dev(div115, p11);
+    			append_dev(div115, t158);
     			append_dev(div115, div114);
     			append_dev(div114, div113);
     			append_dev(div113, div101);
-    			append_dev(div113, t158);
-    			append_dev(div113, div102);
-    			append_dev(div102, a41);
     			append_dev(div113, t160);
-    			append_dev(div113, div103);
+    			append_dev(div113, div102);
+    			append_dev(div102, a42);
     			append_dev(div113, t162);
-    			append_dev(div113, div104);
+    			append_dev(div113, div103);
     			append_dev(div113, t164);
-    			append_dev(div113, div105);
+    			append_dev(div113, div104);
     			append_dev(div113, t166);
-    			append_dev(div113, div106);
+    			append_dev(div113, div105);
     			append_dev(div113, t168);
-    			append_dev(div113, div107);
+    			append_dev(div113, div106);
     			append_dev(div113, t170);
-    			append_dev(div113, div108);
+    			append_dev(div113, div107);
     			append_dev(div113, t172);
-    			append_dev(div113, div109);
+    			append_dev(div113, div108);
     			append_dev(div113, t174);
-    			append_dev(div113, div110);
+    			append_dev(div113, div109);
     			append_dev(div113, t176);
-    			append_dev(div113, div111);
+    			append_dev(div113, div110);
     			append_dev(div113, t178);
+    			append_dev(div113, div111);
+    			append_dev(div113, t180);
     			append_dev(div113, div112);
-    			append_dev(div120, t180);
+    			append_dev(div120, t182);
     			append_dev(div120, div119);
     			append_dev(div119, div118);
     			append_dev(div118, h59);
-    			append_dev(div118, t182);
-    			append_dev(div118, p12);
     			append_dev(div118, t184);
+    			append_dev(div118, p12);
+    			append_dev(div118, t186);
     			append_dev(div118, div117);
-    			insert_dev(target, t185, anchor);
+    			insert_dev(target, t187, anchor);
     			insert_dev(target, br0, anchor);
     			insert_dev(target, br1, anchor);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
+    					listen_dev(a3, "click", /*click_handler_2*/ ctx[8], false, false, false),
+    					listen_dev(a4, "click", /*click_handler_3*/ ctx[9], false, false, false),
     					listen_dev(span3, "click", myFunction, false, false, false),
     					listen_dev(span8, "click", myFunction, false, false, false),
     					listen_dev(span13, "click", myFunction, false, false, false)
@@ -6466,30 +6600,117 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (/*y*/ ctx[0] > 600) {
-    				if (if_block) {
-    					if (dirty & /*y*/ 1) {
-    						transition_in(if_block, 1);
+    			if (/*y*/ ctx[1] > 600) {
+    				if (if_block0) {
+    					if_block0.p(ctx, dirty);
+
+    					if (dirty & /*y*/ 2) {
+    						transition_in(if_block0, 1);
     					}
     				} else {
-    					if_block = create_if_block$1(ctx);
-    					if_block.c();
-    					transition_in(if_block, 1);
-    					if_block.m(t0.parentNode, t0);
+    					if_block0 = create_if_block_1$1(ctx);
+    					if_block0.c();
+    					transition_in(if_block0, 1);
+    					if_block0.m(t0.parentNode, t0);
     				}
-    			} else if (if_block) {
+    			} else if (if_block0) {
     				group_outros();
 
-    				transition_out(if_block, 1, 1, () => {
-    					if_block = null;
+    				transition_out(if_block0, 1, 1, () => {
+    					if_block0 = null;
     				});
 
     				check_outros();
     			}
+
+    			if (dirty & /*current*/ 8) {
+    				toggle_class(a3, "active", /*current*/ ctx[3] === "post");
+    			}
+
+    			if (dirty & /*current*/ 8) {
+    				toggle_class(a4, "active", /*current*/ ctx[3] === "about");
+    			}
+
+    			if (dirty & /*x*/ 1) {
+    				toggle_class(div58, "d-none", /*x*/ ctx[0] <= 767);
+    			}
+
+    			if (dirty & /*x, y*/ 3) {
+    				toggle_class(i26, "category-fixed-icon-modal", /*x*/ ctx[0] <= 767 && /*y*/ ctx[1] >= 400);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && a26_type_value !== (a26_type_value = /*x*/ ctx[0] <= 767 ? "button" : "")) {
+    				attr_dev(a26, "type", a26_type_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && a26_data_toggle_value !== (a26_data_toggle_value = /*x*/ ctx[0] <= 767 ? "modal" : "")) {
+    				attr_dev(a26, "data-toggle", a26_data_toggle_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && a26_data_target_value !== (a26_data_target_value = /*x*/ ctx[0] <= 767 ? "#myModal2" : "")) {
+    				attr_dev(a26, "data-target", a26_data_target_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div59_class_value !== (div59_class_value = /*x*/ ctx[0] >= 767
+    			? "col-12 font-weight-bold pb-2 border-bottom pr-0"
+    			: "col-12 font-weight-bold")) {
+    				attr_dev(div59, "class", div59_class_value);
+    			}
+
+    			if (/*x*/ ctx[0] <= 767) {
+    				if (if_block1) ; else {
+    					if_block1 = create_if_block$1(ctx);
+    					if_block1.c();
+    					if_block1.m(div96, t119);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div96_class_value !== (div96_class_value = /*x*/ ctx[0] <= 767
+    			? "modal-dialog modal-content pr-2"
+    			: "")) {
+    				attr_dev(div96, "class", div96_class_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div96_role_value !== (div96_role_value = /*x*/ ctx[0] <= 767 ? "document" : "")) {
+    				attr_dev(div96, "role", div96_role_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div97_class_value !== (div97_class_value = "" + ((/*x*/ ctx[0] <= 767 ? "modal right" : "") + " mt-2 mr-1 col-12 p-0 d-lg-inline"))) {
+    				attr_dev(div97, "class", div97_class_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div97_id_value !== (div97_id_value = /*x*/ ctx[0] <= 767 ? "myModal2" : "")) {
+    				attr_dev(div97, "id", div97_id_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div97_tabindex_value !== (div97_tabindex_value = /*x*/ ctx[0] <= 767 ? "-1" : "")) {
+    				attr_dev(div97, "tabindex", div97_tabindex_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div97_role_value !== (div97_role_value = /*x*/ ctx[0] <= 767 ? "dialog" : "")) {
+    				attr_dev(div97, "role", div97_role_value);
+    			}
+
+    			if (!current || dirty & /*x*/ 1 && div98_class_value !== (div98_class_value = /*x*/ ctx[0] >= 767
+    			? "row direction shadow-radius-section mt-4 py-2 bg-white"
+    			: "row direction ")) {
+    				attr_dev(div98, "class", div98_class_value);
+    			}
+
+    			if (dirty & /*current*/ 8) {
+    				toggle_class(div100, "active", /*current*/ ctx[3] === "post");
+    			}
+
+    			if (dirty & /*current*/ 8) {
+    				toggle_class(div121, "active", /*current*/ ctx[3] === "about");
+    			}
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(if_block);
+    			transition_in(if_block0);
 
     			add_render_callback(() => {
     				if (!main_transition) main_transition = create_bidirectional_transition(main, scale, {}, true);
@@ -6499,17 +6720,18 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(if_block);
+    			transition_out(if_block0);
     			if (!main_transition) main_transition = create_bidirectional_transition(main, scale, {}, false);
     			main_transition.run(0);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
+    			if (if_block0) if_block0.d(detaching);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
+    			if (if_block1) if_block1.d();
     			if (detaching && main_transition) main_transition.end();
-    			if (detaching) detach_dev(t185);
+    			if (detaching) detach_dev(t187);
     			if (detaching) detach_dev(br0);
     			if (detaching) detach_dev(br1);
     			mounted = false;
@@ -6521,7 +6743,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(35:0) <Router url=\\\"{url}\\\">",
+    		source: "(38:0) <Router url=\\\"{url}\\\">",
     		ctx
     	});
 
@@ -6541,11 +6763,12 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[2]);
+    	add_render_callback(/*onwindowscroll*/ ctx[4]);
+    	add_render_callback(/*onwindowresize*/ ctx[5]);
 
     	router = new Router({
     			props: {
-    				url: /*url*/ ctx[1],
+    				url: /*url*/ ctx[2],
     				$$slots: { default: [create_default_slot$1] },
     				$$scope: { ctx }
     			},
@@ -6567,28 +6790,31 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(window_1$1, "scroll", () => {
-    					scrolling = true;
-    					clearTimeout(scrolling_timeout);
-    					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[2]();
-    				});
+    				dispose = [
+    					listen_dev(window_1$1, "scroll", () => {
+    						scrolling = true;
+    						clearTimeout(scrolling_timeout);
+    						scrolling_timeout = setTimeout(clear_scrolling, 100);
+    						/*onwindowscroll*/ ctx[4]();
+    					}),
+    					listen_dev(window_1$1, "resize", /*onwindowresize*/ ctx[5])
+    				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*y*/ 1 && !scrolling) {
+    			if (dirty & /*y*/ 2 && !scrolling) {
     				scrolling = true;
     				clearTimeout(scrolling_timeout);
-    				scrollTo(window_1$1.pageXOffset, /*y*/ ctx[0]);
+    				scrollTo(window_1$1.pageXOffset, /*y*/ ctx[1]);
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
     			}
 
     			const router_changes = {};
-    			if (dirty & /*url*/ 2) router_changes.url = /*url*/ ctx[1];
+    			if (dirty & /*url*/ 4) router_changes.url = /*url*/ ctx[2];
 
-    			if (dirty & /*$$scope, y*/ 2049) {
+    			if (dirty & /*$$scope, current, x, y*/ 262155) {
     				router_changes.$$scope = { dirty, ctx };
     			}
 
@@ -6607,7 +6833,7 @@ var app = (function () {
     			if (detaching) detach_dev(t);
     			destroy_component(router, detaching);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -6627,10 +6853,12 @@ var app = (function () {
     	validate_slots("Profile", slots, []);
     	let { url = "" } = $$props;
     	let { y } = $$props;
+    	let { x } = $$props;
     	const urlParams = new URLSearchParams(window.location.search);
     	const id = urlParams.has("id");
     	console.log(id);
     	let isOpen = false;
+    	let current = "post";
 
     	function toggleNav() {
     		isOpen = !isOpen;
@@ -6645,19 +6873,29 @@ var app = (function () {
     	// $ : console.log(lastSugment);
     	let map;
 
-    	const writable_props = ["url", "y"];
+    	const writable_props = ["url", "y", "x"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$1.warn(`<Profile> was created with unknown prop '${key}'`);
     	});
 
     	function onwindowscroll() {
-    		$$invalidate(0, y = window_1$1.pageYOffset);
+    		$$invalidate(1, y = window_1$1.pageYOffset);
     	}
 
+    	function onwindowresize() {
+    		$$invalidate(0, x = window_1$1.innerWidth);
+    	}
+
+    	const click_handler = () => $$invalidate(3, current = "post");
+    	const click_handler_1 = () => $$invalidate(3, current = "about");
+    	const click_handler_2 = () => $$invalidate(3, current = "post");
+    	const click_handler_3 = () => $$invalidate(3, current = "about");
+
     	$$self.$$set = $$props => {
-    		if ("url" in $$props) $$invalidate(1, url = $$props.url);
-    		if ("y" in $$props) $$invalidate(0, y = $$props.y);
+    		if ("url" in $$props) $$invalidate(2, url = $$props.url);
+    		if ("y" in $$props) $$invalidate(1, y = $$props.y);
+    		if ("x" in $$props) $$invalidate(0, x = $$props.x);
     	};
 
     	$$self.$capture_state = () => ({
@@ -6674,9 +6912,11 @@ var app = (function () {
     		showDetail: Show_detail,
     		url,
     		y,
+    		x,
     		urlParams,
     		id,
     		isOpen,
+    		current,
     		toggleNav,
     		currentLocation,
     		splitUrl,
@@ -6685,9 +6925,11 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("url" in $$props) $$invalidate(1, url = $$props.url);
-    		if ("y" in $$props) $$invalidate(0, y = $$props.y);
+    		if ("url" in $$props) $$invalidate(2, url = $$props.url);
+    		if ("y" in $$props) $$invalidate(1, y = $$props.y);
+    		if ("x" in $$props) $$invalidate(0, x = $$props.x);
     		if ("isOpen" in $$props) isOpen = $$props.isOpen;
+    		if ("current" in $$props) $$invalidate(3, current = $$props.current);
     		if ("currentLocation" in $$props) currentLocation = $$props.currentLocation;
     		if ("splitUrl" in $$props) splitUrl = $$props.splitUrl;
     		if ("lastSugment" in $$props) lastSugment = $$props.lastSugment;
@@ -6698,13 +6940,30 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [y, url, onwindowscroll];
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*x*/ 1) {
+    			console.log(x);
+    		}
+    	};
+
+    	return [
+    		x,
+    		y,
+    		url,
+    		current,
+    		onwindowscroll,
+    		onwindowresize,
+    		click_handler,
+    		click_handler_1,
+    		click_handler_2,
+    		click_handler_3
+    	];
     }
 
     class Profile extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { url: 1, y: 0 });
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { url: 2, y: 1, x: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -6716,8 +6975,12 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*y*/ ctx[0] === undefined && !("y" in props)) {
+    		if (/*y*/ ctx[1] === undefined && !("y" in props)) {
     			console_1$1.warn("<Profile> was created without expected prop 'y'");
+    		}
+
+    		if (/*x*/ ctx[0] === undefined && !("x" in props)) {
+    			console_1$1.warn("<Profile> was created without expected prop 'x'");
     		}
     	}
 
@@ -6736,12 +6999,467 @@ var app = (function () {
     	set y(value) {
     		throw new Error("<Profile>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get x() {
+    		throw new Error("<Profile>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set x(value) {
+    		throw new Error("<Profile>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src/pages/home.svelte generated by Svelte v3.38.3 */
 
     const { window: window_1 } = globals;
     const file$4 = "src/pages/home.svelte";
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[1] = list[i];
+    	return child_ctx;
+    }
+
+    // (88:20) {#each post as post }
+    function create_each_block$1(ctx) {
+    	let article;
+    	let div7;
+    	let div6;
+    	let div4;
+    	let div3;
+    	let div0;
+    	let a0;
+    	let img0;
+    	let img0_src_value;
+    	let a0_href_value;
+    	let t0;
+    	let div2;
+    	let div1;
+    	let h6;
+    	let a1;
+    	let t1_value = /*post*/ ctx[1].magazine_name + "";
+    	let t1;
+    	let t2;
+    	let i0;
+    	let i0_class_value;
+    	let a1_href_value;
+    	let t3;
+    	let span0;
+    	let i1;
+    	let t4;
+    	let t5_value = /*post*/ ctx[1].publish_date + "";
+    	let t5;
+    	let t6;
+    	let div5;
+    	let i2;
+    	let t7;
+    	let ul;
+    	let li0;
+    	let a2;
+    	let i3;
+    	let t8;
+    	let t9;
+    	let li1;
+    	let a3;
+    	let i4;
+    	let t10;
+    	let t11;
+    	let li2;
+    	let a4;
+    	let i5;
+    	let t12;
+    	let t13;
+    	let div8;
+    	let h3;
+    	let a5;
+    	let t14_value = /*post*/ ctx[1].title + "";
+    	let t14;
+    	let a5_href_value;
+    	let t15;
+    	let div9;
+    	let img1;
+    	let img1_src_value;
+    	let t16;
+    	let p;
+    	let t17;
+    	let span1;
+    	let t18;
+    	let span1_id_value;
+    	let span2;
+    	let t19;
+    	let span2_id_value;
+    	let t20;
+    	let span3;
+    	let t21;
+    	let span3_id_value;
+    	let t22;
+    	let div10;
+    	let a6;
+    	let button;
+    	let t24;
+    	let hr;
+    	let t25;
+    	let div12;
+    	let a7;
+    	let img2;
+    	let img2_src_value;
+    	let t26;
+    	let span4;
+    	let t27_value = /*post*/ ctx[1].author_username + "";
+    	let t27;
+    	let t28;
+    	let t29;
+    	let div11;
+    	let i6;
+    	let t30;
+    	let t31;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			article = element("article");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div0 = element("div");
+    			a0 = element("a");
+    			img0 = element("img");
+    			t0 = space();
+    			div2 = element("div");
+    			div1 = element("div");
+    			h6 = element("h6");
+    			a1 = element("a");
+    			t1 = text(t1_value);
+    			t2 = text(" ");
+    			i0 = element("i");
+    			t3 = space();
+    			span0 = element("span");
+    			i1 = element("i");
+    			t4 = space();
+    			t5 = text(t5_value);
+    			t6 = space();
+    			div5 = element("div");
+    			i2 = element("i");
+    			t7 = space();
+    			ul = element("ul");
+    			li0 = element("li");
+    			a2 = element("a");
+    			i3 = element("i");
+    			t8 = text(" ذخیره کردن پست");
+    			t9 = space();
+    			li1 = element("li");
+    			a3 = element("a");
+    			i4 = element("i");
+    			t10 = text(" کپی کردن لینک");
+    			t11 = space();
+    			li2 = element("li");
+    			a4 = element("a");
+    			i5 = element("i");
+    			t12 = text(" گزارش دادن");
+    			t13 = space();
+    			div8 = element("div");
+    			h3 = element("h3");
+    			a5 = element("a");
+    			t14 = text(t14_value);
+    			t15 = space();
+    			div9 = element("div");
+    			img1 = element("img");
+    			t16 = space();
+    			p = element("p");
+    			t17 = text("طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                             صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                             برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید ");
+    			span1 = element("span");
+    			t18 = text("...");
+    			span2 = element("span");
+    			t19 = text("طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                            برای پر کردن صفحه و ارایه اولیه شکل \n                            ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                            صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.");
+    			t20 = space();
+    			span3 = element("span");
+    			t21 = text("بیشتر بخوانید");
+    			t22 = space();
+    			div10 = element("div");
+    			a6 = element("a");
+    			button = element("button");
+    			button.textContent = "ادامه مطلب";
+    			t24 = space();
+    			hr = element("hr");
+    			t25 = space();
+    			div12 = element("div");
+    			a7 = element("a");
+    			img2 = element("img");
+    			t26 = space();
+    			span4 = element("span");
+    			t27 = text(t27_value);
+    			t28 = text("  ");
+    			t29 = space();
+    			div11 = element("div");
+    			i6 = element("i");
+    			t30 = text(" ۵۶");
+    			t31 = space();
+    			attr_dev(img0, "class", "cu-image-com mr-1 ");
+    			if (img0.src !== (img0_src_value = /*post*/ ctx[1].magazine_logo_url)) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "");
+    			add_location(img0, file$4, 95, 80, 4531);
+    			attr_dev(a0, "href", a0_href_value = "profile/" + /*post*/ ctx[1].magazine_id);
+    			add_location(a0, file$4, 95, 43, 4494);
+    			attr_dev(div0, "class", "col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1");
+    			add_location(div0, file$4, 94, 40, 4394);
+    			set_style(i0, "color", "#048af7");
+
+    			attr_dev(i0, "class", i0_class_value = /*post*/ ctx[1].magazine_isverify === true
+    			? "fas fa-check-circle"
+    			: "");
+
+    			add_location(i0, file$4, 99, 115, 4959);
+    			attr_dev(a1, "href", a1_href_value = "profile/" + /*post*/ ctx[1].magazine_id);
+    			add_location(a1, file$4, 99, 52, 4896);
+    			add_location(h6, file$4, 99, 48, 4892);
+    			attr_dev(i1, "class", "fas fa-clock");
+    			add_location(i1, file$4, 100, 80, 5150);
+    			attr_dev(span0, "class", "show-time-custome");
+    			add_location(span0, file$4, 100, 48, 5118);
+    			attr_dev(div1, "class", "cu-intro mt-2");
+    			add_location(div1, file$4, 98, 44, 4816);
+    			attr_dev(div2, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center");
+    			add_location(div2, file$4, 97, 40, 4695);
+    			attr_dev(div3, "class", "row ");
+    			add_location(div3, file$4, 93, 36, 4335);
+    			attr_dev(div4, "class", "col-11 col-md-11");
+    			add_location(div4, file$4, 92, 32, 4267);
+    			attr_dev(i2, "class", "fas fa-ellipsis-v ");
+    			attr_dev(i2, "type", "button");
+    			attr_dev(i2, "data-toggle", "dropdown");
+    			add_location(i2, file$4, 106, 32, 5494);
+    			attr_dev(i3, "class", "far fa-bookmark");
+    			add_location(i3, file$4, 108, 93, 5732);
+    			attr_dev(a2, "href", "#");
+    			add_location(a2, file$4, 108, 81, 5720);
+    			add_location(li0, file$4, 108, 36, 5675);
+    			attr_dev(i4, "class", "fas fa-share-alt");
+    			add_location(i4, file$4, 109, 52, 5841);
+    			attr_dev(a3, "href", "#");
+    			add_location(a3, file$4, 109, 40, 5829);
+    			add_location(li1, file$4, 109, 36, 5825);
+    			attr_dev(i5, "class", "fas fa-flag");
+    			add_location(i5, file$4, 110, 52, 5950);
+    			attr_dev(a4, "href", "#");
+    			add_location(a4, file$4, 110, 40, 5938);
+    			add_location(li2, file$4, 110, 36, 5934);
+    			attr_dev(ul, "class", "dropdown-menu ellipsis-menu");
+    			add_location(ul, file$4, 107, 32, 5598);
+    			attr_dev(div5, "class", "col-1 ml-0 pl-0 pr-4 dropdown");
+    			add_location(div5, file$4, 105, 32, 5418);
+    			attr_dev(div6, "class", "row justify-content-between p-2");
+    			add_location(div6, file$4, 91, 28, 4189);
+    			attr_dev(div7, "class", "col-12");
+    			add_location(div7, file$4, 90, 24, 4140);
+    			attr_dev(a5, "href", a5_href_value = "show-detail/" + /*post*/ ctx[1].id);
+    			add_location(a5, file$4, 116, 72, 6262);
+    			attr_dev(h3, "class", "title-post mt-1 mb-0 py-3 pr-3");
+    			add_location(h3, file$4, 116, 28, 6218);
+    			attr_dev(div8, "class", "col-12 p-0");
+    			add_location(div8, file$4, 115, 24, 6165);
+    			if (img1.src !== (img1_src_value = "image/30.jpg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
+    			attr_dev(img1, "alt", "");
+    			add_location(img1, file$4, 119, 28, 6457);
+    			attr_dev(div9, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
+    			add_location(div9, file$4, 118, 24, 6371);
+    			attr_dev(span1, "id", span1_id_value = "dots" + /*post*/ ctx[1].id);
+    			add_location(span1, file$4, 125, 114, 7004);
+    			attr_dev(span2, "id", span2_id_value = "more" + /*post*/ ctx[1].id);
+    			add_location(span2, file$4, 125, 149, 7039);
+    			attr_dev(span3, "id", span3_id_value = "myBtn" + /*post*/ ctx[1].id);
+    			set_style(span3, "cursor", "pointer");
+    			add_location(span3, file$4, 132, 28, 7711);
+    			attr_dev(p, "class", "col-12 mt-3 post-text");
+    			add_location(p, file$4, 122, 24, 6620);
+    			attr_dev(button, "id", "read-more");
+    			attr_dev(button, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
+    			add_location(button, file$4, 137, 32, 7991);
+    			attr_dev(a6, "href", "#");
+    			add_location(a6, file$4, 136, 28, 7946);
+    			attr_dev(div10, "class", "col-12 ");
+    			add_location(div10, file$4, 135, 24, 7896);
+    			attr_dev(hr, "class", "col-11 mx-auto");
+    			add_location(hr, file$4, 140, 24, 8199);
+    			attr_dev(img2, "class", "personal-img");
+    			if (img2.src !== (img2_src_value = /*post*/ ctx[1].author_logo)) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "alt", "");
+    			add_location(img2, file$4, 143, 32, 8368);
+    			attr_dev(span4, "class", "personal-name");
+    			add_location(span4, file$4, 144, 32, 8459);
+    			attr_dev(a7, "class", "a-clicked");
+    			attr_dev(a7, "href", "#");
+    			add_location(a7, file$4, 142, 28, 8305);
+    			attr_dev(i6, "class", "fas fa-eye");
+    			add_location(i6, file$4, 146, 52, 8615);
+    			attr_dev(div11, "class", "view-count");
+    			add_location(div11, file$4, 146, 28, 8591);
+    			attr_dev(div12, "class", "col-12 mb-3");
+    			add_location(div12, file$4, 141, 24, 8251);
+    			attr_dev(article, "class", "p-0 shadow-radius-section shadow-section mb-3");
+    			add_location(article, file$4, 89, 20, 4052);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, article, anchor);
+    			append_dev(article, div7);
+    			append_dev(div7, div6);
+    			append_dev(div6, div4);
+    			append_dev(div4, div3);
+    			append_dev(div3, div0);
+    			append_dev(div0, a0);
+    			append_dev(a0, img0);
+    			append_dev(div3, t0);
+    			append_dev(div3, div2);
+    			append_dev(div2, div1);
+    			append_dev(div1, h6);
+    			append_dev(h6, a1);
+    			append_dev(a1, t1);
+    			append_dev(a1, t2);
+    			append_dev(a1, i0);
+    			append_dev(div1, t3);
+    			append_dev(div1, span0);
+    			append_dev(span0, i1);
+    			append_dev(span0, t4);
+    			append_dev(span0, t5);
+    			append_dev(div6, t6);
+    			append_dev(div6, div5);
+    			append_dev(div5, i2);
+    			append_dev(div5, t7);
+    			append_dev(div5, ul);
+    			append_dev(ul, li0);
+    			append_dev(li0, a2);
+    			append_dev(a2, i3);
+    			append_dev(a2, t8);
+    			append_dev(ul, t9);
+    			append_dev(ul, li1);
+    			append_dev(li1, a3);
+    			append_dev(a3, i4);
+    			append_dev(a3, t10);
+    			append_dev(ul, t11);
+    			append_dev(ul, li2);
+    			append_dev(li2, a4);
+    			append_dev(a4, i5);
+    			append_dev(a4, t12);
+    			append_dev(article, t13);
+    			append_dev(article, div8);
+    			append_dev(div8, h3);
+    			append_dev(h3, a5);
+    			append_dev(a5, t14);
+    			append_dev(article, t15);
+    			append_dev(article, div9);
+    			append_dev(div9, img1);
+    			append_dev(article, t16);
+    			append_dev(article, p);
+    			append_dev(p, t17);
+    			append_dev(p, span1);
+    			append_dev(span1, t18);
+    			append_dev(p, span2);
+    			append_dev(span2, t19);
+    			append_dev(p, t20);
+    			append_dev(p, span3);
+    			append_dev(span3, t21);
+    			append_dev(article, t22);
+    			append_dev(article, div10);
+    			append_dev(div10, a6);
+    			append_dev(a6, button);
+    			append_dev(article, t24);
+    			append_dev(article, hr);
+    			append_dev(article, t25);
+    			append_dev(article, div12);
+    			append_dev(div12, a7);
+    			append_dev(a7, img2);
+    			append_dev(a7, t26);
+    			append_dev(a7, span4);
+    			append_dev(span4, t27);
+    			append_dev(a7, t28);
+    			append_dev(div12, t29);
+    			append_dev(div12, div11);
+    			append_dev(div11, i6);
+    			append_dev(div11, t30);
+    			append_dev(article, t31);
+
+    			if (!mounted) {
+    				dispose = listen_dev(
+    					span3,
+    					"click",
+    					function () {
+    						if (is_function(myFunction(/*post*/ ctx[1].id))) myFunction(/*post*/ ctx[1].id).apply(this, arguments);
+    					},
+    					false,
+    					false,
+    					false
+    				);
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*post*/ 2 && img0.src !== (img0_src_value = /*post*/ ctx[1].magazine_logo_url)) {
+    				attr_dev(img0, "src", img0_src_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && a0_href_value !== (a0_href_value = "profile/" + /*post*/ ctx[1].magazine_id)) {
+    				attr_dev(a0, "href", a0_href_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && t1_value !== (t1_value = /*post*/ ctx[1].magazine_name + "")) set_data_dev(t1, t1_value);
+
+    			if (dirty & /*post*/ 2 && i0_class_value !== (i0_class_value = /*post*/ ctx[1].magazine_isverify === true
+    			? "fas fa-check-circle"
+    			: "")) {
+    				attr_dev(i0, "class", i0_class_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && a1_href_value !== (a1_href_value = "profile/" + /*post*/ ctx[1].magazine_id)) {
+    				attr_dev(a1, "href", a1_href_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && t5_value !== (t5_value = /*post*/ ctx[1].publish_date + "")) set_data_dev(t5, t5_value);
+    			if (dirty & /*post*/ 2 && t14_value !== (t14_value = /*post*/ ctx[1].title + "")) set_data_dev(t14, t14_value);
+
+    			if (dirty & /*post*/ 2 && a5_href_value !== (a5_href_value = "show-detail/" + /*post*/ ctx[1].id)) {
+    				attr_dev(a5, "href", a5_href_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && span1_id_value !== (span1_id_value = "dots" + /*post*/ ctx[1].id)) {
+    				attr_dev(span1, "id", span1_id_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && span2_id_value !== (span2_id_value = "more" + /*post*/ ctx[1].id)) {
+    				attr_dev(span2, "id", span2_id_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && span3_id_value !== (span3_id_value = "myBtn" + /*post*/ ctx[1].id)) {
+    				attr_dev(span3, "id", span3_id_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && img2.src !== (img2_src_value = /*post*/ ctx[1].author_logo)) {
+    				attr_dev(img2, "src", img2_src_value);
+    			}
+
+    			if (dirty & /*post*/ 2 && t27_value !== (t27_value = /*post*/ ctx[1].author_username + "")) set_data_dev(t27, t27_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(article);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(88:20) {#each post as post }",
+    		ctx
+    	});
+
+    	return block;
+    }
 
     function create_fragment$4(ctx) {
     	let scrolling = false;
@@ -6753,7 +7471,7 @@ var app = (function () {
     	let scrolling_timeout;
     	let t0;
     	let main;
-    	let div46;
+    	let div7;
     	let aside0;
     	let t2;
     	let aside1;
@@ -6819,242 +7537,33 @@ var app = (function () {
     	let t25;
     	let t26;
     	let section1;
-    	let div45;
-    	let article3;
-    	let div13;
-    	let div12;
-    	let div10;
-    	let div9;
     	let div6;
-    	let a6;
-    	let img6;
-    	let img6_src_value;
     	let t27;
-    	let div8;
-    	let div7;
-    	let h60;
-    	let a7;
-    	let t28;
-    	let i6;
-    	let t29;
-    	let span3;
-    	let i7;
-    	let t30;
-    	let t31;
-    	let div11;
-    	let i8;
-    	let t32;
-    	let ul0;
-    	let li0;
-    	let a8;
-    	let i9;
-    	let t33;
-    	let t34;
-    	let li1;
-    	let a9;
-    	let i10;
-    	let t35;
-    	let t36;
-    	let li2;
-    	let a10;
-    	let i11;
-    	let t37;
-    	let t38;
-    	let div14;
-    	let h30;
-    	let a11;
-    	let t40;
-    	let div15;
-    	let img7;
-    	let img7_src_value;
-    	let t41;
-    	let p0;
-    	let t42;
-    	let span4;
-    	let span5;
-    	let t45;
-    	let span6;
-    	let t47;
-    	let div16;
-    	let a12;
-    	let button0;
-    	let t49;
-    	let hr0;
-    	let t50;
-    	let div18;
-    	let a13;
-    	let img8;
-    	let img8_src_value;
-    	let t51;
-    	let span7;
-    	let t53;
-    	let t54;
-    	let div17;
-    	let i12;
-    	let t55;
-    	let t56;
-    	let article4;
-    	let div26;
-    	let div25;
-    	let div23;
-    	let div22;
-    	let div19;
-    	let img9;
-    	let img9_src_value;
-    	let t57;
-    	let div21;
-    	let div20;
-    	let h61;
-    	let a14;
-    	let t58;
-    	let i13;
-    	let t59;
-    	let span8;
-    	let i14;
-    	let t60;
-    	let t61;
-    	let div24;
-    	let i15;
-    	let t62;
-    	let ul1;
-    	let li3;
-    	let a15;
-    	let i16;
-    	let t63;
-    	let t64;
-    	let li4;
-    	let a16;
-    	let i17;
-    	let t65;
-    	let t66;
-    	let li5;
-    	let a17;
-    	let i18;
-    	let t67;
-    	let t68;
-    	let div27;
-    	let h31;
-    	let a18;
-    	let t70;
-    	let div28;
-    	let img10;
-    	let img10_src_value;
-    	let t71;
-    	let p1;
-    	let t72;
-    	let span9;
-    	let span10;
-    	let t75;
-    	let span11;
-    	let t77;
-    	let div29;
-    	let a19;
-    	let button1;
-    	let t79;
-    	let hr1;
-    	let t80;
-    	let div31;
-    	let a20;
-    	let img11;
-    	let img11_src_value;
-    	let t81;
-    	let span12;
-    	let t83;
-    	let t84;
-    	let div30;
-    	let i19;
-    	let t85;
-    	let t86;
-    	let article5;
-    	let div39;
-    	let div38;
-    	let div36;
-    	let div35;
-    	let div32;
-    	let img12;
-    	let img12_src_value;
-    	let t87;
-    	let div34;
-    	let div33;
-    	let h62;
-    	let a21;
-    	let t88;
-    	let i20;
-    	let t89;
-    	let span13;
-    	let i21;
-    	let t90;
-    	let t91;
-    	let div37;
-    	let i22;
-    	let t92;
-    	let ul2;
-    	let li6;
-    	let a22;
-    	let i23;
-    	let t93;
-    	let t94;
-    	let li7;
-    	let a23;
-    	let i24;
-    	let t95;
-    	let t96;
-    	let li8;
-    	let a24;
-    	let i25;
-    	let t97;
-    	let t98;
-    	let div40;
-    	let h32;
-    	let a25;
-    	let t100;
-    	let div41;
-    	let img13;
-    	let img13_src_value;
-    	let t101;
-    	let p2;
-    	let t102;
-    	let span14;
-    	let span15;
-    	let t105;
-    	let span16;
-    	let t107;
-    	let div42;
-    	let a26;
-    	let button2;
-    	let t109;
-    	let hr2;
-    	let t110;
-    	let div44;
-    	let a27;
-    	let img14;
-    	let img14_src_value;
-    	let t111;
-    	let span17;
-    	let t113;
-    	let t114;
-    	let div43;
-    	let i26;
-    	let t115;
-    	let t116;
     	let aside2;
     	let main_transition;
-    	let t118;
+    	let t29;
     	let br0;
-    	let hr3;
+    	let hr;
     	let br1;
     	let br2;
     	let br3;
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[3]);
+    	add_render_callback(/*onwindowscroll*/ ctx[4]);
+    	let each_value = /*post*/ ctx[1];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
 
     	const block = {
     		c: function create() {
     			t0 = space();
     			main = element("main");
-    			div46 = element("div");
+    			div7 = element("div");
     			aside0 = element("aside");
     			aside0.textContent = "hello";
     			t2 = space();
@@ -7118,638 +7627,122 @@ var app = (function () {
     			t25 = text(" ۲ ماه قبل");
     			t26 = space();
     			section1 = element("section");
-    			div45 = element("div");
-    			article3 = element("article");
-    			div13 = element("div");
-    			div12 = element("div");
-    			div10 = element("div");
-    			div9 = element("div");
     			div6 = element("div");
-    			a6 = element("a");
-    			img6 = element("img");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
     			t27 = space();
-    			div8 = element("div");
-    			div7 = element("div");
-    			h60 = element("h6");
-    			a7 = element("a");
-    			t28 = text("مرکز رشد و نواوری آفرینه ");
-    			i6 = element("i");
-    			t29 = space();
-    			span3 = element("span");
-    			i7 = element("i");
-    			t30 = text(" ۳ دقیقه قبل");
-    			t31 = space();
-    			div11 = element("div");
-    			i8 = element("i");
-    			t32 = space();
-    			ul0 = element("ul");
-    			li0 = element("li");
-    			a8 = element("a");
-    			i9 = element("i");
-    			t33 = text(" ذخیره کردن پست");
-    			t34 = space();
-    			li1 = element("li");
-    			a9 = element("a");
-    			i10 = element("i");
-    			t35 = text(" کپی کردن لینک");
-    			t36 = space();
-    			li2 = element("li");
-    			a10 = element("a");
-    			i11 = element("i");
-    			t37 = text(" گزارش دادن");
-    			t38 = space();
-    			div14 = element("div");
-    			h30 = element("h3");
-    			a11 = element("a");
-    			a11.textContent = "به اینولینکس خوش آمدید";
-    			t40 = space();
-    			div15 = element("div");
-    			img7 = element("img");
-    			t41 = space();
-    			p0 = element("p");
-    			t42 = text("طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                             صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                             برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید ");
-    			span4 = element("span");
-    			span4.textContent = "...";
-    			span5 = element("span");
-    			span5.textContent = "طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                            برای پر کردن صفحه و ارایه اولیه شکل \n                            ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                            صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.";
-    			t45 = space();
-    			span6 = element("span");
-    			span6.textContent = "بیشتر بخوانید";
-    			t47 = space();
-    			div16 = element("div");
-    			a12 = element("a");
-    			button0 = element("button");
-    			button0.textContent = "ادامه مطلب";
-    			t49 = space();
-    			hr0 = element("hr");
-    			t50 = space();
-    			div18 = element("div");
-    			a13 = element("a");
-    			img8 = element("img");
-    			t51 = space();
-    			span7 = element("span");
-    			span7.textContent = "مسعودآقایی ساداتی";
-    			t53 = text("  ");
-    			t54 = space();
-    			div17 = element("div");
-    			i12 = element("i");
-    			t55 = text(" ۵۶");
-    			t56 = space();
-    			article4 = element("article");
-    			div26 = element("div");
-    			div25 = element("div");
-    			div23 = element("div");
-    			div22 = element("div");
-    			div19 = element("div");
-    			img9 = element("img");
-    			t57 = space();
-    			div21 = element("div");
-    			div20 = element("div");
-    			h61 = element("h6");
-    			a14 = element("a");
-    			t58 = text("مرکز رشد و نواوری آفرینه ");
-    			i13 = element("i");
-    			t59 = space();
-    			span8 = element("span");
-    			i14 = element("i");
-    			t60 = text(" ۸ روز قبل");
-    			t61 = space();
-    			div24 = element("div");
-    			i15 = element("i");
-    			t62 = space();
-    			ul1 = element("ul");
-    			li3 = element("li");
-    			a15 = element("a");
-    			i16 = element("i");
-    			t63 = text(" ذخیره کردن پست");
-    			t64 = space();
-    			li4 = element("li");
-    			a16 = element("a");
-    			i17 = element("i");
-    			t65 = text(" کپی کردن لینک");
-    			t66 = space();
-    			li5 = element("li");
-    			a17 = element("a");
-    			i18 = element("i");
-    			t67 = text(" گزارش دادن");
-    			t68 = space();
-    			div27 = element("div");
-    			h31 = element("h3");
-    			a18 = element("a");
-    			a18.textContent = "نگاهی اجمالی به آخرین دستاوردهای شبکه اجتماعی فیس بوک";
-    			t70 = space();
-    			div28 = element("div");
-    			img10 = element("img");
-    			t71 = space();
-    			p1 = element("p");
-    			t72 = text("طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                             صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                             برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید ");
-    			span9 = element("span");
-    			span9.textContent = "...";
-    			span10 = element("span");
-    			span10.textContent = "طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                            برای پر کردن صفحه و ارایه اولیه شکل \n                            ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                            صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.";
-    			t75 = space();
-    			span11 = element("span");
-    			span11.textContent = "بیشتر بخوانید";
-    			t77 = space();
-    			div29 = element("div");
-    			a19 = element("a");
-    			button1 = element("button");
-    			button1.textContent = "ادامه مطلب";
-    			t79 = space();
-    			hr1 = element("hr");
-    			t80 = space();
-    			div31 = element("div");
-    			a20 = element("a");
-    			img11 = element("img");
-    			t81 = space();
-    			span12 = element("span");
-    			span12.textContent = "مسعودآقایی ساداتی";
-    			t83 = text("  ");
-    			t84 = space();
-    			div30 = element("div");
-    			i19 = element("i");
-    			t85 = text(" ۱۴۲");
-    			t86 = space();
-    			article5 = element("article");
-    			div39 = element("div");
-    			div38 = element("div");
-    			div36 = element("div");
-    			div35 = element("div");
-    			div32 = element("div");
-    			img12 = element("img");
-    			t87 = space();
-    			div34 = element("div");
-    			div33 = element("div");
-    			h62 = element("h6");
-    			a21 = element("a");
-    			t88 = text("مرکز رشد و نواوری آفرینه ");
-    			i20 = element("i");
-    			t89 = space();
-    			span13 = element("span");
-    			i21 = element("i");
-    			t90 = text(" ۳ دقیقه قبل");
-    			t91 = space();
-    			div37 = element("div");
-    			i22 = element("i");
-    			t92 = space();
-    			ul2 = element("ul");
-    			li6 = element("li");
-    			a22 = element("a");
-    			i23 = element("i");
-    			t93 = text(" ذخیره کردن پست");
-    			t94 = space();
-    			li7 = element("li");
-    			a23 = element("a");
-    			i24 = element("i");
-    			t95 = text(" کپی کردن لینک");
-    			t96 = space();
-    			li8 = element("li");
-    			a24 = element("a");
-    			i25 = element("i");
-    			t97 = text(" گزارش دادن");
-    			t98 = space();
-    			div40 = element("div");
-    			h32 = element("h3");
-    			a25 = element("a");
-    			a25.textContent = "راه های مدیریت کسب و کار الکترونیکی";
-    			t100 = space();
-    			div41 = element("div");
-    			img13 = element("img");
-    			t101 = space();
-    			p2 = element("p");
-    			t102 = text("طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                             صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                             برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید ");
-    			span14 = element("span");
-    			span14.textContent = "...";
-    			span15 = element("span");
-    			span15.textContent = "طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                            برای پر کردن صفحه و ارایه اولیه شکل \n                            ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                            صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.";
-    			t105 = space();
-    			span16 = element("span");
-    			span16.textContent = "بیشتر بخوانید";
-    			t107 = space();
-    			div42 = element("div");
-    			a26 = element("a");
-    			button2 = element("button");
-    			button2.textContent = "ادامه مطلب";
-    			t109 = space();
-    			hr2 = element("hr");
-    			t110 = space();
-    			div44 = element("div");
-    			a27 = element("a");
-    			img14 = element("img");
-    			t111 = space();
-    			span17 = element("span");
-    			span17.textContent = "مجتبی اکبری";
-    			t113 = text("  ");
-    			t114 = space();
-    			div43 = element("div");
-    			i26 = element("i");
-    			t115 = text(" ۱۲");
-    			t116 = space();
     			aside2 = element("aside");
     			aside2.textContent = "hello1";
-    			t118 = space();
+    			t29 = space();
     			br0 = element("br");
-    			hr3 = element("hr");
+    			hr = element("hr");
     			br1 = element("br");
     			br2 = element("br");
     			br3 = element("br");
     			document.title = "\n        اینولینکس\n    ";
     			attr_dev(aside0, "class", "col-12 col-md-3  mx-1 mt-5 mt-md-0 bg-light shadow-radius-section");
-    			add_location(aside0, file$4, 29, 8, 886);
+    			add_location(aside0, file$4, 39, 8, 1065);
     			attr_dev(img0, "class", "image-pin-top");
     			if (img0.src !== (img0_src_value = "image/30.jpg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$4, 34, 24, 1308);
-    			add_location(h50, file$4, 36, 28, 1457);
+    			add_location(img0, file$4, 44, 24, 1487);
+    			add_location(h50, file$4, 46, 28, 1636);
     			attr_dev(a0, "class", "w-100 content-pin-top");
     			attr_dev(a0, "href", "#");
-    			add_location(a0, file$4, 35, 24, 1386);
+    			add_location(a0, file$4, 45, 24, 1565);
     			if (img1.src !== (img1_src_value = "/image/26.jpeg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "mag-img-top");
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$4, 39, 28, 1604);
+    			add_location(img1, file$4, 49, 28, 1783);
     			attr_dev(a1, "href", "#");
-    			add_location(a1, file$4, 38, 24, 1563);
+    			add_location(a1, file$4, 48, 24, 1742);
     			set_style(i0, "color", "mediumspringgreen");
     			attr_dev(i0, "class", "fas fa-check-circle");
-    			add_location(i0, file$4, 42, 60, 1805);
-    			add_location(span0, file$4, 42, 28, 1773);
+    			add_location(i0, file$4, 52, 60, 1984);
+    			add_location(span0, file$4, 52, 28, 1952);
     			attr_dev(i1, "class", "fas fa-clock");
-    			add_location(i1, file$4, 42, 144, 1889);
+    			add_location(i1, file$4, 52, 144, 2068);
     			attr_dev(div0, "class", "author-time-pin-top");
-    			add_location(div0, file$4, 41, 24, 1711);
+    			add_location(div0, file$4, 51, 24, 1890);
     			attr_dev(article0, "class", "col-12 bg-danger mb-md-4 first-article-main");
-    			add_location(article0, file$4, 33, 20, 1222);
+    			add_location(article0, file$4, 43, 20, 1401);
     			attr_dev(div1, "class", "col-12 mb-4 my-md-0");
-    			add_location(div1, file$4, 32, 16, 1168);
+    			add_location(div1, file$4, 42, 16, 1347);
     			attr_dev(img2, "class", "image-pin w-100");
     			if (img2.src !== (img2_src_value = "image/28.jpg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
-    			add_location(img2, file$4, 48, 24, 2158);
-    			add_location(h51, file$4, 50, 28, 2305);
+    			add_location(img2, file$4, 58, 24, 2337);
+    			add_location(h51, file$4, 60, 28, 2484);
     			attr_dev(a2, "class", "w-100 content-pin");
     			attr_dev(a2, "href", "#");
-    			add_location(a2, file$4, 49, 24, 2238);
+    			add_location(a2, file$4, 59, 24, 2417);
     			if (img3.src !== (img3_src_value = "/image/27.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "class", "mag-img");
     			attr_dev(img3, "alt", "");
-    			add_location(img3, file$4, 53, 28, 2452);
+    			add_location(img3, file$4, 63, 28, 2631);
     			attr_dev(a3, "href", "#");
-    			add_location(a3, file$4, 52, 24, 2411);
+    			add_location(a3, file$4, 62, 24, 2590);
     			set_style(i2, "color", "mediumspringgreen");
     			attr_dev(i2, "class", "fas fa-check-circle");
-    			add_location(i2, file$4, 56, 42, 2626);
-    			add_location(span1, file$4, 56, 28, 2612);
+    			add_location(i2, file$4, 66, 42, 2805);
+    			add_location(span1, file$4, 66, 28, 2791);
     			attr_dev(i3, "class", "fas fa-clock");
-    			add_location(i3, file$4, 56, 126, 2710);
+    			add_location(i3, file$4, 66, 126, 2889);
     			attr_dev(div2, "class", "author-time-pin");
-    			add_location(div2, file$4, 55, 24, 2554);
+    			add_location(div2, file$4, 65, 24, 2733);
     			attr_dev(article1, "class", "col-12");
-    			add_location(article1, file$4, 47, 20, 2109);
+    			add_location(article1, file$4, 57, 20, 2288);
     			attr_dev(div3, "class", "col-12 col-xl-6 mb-4 my-md-0 pin-article-main");
-    			add_location(div3, file$4, 46, 16, 2029);
+    			add_location(div3, file$4, 56, 16, 2208);
     			attr_dev(img4, "class", "image-pin w-100");
     			if (img4.src !== (img4_src_value = "image/20.jpg")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
-    			add_location(img4, file$4, 62, 24, 2988);
-    			add_location(h52, file$4, 64, 28, 3135);
+    			add_location(img4, file$4, 72, 24, 3167);
+    			add_location(h52, file$4, 74, 28, 3314);
     			attr_dev(a4, "class", "w-100 content-pin");
     			attr_dev(a4, "href", "#");
-    			add_location(a4, file$4, 63, 24, 3068);
+    			add_location(a4, file$4, 73, 24, 3247);
     			if (img5.src !== (img5_src_value = "/image/25.jpg")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "class", "mag-img");
     			attr_dev(img5, "alt", "");
-    			add_location(img5, file$4, 67, 28, 3261);
+    			add_location(img5, file$4, 77, 28, 3440);
     			attr_dev(a5, "href", "#");
-    			add_location(a5, file$4, 66, 24, 3220);
+    			add_location(a5, file$4, 76, 24, 3399);
     			set_style(i4, "color", "mediumspringgreen");
     			attr_dev(i4, "class", "fas fa-check-circle");
-    			add_location(i4, file$4, 70, 49, 3442);
-    			add_location(span2, file$4, 70, 28, 3421);
+    			add_location(i4, file$4, 80, 49, 3621);
+    			add_location(span2, file$4, 80, 28, 3600);
     			attr_dev(i5, "class", "fas fa-clock");
-    			add_location(i5, file$4, 70, 133, 3526);
+    			add_location(i5, file$4, 80, 133, 3705);
     			attr_dev(div4, "class", "author-time-pin");
-    			add_location(div4, file$4, 69, 24, 3363);
+    			add_location(div4, file$4, 79, 24, 3542);
     			attr_dev(article2, "class", "col-12");
-    			add_location(article2, file$4, 61, 20, 2939);
+    			add_location(article2, file$4, 71, 20, 3118);
     			attr_dev(div5, "class", "col-12 col-xl-6 mb-4 mt-lg-0 mt-md-4  pin-article-main");
-    			add_location(div5, file$4, 60, 16, 2850);
+    			add_location(div5, file$4, 70, 16, 3029);
     			attr_dev(section0, "class", "row justify-content-md-center mx-0 pt-3 bg-light shadow-radius-section");
-    			add_location(section0, file$4, 31, 12, 1062);
-    			attr_dev(img6, "class", "cu-image-com mr-1 ");
-    			if (img6.src !== (img6_src_value = "image/afarine.jpg")) attr_dev(img6, "src", img6_src_value);
-    			attr_dev(img6, "alt", "");
-    			add_location(img6, file$4, 83, 61, 4271);
-    			attr_dev(a6, "href", "profile");
-    			add_location(a6, file$4, 83, 43, 4253);
-    			attr_dev(div6, "class", "col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1");
-    			add_location(div6, file$4, 82, 40, 4153);
-    			set_style(i6, "color", "#048af7");
-    			attr_dev(i6, "class", "fas fa-check-circle");
-    			add_location(i6, file$4, 87, 94, 4671);
-    			attr_dev(a7, "href", "#");
-    			add_location(a7, file$4, 87, 52, 4629);
-    			add_location(h60, file$4, 87, 48, 4625);
-    			attr_dev(i7, "class", "fas fa-clock");
-    			add_location(i7, file$4, 88, 80, 4819);
-    			attr_dev(span3, "class", "show-time-custome");
-    			add_location(span3, file$4, 88, 48, 4787);
-    			attr_dev(div7, "class", "cu-intro mt-2");
-    			add_location(div7, file$4, 86, 44, 4549);
-    			attr_dev(div8, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center");
-    			add_location(div8, file$4, 85, 40, 4428);
-    			attr_dev(div9, "class", "row ");
-    			add_location(div9, file$4, 81, 36, 4094);
-    			attr_dev(div10, "class", "col-11 col-md-11");
-    			add_location(div10, file$4, 80, 32, 4026);
-    			attr_dev(i8, "class", "fas fa-ellipsis-v ");
-    			attr_dev(i8, "type", "button");
-    			attr_dev(i8, "data-toggle", "dropdown");
-    			add_location(i8, file$4, 94, 32, 5155);
-    			attr_dev(i9, "class", "far fa-bookmark");
-    			add_location(i9, file$4, 96, 93, 5393);
-    			attr_dev(a8, "href", "#");
-    			add_location(a8, file$4, 96, 81, 5381);
-    			add_location(li0, file$4, 96, 36, 5336);
-    			attr_dev(i10, "class", "fas fa-share-alt");
-    			add_location(i10, file$4, 97, 52, 5502);
-    			attr_dev(a9, "href", "#");
-    			add_location(a9, file$4, 97, 40, 5490);
-    			add_location(li1, file$4, 97, 36, 5486);
-    			attr_dev(i11, "class", "fas fa-flag");
-    			add_location(i11, file$4, 98, 52, 5611);
-    			attr_dev(a10, "href", "#");
-    			add_location(a10, file$4, 98, 40, 5599);
-    			add_location(li2, file$4, 98, 36, 5595);
-    			attr_dev(ul0, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul0, file$4, 95, 32, 5259);
-    			attr_dev(div11, "class", "col-1 ml-0 pl-0 pr-4 dropdown");
-    			add_location(div11, file$4, 93, 32, 5079);
-    			attr_dev(div12, "class", "row justify-content-between p-2");
-    			add_location(div12, file$4, 79, 28, 3948);
-    			attr_dev(div13, "class", "col-12");
-    			add_location(div13, file$4, 78, 24, 3899);
-    			attr_dev(a11, "href", "#");
-    			add_location(a11, file$4, 104, 72, 5923);
-    			attr_dev(h30, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h30, file$4, 104, 28, 5879);
-    			attr_dev(div14, "class", "col-12 p-0");
-    			add_location(div14, file$4, 103, 24, 5826);
-    			if (img7.src !== (img7_src_value = "image/30.jpg")) attr_dev(img7, "src", img7_src_value);
-    			attr_dev(img7, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
-    			attr_dev(img7, "alt", "");
-    			add_location(img7, file$4, 107, 28, 6108);
-    			attr_dev(div15, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div15, file$4, 106, 24, 6022);
-    			attr_dev(span4, "id", "dots");
-    			add_location(span4, file$4, 113, 114, 6655);
-    			attr_dev(span5, "id", "more");
-    			add_location(span5, file$4, 113, 140, 6681);
-    			attr_dev(span6, "id", "myBtn");
-    			set_style(span6, "cursor", "pointer");
-    			add_location(span6, file$4, 120, 28, 7344);
-    			attr_dev(p0, "class", "col-12 mt-3 post-text");
-    			add_location(p0, file$4, 110, 24, 6271);
-    			attr_dev(button0, "id", "read-more");
-    			attr_dev(button0, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button0, file$4, 125, 32, 7606);
-    			attr_dev(a12, "href", "#");
-    			add_location(a12, file$4, 124, 28, 7561);
-    			attr_dev(div16, "class", "col-12 ");
-    			add_location(div16, file$4, 123, 24, 7511);
-    			attr_dev(hr0, "class", "col-11 mx-auto");
-    			add_location(hr0, file$4, 128, 24, 7814);
-    			attr_dev(img8, "class", "personal-img");
-    			if (img8.src !== (img8_src_value = "image/1.jpeg")) attr_dev(img8, "src", img8_src_value);
-    			attr_dev(img8, "alt", "");
-    			add_location(img8, file$4, 131, 32, 7983);
-    			attr_dev(span7, "class", "personal-name");
-    			add_location(span7, file$4, 132, 32, 8068);
-    			attr_dev(a13, "class", "a-clicked");
-    			attr_dev(a13, "href", "#");
-    			add_location(a13, file$4, 130, 28, 7920);
-    			attr_dev(i12, "class", "fas fa-eye");
-    			add_location(i12, file$4, 134, 52, 8219);
-    			attr_dev(div17, "class", "view-count");
-    			add_location(div17, file$4, 134, 28, 8195);
-    			attr_dev(div18, "class", "col-12 mb-3");
-    			add_location(div18, file$4, 129, 24, 7866);
-    			attr_dev(article3, "class", "p-0 shadow-radius-section shadow-section mb-3");
-    			add_location(article3, file$4, 77, 20, 3811);
-    			attr_dev(img9, "class", "cu-image-com mr-1 ");
-    			if (img9.src !== (img9_src_value = "image/afarine.jpg")) attr_dev(img9, "src", img9_src_value);
-    			attr_dev(img9, "alt", "");
-    			add_location(img9, file$4, 143, 44, 8780);
-    			attr_dev(div19, "class", "col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1");
-    			add_location(div19, file$4, 142, 40, 8679);
-    			set_style(i13, "color", "#048af7");
-    			attr_dev(i13, "class", "fas fa-check-circle");
-    			add_location(i13, file$4, 147, 94, 9174);
-    			attr_dev(a14, "href", "#");
-    			add_location(a14, file$4, 147, 52, 9132);
-    			add_location(h61, file$4, 147, 48, 9128);
-    			attr_dev(i14, "class", "fas fa-clock");
-    			add_location(i14, file$4, 148, 80, 9322);
-    			attr_dev(span8, "class", "show-time-custome");
-    			add_location(span8, file$4, 148, 48, 9290);
-    			attr_dev(div20, "class", "cu-intro mt-2");
-    			add_location(div20, file$4, 146, 44, 9052);
-    			attr_dev(div21, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center");
-    			add_location(div21, file$4, 145, 40, 8931);
-    			attr_dev(div22, "class", "row ");
-    			add_location(div22, file$4, 141, 36, 8620);
-    			attr_dev(div23, "class", "col-11 col-md-11");
-    			add_location(div23, file$4, 140, 32, 8552);
-    			attr_dev(i15, "class", "fas fa-ellipsis-v ");
-    			attr_dev(i15, "type", "button");
-    			attr_dev(i15, "data-toggle", "dropdown");
-    			add_location(i15, file$4, 154, 32, 9656);
-    			attr_dev(i16, "class", "far fa-bookmark");
-    			add_location(i16, file$4, 156, 93, 9894);
-    			attr_dev(a15, "href", "#");
-    			add_location(a15, file$4, 156, 81, 9882);
-    			add_location(li3, file$4, 156, 36, 9837);
-    			attr_dev(i17, "class", "fas fa-share-alt");
-    			add_location(i17, file$4, 157, 52, 10003);
-    			attr_dev(a16, "href", "#");
-    			add_location(a16, file$4, 157, 40, 9991);
-    			add_location(li4, file$4, 157, 36, 9987);
-    			attr_dev(i18, "class", "fas fa-flag");
-    			add_location(i18, file$4, 158, 52, 10112);
-    			attr_dev(a17, "href", "#");
-    			add_location(a17, file$4, 158, 40, 10100);
-    			add_location(li5, file$4, 158, 36, 10096);
-    			attr_dev(ul1, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul1, file$4, 155, 32, 9760);
-    			attr_dev(div24, "class", "col-1 ml-0 pl-0 pr-4 dropdown");
-    			add_location(div24, file$4, 153, 32, 9580);
-    			attr_dev(div25, "class", "row justify-content-between p-2");
-    			add_location(div25, file$4, 139, 28, 8474);
-    			attr_dev(div26, "class", "col-12");
-    			add_location(div26, file$4, 138, 24, 8425);
-    			attr_dev(a18, "href", "#");
-    			add_location(a18, file$4, 164, 72, 10424);
-    			attr_dev(h31, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h31, file$4, 164, 28, 10380);
-    			attr_dev(div27, "class", "col-12 p-0");
-    			add_location(div27, file$4, 163, 24, 10327);
-    			if (img10.src !== (img10_src_value = "image/28.jpg")) attr_dev(img10, "src", img10_src_value);
-    			attr_dev(img10, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
-    			attr_dev(img10, "alt", "");
-    			add_location(img10, file$4, 167, 28, 10641);
-    			attr_dev(div28, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div28, file$4, 166, 24, 10555);
-    			attr_dev(span9, "id", "dots");
-    			add_location(span9, file$4, 173, 114, 11188);
-    			attr_dev(span10, "id", "more");
-    			add_location(span10, file$4, 173, 140, 11214);
-    			attr_dev(span11, "id", "myBtn");
-    			set_style(span11, "cursor", "pointer");
-    			add_location(span11, file$4, 180, 28, 11877);
-    			attr_dev(p1, "class", "col-12 mt-3 post-text");
-    			add_location(p1, file$4, 170, 24, 10804);
-    			attr_dev(button1, "id", "read-more");
-    			attr_dev(button1, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button1, file$4, 185, 32, 12139);
-    			attr_dev(a19, "href", "#");
-    			add_location(a19, file$4, 184, 28, 12094);
-    			attr_dev(div29, "class", "col-12 ");
-    			add_location(div29, file$4, 183, 24, 12044);
-    			attr_dev(hr1, "class", "col-11 mx-auto");
-    			add_location(hr1, file$4, 188, 24, 12347);
-    			attr_dev(img11, "class", "personal-img");
-    			if (img11.src !== (img11_src_value = "image/1.jpeg")) attr_dev(img11, "src", img11_src_value);
-    			attr_dev(img11, "alt", "");
-    			add_location(img11, file$4, 191, 32, 12516);
-    			attr_dev(span12, "class", "personal-name");
-    			add_location(span12, file$4, 192, 32, 12601);
-    			attr_dev(a20, "class", "a-clicked");
-    			attr_dev(a20, "href", "#");
-    			add_location(a20, file$4, 190, 28, 12453);
-    			attr_dev(i19, "class", "fas fa-eye");
-    			add_location(i19, file$4, 194, 52, 12752);
-    			attr_dev(div30, "class", "view-count");
-    			add_location(div30, file$4, 194, 28, 12728);
-    			attr_dev(div31, "class", "col-12 mb-3");
-    			add_location(div31, file$4, 189, 24, 12399);
-    			attr_dev(article4, "class", "p-0 shadow-radius-section shadow-section mb-3");
-    			add_location(article4, file$4, 137, 20, 8337);
-    			attr_dev(img12, "class", "cu-image-com mr-1 ");
-    			if (img12.src !== (img12_src_value = "image/afarine.jpg")) attr_dev(img12, "src", img12_src_value);
-    			attr_dev(img12, "alt", "");
-    			add_location(img12, file$4, 203, 44, 13314);
-    			attr_dev(div32, "class", "col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1");
-    			add_location(div32, file$4, 202, 40, 13213);
-    			set_style(i20, "color", "#048af7");
-    			attr_dev(i20, "class", "fas fa-check-circle");
-    			add_location(i20, file$4, 207, 94, 13708);
-    			attr_dev(a21, "href", "#");
-    			add_location(a21, file$4, 207, 52, 13666);
-    			add_location(h62, file$4, 207, 48, 13662);
-    			attr_dev(i21, "class", "fas fa-clock");
-    			add_location(i21, file$4, 208, 80, 13856);
-    			attr_dev(span13, "class", "show-time-custome");
-    			add_location(span13, file$4, 208, 48, 13824);
-    			attr_dev(div33, "class", "cu-intro mt-2");
-    			add_location(div33, file$4, 206, 44, 13586);
-    			attr_dev(div34, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center");
-    			add_location(div34, file$4, 205, 40, 13465);
-    			attr_dev(div35, "class", "row ");
-    			add_location(div35, file$4, 201, 36, 13154);
-    			attr_dev(div36, "class", "col-11 col-md-11");
-    			add_location(div36, file$4, 200, 32, 13086);
-    			attr_dev(i22, "class", "fas fa-ellipsis-v ");
-    			attr_dev(i22, "type", "button");
-    			attr_dev(i22, "data-toggle", "dropdown");
-    			add_location(i22, file$4, 214, 32, 14192);
-    			attr_dev(i23, "class", "far fa-bookmark");
-    			add_location(i23, file$4, 216, 93, 14430);
-    			attr_dev(a22, "href", "#");
-    			add_location(a22, file$4, 216, 81, 14418);
-    			add_location(li6, file$4, 216, 36, 14373);
-    			attr_dev(i24, "class", "fas fa-share-alt");
-    			add_location(i24, file$4, 217, 52, 14539);
-    			attr_dev(a23, "href", "#");
-    			add_location(a23, file$4, 217, 40, 14527);
-    			add_location(li7, file$4, 217, 36, 14523);
-    			attr_dev(i25, "class", "fas fa-flag");
-    			add_location(i25, file$4, 218, 52, 14648);
-    			attr_dev(a24, "href", "#");
-    			add_location(a24, file$4, 218, 40, 14636);
-    			add_location(li8, file$4, 218, 36, 14632);
-    			attr_dev(ul2, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul2, file$4, 215, 32, 14296);
-    			attr_dev(div37, "class", "col-1 ml-0 pl-0 pr-4 dropdown");
-    			add_location(div37, file$4, 213, 32, 14116);
-    			attr_dev(div38, "class", "row justify-content-between p-2");
-    			add_location(div38, file$4, 199, 28, 13008);
-    			attr_dev(div39, "class", "col-12");
-    			add_location(div39, file$4, 198, 24, 12959);
-    			attr_dev(a25, "href", "#");
-    			add_location(a25, file$4, 224, 72, 14960);
-    			attr_dev(h32, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h32, file$4, 224, 28, 14916);
-    			attr_dev(div40, "class", "col-12 p-0");
-    			add_location(div40, file$4, 223, 24, 14863);
-    			if (img13.src !== (img13_src_value = "image/20.jpg")) attr_dev(img13, "src", img13_src_value);
-    			attr_dev(img13, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
-    			attr_dev(img13, "alt", "");
-    			add_location(img13, file$4, 227, 28, 15158);
-    			attr_dev(div41, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div41, file$4, 226, 24, 15072);
-    			attr_dev(span14, "id", "dots");
-    			add_location(span14, file$4, 233, 114, 15705);
-    			attr_dev(span15, "id", "more");
-    			add_location(span15, file$4, 233, 140, 15731);
-    			attr_dev(span16, "id", "myBtn");
-    			set_style(span16, "cursor", "pointer");
-    			add_location(span16, file$4, 240, 28, 16394);
-    			attr_dev(p2, "class", "col-12 mt-3 post-text");
-    			add_location(p2, file$4, 230, 24, 15321);
-    			attr_dev(button2, "id", "read-more");
-    			attr_dev(button2, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button2, file$4, 245, 32, 16656);
-    			attr_dev(a26, "href", "#");
-    			add_location(a26, file$4, 244, 28, 16611);
-    			attr_dev(div42, "class", "col-12 ");
-    			add_location(div42, file$4, 243, 24, 16561);
-    			attr_dev(hr2, "class", "col-11 mx-auto");
-    			add_location(hr2, file$4, 248, 24, 16864);
-    			attr_dev(img14, "class", "personal-img");
-    			if (img14.src !== (img14_src_value = "image/4.jpeg")) attr_dev(img14, "src", img14_src_value);
-    			attr_dev(img14, "alt", "");
-    			add_location(img14, file$4, 251, 32, 17033);
-    			attr_dev(span17, "class", "personal-name");
-    			add_location(span17, file$4, 252, 32, 17118);
-    			attr_dev(a27, "class", "a-clicked");
-    			attr_dev(a27, "href", "#");
-    			add_location(a27, file$4, 250, 28, 16970);
-    			attr_dev(i26, "class", "fas fa-eye");
-    			add_location(i26, file$4, 254, 52, 17263);
-    			attr_dev(div43, "class", "view-count");
-    			add_location(div43, file$4, 254, 28, 17239);
-    			attr_dev(div44, "class", "col-12 mb-3");
-    			add_location(div44, file$4, 249, 24, 16916);
-    			attr_dev(article5, "class", "p-0 shadow-radius-section shadow-section mb-3");
-    			add_location(article5, file$4, 197, 20, 12871);
-    			attr_dev(div45, "class", "col-12 p-0 main-article");
-    			add_location(div45, file$4, 76, 16, 3753);
+    			add_location(section0, file$4, 41, 12, 1241);
+    			attr_dev(div6, "class", "col-12 p-0 main-article");
+    			add_location(div6, file$4, 86, 16, 3932);
     			attr_dev(section1, "class", "row mx-0 mt-3 mr-0 pt-0 bg-light ");
-    			add_location(section1, file$4, 75, 12, 3685);
+    			add_location(section1, file$4, 85, 12, 3864);
     			attr_dev(aside1, "class", "col-12 col-md-6 mx-2 order-first order-md-0 ");
-    			add_location(aside1, file$4, 30, 8, 989);
+    			add_location(aside1, file$4, 40, 8, 1168);
     			attr_dev(aside2, "class", "col-12 col-md-2 mx-1 mt-5 mt-md-0 bg-light shadow-radius-section");
-    			add_location(aside2, file$4, 262, 8, 17474);
-    			attr_dev(div46, "class", "row justify-content-center mx-lg-2");
-    			add_location(div46, file$4, 28, 4, 829);
+    			add_location(aside2, file$4, 154, 8, 8833);
+    			attr_dev(div7, "class", "row justify-content-center mx-lg-2");
+    			add_location(div7, file$4, 38, 4, 1008);
     			attr_dev(main, "class", "container-fluid pin-parent ");
-    			add_location(main, file$4, 27, 0, 765);
-    			add_location(br0, file$4, 267, 0, 17603);
-    			attr_dev(hr3, "class", "col-10 offset-1");
-    			add_location(hr3, file$4, 267, 4, 17607);
-    			add_location(br1, file$4, 267, 32, 17635);
-    			add_location(br2, file$4, 267, 36, 17639);
-    			add_location(br3, file$4, 267, 40, 17643);
+    			add_location(main, file$4, 37, 0, 944);
+    			add_location(br0, file$4, 159, 0, 8962);
+    			attr_dev(hr, "class", "col-10 offset-1");
+    			add_location(hr, file$4, 159, 4, 8966);
+    			add_location(br1, file$4, 159, 32, 8994);
+    			add_location(br2, file$4, 159, 36, 8998);
+    			add_location(br3, file$4, 159, 40, 9002);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7757,10 +7750,10 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
-    			append_dev(main, div46);
-    			append_dev(div46, aside0);
-    			append_dev(div46, t2);
-    			append_dev(div46, aside1);
+    			append_dev(main, div7);
+    			append_dev(div7, aside0);
+    			append_dev(div7, t2);
+    			append_dev(div7, aside1);
     			append_dev(aside1, section0);
     			append_dev(section0, div1);
     			append_dev(div1, article0);
@@ -7817,236 +7810,29 @@ var app = (function () {
     			append_dev(div4, t25);
     			append_dev(aside1, t26);
     			append_dev(aside1, section1);
-    			append_dev(section1, div45);
-    			append_dev(div45, article3);
-    			append_dev(article3, div13);
-    			append_dev(div13, div12);
-    			append_dev(div12, div10);
-    			append_dev(div10, div9);
-    			append_dev(div9, div6);
-    			append_dev(div6, a6);
-    			append_dev(a6, img6);
-    			append_dev(div9, t27);
-    			append_dev(div9, div8);
-    			append_dev(div8, div7);
-    			append_dev(div7, h60);
-    			append_dev(h60, a7);
-    			append_dev(a7, t28);
-    			append_dev(a7, i6);
-    			append_dev(div7, t29);
-    			append_dev(div7, span3);
-    			append_dev(span3, i7);
-    			append_dev(span3, t30);
-    			append_dev(div12, t31);
-    			append_dev(div12, div11);
-    			append_dev(div11, i8);
-    			append_dev(div11, t32);
-    			append_dev(div11, ul0);
-    			append_dev(ul0, li0);
-    			append_dev(li0, a8);
-    			append_dev(a8, i9);
-    			append_dev(a8, t33);
-    			append_dev(ul0, t34);
-    			append_dev(ul0, li1);
-    			append_dev(li1, a9);
-    			append_dev(a9, i10);
-    			append_dev(a9, t35);
-    			append_dev(ul0, t36);
-    			append_dev(ul0, li2);
-    			append_dev(li2, a10);
-    			append_dev(a10, i11);
-    			append_dev(a10, t37);
-    			append_dev(article3, t38);
-    			append_dev(article3, div14);
-    			append_dev(div14, h30);
-    			append_dev(h30, a11);
-    			append_dev(article3, t40);
-    			append_dev(article3, div15);
-    			append_dev(div15, img7);
-    			append_dev(article3, t41);
-    			append_dev(article3, p0);
-    			append_dev(p0, t42);
-    			append_dev(p0, span4);
-    			append_dev(p0, span5);
-    			append_dev(p0, t45);
-    			append_dev(p0, span6);
-    			append_dev(article3, t47);
-    			append_dev(article3, div16);
-    			append_dev(div16, a12);
-    			append_dev(a12, button0);
-    			append_dev(article3, t49);
-    			append_dev(article3, hr0);
-    			append_dev(article3, t50);
-    			append_dev(article3, div18);
-    			append_dev(div18, a13);
-    			append_dev(a13, img8);
-    			append_dev(a13, t51);
-    			append_dev(a13, span7);
-    			append_dev(a13, t53);
-    			append_dev(div18, t54);
-    			append_dev(div18, div17);
-    			append_dev(div17, i12);
-    			append_dev(div17, t55);
-    			append_dev(div45, t56);
-    			append_dev(div45, article4);
-    			append_dev(article4, div26);
-    			append_dev(div26, div25);
-    			append_dev(div25, div23);
-    			append_dev(div23, div22);
-    			append_dev(div22, div19);
-    			append_dev(div19, img9);
-    			append_dev(div22, t57);
-    			append_dev(div22, div21);
-    			append_dev(div21, div20);
-    			append_dev(div20, h61);
-    			append_dev(h61, a14);
-    			append_dev(a14, t58);
-    			append_dev(a14, i13);
-    			append_dev(div20, t59);
-    			append_dev(div20, span8);
-    			append_dev(span8, i14);
-    			append_dev(span8, t60);
-    			append_dev(div25, t61);
-    			append_dev(div25, div24);
-    			append_dev(div24, i15);
-    			append_dev(div24, t62);
-    			append_dev(div24, ul1);
-    			append_dev(ul1, li3);
-    			append_dev(li3, a15);
-    			append_dev(a15, i16);
-    			append_dev(a15, t63);
-    			append_dev(ul1, t64);
-    			append_dev(ul1, li4);
-    			append_dev(li4, a16);
-    			append_dev(a16, i17);
-    			append_dev(a16, t65);
-    			append_dev(ul1, t66);
-    			append_dev(ul1, li5);
-    			append_dev(li5, a17);
-    			append_dev(a17, i18);
-    			append_dev(a17, t67);
-    			append_dev(article4, t68);
-    			append_dev(article4, div27);
-    			append_dev(div27, h31);
-    			append_dev(h31, a18);
-    			append_dev(article4, t70);
-    			append_dev(article4, div28);
-    			append_dev(div28, img10);
-    			append_dev(article4, t71);
-    			append_dev(article4, p1);
-    			append_dev(p1, t72);
-    			append_dev(p1, span9);
-    			append_dev(p1, span10);
-    			append_dev(p1, t75);
-    			append_dev(p1, span11);
-    			append_dev(article4, t77);
-    			append_dev(article4, div29);
-    			append_dev(div29, a19);
-    			append_dev(a19, button1);
-    			append_dev(article4, t79);
-    			append_dev(article4, hr1);
-    			append_dev(article4, t80);
-    			append_dev(article4, div31);
-    			append_dev(div31, a20);
-    			append_dev(a20, img11);
-    			append_dev(a20, t81);
-    			append_dev(a20, span12);
-    			append_dev(a20, t83);
-    			append_dev(div31, t84);
-    			append_dev(div31, div30);
-    			append_dev(div30, i19);
-    			append_dev(div30, t85);
-    			append_dev(div45, t86);
-    			append_dev(div45, article5);
-    			append_dev(article5, div39);
-    			append_dev(div39, div38);
-    			append_dev(div38, div36);
-    			append_dev(div36, div35);
-    			append_dev(div35, div32);
-    			append_dev(div32, img12);
-    			append_dev(div35, t87);
-    			append_dev(div35, div34);
-    			append_dev(div34, div33);
-    			append_dev(div33, h62);
-    			append_dev(h62, a21);
-    			append_dev(a21, t88);
-    			append_dev(a21, i20);
-    			append_dev(div33, t89);
-    			append_dev(div33, span13);
-    			append_dev(span13, i21);
-    			append_dev(span13, t90);
-    			append_dev(div38, t91);
-    			append_dev(div38, div37);
-    			append_dev(div37, i22);
-    			append_dev(div37, t92);
-    			append_dev(div37, ul2);
-    			append_dev(ul2, li6);
-    			append_dev(li6, a22);
-    			append_dev(a22, i23);
-    			append_dev(a22, t93);
-    			append_dev(ul2, t94);
-    			append_dev(ul2, li7);
-    			append_dev(li7, a23);
-    			append_dev(a23, i24);
-    			append_dev(a23, t95);
-    			append_dev(ul2, t96);
-    			append_dev(ul2, li8);
-    			append_dev(li8, a24);
-    			append_dev(a24, i25);
-    			append_dev(a24, t97);
-    			append_dev(article5, t98);
-    			append_dev(article5, div40);
-    			append_dev(div40, h32);
-    			append_dev(h32, a25);
-    			append_dev(article5, t100);
-    			append_dev(article5, div41);
-    			append_dev(div41, img13);
-    			append_dev(article5, t101);
-    			append_dev(article5, p2);
-    			append_dev(p2, t102);
-    			append_dev(p2, span14);
-    			append_dev(p2, span15);
-    			append_dev(p2, t105);
-    			append_dev(p2, span16);
-    			append_dev(article5, t107);
-    			append_dev(article5, div42);
-    			append_dev(div42, a26);
-    			append_dev(a26, button2);
-    			append_dev(article5, t109);
-    			append_dev(article5, hr2);
-    			append_dev(article5, t110);
-    			append_dev(article5, div44);
-    			append_dev(div44, a27);
-    			append_dev(a27, img14);
-    			append_dev(a27, t111);
-    			append_dev(a27, span17);
-    			append_dev(a27, t113);
-    			append_dev(div44, t114);
-    			append_dev(div44, div43);
-    			append_dev(div43, i26);
-    			append_dev(div43, t115);
-    			append_dev(div46, t116);
-    			append_dev(div46, aside2);
-    			insert_dev(target, t118, anchor);
+    			append_dev(section1, div6);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div6, null);
+    			}
+
+    			append_dev(div7, t27);
+    			append_dev(div7, aside2);
+    			insert_dev(target, t29, anchor);
     			insert_dev(target, br0, anchor);
-    			insert_dev(target, hr3, anchor);
+    			insert_dev(target, hr, anchor);
     			insert_dev(target, br1, anchor);
     			insert_dev(target, br2, anchor);
     			insert_dev(target, br3, anchor);
     			current = true;
 
     			if (!mounted) {
-    				dispose = [
-    					listen_dev(window_1, "scroll", () => {
-    						scrolling = true;
-    						clearTimeout(scrolling_timeout);
-    						scrolling_timeout = setTimeout(clear_scrolling, 100);
-    						/*onwindowscroll*/ ctx[3]();
-    					}),
-    					listen_dev(span6, "click", myFunction, false, false, false),
-    					listen_dev(span11, "click", myFunction, false, false, false),
-    					listen_dev(span16, "click", myFunction, false, false, false)
-    				];
+    				dispose = listen_dev(window_1, "scroll", () => {
+    					scrolling = true;
+    					clearTimeout(scrolling_timeout);
+    					scrolling_timeout = setTimeout(clear_scrolling, 100);
+    					/*onwindowscroll*/ ctx[4]();
+    				});
 
     				mounted = true;
     			}
@@ -8057,6 +7843,30 @@ var app = (function () {
     				clearTimeout(scrolling_timeout);
     				scrollTo(window_1.pageXOffset, /*y*/ ctx[0]);
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
+    			}
+
+    			if (dirty & /*post, myFunction*/ 2) {
+    				each_value = /*post*/ ctx[1];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div6, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
     			}
     		},
     		i: function intro(local) {
@@ -8077,15 +7887,16 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
+    			destroy_each(each_blocks, detaching);
     			if (detaching && main_transition) main_transition.end();
-    			if (detaching) detach_dev(t118);
+    			if (detaching) detach_dev(t29);
     			if (detaching) detach_dev(br0);
-    			if (detaching) detach_dev(hr3);
+    			if (detaching) detach_dev(hr);
     			if (detaching) detach_dev(br1);
     			if (detaching) detach_dev(br2);
     			if (detaching) detach_dev(br3);
     			mounted = false;
-    			run_all(dispose);
+    			dispose();
     		}
     	};
 
@@ -8106,10 +7917,18 @@ var app = (function () {
     	let { url = "" } = $$props;
     	let { id = 1 } = $$props;
     	let { y } = $$props;
+    	let { post = [] } = $$props;
+
+    	onMount(async () => {
+    		const res = await fetch("http://localhost:8000/post/page/1/");
+    		$$invalidate(1, post = await res.json());
+    		$$invalidate(1, post = post.data);
+    	});
+
     	var currentLocation = window.location.href;
     	var splitUrl = currentLocation.split("/");
     	var lastSugment = splitUrl[splitUrl.length - 1];
-    	const writable_props = ["url", "id", "y"];
+    	const writable_props = ["url", "id", "y", "post"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Home> was created with unknown prop '${key}'`);
@@ -8120,9 +7939,10 @@ var app = (function () {
     	}
 
     	$$self.$$set = $$props => {
-    		if ("url" in $$props) $$invalidate(1, url = $$props.url);
-    		if ("id" in $$props) $$invalidate(2, id = $$props.id);
+    		if ("url" in $$props) $$invalidate(2, url = $$props.url);
+    		if ("id" in $$props) $$invalidate(3, id = $$props.id);
     		if ("y" in $$props) $$invalidate(0, y = $$props.y);
+    		if ("post" in $$props) $$invalidate(1, post = $$props.post);
     	};
 
     	$$self.$capture_state = () => ({
@@ -8140,15 +7960,17 @@ var app = (function () {
     		url,
     		id,
     		y,
+    		post,
     		currentLocation,
     		splitUrl,
     		lastSugment
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("url" in $$props) $$invalidate(1, url = $$props.url);
-    		if ("id" in $$props) $$invalidate(2, id = $$props.id);
+    		if ("url" in $$props) $$invalidate(2, url = $$props.url);
+    		if ("id" in $$props) $$invalidate(3, id = $$props.id);
     		if ("y" in $$props) $$invalidate(0, y = $$props.y);
+    		if ("post" in $$props) $$invalidate(1, post = $$props.post);
     		if ("currentLocation" in $$props) currentLocation = $$props.currentLocation;
     		if ("splitUrl" in $$props) splitUrl = $$props.splitUrl;
     		if ("lastSugment" in $$props) lastSugment = $$props.lastSugment;
@@ -8158,13 +7980,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [y, url, id, onwindowscroll];
+    	return [y, post, url, id, onwindowscroll];
     }
 
     class Home extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { url: 1, id: 2, y: 0 });
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { url: 2, id: 3, y: 0, post: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -8202,6 +8024,14 @@ var app = (function () {
     	}
 
     	set y(value) {
+    		throw new Error("<Home>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get post() {
+    		throw new Error("<Home>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set post(value) {
     		throw new Error("<Home>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -8425,7 +8255,7 @@ var app = (function () {
     			attr_dev(div1, "class", "col-7 ");
     			add_location(div1, file$3, 78, 24, 4291);
     			if (img.src !== (img_src_value = /*src*/ ctx[2])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "brand-icon");
+    			attr_dev(img, "class", "brand-icon my-2");
     			attr_dev(img, "alt", "");
     			add_location(img, file$3, 84, 28, 4597);
     			attr_dev(div2, "class", "col-1 h-100");
@@ -8578,7 +8408,7 @@ var app = (function () {
 
     	route4 = new Route({
     			props: {
-    				path: "profile/show-detail",
+    				path: "show-detail/",
     				component: Show_detail
     			},
     			$$inline: true
@@ -8669,7 +8499,7 @@ var app = (function () {
     			attr_dev(header, "class", "sticky-top ");
     			toggle_class(header, "nav-custome-bottom", /*y*/ ctx[1] <= 600);
     			add_location(header, file$3, 28, 4, 786);
-    			add_location(div13, file$3, 92, 4, 4790);
+    			add_location(div13, file$3, 92, 4, 4795);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -8848,27 +8678,27 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Close";
     			attr_dev(div0, "class", "nav flex-sm-column flex-row text-center");
-    			add_location(div0, file$3, 104, 20, 5380);
+    			add_location(div0, file$3, 104, 20, 5378);
     			attr_dev(div1, "class", "modal-body");
-    			add_location(div1, file$3, 103, 16, 5335);
+    			add_location(div1, file$3, 103, 16, 5333);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "btn btn-secondary");
     			attr_dev(button, "data-dismiss", "modal");
-    			add_location(button, file$3, 109, 20, 5592);
+    			add_location(button, file$3, 109, 20, 5590);
     			attr_dev(div2, "class", "modal-footer");
-    			add_location(div2, file$3, 108, 16, 5545);
+    			add_location(div2, file$3, 108, 16, 5543);
     			attr_dev(div3, "class", "modal-content");
-    			add_location(div3, file$3, 102, 12, 5291);
+    			add_location(div3, file$3, 102, 12, 5289);
     			attr_dev(div4, "class", "modal-dialog");
     			attr_dev(div4, "role", "document");
-    			add_location(div4, file$3, 101, 8, 5236);
+    			add_location(div4, file$3, 101, 8, 5234);
     			attr_dev(div5, "class", "modal left fade");
     			attr_dev(div5, "id", "exampleModal");
     			attr_dev(div5, "tabindex", "");
     			attr_dev(div5, "role", "dialog");
     			attr_dev(div5, "aria-labelledby", "exampleModalLabel");
     			attr_dev(div5, "aria-hidden", "true");
-    			add_location(div5, file$3, 100, 4, 5099);
+    			add_location(div5, file$3, 100, 4, 5097);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9755,7 +9585,7 @@ var app = (function () {
     const { setTimeout: setTimeout_1 } = globals;
     const file = "src/App.svelte";
 
-    // (22:0) {#if loading===true}
+    // (27:0) {#if loading===true}
     function create_if_block_1(ctx) {
     	let div;
     	let wave;
@@ -9779,13 +9609,13 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "لطفا کمی صبر کنید...";
     			attr_dev(span, "class", "loading-snipper");
-    			add_location(span, file, 23, 66, 593);
+    			add_location(span, file, 28, 66, 662);
     			set_style(div, "direction", "rtl");
     			set_style(div, "text-align", "center");
     			set_style(div, "margin", "auto");
     			set_style(div, "width", "100%");
     			set_style(div, "height", "100%");
-    			add_location(div, file, 22, 1, 441);
+    			add_location(div, file, 27, 1, 510);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -9812,14 +9642,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(22:0) {#if loading===true}",
+    		source: "(27:0) {#if loading===true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (28:0) {#if loading===false}
+    // (35:0) {#if loading===false}
     function create_if_block(ctx) {
     	let div;
     	let nav;
@@ -9844,7 +9674,7 @@ var app = (function () {
     			t = space();
     			create_component(footer.$$.fragment);
     			attr_dev(div, "class", "class ");
-    			add_location(div, file, 28, 0, 721);
+    			add_location(div, file, 35, 0, 812);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -9883,7 +9713,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(28:0) {#if loading===false}",
+    		source: "(35:0) {#if loading===false}",
     		ctx
     	});
 
@@ -9903,9 +9733,10 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[2]);
-    	let if_block0 = /*loading*/ ctx[1] === true && create_if_block_1(ctx);
-    	let if_block1 = /*loading*/ ctx[1] === false && create_if_block(ctx);
+    	add_render_callback(/*onwindowscroll*/ ctx[3]);
+    	add_render_callback(/*onwindowresize*/ ctx[4]);
+    	let if_block0 = /*loading*/ ctx[2] === true && create_if_block_1(ctx);
+    	let if_block1 = /*loading*/ ctx[2] === false && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -9925,12 +9756,15 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(window, "scroll", () => {
-    					scrolling = true;
-    					clearTimeout(scrolling_timeout);
-    					scrolling_timeout = setTimeout_1(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[2]();
-    				});
+    				dispose = [
+    					listen_dev(window, "scroll", () => {
+    						scrolling = true;
+    						clearTimeout(scrolling_timeout);
+    						scrolling_timeout = setTimeout_1(clear_scrolling, 100);
+    						/*onwindowscroll*/ ctx[3]();
+    					}),
+    					listen_dev(window, "resize", /*onwindowresize*/ ctx[4])
+    				];
 
     				mounted = true;
     			}
@@ -9943,9 +9777,9 @@ var app = (function () {
     				scrolling_timeout = setTimeout_1(clear_scrolling, 100);
     			}
 
-    			if (/*loading*/ ctx[1] === true) {
+    			if (/*loading*/ ctx[2] === true) {
     				if (if_block0) {
-    					if (dirty & /*loading*/ 2) {
+    					if (dirty & /*loading*/ 4) {
     						transition_in(if_block0, 1);
     					}
     				} else {
@@ -9964,11 +9798,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*loading*/ ctx[1] === false) {
+    			if (/*loading*/ ctx[2] === false) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty & /*loading*/ 2) {
+    					if (dirty & /*loading*/ 4) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -10004,7 +9838,7 @@ var app = (function () {
     			if (if_block1) if_block1.d(detaching);
     			if (detaching) detach_dev(if_block1_anchor);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -10023,6 +9857,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	let y = 0;
+    	let x = 0;
 
     	//$: console.log(y);	
     	///
@@ -10030,7 +9865,7 @@ var app = (function () {
 
     	setTimeout(
     		function () {
-    			$$invalidate(1, loading = false);
+    			$$invalidate(2, loading = false);
     		},
     		2000
     	);
@@ -10045,7 +9880,12 @@ var app = (function () {
     		$$invalidate(0, y = window.pageYOffset);
     	}
 
+    	function onwindowresize() {
+    		$$invalidate(1, x = window.innerWidth);
+    	}
+
     	$$self.$capture_state = () => ({
+    		onMount,
     		Nav,
     		Footer,
     		fade,
@@ -10054,19 +9894,21 @@ var app = (function () {
     		fly,
     		Wave,
     		y,
+    		x,
     		loading
     	});
 
     	$$self.$inject_state = $$props => {
     		if ("y" in $$props) $$invalidate(0, y = $$props.y);
-    		if ("loading" in $$props) $$invalidate(1, loading = $$props.loading);
+    		if ("x" in $$props) $$invalidate(1, x = $$props.x);
+    		if ("loading" in $$props) $$invalidate(2, loading = $$props.loading);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [y, loading, onwindowscroll];
+    	return [y, x, loading, onwindowscroll, onwindowresize];
     }
 
     class App extends SvelteComponentDev {

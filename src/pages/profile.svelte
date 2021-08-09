@@ -8,10 +8,13 @@
     import showDetail from "./show-detail.svelte";
     export let url = "";
     export let y;
+    export let x;
+    $: console.log(x);
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.has('id');
     console.log(id);
     let isOpen = false;
+    let current = 'post';
     function toggleNav(){
         isOpen =! isOpen;       
     }
@@ -26,21 +29,22 @@
     @import "public/global.css";
     
 </style>
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} bind:innerWidth={x}/>
 <svelte:head>
     <title>
         اینولینکس
     </title>
 </svelte:head>
 <Router url="{url}">
+
 {#if y>600}
-<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-md-inline"> 
+<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-md-inline" > 
     
     <div transition:slide class="col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top">
-        <div class="row justify-content-between shadow-sm">
+        <div class="row justify-content-between shadow-sm mr-0">
             <div class="col-8 col-md-4 direction my-auto" >
                 <div class="row justify-content-end">
-                    <button class="btn  rounded-pill  font btn-mw-scroll  text-center visit-btn mx-0 "><i class="fas fa-external-link-alt padding-button ml-2 icon-size-scroll"></i>بازدید سایت </button>
+                    <button class="btn rounded-pill font btn-mw-scroll text-center visit-btn mx-0 "><i class="fas fa-external-link-alt padding-button ml-2 icon-size-scroll"></i>بازدید سایت </button>
 
                     <div class="col-5 mr-0 justify-content-start dropdown dropleft px-2">
                         <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-5 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll rounded-pill col-12 font text-center col-md-7">بیشتر</button>
@@ -66,21 +70,22 @@
         <div class="col-12 mt-0 scroll-main-height">
             <div class="row  mx-4 scroll-main-height">
                 <ul class="nav nav-tabs direction text-center" role="tablist">
-                    <li class="nav-item-scroll mt-2"><a class="nav-link-scroll py-2 active " data-toggle="tab" href="#post">پست</a></li>
-                    <li class="nav-item-scroll mt-2"><a class="nav-link-scroll  py-2"  data-toggle="tab" href="#about">درباره</a></li>
+                    <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='post'} on:click="{() => current = 'post'}" data-toggle="tab" href="#post">پست</a></li>
+                    <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='about'} on:click="{() => current = 'about'}"  data-toggle="tab" href="#about">درباره</a></li>
                 </ul>
             </div>
         </div>
     </div>
     
 </section>
-
 {/if}
 
-<main transition:scale class="container-fluid pin-parent ">
+
+
+<main transition:scale class="container-fluid pin-parent px-0 px-md-3">
     <div class="row justify-content-center mx-0">
         
-        <aside class="col-12 col-md-3 mr-2 d-none d-md-inline" >
+        <aside class="col-12 col-md-3 mr-2 d-none d-lg-inline" >
             <div class="row">
                 <div class="col-12 shadow-radius-section bg-light">
                     <div class="row ">
@@ -93,8 +98,8 @@
                 </div>
             </div>
         </aside>
-        <aside class="col-12 col-md-8  ">
-            <div class="row ml-1 ">
+        <aside class="col-12 col-lg-8  ">
+            <div class="row ml-md-1 ">
                 <div class="col-12 ">
                     <div class="row p-0 shadow-radius-section bg-white" >
                         <div class="col-12 p-0 banner" style="overflow: hidden;">
@@ -129,8 +134,8 @@
                             <div class="col-12 tab-header-main mt-3 ">
                                 <div class="row  scroll-main-height">
                                     <ul class="nav nav-tabs direction text-center" role="tablist">
-                                        <li class="nav-item-scroll mt-2"><a class="nav-link-scroll py-2 active " data-toggle="tab" href="#post">پست</a></li>
-                                        <li class="nav-item-scroll mt-2"><a class="nav-link-scroll  py-2"  data-toggle="tab" href="#about">درباره</a></li>
+                                        <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='post'}  on:click="{() => current = 'post'}" data-toggle="tab" href="#post">پست</a></li>
+                                        <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='about'}  on:click="{() => current = 'about'}"  data-toggle="tab" href="#about">درباره</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -138,8 +143,8 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-content">
-                <div id="post" class="row tab-pane active ">
+            <div class="tab-content w-100 mr-0">
+                <div id="post" class="row tab-pane" class:active="{current==='post'}">
                     <div class="row px-0 mx-0" >
                         <aside class="col-12 col-md-9 order-first justify-content-between order-md-0 mx-0 ">
                             <section class="row mx-0 mt-3 mr-0 pt-0  ">
@@ -160,7 +165,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-1 ml-0 pl-0 pr-4 dropdown">
+                                                <div class="col-1 ml-0 pl-0 pr-4  pr-md-3 pr-lg-4 dropdown">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -295,7 +300,7 @@
                                             <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a href="#">راه های مدیریت کسب و کار الکترونیکی</a></h3>
                                         </div>
                                         <div class="col-12 p-0 mx-0 responsive-imagePost-height">
-                                            <img src="../iamge/20.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
+                                            <img src="../image/20.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
                                         </div>
                                         
                                         <p class="col-12 mt-3 post-text">
@@ -330,10 +335,10 @@
                                 </div>
                             </section>
                         </aside>
-                        <aside  class=" col-12 col-md-3 mt-3 d-none d-md-inline">
-                            <div class="row px-0 text-center shadow-radius-section bg-light ">
-                                <div class="col-10 ml-2 mt-5 mb-3 ">
-                                    <img class="company-img ml-3" src="image/afarine.jpg" alt="">
+                        <aside  class=" col-12 col-md-3 mt-3 ">
+                            <div class="row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
+                                <div class="col-10 mx-auto mt-5 mb-3 ">
+                                    <img class="company-img  w-100" src="image/afarine.jpg" alt="">
                                 </div>
                                 <h3 class="col-12">
                                     آفرینه
@@ -342,13 +347,24 @@
                                     زندگی به سبک نوآوری
                                 </h6>
                             </div>
-                            <div class="row direction shadow-radius-section mt-4 py-2 bg-white">
-                                <div class="col-12 font-weight-bold pb-2 border-bottom">
-                                    دسته بندی 
+                            <div class="{x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '}" >
+                                <div class="{x >=767 ? 'col-12 font-weight-bold pb-2 border-bottom pr-0': 'col-12 font-weight-bold'}">
+                                    <a type="{x<=767 ? 'button' : ''}" class="btn " data-toggle="{x<=767 ? 'modal' :''}"   data-target="{x<=767 ? '#myModal2' : ''}">
+                                        <i class="fas fa-list-ul category-icon-modal" class:category-fixed-icon-modal={x<=767 && y>=400}></i>
+                                    </a><span class="d-none d-md-inline">دسته بندی </span>
                                 </div>
-                                <div class=" mt-2 mr-1 col-12 p-0 ">
-                                    <div id="accordion">
-                                        <div class="mb-2 pl-2">
+                                <div class="{x<=767 ? 'modal right' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'myModal2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
+                                    <div id="accordion" class="{x<=767 ? 'modal-dialog modal-content pr-2' : ''}" role="{x<=767 ? 'document' : ''}">
+                                        {#if x<=767}
+                                            <button type="button" class="close row mx-2 justify-content-end" 
+                                            data-dismiss="modal" 
+                                            aria-label="Close">
+                    
+                                                <span class="col-1 mt-1" aria-hidden="true">
+                                                ×</span>
+                                            </button>
+                                        {/if}
+                                        <div class="mb-2 pl-2 ">
                                           <div class="border-bottom pb-2" id="headingOne">
                                             <h5 class="mb-0">
                                               <a class="p-0 d-inline category_button collapsed " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></a>
@@ -479,7 +495,7 @@
                         </aside>
                     </div>
                 </div>
-                <div id="about" class="row tab-pane fade mt-3">
+                <div id="about" class="row tab-pane mt-3 margin-about-right" class:active="{current==='about'}">
                     <div class="col-12 direction ">
                         <div class="row bg-white shadow-radius-section ml-1 py-4 px-1">
                             <div class="col-12 ">
