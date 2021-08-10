@@ -10536,7 +10536,7 @@ var app = (function () {
     			set_style(i6, "color", "#048af7");
     			attr_dev(i6, "class", "fas fa-check-circle");
     			add_location(i6, file$4, 98, 125, 4992);
-    			attr_dev(a6, "href", "Magezine");
+    			attr_dev(a6, "href", "magezine");
     			attr_dev(a6, "class", "title-post-link");
     			add_location(a6, file$4, 98, 52, 4919);
     			add_location(h60, file$4, 98, 48, 4915);
@@ -10637,7 +10637,7 @@ var app = (function () {
     			set_style(i13, "color", "#048af7");
     			attr_dev(i13, "class", "fas fa-check-circle");
     			add_location(i13, file$4, 159, 125, 9814);
-    			attr_dev(a13, "href", "Magezine");
+    			attr_dev(a13, "href", "magezine");
     			attr_dev(a13, "class", "title-post-link");
     			add_location(a13, file$4, 159, 52, 9741);
     			add_location(h61, file$4, 159, 48, 9737);
@@ -10738,7 +10738,7 @@ var app = (function () {
     			set_style(i20, "color", "#048af7");
     			attr_dev(i20, "class", "fas fa-check-circle");
     			add_location(i20, file$4, 220, 125, 14636);
-    			attr_dev(a20, "href", "Magezine");
+    			attr_dev(a20, "href", "magezine");
     			attr_dev(a20, "class", "title-post-link");
     			add_location(a20, file$4, 220, 52, 14563);
     			add_location(h62, file$4, 220, 48, 14559);

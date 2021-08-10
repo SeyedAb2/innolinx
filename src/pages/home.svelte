@@ -96,7 +96,7 @@
                                         </div>
                                         <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 pr-md-4 pr-xl-3 mr-lg-0 mr-lg-1 mr-xl-0 justify-content-center custome-margin-right ">
                                             <div class="cu-intro mt-2">
-                                                <h6><a href="Magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
+                                                <h6><a href="magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
                                                 <span class="show-time-custome"><i class="fas fa-clock"></i> ۳ دقیقه قبل</span>
                                             </div>
                                         </div>
@@ -157,7 +157,7 @@
                                         </div>
                                         <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 pr-md-4 pr-xl-3 mr-lg-0 mr-lg-1 mr-xl-0 justify-content-center custome-margin-right ">
                                             <div class="cu-intro mt-2">
-                                                <h6><a href="Magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
+                                                <h6><a href="magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
                                                 <span class="show-time-custome"><i class="fas fa-clock"></i> ۳ دقیقه قبل</span>
                                             </div>
                                         </div>
@@ -218,7 +218,7 @@
                                         </div>
                                         <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 pr-md-4 pr-xl-3 mr-lg-0 mr-lg-1 mr-xl-0 justify-content-center custome-margin-right ">
                                             <div class="cu-intro mt-2">
-                                                <h6><a href="Magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
+                                                <h6><a href="magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
                                                 <span class="show-time-custome"><i class="fas fa-clock"></i> ۳ دقیقه قبل</span>
                                             </div>
                                         </div>

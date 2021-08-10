@@ -259,8 +259,6 @@ header {
     opacity: 1;
 }
 
-.cust-raw {}
-
 .picture-custom {
     border-radius: 15px;
     box-shadow: 0 0 10px gray;
@@ -481,6 +479,36 @@ a:hover {
 
 .shadow-section:hover {
     box-shadow: 0 0 20px 1px #d6d1d1;
+}
+
+@media(max-width:375px) {
+    .first-article-main {
+        height: 42vh;
+    }
+    .content-pin-top h5 {
+        font-size: 16px !important;
+    }
+    .pin-article-main article {
+        height: 42vh !important;
+    }
+    .content-pin h5 {
+        font-size: 16px !important;
+    }
+}
+
+@media(min-width:1300px) {
+    .first-article-main {
+        height: 300px;
+    }
+    .content-pin-top h5 {
+        font-size: 16px !important;
+    }
+    .pin-article-main article {
+        height: 180px !important;
+    }
+    .content-pin h5 {
+        font-size: 16px !important;
+    }
 }
 
 @media(max-width:1200px) {
