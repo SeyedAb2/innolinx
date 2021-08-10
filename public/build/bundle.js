@@ -10146,7 +10146,8 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[4]);
+    	add_render_callback(/*onwindowscroll*/ ctx[6]);
+    	add_render_callback(/*onwindowresize*/ ctx[7]);
 
     	const block = {
     		c: function create() {
@@ -10446,408 +10447,411 @@ var app = (function () {
     			br3 = element("br");
     			document.title = "\n        اینولینکس\n    ";
     			attr_dev(aside0, "class", "col-12 col-md-3  mx-1 mt-5 mt-md-0 bg-light shadow-radius-section");
-    			add_location(aside0, file$4, 40, 8, 1108);
+    			add_location(aside0, file$4, 42, 8, 1185);
     			attr_dev(img0, "class", "image-pin-top");
     			if (img0.src !== (img0_src_value = "image/30.jpg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$4, 45, 24, 1530);
-    			add_location(h50, file$4, 47, 28, 1679);
+    			add_location(img0, file$4, 47, 24, 1642);
+    			add_location(h50, file$4, 49, 28, 1791);
     			attr_dev(a0, "class", "w-100 content-pin-top");
     			attr_dev(a0, "href", "#");
-    			add_location(a0, file$4, 46, 24, 1608);
+    			add_location(a0, file$4, 48, 24, 1720);
     			if (img1.src !== (img1_src_value = "/image/26.jpeg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "mag-img-top");
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$4, 50, 28, 1826);
+    			add_location(img1, file$4, 52, 28, 1938);
     			attr_dev(a1, "href", "#");
-    			add_location(a1, file$4, 49, 24, 1785);
+    			add_location(a1, file$4, 51, 24, 1897);
     			set_style(i0, "color", "mediumspringgreen");
     			attr_dev(i0, "class", "fas fa-check-circle");
-    			add_location(i0, file$4, 53, 60, 2027);
-    			add_location(span0, file$4, 53, 28, 1995);
+    			add_location(i0, file$4, 55, 60, 2139);
+    			add_location(span0, file$4, 55, 28, 2107);
     			attr_dev(i1, "class", "fas fa-clock");
-    			add_location(i1, file$4, 53, 144, 2111);
+    			add_location(i1, file$4, 55, 144, 2223);
     			attr_dev(div0, "class", "author-time-pin-top");
-    			add_location(div0, file$4, 52, 24, 1933);
-    			attr_dev(article0, "class", "col-12 bg-danger mb-md-4 first-article-main");
-    			add_location(article0, file$4, 44, 20, 1444);
+    			add_location(div0, file$4, 54, 24, 2045);
+    			attr_dev(article0, "class", "col-12 bg-danger mb-md-4 first-article-main ");
+    			toggle_class(article0, "pin-article-height", /*h*/ ctx[2] <= 465);
+    			add_location(article0, file$4, 46, 20, 1521);
     			attr_dev(div1, "class", "col-12 mb-4 my-md-0");
-    			add_location(div1, file$4, 43, 16, 1390);
+    			add_location(div1, file$4, 45, 16, 1467);
     			attr_dev(img2, "class", "image-pin w-100");
     			if (img2.src !== (img2_src_value = "image/28.jpg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
-    			add_location(img2, file$4, 59, 24, 2380);
-    			add_location(h51, file$4, 61, 28, 2527);
+    			add_location(img2, file$4, 61, 24, 2526);
+    			add_location(h51, file$4, 63, 28, 2673);
     			attr_dev(a2, "class", "w-100 content-pin");
     			attr_dev(a2, "href", "#");
-    			add_location(a2, file$4, 60, 24, 2460);
+    			add_location(a2, file$4, 62, 24, 2606);
     			if (img3.src !== (img3_src_value = "/image/27.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "class", "mag-img");
     			attr_dev(img3, "alt", "");
-    			add_location(img3, file$4, 64, 28, 2674);
+    			add_location(img3, file$4, 66, 28, 2820);
     			attr_dev(a3, "href", "#");
-    			add_location(a3, file$4, 63, 24, 2633);
+    			add_location(a3, file$4, 65, 24, 2779);
     			set_style(i2, "color", "mediumspringgreen");
     			attr_dev(i2, "class", "fas fa-check-circle");
-    			add_location(i2, file$4, 67, 42, 2848);
-    			add_location(span1, file$4, 67, 28, 2834);
+    			add_location(i2, file$4, 69, 42, 2994);
+    			add_location(span1, file$4, 69, 28, 2980);
     			attr_dev(i3, "class", "fas fa-clock");
-    			add_location(i3, file$4, 67, 126, 2932);
+    			add_location(i3, file$4, 69, 126, 3078);
     			attr_dev(div2, "class", "author-time-pin");
-    			add_location(div2, file$4, 66, 24, 2776);
+    			add_location(div2, file$4, 68, 24, 2922);
     			attr_dev(article1, "class", "col-12");
-    			add_location(article1, file$4, 58, 20, 2331);
+    			toggle_class(article1, "pin-article-height", /*h*/ ctx[2] <= 465);
+    			add_location(article1, file$4, 60, 20, 2443);
     			attr_dev(div3, "class", "col-12 col-xl-6 mb-4 my-md-0 pin-article-main");
-    			add_location(div3, file$4, 57, 16, 2251);
+    			add_location(div3, file$4, 59, 16, 2363);
     			attr_dev(img4, "class", "image-pin w-100");
     			if (img4.src !== (img4_src_value = "image/20.jpg")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
-    			add_location(img4, file$4, 73, 24, 3210);
-    			add_location(h52, file$4, 75, 28, 3357);
+    			add_location(img4, file$4, 75, 24, 3390);
+    			add_location(h52, file$4, 77, 28, 3537);
     			attr_dev(a4, "class", "w-100 content-pin");
     			attr_dev(a4, "href", "#");
-    			add_location(a4, file$4, 74, 24, 3290);
+    			add_location(a4, file$4, 76, 24, 3470);
     			if (img5.src !== (img5_src_value = "/image/25.jpg")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "class", "mag-img");
     			attr_dev(img5, "alt", "");
-    			add_location(img5, file$4, 78, 28, 3483);
+    			add_location(img5, file$4, 80, 28, 3663);
     			attr_dev(a5, "href", "#");
-    			add_location(a5, file$4, 77, 24, 3442);
+    			add_location(a5, file$4, 79, 24, 3622);
     			set_style(i4, "color", "mediumspringgreen");
     			attr_dev(i4, "class", "fas fa-check-circle");
-    			add_location(i4, file$4, 81, 49, 3664);
-    			add_location(span2, file$4, 81, 28, 3643);
+    			add_location(i4, file$4, 83, 49, 3844);
+    			add_location(span2, file$4, 83, 28, 3823);
     			attr_dev(i5, "class", "fas fa-clock");
-    			add_location(i5, file$4, 81, 133, 3748);
+    			add_location(i5, file$4, 83, 133, 3928);
     			attr_dev(div4, "class", "author-time-pin");
-    			add_location(div4, file$4, 80, 24, 3585);
+    			add_location(div4, file$4, 82, 24, 3765);
     			attr_dev(article2, "class", "col-12");
-    			add_location(article2, file$4, 72, 20, 3161);
+    			toggle_class(article2, "pin-article-height", /*h*/ ctx[2] <= 465);
+    			add_location(article2, file$4, 74, 20, 3307);
     			attr_dev(div5, "class", "col-12 col-xl-6 mb-4 mt-lg-0 mt-md-4  pin-article-main");
-    			add_location(div5, file$4, 71, 16, 3072);
+    			add_location(div5, file$4, 73, 16, 3218);
     			attr_dev(section0, "class", "row justify-content-md-center mx-0 pt-3 bg-light shadow-radius-section");
-    			add_location(section0, file$4, 42, 12, 1284);
+    			add_location(section0, file$4, 44, 12, 1361);
     			attr_dev(img6, "class", "cu-image-com mr-1 ");
     			if (img6.src !== (img6_src_value = "image/afarine.jpg")) attr_dev(img6, "src", img6_src_value);
     			attr_dev(img6, "alt", "");
-    			add_location(img6, file$4, 94, 44, 4513);
+    			add_location(img6, file$4, 96, 44, 4693);
     			attr_dev(div6, "class", "col-2 col-sm-1 col-md-1 col-lg-1 p-0 pt-1 custom-width");
-    			add_location(div6, file$4, 93, 40, 4399);
+    			add_location(div6, file$4, 95, 40, 4579);
     			set_style(i6, "color", "#048af7");
     			attr_dev(i6, "class", "fas fa-check-circle");
-    			add_location(i6, file$4, 98, 125, 4992);
+    			add_location(i6, file$4, 100, 125, 5172);
     			attr_dev(a6, "href", "magezine");
     			attr_dev(a6, "class", "title-post-link");
-    			add_location(a6, file$4, 98, 52, 4919);
-    			add_location(h60, file$4, 98, 48, 4915);
+    			add_location(a6, file$4, 100, 52, 5099);
+    			add_location(h60, file$4, 100, 48, 5095);
     			attr_dev(i7, "class", "fas fa-clock");
-    			add_location(i7, file$4, 99, 80, 5140);
+    			add_location(i7, file$4, 101, 80, 5320);
     			attr_dev(span3, "class", "show-time-custome");
-    			add_location(span3, file$4, 99, 48, 5108);
+    			add_location(span3, file$4, 101, 48, 5288);
     			attr_dev(div7, "class", "cu-intro mt-2");
-    			add_location(div7, file$4, 97, 44, 4839);
+    			add_location(div7, file$4, 99, 44, 5019);
     			attr_dev(div8, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 pr-md-4 pr-xl-3 mr-lg-0 mr-lg-1 mr-xl-0 justify-content-center custome-margin-right ");
-    			add_location(div8, file$4, 96, 40, 4664);
+    			add_location(div8, file$4, 98, 40, 4844);
     			attr_dev(div9, "class", "row ");
-    			add_location(div9, file$4, 92, 36, 4340);
+    			add_location(div9, file$4, 94, 36, 4520);
     			attr_dev(div10, "class", "col-11 col-md-11");
-    			add_location(div10, file$4, 91, 32, 4272);
+    			add_location(div10, file$4, 93, 32, 4452);
     			attr_dev(i8, "class", "fas fa-ellipsis-h -1 ");
     			attr_dev(i8, "type", "button");
     			attr_dev(i8, "data-toggle", "dropdown");
-    			add_location(i8, file$4, 105, 36, 5496);
+    			add_location(i8, file$4, 107, 36, 5676);
     			attr_dev(i9, "class", "far fa-bookmark");
-    			add_location(i9, file$4, 107, 120, 5768);
+    			add_location(i9, file$4, 109, 120, 5948);
     			attr_dev(a7, "class", "dropdown-item");
     			attr_dev(a7, "href", "#");
-    			add_location(a7, file$4, 107, 85, 5733);
-    			add_location(li0, file$4, 107, 40, 5688);
+    			add_location(a7, file$4, 109, 85, 5913);
+    			add_location(li0, file$4, 109, 40, 5868);
     			attr_dev(i10, "class", "fas fa-share-alt");
-    			add_location(i10, file$4, 108, 78, 5903);
+    			add_location(i10, file$4, 110, 78, 6083);
     			attr_dev(a8, "class", "dropdown-item");
     			attr_dev(a8, "href", "#");
-    			add_location(a8, file$4, 108, 44, 5869);
-    			add_location(li1, file$4, 108, 40, 5865);
+    			add_location(a8, file$4, 110, 44, 6049);
+    			add_location(li1, file$4, 110, 40, 6045);
     			attr_dev(i11, "class", "fas fa-flag");
-    			add_location(i11, file$4, 109, 78, 6038);
+    			add_location(i11, file$4, 111, 78, 6218);
     			attr_dev(a9, "class", "dropdown-item");
     			attr_dev(a9, "href", "#");
-    			add_location(a9, file$4, 109, 44, 6004);
-    			add_location(li2, file$4, 109, 40, 6000);
+    			add_location(a9, file$4, 111, 44, 6184);
+    			add_location(li2, file$4, 111, 40, 6180);
     			attr_dev(ul0, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul0, file$4, 106, 36, 5607);
+    			add_location(ul0, file$4, 108, 36, 5787);
     			attr_dev(div11, "class", "col-1 ml-0 pl-0 pr-3 pr-md-3 pr-lg-4 dropdown");
-    			add_location(div11, file$4, 104, 32, 5400);
+    			add_location(div11, file$4, 106, 32, 5580);
     			attr_dev(div12, "class", "row justify-content-between p-2 pl-4 pl-md-2 ");
-    			add_location(div12, file$4, 90, 28, 4180);
+    			add_location(div12, file$4, 92, 28, 4360);
     			attr_dev(div13, "class", "col-12");
-    			add_location(div13, file$4, 89, 24, 4131);
+    			add_location(div13, file$4, 91, 24, 4311);
     			attr_dev(a10, "class", "title-post-link");
     			attr_dev(a10, "href", "magezine/show-detail");
-    			add_location(a10, file$4, 116, 72, 6379);
+    			add_location(a10, file$4, 118, 72, 6559);
     			attr_dev(h30, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h30, file$4, 116, 28, 6335);
+    			add_location(h30, file$4, 118, 28, 6515);
     			attr_dev(div14, "class", "col-12 p-0");
-    			add_location(div14, file$4, 115, 24, 6282);
+    			add_location(div14, file$4, 117, 24, 6462);
     			if (img7.src !== (img7_src_value = "image/30.jpg")) attr_dev(img7, "src", img7_src_value);
     			attr_dev(img7, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
     			attr_dev(img7, "alt", "");
-    			add_location(img7, file$4, 119, 28, 6607);
+    			add_location(img7, file$4, 121, 28, 6787);
     			attr_dev(div15, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div15, file$4, 118, 24, 6521);
+    			add_location(div15, file$4, 120, 24, 6701);
     			attr_dev(span4, "id", "dots");
-    			add_location(span4, file$4, 125, 114, 7154);
+    			add_location(span4, file$4, 127, 114, 7334);
     			attr_dev(span5, "id", "more");
-    			add_location(span5, file$4, 125, 140, 7180);
+    			add_location(span5, file$4, 127, 140, 7360);
     			attr_dev(span6, "id", "myBtn");
     			set_style(span6, "cursor", "pointer");
-    			add_location(span6, file$4, 132, 28, 7843);
+    			add_location(span6, file$4, 134, 28, 8023);
     			attr_dev(p0, "class", "col-12 mt-3 post-text");
-    			add_location(p0, file$4, 122, 24, 6770);
+    			add_location(p0, file$4, 124, 24, 6950);
     			attr_dev(button0, "id", "read-more");
     			attr_dev(button0, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button0, file$4, 137, 32, 8124);
+    			add_location(button0, file$4, 139, 32, 8304);
     			attr_dev(a11, "href", "magezine/show-detail");
-    			add_location(a11, file$4, 136, 28, 8060);
+    			add_location(a11, file$4, 138, 28, 8240);
     			attr_dev(div16, "class", "col-12 ");
-    			add_location(div16, file$4, 135, 24, 8010);
+    			add_location(div16, file$4, 137, 24, 8190);
     			attr_dev(img8, "class", "personal-img");
     			if (img8.src !== (img8_src_value = "image/1.jpeg")) attr_dev(img8, "src", img8_src_value);
     			attr_dev(img8, "alt", "");
-    			add_location(img8, file$4, 143, 32, 8501);
+    			add_location(img8, file$4, 145, 32, 8681);
     			attr_dev(span7, "class", "personal-name");
-    			add_location(span7, file$4, 144, 32, 8586);
+    			add_location(span7, file$4, 146, 32, 8766);
     			attr_dev(a12, "class", "a-clicked");
     			attr_dev(a12, "href", "profile");
-    			add_location(a12, file$4, 142, 28, 8432);
+    			add_location(a12, file$4, 144, 28, 8612);
     			attr_dev(i12, "class", "fas fa-eye");
-    			add_location(i12, file$4, 146, 52, 8737);
+    			add_location(i12, file$4, 148, 52, 8917);
     			attr_dev(div17, "class", "view-count");
-    			add_location(div17, file$4, 146, 28, 8713);
+    			add_location(div17, file$4, 148, 28, 8893);
     			attr_dev(div18, "class", "col-12 mb-1 author-show-box pt-1");
-    			add_location(div18, file$4, 141, 24, 8357);
+    			add_location(div18, file$4, 143, 24, 8537);
     			attr_dev(article3, "class", "p-0  shadow-radius-section shadow-section mb-4 bg-light");
-    			add_location(article3, file$4, 88, 20, 4033);
+    			add_location(article3, file$4, 90, 20, 4213);
     			attr_dev(img9, "class", "cu-image-com mr-1 ");
     			if (img9.src !== (img9_src_value = "image/afarine.jpg")) attr_dev(img9, "src", img9_src_value);
     			attr_dev(img9, "alt", "");
-    			add_location(img9, file$4, 155, 44, 9335);
+    			add_location(img9, file$4, 157, 44, 9515);
     			attr_dev(div19, "class", "col-2 col-sm-1 col-md-1 col-lg-1 p-0 pt-1 custom-width");
-    			add_location(div19, file$4, 154, 40, 9221);
+    			add_location(div19, file$4, 156, 40, 9401);
     			set_style(i13, "color", "#048af7");
     			attr_dev(i13, "class", "fas fa-check-circle");
-    			add_location(i13, file$4, 159, 125, 9814);
+    			add_location(i13, file$4, 161, 125, 9994);
     			attr_dev(a13, "href", "magezine");
     			attr_dev(a13, "class", "title-post-link");
-    			add_location(a13, file$4, 159, 52, 9741);
-    			add_location(h61, file$4, 159, 48, 9737);
+    			add_location(a13, file$4, 161, 52, 9921);
+    			add_location(h61, file$4, 161, 48, 9917);
     			attr_dev(i14, "class", "fas fa-clock");
-    			add_location(i14, file$4, 160, 80, 9962);
+    			add_location(i14, file$4, 162, 80, 10142);
     			attr_dev(span8, "class", "show-time-custome");
-    			add_location(span8, file$4, 160, 48, 9930);
+    			add_location(span8, file$4, 162, 48, 10110);
     			attr_dev(div20, "class", "cu-intro mt-2");
-    			add_location(div20, file$4, 158, 44, 9661);
+    			add_location(div20, file$4, 160, 44, 9841);
     			attr_dev(div21, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 pr-md-4 pr-xl-3 mr-lg-0 mr-lg-1 mr-xl-0 justify-content-center custome-margin-right ");
-    			add_location(div21, file$4, 157, 40, 9486);
+    			add_location(div21, file$4, 159, 40, 9666);
     			attr_dev(div22, "class", "row ");
-    			add_location(div22, file$4, 153, 36, 9162);
+    			add_location(div22, file$4, 155, 36, 9342);
     			attr_dev(div23, "class", "col-11 col-md-11");
-    			add_location(div23, file$4, 152, 32, 9094);
+    			add_location(div23, file$4, 154, 32, 9274);
     			attr_dev(i15, "class", "fas fa-ellipsis-h -1 ");
     			attr_dev(i15, "type", "button");
     			attr_dev(i15, "data-toggle", "dropdown");
-    			add_location(i15, file$4, 166, 36, 10318);
+    			add_location(i15, file$4, 168, 36, 10498);
     			attr_dev(i16, "class", "far fa-bookmark");
-    			add_location(i16, file$4, 168, 120, 10590);
+    			add_location(i16, file$4, 170, 120, 10770);
     			attr_dev(a14, "class", "dropdown-item");
     			attr_dev(a14, "href", "#");
-    			add_location(a14, file$4, 168, 85, 10555);
-    			add_location(li3, file$4, 168, 40, 10510);
+    			add_location(a14, file$4, 170, 85, 10735);
+    			add_location(li3, file$4, 170, 40, 10690);
     			attr_dev(i17, "class", "fas fa-share-alt");
-    			add_location(i17, file$4, 169, 78, 10725);
+    			add_location(i17, file$4, 171, 78, 10905);
     			attr_dev(a15, "class", "dropdown-item");
     			attr_dev(a15, "href", "#");
-    			add_location(a15, file$4, 169, 44, 10691);
-    			add_location(li4, file$4, 169, 40, 10687);
+    			add_location(a15, file$4, 171, 44, 10871);
+    			add_location(li4, file$4, 171, 40, 10867);
     			attr_dev(i18, "class", "fas fa-flag");
-    			add_location(i18, file$4, 170, 78, 10860);
+    			add_location(i18, file$4, 172, 78, 11040);
     			attr_dev(a16, "class", "dropdown-item");
     			attr_dev(a16, "href", "#");
-    			add_location(a16, file$4, 170, 44, 10826);
-    			add_location(li5, file$4, 170, 40, 10822);
+    			add_location(a16, file$4, 172, 44, 11006);
+    			add_location(li5, file$4, 172, 40, 11002);
     			attr_dev(ul1, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul1, file$4, 167, 36, 10429);
+    			add_location(ul1, file$4, 169, 36, 10609);
     			attr_dev(div24, "class", "col-1 ml-0 pl-0 pr-3 pr-md-3 pr-lg-4 dropdown");
-    			add_location(div24, file$4, 165, 32, 10222);
+    			add_location(div24, file$4, 167, 32, 10402);
     			attr_dev(div25, "class", "row justify-content-between p-2 pl-4 pl-md-2 ");
-    			add_location(div25, file$4, 151, 28, 9002);
+    			add_location(div25, file$4, 153, 28, 9182);
     			attr_dev(div26, "class", "col-12");
-    			add_location(div26, file$4, 150, 24, 8953);
+    			add_location(div26, file$4, 152, 24, 9133);
     			attr_dev(a17, "class", "title-post-link");
     			attr_dev(a17, "href", "magezine/show-detail");
-    			add_location(a17, file$4, 177, 72, 11201);
+    			add_location(a17, file$4, 179, 72, 11381);
     			attr_dev(h31, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h31, file$4, 177, 28, 11157);
+    			add_location(h31, file$4, 179, 28, 11337);
     			attr_dev(div27, "class", "col-12 p-0");
-    			add_location(div27, file$4, 176, 24, 11104);
+    			add_location(div27, file$4, 178, 24, 11284);
     			if (img10.src !== (img10_src_value = "image/30.jpg")) attr_dev(img10, "src", img10_src_value);
     			attr_dev(img10, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
     			attr_dev(img10, "alt", "");
-    			add_location(img10, file$4, 180, 28, 11429);
+    			add_location(img10, file$4, 182, 28, 11609);
     			attr_dev(div28, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div28, file$4, 179, 24, 11343);
+    			add_location(div28, file$4, 181, 24, 11523);
     			attr_dev(span9, "id", "dots");
-    			add_location(span9, file$4, 186, 114, 11976);
+    			add_location(span9, file$4, 188, 114, 12156);
     			attr_dev(span10, "id", "more");
-    			add_location(span10, file$4, 186, 140, 12002);
+    			add_location(span10, file$4, 188, 140, 12182);
     			attr_dev(span11, "id", "myBtn");
     			set_style(span11, "cursor", "pointer");
-    			add_location(span11, file$4, 193, 28, 12665);
+    			add_location(span11, file$4, 195, 28, 12845);
     			attr_dev(p1, "class", "col-12 mt-3 post-text");
-    			add_location(p1, file$4, 183, 24, 11592);
+    			add_location(p1, file$4, 185, 24, 11772);
     			attr_dev(button1, "id", "read-more");
     			attr_dev(button1, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button1, file$4, 198, 32, 12946);
+    			add_location(button1, file$4, 200, 32, 13126);
     			attr_dev(a18, "href", "magezine/show-detail");
-    			add_location(a18, file$4, 197, 28, 12882);
+    			add_location(a18, file$4, 199, 28, 13062);
     			attr_dev(div29, "class", "col-12 ");
-    			add_location(div29, file$4, 196, 24, 12832);
+    			add_location(div29, file$4, 198, 24, 13012);
     			attr_dev(img11, "class", "personal-img");
     			if (img11.src !== (img11_src_value = "image/1.jpeg")) attr_dev(img11, "src", img11_src_value);
     			attr_dev(img11, "alt", "");
-    			add_location(img11, file$4, 204, 32, 13323);
+    			add_location(img11, file$4, 206, 32, 13503);
     			attr_dev(span12, "class", "personal-name");
-    			add_location(span12, file$4, 205, 32, 13408);
+    			add_location(span12, file$4, 207, 32, 13588);
     			attr_dev(a19, "class", "a-clicked");
     			attr_dev(a19, "href", "profile");
-    			add_location(a19, file$4, 203, 28, 13254);
+    			add_location(a19, file$4, 205, 28, 13434);
     			attr_dev(i19, "class", "fas fa-eye");
-    			add_location(i19, file$4, 207, 52, 13559);
+    			add_location(i19, file$4, 209, 52, 13739);
     			attr_dev(div30, "class", "view-count");
-    			add_location(div30, file$4, 207, 28, 13535);
+    			add_location(div30, file$4, 209, 28, 13715);
     			attr_dev(div31, "class", "col-12 mb-1 author-show-box pt-1");
-    			add_location(div31, file$4, 202, 24, 13179);
+    			add_location(div31, file$4, 204, 24, 13359);
     			attr_dev(article4, "class", "p-0  shadow-radius-section shadow-section mb-4 bg-light");
-    			add_location(article4, file$4, 149, 20, 8855);
+    			add_location(article4, file$4, 151, 20, 9035);
     			attr_dev(img12, "class", "cu-image-com mr-1 ");
     			if (img12.src !== (img12_src_value = "image/afarine.jpg")) attr_dev(img12, "src", img12_src_value);
     			attr_dev(img12, "alt", "");
-    			add_location(img12, file$4, 216, 44, 14157);
+    			add_location(img12, file$4, 218, 44, 14337);
     			attr_dev(div32, "class", "col-2 col-sm-1 col-md-1 col-lg-1 p-0 pt-1 custom-width");
-    			add_location(div32, file$4, 215, 40, 14043);
+    			add_location(div32, file$4, 217, 40, 14223);
     			set_style(i20, "color", "#048af7");
     			attr_dev(i20, "class", "fas fa-check-circle");
-    			add_location(i20, file$4, 220, 125, 14636);
+    			add_location(i20, file$4, 222, 125, 14816);
     			attr_dev(a20, "href", "magezine");
     			attr_dev(a20, "class", "title-post-link");
-    			add_location(a20, file$4, 220, 52, 14563);
-    			add_location(h62, file$4, 220, 48, 14559);
+    			add_location(a20, file$4, 222, 52, 14743);
+    			add_location(h62, file$4, 222, 48, 14739);
     			attr_dev(i21, "class", "fas fa-clock");
-    			add_location(i21, file$4, 221, 80, 14784);
+    			add_location(i21, file$4, 223, 80, 14964);
     			attr_dev(span13, "class", "show-time-custome");
-    			add_location(span13, file$4, 221, 48, 14752);
+    			add_location(span13, file$4, 223, 48, 14932);
     			attr_dev(div33, "class", "cu-intro mt-2");
-    			add_location(div33, file$4, 219, 44, 14483);
+    			add_location(div33, file$4, 221, 44, 14663);
     			attr_dev(div34, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-3 pr-md-4 pr-xl-3 mr-lg-0 mr-lg-1 mr-xl-0 justify-content-center custome-margin-right ");
-    			add_location(div34, file$4, 218, 40, 14308);
+    			add_location(div34, file$4, 220, 40, 14488);
     			attr_dev(div35, "class", "row ");
-    			add_location(div35, file$4, 214, 36, 13984);
+    			add_location(div35, file$4, 216, 36, 14164);
     			attr_dev(div36, "class", "col-11 col-md-11");
-    			add_location(div36, file$4, 213, 32, 13916);
+    			add_location(div36, file$4, 215, 32, 14096);
     			attr_dev(i22, "class", "fas fa-ellipsis-h -1 ");
     			attr_dev(i22, "type", "button");
     			attr_dev(i22, "data-toggle", "dropdown");
-    			add_location(i22, file$4, 227, 36, 15140);
+    			add_location(i22, file$4, 229, 36, 15320);
     			attr_dev(i23, "class", "far fa-bookmark");
-    			add_location(i23, file$4, 229, 120, 15412);
+    			add_location(i23, file$4, 231, 120, 15592);
     			attr_dev(a21, "class", "dropdown-item");
     			attr_dev(a21, "href", "#");
-    			add_location(a21, file$4, 229, 85, 15377);
-    			add_location(li6, file$4, 229, 40, 15332);
+    			add_location(a21, file$4, 231, 85, 15557);
+    			add_location(li6, file$4, 231, 40, 15512);
     			attr_dev(i24, "class", "fas fa-share-alt");
-    			add_location(i24, file$4, 230, 78, 15547);
+    			add_location(i24, file$4, 232, 78, 15727);
     			attr_dev(a22, "class", "dropdown-item");
     			attr_dev(a22, "href", "#");
-    			add_location(a22, file$4, 230, 44, 15513);
-    			add_location(li7, file$4, 230, 40, 15509);
+    			add_location(a22, file$4, 232, 44, 15693);
+    			add_location(li7, file$4, 232, 40, 15689);
     			attr_dev(i25, "class", "fas fa-flag");
-    			add_location(i25, file$4, 231, 78, 15682);
+    			add_location(i25, file$4, 233, 78, 15862);
     			attr_dev(a23, "class", "dropdown-item");
     			attr_dev(a23, "href", "#");
-    			add_location(a23, file$4, 231, 44, 15648);
-    			add_location(li8, file$4, 231, 40, 15644);
+    			add_location(a23, file$4, 233, 44, 15828);
+    			add_location(li8, file$4, 233, 40, 15824);
     			attr_dev(ul2, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul2, file$4, 228, 36, 15251);
+    			add_location(ul2, file$4, 230, 36, 15431);
     			attr_dev(div37, "class", "col-1 ml-0 pl-0 pr-3 pr-md-3 pr-lg-4 dropdown");
-    			add_location(div37, file$4, 226, 32, 15044);
+    			add_location(div37, file$4, 228, 32, 15224);
     			attr_dev(div38, "class", "row justify-content-between p-2 pl-4 pl-md-2 ");
-    			add_location(div38, file$4, 212, 28, 13824);
+    			add_location(div38, file$4, 214, 28, 14004);
     			attr_dev(div39, "class", "col-12");
-    			add_location(div39, file$4, 211, 24, 13775);
+    			add_location(div39, file$4, 213, 24, 13955);
     			attr_dev(a24, "class", "title-post-link");
     			attr_dev(a24, "href", "magezine/show-detail");
-    			add_location(a24, file$4, 238, 72, 16023);
+    			add_location(a24, file$4, 240, 72, 16203);
     			attr_dev(h32, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h32, file$4, 238, 28, 15979);
+    			add_location(h32, file$4, 240, 28, 16159);
     			attr_dev(div40, "class", "col-12 p-0");
-    			add_location(div40, file$4, 237, 24, 15926);
+    			add_location(div40, file$4, 239, 24, 16106);
     			if (img13.src !== (img13_src_value = "image/30.jpg")) attr_dev(img13, "src", img13_src_value);
     			attr_dev(img13, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
     			attr_dev(img13, "alt", "");
-    			add_location(img13, file$4, 241, 28, 16251);
+    			add_location(img13, file$4, 243, 28, 16431);
     			attr_dev(div41, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div41, file$4, 240, 24, 16165);
+    			add_location(div41, file$4, 242, 24, 16345);
     			attr_dev(span14, "id", "dots");
-    			add_location(span14, file$4, 247, 114, 16798);
+    			add_location(span14, file$4, 249, 114, 16978);
     			attr_dev(span15, "id", "more");
-    			add_location(span15, file$4, 247, 140, 16824);
+    			add_location(span15, file$4, 249, 140, 17004);
     			attr_dev(span16, "id", "myBtn");
     			set_style(span16, "cursor", "pointer");
-    			add_location(span16, file$4, 254, 28, 17487);
+    			add_location(span16, file$4, 256, 28, 17667);
     			attr_dev(p2, "class", "col-12 mt-3 post-text");
-    			add_location(p2, file$4, 244, 24, 16414);
+    			add_location(p2, file$4, 246, 24, 16594);
     			attr_dev(button2, "id", "read-more");
     			attr_dev(button2, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button2, file$4, 259, 32, 17768);
+    			add_location(button2, file$4, 261, 32, 17948);
     			attr_dev(a25, "href", "magezine/show-detail");
-    			add_location(a25, file$4, 258, 28, 17704);
+    			add_location(a25, file$4, 260, 28, 17884);
     			attr_dev(div42, "class", "col-12 ");
-    			add_location(div42, file$4, 257, 24, 17654);
+    			add_location(div42, file$4, 259, 24, 17834);
     			attr_dev(img14, "class", "personal-img");
     			if (img14.src !== (img14_src_value = "image/1.jpeg")) attr_dev(img14, "src", img14_src_value);
     			attr_dev(img14, "alt", "");
-    			add_location(img14, file$4, 265, 32, 18145);
+    			add_location(img14, file$4, 267, 32, 18325);
     			attr_dev(span17, "class", "personal-name");
-    			add_location(span17, file$4, 266, 32, 18230);
+    			add_location(span17, file$4, 268, 32, 18410);
     			attr_dev(a26, "class", "a-clicked");
     			attr_dev(a26, "href", "profile");
-    			add_location(a26, file$4, 264, 28, 18076);
+    			add_location(a26, file$4, 266, 28, 18256);
     			attr_dev(i26, "class", "fas fa-eye");
-    			add_location(i26, file$4, 268, 52, 18381);
+    			add_location(i26, file$4, 270, 52, 18561);
     			attr_dev(div43, "class", "view-count");
-    			add_location(div43, file$4, 268, 28, 18357);
+    			add_location(div43, file$4, 270, 28, 18537);
     			attr_dev(div44, "class", "col-12 mb-1 author-show-box pt-1");
-    			add_location(div44, file$4, 263, 24, 18001);
+    			add_location(div44, file$4, 265, 24, 18181);
     			attr_dev(article5, "class", "p-0  shadow-radius-section shadow-section mb-4 bg-light");
-    			add_location(article5, file$4, 210, 20, 13677);
+    			add_location(article5, file$4, 212, 20, 13857);
     			attr_dev(div45, "class", "col-12 p-0 main-article");
-    			add_location(div45, file$4, 87, 16, 3975);
+    			add_location(div45, file$4, 89, 16, 4155);
     			attr_dev(section1, "class", "row mx-0 mt-3 mr-0 pt-0 bg-light ");
-    			add_location(section1, file$4, 86, 12, 3907);
+    			add_location(section1, file$4, 88, 12, 4087);
     			attr_dev(aside1, "class", "col-12 col-md-6 mx-2 order-first order-md-0 ");
-    			add_location(aside1, file$4, 41, 8, 1211);
+    			add_location(aside1, file$4, 43, 8, 1288);
     			attr_dev(aside2, "class", "col-12 col-md-2 mx-1 mt-5 mt-md-0 bg-light shadow-radius-section");
-    			add_location(aside2, file$4, 274, 8, 18550);
+    			add_location(aside2, file$4, 276, 8, 18730);
     			attr_dev(div46, "class", "row justify-content-center mx-lg-2");
-    			add_location(div46, file$4, 39, 4, 1051);
+    			add_location(div46, file$4, 41, 4, 1128);
     			attr_dev(main, "class", "container-fluid pin-parent ");
-    			add_location(main, file$4, 38, 0, 987);
-    			add_location(br0, file$4, 279, 0, 18679);
+    			add_location(main, file$4, 40, 0, 1064);
+    			add_location(br0, file$4, 281, 0, 18859);
     			attr_dev(hr, "class", "col-10 offset-1");
-    			add_location(hr, file$4, 279, 4, 18683);
-    			add_location(br1, file$4, 279, 32, 18711);
-    			add_location(br2, file$4, 279, 36, 18715);
-    			add_location(br3, file$4, 279, 40, 18719);
+    			add_location(hr, file$4, 281, 4, 18863);
+    			add_location(br1, file$4, 281, 32, 18891);
+    			add_location(br2, file$4, 281, 36, 18895);
+    			add_location(br3, file$4, 281, 40, 18899);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11132,8 +11136,9 @@ var app = (function () {
     						scrolling = true;
     						clearTimeout(scrolling_timeout);
     						scrolling_timeout = setTimeout(clear_scrolling, 100);
-    						/*onwindowscroll*/ ctx[4]();
+    						/*onwindowscroll*/ ctx[6]();
     					}),
+    					listen_dev(window_1, "resize", /*onwindowresize*/ ctx[7]),
     					listen_dev(span6, "click", myFunction, false, false, false),
     					listen_dev(span11, "click", myFunction, false, false, false),
     					listen_dev(span16, "click", myFunction, false, false, false)
@@ -11148,6 +11153,18 @@ var app = (function () {
     				clearTimeout(scrolling_timeout);
     				scrollTo(window_1.pageXOffset, /*y*/ ctx[0]);
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
+    			}
+
+    			if (dirty & /*h*/ 4) {
+    				toggle_class(article0, "pin-article-height", /*h*/ ctx[2] <= 465);
+    			}
+
+    			if (dirty & /*h*/ 4) {
+    				toggle_class(article1, "pin-article-height", /*h*/ ctx[2] <= 465);
+    			}
+
+    			if (dirty & /*h*/ 4) {
+    				toggle_class(article2, "pin-article-height", /*h*/ ctx[2] <= 465);
     			}
     		},
     		i: function intro(local) {
@@ -11197,18 +11214,20 @@ var app = (function () {
     	let { url = "" } = $$props;
     	let { id = 1 } = $$props;
     	let { y } = $$props;
+    	let { x } = $$props;
+    	let { h } = $$props;
     	let { post = [] } = $$props;
 
     	onMount(async () => {
     		const res = await fetch("http://localhost:8000/post/page/1/");
-    		$$invalidate(1, post = await res.json());
-    		$$invalidate(1, post = post.data);
+    		$$invalidate(3, post = await res.json());
+    		$$invalidate(3, post = post.data);
     	});
 
     	var currentLocation = window.location.href;
     	var splitUrl = currentLocation.split("/");
     	var lastSugment = splitUrl[splitUrl.length - 1];
-    	const writable_props = ["url", "id", "y", "post"];
+    	const writable_props = ["url", "id", "y", "x", "h", "post"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Home> was created with unknown prop '${key}'`);
@@ -11218,11 +11237,18 @@ var app = (function () {
     		$$invalidate(0, y = window_1.pageYOffset);
     	}
 
+    	function onwindowresize() {
+    		$$invalidate(1, x = window_1.innerWidth);
+    		$$invalidate(2, h = window_1.innerHeight);
+    	}
+
     	$$self.$$set = $$props => {
-    		if ("url" in $$props) $$invalidate(2, url = $$props.url);
-    		if ("id" in $$props) $$invalidate(3, id = $$props.id);
+    		if ("url" in $$props) $$invalidate(4, url = $$props.url);
+    		if ("id" in $$props) $$invalidate(5, id = $$props.id);
     		if ("y" in $$props) $$invalidate(0, y = $$props.y);
-    		if ("post" in $$props) $$invalidate(1, post = $$props.post);
+    		if ("x" in $$props) $$invalidate(1, x = $$props.x);
+    		if ("h" in $$props) $$invalidate(2, h = $$props.h);
+    		if ("post" in $$props) $$invalidate(3, post = $$props.post);
     	};
 
     	$$self.$capture_state = () => ({
@@ -11241,6 +11267,8 @@ var app = (function () {
     		url,
     		id,
     		y,
+    		x,
+    		h,
     		post,
     		currentLocation,
     		splitUrl,
@@ -11248,10 +11276,12 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("url" in $$props) $$invalidate(2, url = $$props.url);
-    		if ("id" in $$props) $$invalidate(3, id = $$props.id);
+    		if ("url" in $$props) $$invalidate(4, url = $$props.url);
+    		if ("id" in $$props) $$invalidate(5, id = $$props.id);
     		if ("y" in $$props) $$invalidate(0, y = $$props.y);
-    		if ("post" in $$props) $$invalidate(1, post = $$props.post);
+    		if ("x" in $$props) $$invalidate(1, x = $$props.x);
+    		if ("h" in $$props) $$invalidate(2, h = $$props.h);
+    		if ("post" in $$props) $$invalidate(3, post = $$props.post);
     		if ("currentLocation" in $$props) currentLocation = $$props.currentLocation;
     		if ("splitUrl" in $$props) splitUrl = $$props.splitUrl;
     		if ("lastSugment" in $$props) lastSugment = $$props.lastSugment;
@@ -11261,13 +11291,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [y, post, url, id, onwindowscroll];
+    	return [y, x, h, post, url, id, onwindowscroll, onwindowresize];
     }
 
     class Home extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { url: 2, id: 3, y: 0, post: 1 });
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { url: 4, id: 5, y: 0, x: 1, h: 2, post: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -11281,6 +11311,14 @@ var app = (function () {
 
     		if (/*y*/ ctx[0] === undefined && !("y" in props)) {
     			console.warn("<Home> was created without expected prop 'y'");
+    		}
+
+    		if (/*x*/ ctx[1] === undefined && !("x" in props)) {
+    			console.warn("<Home> was created without expected prop 'x'");
+    		}
+
+    		if (/*h*/ ctx[2] === undefined && !("h" in props)) {
+    			console.warn("<Home> was created without expected prop 'h'");
     		}
     	}
 
@@ -11305,6 +11343,22 @@ var app = (function () {
     	}
 
     	set y(value) {
+    		throw new Error("<Home>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get x() {
+    		throw new Error("<Home>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set x(value) {
+    		throw new Error("<Home>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get h() {
+    		throw new Error("<Home>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set h(value) {
     		throw new Error("<Home>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 

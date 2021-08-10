@@ -481,6 +481,10 @@ a:hover {
     box-shadow: 0 0 20px 1px #d6d1d1;
 }
 
+.pin-article-height {
+    height: 260px !important;
+}
+
 @media(max-width:375px) {
     .first-article-main {
         height: 42vh;

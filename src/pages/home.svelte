@@ -10,6 +10,8 @@
     export let url = "";
     export let id =1;
     export let y;
+    export let x;
+    export let h;
     export let post = [];
 	onMount(
 		async() => {
@@ -30,7 +32,7 @@
 <style>
     @import "public/global.css";
 </style>
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} bind:innerWidth={x} bind:innerHeight={h}/>
 <svelte:head>
     <title>
         اینولینکس
@@ -42,7 +44,7 @@
         <aside class="col-12 col-md-6 mx-2 order-first order-md-0 ">
             <section class="row justify-content-md-center mx-0 pt-3 bg-light shadow-radius-section" >
                 <div class="col-12 mb-4 my-md-0">
-                    <article class="col-12 bg-danger mb-md-4 first-article-main">
+                    <article class="col-12 bg-danger mb-md-4 first-article-main " class:pin-article-height={h<=465}>
                         <img class="image-pin-top" src="image/30.jpg" alt="">
                         <a class="w-100 content-pin-top" href="#">
                             <h5>جدیدترین اخبار از تحریم فیس بوک توسط آمریکا</h5>
@@ -56,7 +58,7 @@
                     </article>
                 </div>
                 <div class="col-12 col-xl-6 mb-4 my-md-0 pin-article-main">
-                    <article class="col-12">
+                    <article class="col-12" class:pin-article-height={h<=465}>
                         <img class="image-pin w-100" src="image/28.jpg" alt="">
                         <a class="w-100 content-pin" href="#">
                             <h5>جدیدترین اخبار از تحریم فیس بوک توسط آمریکا</h5>
@@ -70,7 +72,7 @@
                     </article>
                 </div>
                 <div class="col-12 col-xl-6 mb-4 mt-lg-0 mt-md-4  pin-article-main">
-                    <article class="col-12">
+                    <article class="col-12" class:pin-article-height={h<=465}>
                         <img class="image-pin w-100" src="image/20.jpg" alt="">
                         <a class="w-100 content-pin" href="#">
                             <h5>به اینولینکس خوش آمدید</h5>
