@@ -127,6 +127,7 @@ header {
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .menu-icon {

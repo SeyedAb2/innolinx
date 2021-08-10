@@ -43,16 +43,16 @@
                                     </Link>
                                 </div>
                                 <div class="col-2 col-md-1 ">
-                                    <Link class="menu-item-link-color" to="contact">
+                                    <Link class="menu-item-link-color" to="profile">
                                         <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon ">
-                                            <i class="fas fa-mail-bulk ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>تماس باما</span></i>
+                                            <i class="fas fa-mail-bulk ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>پروفایل فرد</span></i>
                                         </div>
                                     </Link>
                                 </div>
                                 <div class="col-2 col-md-1 ">
-                                    <Link class="menu-item-link-color" to="about">
+                                    <Link class="menu-item-link-color" to="show-detail">
                                         <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0">
-                                            <i class="fas fa-info-circle ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>درباره ما</span></i>
+                                            <i class="fas fa-info-circle ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>جزيیات</span></i>
                                         </div>
                                     </Link>
                                 </div>
@@ -60,7 +60,7 @@
                                 <div class="col-2 col-md-1 ">
                                     <Link class="menu-item-link-color" to="magezine">
                                         <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0">
-                                            <i class="fas fa-feather ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>آفرینه</span></i>
+                                            <i class="fas fa-feather ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>مجله</span></i>
                                         </div>
                                     </Link>
                                 </div>
@@ -99,6 +99,7 @@
         <Route path="magezine" component="{magezine}"/>
         <Route path="profile/show-detail" component="{showDetail}"/>
         <Route path="magezine/show-detail" component="{showDetail}"/>
+        <Route path="show-detail" component="{showDetail}"/>
     </div>
     </Router>
     <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
