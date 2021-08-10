@@ -71,7 +71,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-12 col-xl-6 mb-4 mt-lg-0 mt-md-4  pin-article-main">
+                <div class="col-12 col-xl-6 mb-4 mt-lg-4 mt-xl-0 mt-md-4  pin-article-main">
                     <article class="col-12" class:pin-article-height={h<=465}>
                         <img class="image-pin w-100" src="image/20.jpg" alt="">
                         <a class="w-100 content-pin" href="#">
@@ -104,7 +104,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1 ml-0 pl-0 pr-3 pr-md-3 pr-lg-4 dropdown">
+                                <div class="col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                     <ul class="dropdown-menu ellipsis-menu">
                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -165,7 +165,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1 ml-0 pl-0 pr-3 pr-md-3 pr-lg-4 dropdown">
+                                <div class="col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                     <ul class="dropdown-menu ellipsis-menu">
                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -226,7 +226,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1 ml-0 pl-0 pr-3 pr-md-3 pr-lg-4 dropdown">
+                                <div class="col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                     <ul class="dropdown-menu ellipsis-menu">
                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>

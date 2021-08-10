@@ -1252,6 +1252,9 @@ a:hover {
         word-spacing: 0px;
         text-align: justify;
     }
+    .col-custom {
+        width: 136px !important;
+    }
 }
 
 @media(max-width:375px) {

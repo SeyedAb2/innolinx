@@ -117,7 +117,7 @@
                                     <h6 class="explain-about-page">به آفرینه محلق شوید و بروز باشید.میتوانید مطالب مرتبط به کارآفرینی و بازاریابی رو از اینجا دنبال کنید اگر از محتوای ما خوشتان اومد آنرابا دیگران به اشتراک بگذارید.</h6>
                                     <div class="col-12 mt-4 font">
                                         <div class="row">
-                                            <button class="btn  rounded-pill  font btn-mw text-center visit-btn mx-1  "><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
+                                            <button class="btn rounded-pill mb-1 col-custom font btn-mw text-center visit-btn mx-0 mx-sm-1"><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
                                             <div class="col-5 justify-content-start dropdown dropleft pr-1">
                                                 <button type="button" data-toggle="dropdown" class="pt-custome-more-btn btn btn-mw rounded-pill col-12 font text-center col-md-6 ">بیشتر</button>
                                                 <ul class="dropdown-menu  ellipsis-menu">
@@ -227,7 +227,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                <div class="dropdown col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-3 pr-lg-3 pr-xl-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
