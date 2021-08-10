@@ -30,11 +30,11 @@
     <header class="sticky-top " class:nav-custome-bottom={y<=600}> 
         <nav class="container-fluid pb-0 "  >
             <div class="row justify-content-end " >
-                <div class="col-9">
+                <div class="col-9 px-0">
                     <div class="row ">
                         <div class="col-12">
                             
-                            <div class="row justify-content-start"  style="direction: rtl;">
+                            <div class="row justify-content-start mt-1" style="direction: rtl;">
                                 <div class="col-2 col-md-1">
                                     <Link to="/" class="menu-item-link-color">
                                         <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 col-md-2 pl-4 ">
+                <div class="col-3 col-md-2 pl-2 ">
                     <Link to="/">
                         <div class="col-7 ">
                             <div class="brand-text mx-0">
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="col-1 h-100">
-                            <img {src} class="brand-icon mt-1" alt="">
+                            <img {src} class="brand-icon mt-2" alt="">
                         </div>
                     </Link>
                     
