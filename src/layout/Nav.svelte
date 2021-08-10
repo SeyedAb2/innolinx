@@ -3,6 +3,7 @@
     import {fade , slide , scale , fly} from "svelte/transition";
 	import about from "../pages/about.svelte";
 	import contact from "../pages/contact.svelte";
+    import magezine from "../pages/magezine.svelte";
 	import profile from "../pages/profile.svelte";
     import showDetail from "../pages/show-detail.svelte";
     import home from "../pages/home.svelte";
@@ -57,7 +58,7 @@
                                 </div>
                                 
                                 <div class="col-2 col-md-1 ">
-                                    <Link class="menu-item-link-color" to="profile">
+                                    <Link class="menu-item-link-color" to="magezine">
                                         <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0">
                                             <i class="fas fa-feather ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>آفرینه</span></i>
                                         </div>
@@ -95,7 +96,9 @@
         <Route path="about" component="{about}" />
         <Route path="/" component="{home}"/>
         <Route path="profile" component="{profile}"/>
+        <Route path="magezine" component="{magezine}"/>
         <Route path="profile/show-detail" component="{showDetail}"/>
+        <Route path="magezine/show-detail" component="{showDetail}"/>
     </div>
     </Router>
     <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

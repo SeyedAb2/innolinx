@@ -6,6 +6,7 @@
     import { Router, Link, Route } from "svelte-routing";
     import {circIn} from "svelte/easing";
     import showDetail from "./show-detail.svelte";
+    import profile from "./profile.svelte";
     export let url = "";
     export let y;
     export let x;
@@ -102,11 +103,11 @@
             <div class="row ml-md-1 ">
                 <div class="col-12 ">
                     <div class="row p-0 shadow-radius-section bg-white" >
-                        <div class="col-12 p-0 banner" >
-                            <img class=" header-image-person bg-light" src="image/head.jpeg" alt="">
+                        <div class="col-12 p-0 banner" style="overflow: hidden;">
+                            <img class=" header-image bg-light" src="image/head.jpeg" alt="">
                         </div>
-                        <div class="col-12 header-image-main border-radius">
-                            <img class="header-logo-image-person border-radius" src="image/1.jpeg" alt="">
+                        <div class="col-12 header-image-main">
+                            <img class="header-logo-image" src="image/afarine.jpg" alt="">
                         </div>
                         <div class="header-detail col-12">
                             <div class="row">
@@ -203,7 +204,7 @@
                                         </div>
                                         
                                         <div class="col-12 mb-1 author-show-box pt-1">
-                                            <a class="a-clicked" href="#">
+                                            <a class="a-clicked" href="profile">
                                                 <img class="personal-img" src="image/1.jpeg" alt="">
                                                 <span class="personal-name"> مسعودآقایی ساداتی</span>&nbsp;&nbsp;
                                             </a>

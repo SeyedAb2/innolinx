@@ -670,7 +670,20 @@ a:hover {
     top: -55px;
     right: 25px;
     border: 2px solid rgb(204 203 203);
-    border-radius: 4px;
+}
+
+.header-logo-image-person {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    z-index: 2;
+    top: -100px;
+    right: 30px;
+    border: 2px solid rgb(204 203 203);
+}
+
+.border-radius {
+    border-radius: 50%;
 }
 
 .btn-mw {
@@ -698,11 +711,18 @@ a:hover {
 .banner {
     border-radius: 7px 7px 0 0;
     padding-right: 1px !important;
+    overflow: hidden;
 }
 
 .header-image {
     width: 820px;
     height: 135px;
+    border-radius: 7px 7px 0 0;
+}
+
+.header-image-person {
+    width: 820px;
+    height: 190px;
     border-radius: 7px 7px 0 0;
 }
 

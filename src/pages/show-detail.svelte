@@ -5,7 +5,7 @@
     import { Loader } from "@googlemaps/js-api-loader"
     import { Router, Link, Route } from "svelte-routing";
     import {circIn} from "svelte/easing";
-    import Profile from "./profile.svelte";
+    import Profile from "./magezine.svelte";
     export let url = "";
     export let y;
     const urlParams = new URLSearchParams(window.location.search);
