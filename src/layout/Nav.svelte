@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="col-1 h-100">
-                            <img {src} class="brand-icon" alt="">
+                            <img {src} class="brand-icon mt-1" alt="">
                         </div>
                     </Link>
                     
