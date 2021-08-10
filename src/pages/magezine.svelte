@@ -114,7 +114,7 @@
                                 <div class="col-10">
                                     <h3 class="text-bold">آفرینه&nbsp;<i style="color:#048af7;font-size: 20px;" class="fas fa-check-circle"></i></h3>
                                     <h6 class="text-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;تهران,شهرک طالقانی,ساحتمان نگین</h6>
-                                    <h6 class="explain-about-page">به آفرینه محلق شوید و بروز باشید .می توانید مطالب مرتبط به کارآفرینی و بازاریابی رو از اینجا دنبال کنید اگر از محتوای ما خوشتان اومد آنرا  با دیگران به اشتراک بگذارید.</h6>
+                                    <h6 class="explain-about-page">به آفرینه محلق شوید و بروز باشید.میتوانید مطالب مرتبط به کارآفرینی و بازاریابی رو از اینجا دنبال کنید اگر از محتوای ما خوشتان اومد آنرابا دیگران به اشتراک بگذارید.</h6>
                                     <div class="col-12 mt-4 font">
                                         <div class="row">
                                             <button class="btn  rounded-pill  font btn-mw text-center visit-btn mx-1  "><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
@@ -155,10 +155,10 @@
                                             <div class="row justify-content-between p-2 pl-4 pl-md-2">
                                                 <div class="col-11 col-md-11" >
                                                     <div class="row ">
-                                                        <div class="col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1" >
+                                                        <div class="col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1 custom-width" >
                                                             <img class="cu-image-com mr-1 " src="image/afarine.jpg" alt="">
                                                         </div>
-                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center ">
+                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center custome-margin-right ">
                                                             <div class="cu-intro mt-2">
                                                                 <h6><a href="#" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
                                                                 <span class="show-time-custome"><i class="fas fa-clock"></i> ۳ دقیقه قبل</span>
@@ -508,30 +508,30 @@
                                 </p>
                                 <div class="col-12">
                                     <div class="row ">
-                                        <div class="col-4 text-bold pr-0">وبسایت</div>
-                                        <div class="col-8 text-bold pr-0 mb-4">
+                                        <div class="col-6 text-bold pr-0">وبسایت</div>
+                                        <div class="col-6 text-bold pr-0 mb-4">
                                             <a class="text-primary" href="#">
                                                 http://afarine.com/
                                             </a>
                                         </div>
-                                        <div class="col-4 text-bold pr-0">نوع فعالیت</div>
-                                        <div class="col-8 pr-0 mb-4 text-secondary">
+                                        <div class="col-6 text-bold pr-0">نوع فعالیت</div>
+                                        <div class="col-6 pr-0 mb-4 text-secondary">
                                             کارآفرینی و کسب و کار - خصوصی
                                         </div>
-                                        <div class="col-4 text-bold pr-0">میزان استخدام</div>
-                                        <div class="col-8 pr-0 mb-4 text-secondary">
+                                        <div class="col-6 text-bold pr-0">میزان استخدام</div>
+                                        <div class="col-6 pr-0 mb-4 text-secondary">
                                             ۱۲۰ + کارمند
                                         </div>
-                                        <div class="col-4 text-bold pr-0">تاریخ تاسیس</div>
-                                        <div class="col-8 pr-0 mb-4 text-secondary">
+                                        <div class="col-6 text-bold pr-0">تاریخ تاسیس</div>
+                                        <div class="col-6 pr-0 mb-4 text-secondary">
                                             ۲۰۱۸
                                         </div>
-                                        <div class="col-4 text-bold pr-0">تخصص ها</div>
-                                        <div class="col-8 pr-0 mb-4 text-secondary">
+                                        <div class="col-6 text-bold pr-0">تخصص ها</div>
+                                        <div class="col-6 pr-0 mb-4 text-secondary">
                                            اشتغال/بازاریابی/کسب و کار/
                                         </div>
-                                        <div class="col-4 text-bold pr-0">آدرس اصلی</div>
-                                        <div class="col-8 pr-0 mb-4 text-secondary">
+                                        <div class="col-6 text-bold pr-0">آدرس اصلی</div>
+                                        <div class="col-6 pr-0 mb-4 text-secondary">
                                             تهران,شهرک طالقانی,ساحتمان نگین
                                         </div>
                                     </div>
