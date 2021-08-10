@@ -840,11 +840,13 @@ a:hover {
 .category-fixed-icon-modal {
     position: fixed;
     top: 50%;
-    right: 2%;
-    border: 1px solid rgb(83, 83, 83);
-    background-color: rgb(153, 153, 153);
-    border-radius: 50%;
-    padding: 7px;
+    right: 0.2%;
+    color: #5c5c5c;
+    border: 0.5px solid #9c9c9c;
+    background-color: rgb(173, 173, 173);
+    border-radius: 3px;
+    padding: 3px;
+    padding-right: 4px;
 }
 
 .category_button {
@@ -1009,6 +1011,7 @@ a:hover {
 
 .modal.right .modal-dialog {
     position: fixed;
+    top: 0;
     margin: auto;
     width: 200px;
     height: 100%;

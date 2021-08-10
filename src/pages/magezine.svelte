@@ -155,18 +155,18 @@
                                             <div class="row justify-content-between p-2 pl-4 pl-md-2">
                                                 <div class="col-11 col-md-11" >
                                                     <div class="row ">
-                                                        <div class="col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1 custom-width" >
+                                                        <div class="col-2 col-sm-1 col-md-1 col-lg-1 p-0 pt-1 custom-width" >
                                                             <img class="cu-image-com mr-1 " src="image/afarine.jpg" alt="">
                                                         </div>
-                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center custome-margin-right ">
+                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-0 pr-md-4 mr-lg-2 mr-xl-0 pr-xl-3 justify-content-center custome-margin-right ">
                                                             <div class="cu-intro mt-2">
-                                                                <h6><a href="#" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
+                                                                <h6><a href="magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
                                                                 <span class="show-time-custome"><i class="fas fa-clock"></i> ۳ دقیقه قبل</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-1 ml-0 pl-0 pr-4  pr-md-3 pr-lg-4 dropdown">
+                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -178,7 +178,7 @@
                                         </div>
                                         
                                         <div class="col-12 p-0">
-                                            <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a class="title-post-link" href="profile/show-detail">به اینولینکس خوش آمدید</a></h3>
+                                            <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a class="title-post-link" href="magezine/show-detail">به اینولینکس خوش آمدید</a></h3>
                                         </div>
                                         <div class="col-12 p-0 mx-0 responsive-imagePost-height">
                                             <img src="image/30.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
@@ -198,7 +198,7 @@
                                             
                                         </p>
                                         <div class="col-12 ">
-                                            <a href="#">
+                                            <a href="magezine/show-detail">
                                                 <button id="read-more" class="btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10">ادامه مطلب</button>
                                             </a>
                                         </div>
@@ -211,97 +211,38 @@
                                             <div class="view-count"><i class="fas fa-eye"></i> ۵۶</div>
                                         </div>
                                     </article>
-                                    <article class="p-0 shadow-radius-section shadow-section mb-3 bg-light">
+                                    <article class="p-0  shadow-radius-section shadow-section mb-4 bg-light">
                                         <div class="col-12">
-                                            <div class="row justify-content-between p-2">
+                                            <div class="row justify-content-between p-2 pl-4 pl-md-2">
                                                 <div class="col-11 col-md-11" >
                                                     <div class="row ">
-                                                        <div class="col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1" >
+                                                        <div class="col-2 col-sm-1 col-md-1 col-lg-1 p-0 pt-1 custom-width" >
                                                             <img class="cu-image-com mr-1 " src="image/afarine.jpg" alt="">
                                                         </div>
-                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center">
+                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-0 pr-md-4 mr-lg-2 mr-xl-0 pr-xl-3 justify-content-center custome-margin-right ">
                                                             <div class="cu-intro mt-2">
-                                                                <h6><a href="#">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
-                                                                <span class="show-time-custome"><i class="fas fa-clock"></i> ۸ روز قبل</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-1 ml-0 pl-0 pr-4 dropdown">
-                                                <i class="fas fa-ellipsis-v " type="button" data-toggle="dropdown"></i>
-                                                <ul class="dropdown-menu ellipsis-menu">
-                                                    <li><!-- <i class="fas fa-bookmark"></i> --> <a href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
-                                                    <li><a href="#"><i class="fas fa-share-alt"></i> کپی کردن لینک </a></li>
-                                                    <li><a href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
-                                                </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 p-0">
-                                            <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a href="#">نگاهی اجمالی به آخرین دستاوردهای شبکه اجتماعی فیس بوک</a> </h3>
-                                        </div>
-                                        <div class="col-12 p-0 mx-0 responsive-imagePost-height">
-                                            <img src="image/28.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
-                                        </div>
-                                        
-                                        <p class="col-12 mt-3 post-text">
-                                            طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
-                                             صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
-                                             برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید <span id="dots">...</span><span id="more"> طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
-                                            برای پر کردن صفحه و ارایه اولیه شکل 
-                                            ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،
-                                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
-                                            صفحه‌آرایی و طراحی گرافیک گفته می‌شود،
-                                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</span>
-                                            <!-- svelte-ignore missing-declaration -->
-                                            <span on:click={myFunction} id="myBtn" style="cursor: pointer;">بیشتر بخوانید</span>
-                                            
-                                        </p>
-                                        <div class="col-12 ">
-                                            <a href="#">
-                                                <button id="read-more" class="btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10">ادامه مطلب</button>
-                                            </a>
-                                        </div>
-                                        <hr class="col-11 mx-auto">
-                                        <div class="col-12 mb-3">
-                                            <a class="a-clicked" href="#">
-                                                <img class="personal-img" src="image/1.jpeg" alt="">
-                                                <span class="personal-name"> مسعودآقایی ساداتی</span>&nbsp;&nbsp;
-                                            </a>
-                                            <div class="view-count"><i class="fas fa-eye"></i> ۱۴۲</div>
-                                        </div>
-                                    </article>
-                                    <article class="p-0 shadow-radius-section shadow-section mb-3 bg-light">
-                                        <div class="col-12">
-                                            <div class="row justify-content-between p-2">
-                                                <div class="col-11 col-md-11" >
-                                                    <div class="row ">
-                                                        <div class="col-2 col-sm-1 col-md-2 col-lg-1 p-0 pt-1" >
-                                                            <img class="cu-image-com mr-1 " src="image/afarine.jpg" alt="">
-                                                        </div>
-                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-3 mr-lg-4 justify-content-center">
-                                                            <div class="cu-intro mt-2">
-                                                                <h6><a href="#">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
+                                                                <h6><a href="magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
                                                                 <span class="show-time-custome"><i class="fas fa-clock"></i> ۳ دقیقه قبل</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-1 ml-0 pl-0 pr-4 dropdown">
-                                                <i class="fas fa-ellipsis-v " type="button" data-toggle="dropdown"></i>
-                                                <ul class="dropdown-menu ellipsis-menu">
-                                                    <li><!-- <i class="fas fa-bookmark"></i> --> <a href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
-                                                    <li><a href="#"><i class="fas fa-share-alt"></i> کپی کردن لینک </a></li>
-                                                    <li><a href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
-                                                </ul>
+                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                    <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
+                                                    <ul class="dropdown-menu ellipsis-menu">
+                                                        <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-share-alt"></i> کپی کردن لینک </a></li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                         <div class="col-12 p-0">
-                                            <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a href="#">راه های مدیریت کسب و کار الکترونیکی</a></h3>
+                                            <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a class="title-post-link" href="magezine/show-detail">به اینولینکس خوش آمدید</a></h3>
                                         </div>
                                         <div class="col-12 p-0 mx-0 responsive-imagePost-height">
-                                            <img src="../image/20.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
+                                            <img src="image/30.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
                                         </div>
                                         
                                         <p class="col-12 mt-3 post-text">
@@ -318,20 +259,80 @@
                                             
                                         </p>
                                         <div class="col-12 ">
-                                            <a href="#">
+                                            <a href="magezine/show-detail">
                                                 <button id="read-more" class="btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10">ادامه مطلب</button>
                                             </a>
                                         </div>
-                                        <hr class="col-11 mx-auto">
-                                        <div class="col-12 mb-3">
-                                            <a class="a-clicked" href="#">
-                                                <img class="personal-img" src="image/4.jpeg" alt="">
-                                                <span class="personal-name"> مجتبی اکبری</span>&nbsp;&nbsp;
+                                        
+                                        <div class="col-12 mb-1 author-show-box pt-1">
+                                            <a class="a-clicked" href="profile">
+                                                <img class="personal-img" src="image/1.jpeg" alt="">
+                                                <span class="personal-name"> مسعودآقایی ساداتی</span>&nbsp;&nbsp;
                                             </a>
-                                            <div class="view-count"><i class="fas fa-eye"></i> ۱۲</div>
+                                            <div class="view-count"><i class="fas fa-eye"></i> ۵۶</div>
                                         </div>
                                     </article>
-                                    
+                                    <article class="p-0  shadow-radius-section shadow-section mb-4 bg-light">
+                                        <div class="col-12">
+                                            <div class="row justify-content-between p-2 pl-4 pl-md-2">
+                                                <div class="col-11 col-md-11" >
+                                                    <div class="row ">
+                                                        <div class="col-2 col-sm-1 col-md-1 col-lg-1 p-0 pt-1 custom-width" >
+                                                            <img class="cu-image-com mr-1 " src="image/afarine.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9 px-0 mr-1 mr-sm-4 mr-md-0 pr-md-4 mr-lg-2 mr-xl-0 pr-xl-3 justify-content-center custome-margin-right ">
+                                                            <div class="cu-intro mt-2">
+                                                                <h6><a href="magezine" class="title-post-link">مرکز رشد و نواوری آفرینه&nbsp;<i style="color:#048af7;" class="fas fa-check-circle"></i></a></h6>
+                                                                <span class="show-time-custome"><i class="fas fa-clock"></i> ۳ دقیقه قبل</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                    <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
+                                                    <ul class="dropdown-menu ellipsis-menu">
+                                                        <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-share-alt"></i> کپی کردن لینک </a></li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12 p-0">
+                                            <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a class="title-post-link" href="magezine/show-detail">به اینولینکس خوش آمدید</a></h3>
+                                        </div>
+                                        <div class="col-12 p-0 mx-0 responsive-imagePost-height">
+                                            <img src="image/30.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
+                                        </div>
+                                        
+                                        <p class="col-12 mt-3 post-text">
+                                            طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
+                                             صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
+                                             برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید <span id="dots">...</span><span id="more"> طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
+                                            برای پر کردن صفحه و ارایه اولیه شکل 
+                                            ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،
+                                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
+                                            صفحه‌آرایی و طراحی گرافیک گفته می‌شود،
+                                            تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</span>
+                                            <!-- svelte-ignore missing-declaration -->
+                                            <span on:click={myFunction} id="myBtn" style="cursor: pointer;">بیشتر بخوانید</span>
+                                            
+                                        </p>
+                                        <div class="col-12 ">
+                                            <a href="magezine/show-detail">
+                                                <button id="read-more" class="btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10">ادامه مطلب</button>
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="col-12 mb-1 author-show-box pt-1">
+                                            <a class="a-clicked" href="profile">
+                                                <img class="personal-img" src="image/1.jpeg" alt="">
+                                                <span class="personal-name"> مسعودآقایی ساداتی</span>&nbsp;&nbsp;
+                                            </a>
+                                            <div class="view-count"><i class="fas fa-eye"></i> ۵۶</div>
+                                        </div>
+                                    </article>
                                     
                                 </div>
                             </section>
@@ -351,7 +352,7 @@
                             <div class="{x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '}" >
                                 <div class="{x >=767 ? 'col-12 font-weight-bold pb-2 border-bottom pr-0': 'col-12 font-weight-bold'}">
                                     <a type="{x<=767 ? 'button' : ''}" class="btn " data-toggle="{x<=767 ? 'modal' :''}"   data-target="{x<=767 ? '#myModal2' : ''}">
-                                        <i class="fas fa-list-ul category-icon-modal" class:category-fixed-icon-modal={x<=767 && y>=400}></i>
+                                        <i class="{x>=767 ? 'fas fa-list-ul category-icon-modal' : 'fas fa-caret-left'} " class:category-fixed-icon-modal={x<=767 && y>=400}></i>
                                     </a><span class="d-none d-md-inline">دسته بندی </span>
                                 </div>
                                 <div class="{x<=767 ? 'modal right' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'myModal2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
