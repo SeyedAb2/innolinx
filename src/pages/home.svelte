@@ -1,7 +1,6 @@
 <script>
 	import Magezine from './magezine.svelte';
     import {onMount} from "svelte";
-    import "../App.svelte";
     import {fade , slide , scale , fly} from "svelte/transition";
     import {circIn} from "svelte/easing";
     import { Router, Link, Route } from "svelte-routing";
