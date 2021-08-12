@@ -32,7 +32,7 @@
 <svelte:window bind:scrollY={y} bind:innerWidth={x}/>
 <svelte:head>
     <title>
-        اینولینکس
+        مجله
     </title>
 </svelte:head>
 <Router url="{url}">
@@ -354,7 +354,7 @@
                                         <i class="{x>=767 ? 'fas fa-list-ul category-icon-modal' : 'fas fa-caret-left'} " class:category-fixed-icon-modal={x<=767 && y>=400}></i>
                                     </a><span class="d-none d-md-inline">دسته بندی </span>
                                 </div>
-                                <div class="{x<=767 ? 'modal right' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'myModal2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
+                                <div class="{x<=767 ? 'modal right fade' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'myModal2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
                                     <div id="accordion" class="{x<=767 ? 'modal-dialog modal-content pr-2' : ''}" role="{x<=767 ? 'document' : ''}">
                                         {#if x<=767}
                                             <button type="button" class="close row mx-2 justify-content-end" 
