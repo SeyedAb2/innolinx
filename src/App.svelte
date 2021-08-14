@@ -37,6 +37,7 @@
 	<Nav {y}/>
 	<Footer {y}/>
 </div>
+<script src="/script.js"></script>
 {/if}
 	
 

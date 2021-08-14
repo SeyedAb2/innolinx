@@ -940,9 +940,32 @@ a:hover {
     }
 }
 
+.font-family {
+    font-family: vazir !important;
+}
+
+.coment-for-showdetail {
+    font-size: 12px;
+    font-weight: bold;
+    color: #475159;
+}
+
+.read-more-custom {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 #more,
-#read-more {
+#read-more,
+.hide-more,
+.read-more {
     display: none;
+    font-family: vazir;
+}
+
+.show-more {
+    display: inline;
     font-family: vazir;
 }
 
