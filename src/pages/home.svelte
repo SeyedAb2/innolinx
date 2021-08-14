@@ -103,7 +103,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
+                                <div class="report navbar col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                     <ul class="dropdown-menu ellipsis-menu">
                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -164,7 +164,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
+                                <div class="report navbar col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                     <ul class="dropdown-menu ellipsis-menu">
                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -225,7 +225,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
+                                <div class="report navbar col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-1 pr-lg-3 pr-xl-4 dropdown">
                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                     <ul class="dropdown-menu ellipsis-menu">
                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>

@@ -583,6 +583,26 @@ a:hover {
     width: 5%;
 }
 
+.vm-navbar .navbar {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block;
+    height: auto;
+}
+
+.report.navbar {
+    border: none !important;
+    display: block;
+    height: auto;
+    color: black;
+    padding-top: 0;
+}
+
+.report .dropdown-menu {
+    top: 40% !important;
+}
+
 .padding-button {
     margin-top: -5px;
 }

@@ -35,6 +35,7 @@
         مجله
     </title>
 </svelte:head>
+
 <Router url="{url}">
 
 {#if y>600}
@@ -43,15 +44,16 @@
     <div transition:slide class="col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top">
         <div class="row justify-content-between shadow-sm mr-0">
             <div class="col-8 col-md-4 direction my-auto" >
-                <div class="row justify-content-end">
+                <div class="row justify-content-end vm-navbar">
                     <button class="btn rounded-pill font btn-mw-scroll text-center visit-btn mx-0 "><i class="fas fa-external-link-alt padding-button ml-2 icon-size-scroll"></i>بازدید سایت </button>
 
-                    <div class="col-5 mr-0 justify-content-start dropdown dropleft px-2">
-                        <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-5 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll rounded-pill col-12 font text-center col-md-7">بیشتر</button>
+                    <div class="col-5 mr-0 justify-content-start navbar dropleft px-2">
+                        <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-3 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll rounded-pill col-12 font text-center col-md-7 mr-2"
+                        >بیشتر</button>
                         
-                        <ul class="dropdown-menu  ellipsis-menu">
-                            <li><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>
-                            <li><a href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
+                        <ul class="dropdown-menu  ellipsis-menu ml-2">
+                            <li class="dropdown-item"><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>
+                            <li class="dropdown-item"><a href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
                         </ul>
                     </div>
                 </div>
@@ -83,6 +85,7 @@
 
 
 <main transition:scale class="container-fluid pin-parent px-0 px-md-3">
+    
     <div class="row justify-content-center mx-0">
         
         <aside class="col-12 col-md-3 mr-2 d-none d-lg-inline" >
@@ -115,10 +118,10 @@
                                     <h6 class="text-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;تهران,شهرک طالقانی,ساحتمان نگین</h6>
                                     <h6 class="explain-about-page">به آفرینه محلق شوید و بروز باشید.میتوانید مطالب مرتبط به کارآفرینی و بازاریابی رو از اینجا دنبال کنید اگر از محتوای ما خوشتان اومد آنرابا دیگران به اشتراک بگذارید.</h6>
                                     <div class="col-12 mt-4 font">
-                                        <div class="row">
+                                        <div class="row vm-navbar">
                                             <button class="btn rounded-pill mb-1 col-custom font btn-mw text-center visit-btn mx-0 mx-sm-1"><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
-                                            <div class="col-5 justify-content-start dropdown dropleft pr-1">
-                                                <button type="button" data-toggle="dropdown" class="pt-custome-more-btn btn btn-mw rounded-pill col-12 font text-center col-md-6 ">بیشتر</button>
+                                            <div class="col-5 col-md-3 justify-content-start navbar dropleft pr-1">
+                                                <button type="button" data-toggle="dropdown" class="pt-custome-more-btn btn btn-mw rounded-pill col-12 font text-center col-md-6 mr-2">بیشتر</button>
                                                 <ul class="dropdown-menu  ellipsis-menu">
                                                     <li><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>
                                                     <li><a href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
@@ -143,6 +146,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="tab-content w-100 mr-0">
                 <div id="post" class="row tab-pane" class:active="{current==='post'}">
                     <div class="row px-0 mx-0" >
@@ -165,7 +169,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                
+                                                <div class="report col-1 ml-0 pl-0 pr-3 navbar pr-sm-4 pr-md-3 pr-lg-3 pr-xl-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -226,7 +231,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="dropdown col-1 ml-0 pl-0 pr-3 pr-sm-4 pr-md-3 pr-lg-3 pr-xl-4 ">
+                                                
+                                                <div class="report col-1 ml-0 pl-0 pr-3 navbar pr-sm-4 pr-md-3 pr-lg-3 pr-xl-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -287,7 +293,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                
+                                                <div class="report col-1 ml-0 pl-0 pr-3 navbar pr-sm-4 pr-md-3 pr-lg-3 pr-xl-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>

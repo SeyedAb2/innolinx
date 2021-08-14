@@ -42,11 +42,11 @@
     <div transition:slide class="col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top">
         <div class="row justify-content-between shadow-sm mr-0">
             <div class="col-8 col-md-4 direction my-auto" >
-                <div class="row justify-content-end">
+                <div class="row justify-content-end vm-navbar">
                     <button class="btn rounded-pill font btn-mw-scroll-profile text-center visit-btn mx-0 "><i class="fas fa-external-link-alt padding-button ml-2 icon-size-scroll"></i>بازدید سایت </button>
 
-                    <div class="col-5 mr-0 justify-content-start dropdown dropleft px-2">
-                        <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-5 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll-profile rounded-pill col-12 font text-center col-md-7">بیشتر</button>
+                    <div class="col-5 mr-0 justify-content-start navbar dropdown dropleft px-2">
+                        <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-3 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll-profile rounded-pill col-12 font text-center col-md-7">بیشتر</button>
                         
                         <ul class="dropdown-menu  ellipsis-menu">
                             <li><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>
@@ -102,17 +102,17 @@
                         <div class="col-12 header-image-main border-radius">
                             <img class="header-logo-image-person border-radius" src="image/1.jpeg" alt="">
                         </div>
-                        <div class="header-detail col-12 ">
+                        <div class="header-detail col-12 pb-3">
                             <div class="row">
                                 <div class="col-10 ">
                                     <h3 class="text-bold text-font-size">مسعود آقایی ساداتی&nbsp;<!--  <i style="color:#048af7;font-size: 20px;" class="fas fa-check-circle"></i> --></h3>
                                     <h6 class="text-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;تهران,شهرک طالقانی,ساحتمان نگین</h6>
                                     <h6 class="explain-about-page">مدیر شرکت آفرینه و مسپول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید </h6>
                                     <div class="col-12 mt-4 font">
-                                        <div class="row">
+                                        <div class="row vm-navbar">
                                             <button class="btn rounded-pill mb-1 col-custom font btn-mw-profile text-center visit-btn mx-0 mx-sm-1"><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
-                                            <div class="col-5 justify-content-start dropdown dropleft pr-1">
-                                                <button type="button" data-toggle="dropdown" class="pt-custome-more-btn btn btn-mw-profile rounded-pill col-12 font text-center col-md-6 ">بیشتر</button>
+                                            <div class="col-5 col-md-3 justify-content-start navbar dropdown dropleft pr-1">
+                                                <button type="button" data-toggle="dropdown" class="pt-custome-more-btn btn btn-mw-profile rounded-pill col-12 font text-center col-md-6 mr-2">بیشتر</button>
                                                 <ul class="dropdown-menu  ellipsis-menu">
                                                     <li><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>
                                                     <li><a href="#"><i class="fas fa-flag"></i> گزارش دادن</a></li>
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <!--
                             <div class="col-12 tab-header-main mt-3 ">
                                 <div class="row  scroll-main-height">
                                     <ul class="nav nav-tabs direction text-center" role="tablist">
@@ -133,12 +133,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            
+                        -->
                     </div>
                 </div>
             </div>
-            <div class="tab-content w-100 mr-0">
-                <div id="post" class="row tab-pane" class:active="{current==='post'}">
+            <div class="w-100 mr-0">
+                <div id="post" class="row ">
                     <div class="row px-0 mx-0" >
                         <aside class="col-12 col-md-9 order-first justify-content-between order-md-0 mx-0 ">
                             <section class="row mx-0 mt-3 mr-0 pt-0  ">
@@ -159,7 +159,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                <div class="report dropdown col-1 ml-0 pl-0 pr-3 navbar pr-md-3 pr-lg-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -217,7 +217,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                <div class="report dropdown col-1 ml-0 pl-0 pr-3 navbar pr-md-3 pr-lg-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -275,7 +275,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="dropdown col-1 ml-0 pl-0 pr-3  pr-md-3 pr-lg-4 ">
+                                                <div class="report dropdown col-1 ml-0 pl-0 pr-3 navbar pr-md-3 pr-lg-4 ">
                                                     <i class="fas fa-ellipsis-h -1 " type="button" data-toggle="dropdown"></i>
                                                     <ul class="dropdown-menu ellipsis-menu">
                                                         <li><!-- <i class="fas fa-bookmark"></i> --> <a  class="dropdown-item" href="#"><i class="far fa-bookmark"></i> ذخیره کردن پست</a> </li>
@@ -317,11 +317,10 @@
                                             <div class="view-count"><i class="fas fa-eye"></i> ۵۶</div>
                                         </div>
                                     </article>
-                                    
                                 </div>
                             </section>
                         </aside>
-                        <aside  class=" col-12 col-md-3 mt-3 ">
+                        <!--<aside  class=" col-12 col-md-3 mt-3 ">
                             <div class="row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
                                 <div class="col-10 mx-auto mt-5 mb-3 ">
                                     <img class="company-img  w-100" src="image/afarine.jpg" alt="">
@@ -334,69 +333,12 @@
                                 </h6>
                             </div>
                         </aside>
-                    </div>
-                </div>
-                <div id="about" class="row tab-pane mt-3 margin-about-right" class:active="{current==='about'}">
-                    <div class="col-12 direction ">
-                        <div class="row bg-white shadow-radius-section ml-1 py-4 px-1">
-                            <div class="col-12 ">
-                                <h5 class="text-bold mb-2">درباره آفرینه</h5>
-                                <p class="text-secondary text-justify word-space">
-                                    لورم ایپسوم یک متن ساختگی برای طراحی و نمایش محتوای بی ربط است اما این متن نوشته شده هیچ ربطی به لورم ایپسوم ندارد.
-                                    این چیزی که میبینید صرفا یک متن ساختگی تر نسبت به لورم ایپسوم است تا شما بتواندی با گرفتن خروجی در سایت و موبایل یا هر دستگاه دیگر خروجی بگیرید و نگاه کنید که ساختار کد نوشتاری سایت با لورم به چه صورتی در آمده است.
-                                    با تشکر از سایت ساختگی نوشتار لورم ایپسوم آقای بوق 
-                                </p>
-                                <div class="col-12">
-                                    <div class="row ">
-                                        <div class="col-6 text-bold pr-0">وبسایت</div>
-                                        <div class="col-6 text-bold pr-0 mb-4">
-                                            <a class="text-primary" href="#">
-                                                http://afarine.com/
-                                            </a>
-                                        </div>
-                                        <div class="col-6 text-bold pr-0">نوع فعالیت</div>
-                                        <div class="col-6 pr-0 mb-4 text-secondary">
-                                            کارآفرینی و کسب و کار - خصوصی
-                                        </div>
-                                        <div class="col-6 text-bold pr-0">میزان استخدام</div>
-                                        <div class="col-6 pr-0 mb-4 text-secondary">
-                                            ۱۲۰ + کارمند
-                                        </div>
-                                        <div class="col-6 text-bold pr-0">تاریخ تاسیس</div>
-                                        <div class="col-6 pr-0 mb-4 text-secondary">
-                                            ۲۰۱۸
-                                        </div>
-                                        <div class="col-6 text-bold pr-0">تخصص ها</div>
-                                        <div class="col-6 pr-0 mb-4 text-secondary">
-                                           اشتغال/بازاریابی/کسب و کار/
-                                        </div>
-                                        <div class="col-6 text-bold pr-0">آدرس اصلی</div>
-                                        <div class="col-6 pr-0 mb-4 text-secondary">
-                                            تهران,شهرک طالقانی,ساحتمان نگین
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row bg-white shadow-radius-section ml-1 py-4 px-1 mt-3">
-                            <div class="col-12 ">
-                                <h5 class="text-bold ">موقعیت مکانی آفرینه</h5>
-                                <p class="text-secondary text-justify word-space">
-                                    برای یافتن مکان دقیق باید زوم کنید
-                                </p>
-                                <div class="row">
-                                    
-                                </div>
-                            </div>
-                        </div>
+                        -->
                     </div>
                 </div>
             </div>
-            
         </aside>
     </div>
-    
 </main>
 <br><br>
-
 </Router>
