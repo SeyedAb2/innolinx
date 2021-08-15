@@ -46,7 +46,7 @@
                     <button class="btn rounded-pill font btn-mw-scroll-profile text-center visit-btn mx-0 "><i class="fas fa-external-link-alt padding-button ml-2 icon-size-scroll"></i>بازدید سایت </button>
 
                     <div class="col-5 mr-0 justify-content-start navbar dropdown dropleft px-2">
-                        <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-3 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll-profile rounded-pill col-12 font text-center col-md-7">بیشتر</button>
+                        <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-3 pr-md-3 mr-2 px-lg-3 btn btn-sm btn-mw-scroll-profile rounded-pill col-12 font text-center col-md-7">بیشتر</button>
                         
                         <ul class="dropdown-menu  ellipsis-menu">
                             <li><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>
@@ -62,9 +62,7 @@
                     </div>
                     <div class="col-10 pr-0">
                         <h5 class="text-logo-scroll-profile mt-0 mr-0">آفرینه&nbsp;<i style="color:#048af7;font-size: 13px;" class="fas fa-check-circle"></i><br><span class="explain-about-page-scroll">مدیر شرکت آفرینه و مسپول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید</span></h5>
-                        
                     </div>
-                    
                 </div>
             </div>
         </div>
