@@ -4,78 +4,23 @@
 <svelte:window bind:scrollY={y}/>
 <style>
     @import "./css/fonts.css";
-    footer{
-        font-family: ' BYekan';
-        bottom: 0;
-        width: 100%;
-        height: 270px;
-        
-        
-    }
     
-
-@media (max-width:767px) {
-    .footer {
-      height: 570px;
-    }
-}
-
-@media (min-width: 767px) {
-    .footer {
-      height: 300px;
-    }
-}
-
-/* Sticky footer style and color
--------------------------------------------------- */
-footer {
-  padding-top: 30px;
-  background-color: #011C0C;
-  color: #bbb;
-}
-footer a {
-  color: #999;
-  text-decoration:none;
-}
-
-
-footer a:hover, footer a:focus {
-  color: #aaa;
-  text-decoration:none;
-  border-bottom:1px dotted #999;
-}
-
-footer .form-control {
-    background-color: #103D22;
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    border: none;
-    resize: none;
-    color: #d1d2d2;
-    padding: 0.7em 1em;
-}
-footer .form-group{
-    margin-bottom: 25px;
-}
-i{
-    font-size: 35px;
-}
-
 </style>
 
-<footer class="footer" style="font-family: 'BYekan' ;">
+<footer class="footer">
     <div class="container">
         <div class="row">
             
             <div class="col-md-4">
                 <form style="direction: rtl;">
-                    <fieldset class="form-group" style="">
-                        <input style="text-align: right;font-family: BYekan;" type="email" class="form-control" id="exampleInputEmail1" placeholder="لطفا ایمیل خود را وارد کنید">
+                    <fieldset class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="لطفا ایمیل خود را وارد کنید">
                     </fieldset>
                     <fieldset class="form-group">
-                        <textarea style="text-align: right;font-family: BYekan;" class="form-control" id="exampleMessage" placeholder="متن"></textarea>
+                        <textarea class="form-control" id="exampleMessage" placeholder="متن"></textarea>
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
-                        <button style="text-align: right;font-family: BYekan;" type="button" class="btn btn-danger btn-lg">ارسال</button>
+                        <button  type="button" class="btn btn-lg">ارسال</button>
                     </fieldset>
                 </form>
             </div>
@@ -112,9 +57,7 @@ i{
                         </ul>
                     </div>
                 </div>
-                
             </div>
-            
         </div>
     </div>
 </footer>
