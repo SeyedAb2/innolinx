@@ -4,6 +4,7 @@ var contents = document.querySelectorAll(".content");
 contents.forEach(content => {
     var changeToArray = content.textContent.split(' ');
     content.nextElementSibling.style.display = "inline";
+    content.nextElementSibling.nextElementSibling.style.display = "none";
     if (changeToArray.length < lessWord) {
         content.nextElementSibling.style.display = "none";
         content.nextElementSibling.nextElementSibling.style.display = "inline";
