@@ -3,7 +3,10 @@ var contents = document.querySelectorAll(".content");
 
 contents.forEach(content => {
     var changeToArray = content.textContent.split(' ');
-    console.log(Number(changeToArray.length))
+    console.log(content.textContent)
+    console.log(changeToArray.length)
+    console.log(changeToArray)
+    console.log(changeToArray.substring(0, 20))
     content.nextElementSibling.style.display = "inline";
     if (changeToArray.length < lessWord) {
         content.nextElementSibling.style.display = "none";
