@@ -1,23 +1,22 @@
-var lessWord = 5;
+var lessWord = 50;
 var contents = document.querySelectorAll(".content");
 
 contents.forEach(content => {
     var changeToArray = content.textContent.split(' ');
-    console.log(content.textContent)
-    console.log(changeToArray.length)
-    console.log(changeToArray)
-    console.log(changeToArray.substring(0, 20))
     content.nextElementSibling.style.display = "inline";
     if (changeToArray.length < lessWord) {
         content.nextElementSibling.style.display = "none";
         content.nextElementSibling.nextElementSibling.style.display = "inline";
     } else if (changeToArray.length > lessWord && changeToArray.length <= 500) {
-        var displayText = content.textContent.substring(0, lessWord - 1);
-        var moreText = content.textContent.substring(lessWord - 1, Number(changeToArray.length));
-        content.innerHTML = `${displayText}<span class="dots">...</span><span class="more hide-more">${moreText}</span>`
+        var displayText = changeToArray.slice(0, lessWord - 1).join(" ");
+        var moreText = changeToArray.slice(lessWord - 1, Number(changeToArray.length)).join(" ");
+        if (changeToArray.slice(0, lessWord - 1).length <= lessWord) {
+            content.nextElementSibling.nextElementSibling.style.display = "none";
+            content.innerHTML = `${displayText}<span class="dots">...</span><span class="more hide-more">${moreText}</span>`
+        }
     } else if (changeToArray.length > 500) {
-        var displayText = content.textContent.substring(0, lessWord - 1);
-        var moreText = content.textContent.substring(lessWord - 1, 500);
+        var displayText = changeToArray.slice(0, lessWord - 1).join(" ");
+        var moreText = changeToArray.slice(lessWord - 1, 500).join(" ");
         content.innerHTML = `${displayText}<span class="dots">...</span><span class="more hide-more">${moreText}</span><span class="dots1 hide-more">.....</span><span class="coment-for-showdetail hide-more">برای مطالعه کامل مقاله لطفا بروی ادامه مطلب کلیک کنید</span>`
     }
 })
@@ -26,11 +25,15 @@ function readMore(btn) {
     var post = btn.parentElement;
     post.querySelector(".dots").classList.add("hide-more");
     post.querySelector(".more").classList.remove("hide-more");
-    post.querySelector(".dots1").classList.remove("hide-more");
-    post.querySelector(".coment-for-showdetail").classList.remove("hide-more");
+    if (post.querySelector(".dots1") && post.querySelector(".coment-for-showdetail")) {
+        post.querySelector(".dots1").classList.remove("hide-more");
+        post.querySelector(".coment-for-showdetail").classList.remove("hide-more");
+    }
     post.querySelector(".read-more").style.display = 'inline';
     btn.style.display = 'none';
-    if (changeToArray.length > 500) {
+    var less = post.childNodes[0].innerHTML.split(" ");
+    var more = post.querySelector(".content").childNodes[2].innerHTML.split(" ");
+    if ((more.length + less.length) <= 500) {
         btn.style.display = 'none';
     }
 
