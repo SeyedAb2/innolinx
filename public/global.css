@@ -593,6 +593,7 @@ a:hover {
 
 .report.navbar {
     border: none !important;
+    background: transparent !important;
     display: block;
     height: auto;
     color: black;
