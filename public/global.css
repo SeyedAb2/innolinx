@@ -1522,6 +1522,7 @@ footer {
 -------------------------------------------------- */
 
 footer {
+    font-size: 14px !important;
     font-family: vazir !important;
     padding-top: 30px;
     background-color: #F3F2F2;
@@ -1535,9 +1536,10 @@ footer a {
 
 footer a:hover,
 footer a:focus {
-    color: #444444;
+    transition-duration: 0.1s;
+    color: #0073b1;
     text-decoration: none;
-    border-bottom: 1px dotted #999;
+    border-bottom: 1px solid #0073b1;
 }
 
 footer .form-control {
@@ -1555,8 +1557,37 @@ footer .form-group {
     margin-bottom: 25px;
 }
 
-.footer i {
-    font-size: 35px;
+footer .icon_footer img {
+    width: 36px;
+    height: 36px;
+}
+
+footer .icon_footer {
+    font-weight: bold;
+    font-size: 16px !important;
+    direction: rtl;
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    direction: rtl;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #757575;
+}
+
+footer .copyright p {
+    margin-bottom: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+footer .copyright a {
+    font-size: 12px;
+    color: #757575;
+}
+
+footer .copyright a:hover {
+    color: #ff9d2e;
 }
 
 .footer textarea,
@@ -1564,19 +1595,32 @@ footer .form-group {
 .footer input {
     font-family: vazir !important;
     text-align: right;
+    font-size: 14px;
 }
 
 .footer .btn {
-    background-color: #26A6F9;
+    background-color: #0073b1;
     color: white;
 }
 
 .footer .nav-link {
-    color: #00b2ff;
+    color: #0073b1;
     transition: all 0.3s;
     cursor: pointer;
 }
 
+footer .social_media {
+    font-size: 15px;
+}
+
+footer .social_media h5 {
+    font-size: 18px;
+}
+
 .footer .nav-link:hover {
     color: #ff9d2e;
+}
+
+footer fieldset .btn:hover {
+    background-color: #ff9d2e;
 }
