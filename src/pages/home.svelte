@@ -43,7 +43,7 @@
         <aside class="col-12 col-md-6 mx-2 order-first order-md-0 ">
             <section class="row justify-content-md-center mx-0 pt-3 bg-light shadow-radius-section" >
                 <div class="col-12 mb-4 my-md-0">
-                    <article class="col-12 bg-danger mb-md-4 first-article-main " class:pin-article-height={h<=465}>
+                    <article class="col-12 mb-md-4 first-article-main " class:pin-article-height={h<=465}>
                         <img class="image-pin-top" src="image/30.jpg" alt="">
                         <a class="w-100 content-pin-top" href="#">
                             <h5>جدیدترین اخبار از تحریم فیس بوک توسط آمریکا</h5>

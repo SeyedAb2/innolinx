@@ -1362,6 +1362,50 @@ a:hover {
     transition: opacity 0.3s linear, right 0.3s ease-out;
 }
 
+@media(min-width:300px) {
+    .modal.right.fade .modal-dialog {
+        width: 87%;
+        left: 50px;
+        -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+        transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
+}
+
+@media(min-width:400px) {
+    .modal.right.fade .modal-dialog {
+        width: 60%;
+        left: 170px;
+        -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+        transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
+}
+
+@media(min-width:425px) {
+    .modal.right.fade .modal-dialog {
+        width: 60%;
+        left: 180px;
+        -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+        transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
+}
+
+@media(min-width:460px) {
+    .modal.right.fade .modal-dialog {
+        width: 200px;
+        left: 57%;
+        -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+        transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
+}
+
 @media(min-width:500px) {
     .modal.right.fade .modal-dialog {
         left: 60.5%;
