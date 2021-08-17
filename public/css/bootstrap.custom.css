@@ -5923,7 +5923,9 @@ button.close {
     opacity: 0
 }
 
-.modal-backdrop.show {
+.modal-backdrop.show,
+.mod1 .modal-backdrop.show,
+.mod2 .modal-backdrop.show {
     opacity: .5
 }
 

@@ -30,43 +30,44 @@
     <header class="sticky-top " class:nav-custome-bottom={y<=600}> 
         <nav class="container-fluid pb-0 "  >
             <div class="row justify-content-end " >
-                <div class="col-9 px-0">
+                <div class="col-7 col-sm-7 col-custom  px-0">
                     <div class="row ">
                         <div class="col-12">
                             
-                            <div class="row justify-content-start mt-1" style="direction: rtl;">
-                                <div class="col-2 col-md-1">
+                            <div class="menu-main-element row justify-content-start mt-1" style="direction: rtl;text-align: center;">
+                                <div class="col-2 ">
                                     <Link to="/" class="menu-item-link-color">
-                                        <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0">
-                                            <i class="fas fa-home ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>خانه</span> </i>
+                                        <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
+                                            <i class="fas fa-home  p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>خانه</span> </i>
                                         </div>
                                     </Link>
                                 </div>
-                                <div class="col-2 col-md-1 ">
-                                    <Link class="menu-item-link-color" to="profile">
-                                        <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon ">
-                                            <i class="fas fa-mail-bulk ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>پروفایل فرد</span></i>
+                                <div class="col-2">
+                                    <Link to="profile" class="menu-item-link-color">
+                                        <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
+                                            <i class="fas fa-mail-bulk p-0 m-0 mt-2 mt-md-0 " ><span class="menu-item d-none d-md-inline"><br>پروفایل فرد</span> </i>
                                         </div>
                                     </Link>
                                 </div>
-                                <div class="col-2 col-md-1 ">
+                                
+                                <div class="col-2  ">
                                     <Link class="menu-item-link-color" to="show-detail">
-                                        <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0">
+                                        <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
                                             <i class="fas fa-info-circle ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>جزيیات</span></i>
                                         </div>
                                     </Link>
                                 </div>
                                 
-                                <div class="col-2 col-md-1 ">
+                                <div class="col-2  ">
                                     <Link class="menu-item-link-color" to="magezine">
-                                        <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0">
+                                        <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
                                             <i class="fas fa-feather ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>مجله</span></i>
                                         </div>
                                     </Link>
                                 </div>
-                                <div class="col-2 col-md-1" data-toggle="modal" data-target="#exampleModal">
+                                <div class="col-2 " data-toggle="modal" data-target="#mod1">
                                     <div class="menu-item-link-color">
-                                        <div style="height: 25px;" class="col-12 mt-2 px-auto menu-icon pb-0 mb-0 dropdown">
+                                        <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0 dropdown">
                                             <i class="fas fa-toolbox ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br><i class="fas fa-sort-down"></i>&nbsp;ابزار</span></i>
                                         </div>
                                     </div>
@@ -102,7 +103,7 @@
         <Route path="show-detail" component="{showDetail}"/>
     </div>
     </Router>
-    <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="nav-modal modal left fade" id="mod1" tabindex="" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -111,7 +112,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
                 </div>
             </div>
         </div>

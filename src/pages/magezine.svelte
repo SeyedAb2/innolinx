@@ -121,8 +121,8 @@
                                     <h6 class="explain-about-page">به آفرینه محلق شوید و بروز باشید.میتوانید مطالب مرتبط به کارآفرینی و بازاریابی رو از اینجا دنبال کنید اگر از محتوای ما خوشتان اومد آنرابا دیگران به اشتراک بگذارید.</h6>
                                     <div class="col-12 mt-4 font">
                                         <div class="row vm-navbar">
-                                            <button class="btn rounded-pill mb-1 col-custom font btn-mw text-center visit-btn mx-0 mx-sm-1"><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
-                                            <div class="col-5 col-md-3 justify-content-start navbar dropleft pr-1">
+                                            <button class="btn rounded-pill mb-1 font btn-mw text-center visit-btn mx-0 mx-sm-1"><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
+                                            <div class="col-12 col-md-3 justify-content-start navbar dropleft pr-1">
                                                 <button type="button" data-toggle="dropdown" class="pt-custome-more-btn btn btn-mw rounded-pill col-12 font text-center col-md-6 mr-2">بیشتر</button>
                                                 <ul class="dropdown-menu  ellipsis-menu">
                                                     <li><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>
@@ -376,11 +376,12 @@
                             </div>
                             <div class="{x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '}" >
                                 <div class="{x >=767 ? 'col-12 font-weight-bold pb-2 border-bottom pr-0': 'col-12 font-weight-bold'}">
-                                    <a type="{x<=767 ? 'button' : ''}" class="btn " data-toggle="{x<=767 ? 'modal' :''}"   data-target="{x<=767 ? '#myModal2' : ''}">
-                                        <i class="{x>=767 ? 'fas fa-list-ul category-icon-modal' : 'fas fa-caret-left'} " class:category-fixed-icon-modal={x<=767 && y>=400}></i>
+                                    <!-- svelte-ignore a11y-missing-attribute -->
+                                    <a type="{x<=767 ? 'button' : ''}" class="btn " data-toggle="{x<=767 ? 'modal' :''}"   data-target="{x<=767 ? '#mod2' : ''}">
+                                        <i class="{x>=767 ? 'fas fa-list-ul category-icon-modal' : 'fas fa-caret-left'} "  class:category-fixed-icon-modal={x<=767 && y>=400} ></i>
                                     </a><span class="d-none d-md-inline">دسته بندی </span>
                                 </div>
-                                <div class="{x<=767 ? 'modal right fade' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'myModal2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
+                                <div class="modal-category-main {x<=767 ? 'modal right fade' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'mod2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
                                     <div id="accordion" class="{x<=767 ? 'modal-dialog modal-content pr-2' : ''}" role="{x<=767 ? 'document' : ''}">
                                         {#if x<=767}
                                             <button type="button" class="close row mx-2 justify-content-end" 
@@ -392,9 +393,17 @@
                                             </button>
                                         {/if}
                                         <div class="mb-2 pl-2 ">
+                                            <div class="border-bottom pb-2" id="">
+                                                <h5 class="mb-0">
+                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                  <a href="#" class="category-main-text-link">
+                                                    <p class="category-main-text d-inline">همه</p>
+                                                  </a>
+                                                </h5>
+                                        </div>   
                                           <div class="border-bottom pb-2" id="headingOne">
-                                            <h5 class="mb-0">
-                                              <a class="p-0 d-inline category_button collapsed " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></a>
+                                            <h5 class="mb-0 mt-2">
+                                              <a class="p-0 d-inline  category_button collapsed " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></a>
                                               <a href="#" class="category-main-text-link">
                                                 <p class="category-main-text d-inline">بازاریابی</p>
                                               </a>
@@ -414,24 +423,35 @@
                                                             </h5>
                                                           </div>
                                                           <div id="collapseOneOne" class="collapse mr-3 " aria-labelledby="headingOneOne" data-parent="#accordion1">
-                                                            <div class="">
-                                                              فوتبال 
-                                                            </div>
+                                                            <div class="my-1 pl-2 ">
+                                                                <div class="border-bottom pb-2" id="">
+                                                                    <h5 class="mb-0">
+                                                                      <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                                      <a href="#" class="category-main-text-link">
+                                                                        <p class="category-main-text d-inline">ورزش</p>
+                                                                      </a>
+                                                                    </h5>
+                                                                </div> 
                                                           </div>
                                                         </div>
-                                                        <div class="mb-2 pl-2">
+                                                        <div class="my-2 pl-2">
                                                           <div class="border-bottom pb-2" id="headingTwoTwo">
                                                             <h5 class="mb-0">
                                                               <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseTwoTwo" aria-expanded="false" aria-controls="collapseTwoTwo"></a>
                                                               <a href="#" class="category-main-text-link">
-                                                                <p class="category-main-text d-inline">مدیریت تلکنولوژی</p>
+                                                                <p class="category-main-text d-inline">مدیریت تکنولوژی</p>
                                                               </a>
                                                             </h5>
                                                           </div>
                                                           <div id="collapseTwoTwo" class="collapse mr-3" aria-labelledby="headingTwoTwo" data-parent="#accordion1">
-                                                            <div class="">
-                                                              خاورمیانه
-                                                            </div>
+                                                            <div class="border-bottom py-2" id="">
+                                                                <h5 class="mb-0">
+                                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                                  <a href="#" class="category-main-text-link">
+                                                                    <p class="category-main-text d-inline">خاورمیانه</p>
+                                                                  </a>
+                                                                </h5>
+                                                            </div> 
                                                           </div>
                                                         </div>
                                                         <div class="mb-2 pl-2">
@@ -457,19 +477,24 @@
                                                                             </h5>
                                                                           </div>
                                                                           <div id="collapseOneOneOne" class="collapse mr-3 " aria-labelledby="headingOneOneOne" data-parent="#accordion2">
-                                                                            <div class="">
-                                                                              فوتبال 
-                                                                            </div>
+                                                                            <div class="border-bottom py-2" id="">
+                                                                                <h5 class="mb-0">
+                                                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                                                  <a href="#" class="category-main-text-link">
+                                                                                    <p class="category-main-text d-inline">فوتبال</p>
+                                                                                  </a>
+                                                                                </h5>
+                                                                            </div> 
                                                                           </div>
                                                                         </div>
-                                                                        <div class="mb-2 pl-2">
-                                                                          <div class="border-bottom pb-2" id="headingTwoTwoTwo">
+                                                                        <div class="border-bottom pb-2" id="">
                                                                             <h5 class="mb-0">
+                                                                              <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
                                                                               <a href="#" class="category-main-text-link">
-                                                                                <p class="category-main-text d-inline">مدیریت تلکنولوژی</p>
+                                                                                <p class="category-main-text d-inline">خاورمیانه</p>
                                                                               </a>
                                                                             </h5>
-                                                                          </div>
+                                                                        </div> 
                                                                           <div id="collapseTwoTwoTwo" class="collapse mr-3" aria-labelledby="headingTwoTwoTwo" data-parent="#accordion2">
                                                                             <div class="">
                                                                               خاورمیانه
@@ -496,9 +521,14 @@
                                             </h5>
                                           </div>
                                           <div id="collapseTwo" class="collapse mr-3" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div class="">
-                                              خاورمیانه
-                                            </div>
+                                            <div class="border-bottom py-2" id="">
+                                                <h5 class="mb-0">
+                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                  <a href="#" class="category-main-text-link">
+                                                    <p class="category-main-text d-inline">خاورمیانه</p>
+                                                  </a>
+                                                </h5>
+                                            </div> 
                                           </div>
                                         </div>
                                         <div class="mb-2 pl-2">
@@ -511,9 +541,14 @@
                                             </h5>
                                           </div>
                                           <div id="collapseThree" class="collapse mr-3" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div class="">
-                                              راهیان نور
-                                            </div>
+                                            <div class="border-bottom py-2" id="">
+                                                <h5 class="mb-0">
+                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                  <a href="#" class="category-main-text-link">
+                                                    <p class="category-main-text d-inline">راهیان نور</p>
+                                                  </a>
+                                                </h5>
+                                            </div> 
                                           </div>
                                         </div>
                                       </div>

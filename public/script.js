@@ -37,7 +37,4 @@ function readMore(btn) {
     if ((more.length + less.length) <= 500) {
         btn.style.display = 'none';
     }
-
-
-
 }
