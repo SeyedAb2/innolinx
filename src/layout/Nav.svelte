@@ -27,7 +27,7 @@
 
 <Router url="{url}">
 
-    <header class="sticky-top " class:nav-custome-bottom={y<=600}> 
+    <header class="sticky-top " class:nav-custome-bottom={y<=768}> 
         <nav class="container-fluid pb-0 "  >
             <div class="row justify-content-end " >
                 <div class="col-7 col-sm-7 col-custom  px-0">

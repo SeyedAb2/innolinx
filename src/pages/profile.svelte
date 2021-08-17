@@ -36,8 +36,8 @@
 </svelte:head>
 <Router url="{url}">
 
-{#if y>600}
-<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-md-inline" > 
+{#if y>768}
+<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-lg-inline" > 
     
     <div transition:slide class="col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top">
         <div class="row justify-content-between shadow-sm mr-0">
@@ -329,6 +329,32 @@
                                     </article>
                                 </div>
                             </section>
+                        </aside>
+                        <aside  class=" col-12 col-md-3 mt-3 ">
+                            <div class="row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
+                                <div class="col-12 p-0 banner" >
+                                    <img class=" header-image-person-sidebar bg-light" src="image/head.jpeg" alt="">
+                                </div>
+                                <div class="col-12 header-image-main border-radius">
+                                    <img class="header-logo-image-person-sidebar border-radius" src="image/1.jpeg" alt="">
+                                </div>
+                                <div class="header-detail col-12 pb-3">
+                                    <div class="row">
+                                        <div class="col-10 ">
+                                            <h6 class="text-bold ">مسعود آقایی ساداتی&nbsp;<!--  <i style="color:#048af7;font-size: 20px;" class="fas fa-check-circle"></i> --></h6>
+                                            <h6 class="explain-about-page-sidebar">مدیر شرکت آفرینه و مسیول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید </h6>
+                                            <div class="col-12 mt-4 font mx-0 px-0">
+                                                <!-- svelte-ignore a11y-invalid-attribute -->
+                                                <a href="#">
+                                                    <button class="px-0 mx-0 btn-sm col-12 font btn btn-danger text-white rounded-circle rounded-pill">
+                                                        ارتباط بگیرید
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </aside>
                         <!--<aside  class=" col-12 col-md-3 mt-3 ">
                             <div class="row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>

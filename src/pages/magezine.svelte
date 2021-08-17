@@ -40,8 +40,8 @@
 
 <Router url="{url}">
 
-{#if y>600}
-<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-md-inline" > 
+{#if y>768}
+<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-lg-inline" > 
     
     <div transition:slide class="col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top">
         <div class="row justify-content-between shadow-sm mr-0">

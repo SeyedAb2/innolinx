@@ -63,17 +63,17 @@
                             <li><a href="">برنامه ریزی </a></li>
                             <li><a href="">اسناد طبقه بندی شده</a></li>
                             <li><a href="">سرویس دو پارچه آگرین</a></li>
-                            <li><a href="">داده های ثبت احوال</a></li>
-                            <li><a href="">پشتیبانی سایت</a></li>
-                            <li><a href="">اعضای تیم مرکزی</a></li>
-                            <li><a href="">طرح سوال از مخاطب</a></li>
+                            
+                            
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul class="list-unstyled">
                             <li><a href="">اعضای تیم مرکزی</a></li>
                             <li><a href="">طرح سوال از مخاطب</a></li>
-                            <li><a href="">اعضای تیم مرکزی</a></li>
+                            <li><a href="">پشتیبانی سایت</a></li>
+                            <li><a href="">داده های ثبت احوال</a></li>
+
                         </ul>
                     </div>
                 </div>
