@@ -821,6 +821,20 @@ a:hover {
     border-radius: 50%;
 }
 
+.sticky-top-custom {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    z-index: 1030
+}
+
+.sticky-top-custom-scroll {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 140px;
+    z-index: 1030
+}
+
 .btn-mw {
     background-color: #0080ff;
     color: blanchedalmond;

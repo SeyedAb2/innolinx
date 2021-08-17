@@ -4004,6 +4004,7 @@ var app = (function () {
     	let div57;
     	let a21;
     	let button5;
+    	let div61_class_value;
     	let main_transition;
     	let t94;
     	let br0;
@@ -4641,32 +4642,32 @@ var app = (function () {
     			attr_dev(img9, "class", " header-image-person-sidebar bg-light");
     			if (img9.src !== (img9_src_value = "image/head.jpeg")) attr_dev(img9, "src", img9_src_value);
     			attr_dev(img9, "alt", "");
-    			add_location(img9, file$6, 335, 36, 32379);
+    			add_location(img9, file$6, 335, 36, 32456);
     			attr_dev(div55, "class", "col-12 p-0 banner");
-    			add_location(div55, file$6, 334, 32, 32310);
+    			add_location(div55, file$6, 334, 32, 32387);
     			attr_dev(img10, "class", "header-logo-image-person-sidebar border-radius");
     			if (img10.src !== (img10_src_value = "image/1.jpeg")) attr_dev(img10, "src", img10_src_value);
     			attr_dev(img10, "alt", "");
-    			add_location(img10, file$6, 338, 36, 32620);
+    			add_location(img10, file$6, 338, 36, 32697);
     			attr_dev(div56, "class", "col-12 header-image-main border-radius");
-    			add_location(div56, file$6, 337, 32, 32531);
+    			add_location(div56, file$6, 337, 32, 32608);
     			attr_dev(h65, "class", "text-bold ");
-    			add_location(h65, file$6, 343, 44, 32978);
+    			add_location(h65, file$6, 343, 44, 33055);
     			attr_dev(h66, "class", "explain-about-page-sidebar");
-    			add_location(h66, file$6, 344, 44, 33159);
+    			add_location(h66, file$6, 344, 44, 33236);
     			attr_dev(button5, "class", "px-0 mx-0 btn-sm col-12 font btn btn-danger text-white rounded-circle rounded-pill");
-    			add_location(button5, file$6, 348, 52, 33642);
+    			add_location(button5, file$6, 348, 52, 33719);
     			attr_dev(a21, "href", "#");
-    			add_location(a21, file$6, 347, 48, 33577);
+    			add_location(a21, file$6, 347, 48, 33654);
     			attr_dev(div57, "class", "col-12 mt-4 font mx-0 px-0");
-    			add_location(div57, file$6, 345, 44, 33394);
+    			add_location(div57, file$6, 345, 44, 33471);
     			attr_dev(div58, "class", "col-10 ");
-    			add_location(div58, file$6, 342, 40, 32912);
+    			add_location(div58, file$6, 342, 40, 32989);
     			attr_dev(div59, "class", "row");
-    			add_location(div59, file$6, 341, 36, 32854);
+    			add_location(div59, file$6, 341, 36, 32931);
     			attr_dev(div60, "class", "header-detail col-12 pb-3");
-    			add_location(div60, file$6, 340, 32, 32778);
-    			attr_dev(div61, "class", "row px-0 text-center shadow-radius-section bg-light ");
+    			add_location(div60, file$6, 340, 32, 32855);
+    			attr_dev(div61, "class", div61_class_value = "" + ((/*y*/ ctx[1] > 100 ? "sticky-top-custom" : "") + " " + (/*y*/ ctx[1] > 768 ? "sticky-top-custom-scroll" : "") + " row px-0 text-center shadow-radius-section bg-light "));
     			toggle_class(div61, "d-none", /*x*/ ctx[0] <= 767);
     			add_location(div61, file$6, 333, 28, 32189);
     			attr_dev(aside2, "class", " col-12 col-md-3 mt-3 ");
@@ -4684,8 +4685,8 @@ var app = (function () {
     			add_location(div65, file$6, 77, 4, 3218);
     			attr_dev(main, "class", "container-fluid pin-parent px-0 px-md-3");
     			add_location(main, file$6, 76, 0, 3142);
-    			add_location(br0, file$6, 378, 0, 35051);
-    			add_location(br1, file$6, 378, 4, 35055);
+    			add_location(br0, file$6, 378, 0, 35128);
+    			add_location(br1, file$6, 378, 4, 35132);
     		},
     		m: function mount(target, anchor) {
     			if (if_block) if_block.m(target, anchor);
@@ -4970,7 +4971,11 @@ var app = (function () {
     				attr_dev(div6, "class", div6_class_value);
     			}
 
-    			if (dirty & /*x*/ 1) {
+    			if (!current || dirty & /*y*/ 2 && div61_class_value !== (div61_class_value = "" + ((/*y*/ ctx[1] > 100 ? "sticky-top-custom" : "") + " " + (/*y*/ ctx[1] > 768 ? "sticky-top-custom-scroll" : "") + " row px-0 text-center shadow-radius-section bg-light "))) {
+    				attr_dev(div61, "class", div61_class_value);
+    			}
+
+    			if (dirty & /*y, x*/ 3) {
     				toggle_class(div61, "d-none", /*x*/ ctx[0] <= 767);
     			}
     		},
@@ -5077,7 +5082,7 @@ var app = (function () {
     			const router_changes = {};
     			if (dirty & /*url*/ 4) router_changes.url = /*url*/ ctx[2];
 
-    			if (dirty & /*$$scope, x, y*/ 16387) {
+    			if (dirty & /*$$scope, y, x*/ 16387) {
     				router_changes.$$scope = { dirty, ctx };
     			}
 

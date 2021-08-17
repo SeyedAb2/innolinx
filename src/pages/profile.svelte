@@ -331,7 +331,7 @@
                             </section>
                         </aside>
                         <aside  class=" col-12 col-md-3 mt-3 ">
-                            <div class="row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
+                            <div class="{y>100 ? 'sticky-top-custom' : ''} {y>768 ? 'sticky-top-custom-scroll' : ''} row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
                                 <div class="col-12 p-0 banner" >
                                     <img class=" header-image-person-sidebar bg-light" src="image/head.jpeg" alt="">
                                 </div>
