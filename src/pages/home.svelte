@@ -11,7 +11,7 @@
     export let y;
     export let x;
     export let h;
-    export let post = [];
+    /*export let post = [];
 	onMount(
 		async() => {
 			const res = await fetch('http://localhost:8000/post/page/1/')
@@ -19,7 +19,7 @@
 			post = post.data
 			
 		}
-	)
+	)*/
     
     var currentLocation = window.location.href;
     var splitUrl = currentLocation.split("/");

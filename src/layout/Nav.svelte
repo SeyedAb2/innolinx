@@ -9,11 +9,11 @@
     import home from "../pages/home.svelte";
 	export let url = "";
     export let y;
-    var currentLocation = window.location.href;
-    var splitUrl = currentLocation.split("/");
-    var lastSugment = splitUrl[splitUrl.length - 1];
-    $ : console.log(lastSugment);
-    let src;
+    export let currentLocation = window.location.href;
+    export let splitUrl = currentLocation.split("/");
+    export let lastSugment = splitUrl[splitUrl.length - 1];
+    //$ : console.log(lastSugment);
+    export let src;
     if(lastSugment==="show-detail"){
         src="../image/1.png";
     }

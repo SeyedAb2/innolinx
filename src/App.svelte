@@ -21,7 +21,7 @@
 
 
 <style global> 
-	@import "/bootstrap.rtl.min.css";
+	@import "/css/bootstrap.rtl.min.css";
 	@import "/global.css";
 </style>
 {#if loading===true}

@@ -812,6 +812,9 @@ a:hover {
 }
 
 @media(max-width:320px) {
+    .btn-mw-profile .navbar {
+        max-width: 100% !important;
+    }
     .btn-mw {
         background-color: #0080ff;
         color: blanchedalmond;
@@ -833,8 +836,8 @@ a:hover {
         margin: 8px 4% !important;
     }
     .vm-navbar {
-        padding-left: 0 !important;
-        margin-left: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 

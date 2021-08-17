@@ -109,7 +109,7 @@
                                     <div class="col-12 mt-4 font">
                                         <div class="row vm-navbar">
                                             <button class="btn rounded-pill mb-1 col-custom font btn-mw-profile text-center visit-btn mx-0 mx-sm-1"><i class="fas fa-external-link-alt padding-button ml-2 icon-size"></i>بازدید سایت </button>
-                                            <div class="col-12 col-md-3 justify-content-start navbar dropdown dropleft pr-1">
+                                            <div class="{x<=320 ? 'col-12' : 'col-5'} col-md-3 justify-content-start navbar dropdown dropleft pr-1">
                                                 <button type="button" data-toggle="dropdown" class="pt-custome-more-btn btn btn-mw-profile rounded-pill col-12 font text-center col-md-6 mr-2">بیشتر</button>
                                                 <ul class="dropdown-menu  ellipsis-menu">
                                                     <li><a href="#"><i class="fas fa-share-alt"></i> اشتراک صفحه </a></li>

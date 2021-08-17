@@ -1,5 +1,15 @@
 <script>
     export let y;
+    export let currentLocation = window.location.href;
+    export let splitUrl = currentLocation.split("/");
+    export let lastSugment = splitUrl[splitUrl.length - 1];
+    export let src;
+    if(lastSugment==="show-detail"){
+        src="../image/1.png";
+    }
+    else{
+        src="image/1.png";
+    }
 </script>
 <svelte:window bind:scrollY={y}/>
 <style>
@@ -10,8 +20,9 @@
 <footer class="footer">
     <div class="container">
         <div class="icon_footer">
-            <h5><img src="image/1.png">
-                <span>اینو</span><span>لینکس</span></h5>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <h5><img {src}>
+            <span>اینو</span><span>لینکس</span></h5>
         </div>
         
         <div class="row">
