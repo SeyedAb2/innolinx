@@ -38,14 +38,14 @@
                                 <div class="col-2 ">
                                     <Link to="/" class="menu-item-link-color">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
-                                            <i class="fas fa-home  p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>خانه</span> </i>
+                                            <i class="nav-logo fas fa-home  p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>خانه</span> </i>
                                         </div>
                                     </Link>
                                 </div>
                                 <div class="col-2">
                                     <Link to="profile" class="menu-item-link-color">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
-                                            <i class="fas fa-mail-bulk p-0 m-0 mt-2 mt-md-0 " ><span class="menu-item d-none d-md-inline"><br>پروفایل فرد</span> </i>
+                                            <i class="nav-logo fas fa-mail-bulk p-0 m-0 mt-2 mt-md-0 " ><span class="menu-item d-none d-md-inline"><br>پروفایل فرد</span> </i>
                                         </div>
                                     </Link>
                                 </div>
@@ -53,7 +53,7 @@
                                 <div class="col-2  ">
                                     <Link class="menu-item-link-color" to="show-detail">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
-                                            <i class="fas fa-info-circle ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>جزيیات</span></i>
+                                            <i class="nav-logo fas fa-info-circle ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>جزيیات</span></i>
                                         </div>
                                     </Link>
                                 </div>
@@ -61,14 +61,80 @@
                                 <div class="col-2  ">
                                     <Link class="menu-item-link-color" to="magezine">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
-                                            <i class="fas fa-feather ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>مجله</span></i>
+                                            <i class="nav-logo fas fa-feather ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>مجله</span></i>
                                         </div>
                                     </Link>
                                 </div>
                                 <div class="col-2 " data-toggle="modal" data-target="#mod1">
                                     <div class="menu-item-link-color">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0 dropdown">
-                                            <i class="fas fa-toolbox ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br><i class="fas fa-sort-down"></i>&nbsp;ابزار</span></i>
+                                            <i class="nav-logo fas fa-toolbox ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br><i class="fas fa-sort-down"></i>&nbsp;ابزار</span></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="menu-item-link-color ">
+                                        <div data-toggle="dropdown" style="height: 25px;" class="navbar col-12 mt-0 text-center px-0 menu-icon pb-0 mb-0 dropdown">
+                                            <img class="ml-1 p-0 m-0 margin-logo logo-cu-nav" src="image/1.jpeg" alt="">
+                                            <span class="menu-item-logo d-none d-md-inline "><i class="fas fa-sort-down "></i>&nbsp;من</span>
+                                        </div>
+                                        <div class="dropdown-menu logo-tab-menu">
+                                            <div class="row px-2">
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="row">
+                                                                <div class="col-3 pb-3 pl-0 w-auto">
+                                                                    <img src="image/1.jpeg" class="mx-0 logo-cu-nav-tab" alt="">
+                                                                </div>
+                                                                <div class="col-8 direction pr-1">
+                                                                    <h6 class="text-bold mb-0 pb-1">
+                                                                        مسعودآقایی ساداتی
+                                                                    </h6>
+                                                                    <p class="pt-0 text-right direction font font-size-custom">
+                                                                        مدیر مسیول سایت اینولینکس و مدیرعامل شرکت آفرینه مدرس کارافرینی و MBA
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="col-12 w-100 btn btn-sm btn-white border-primary border-custom-view-profile rounded-pill rounded-circle font text-center">ناحیه کاربری</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr class="dropdown-divider">
+                                                <div class="col-12 direction text-right font ">
+                                                    <h6 class="text-bold mb-0 pb-1">
+                                                         حساب کاربری
+                                                    </h6>
+                                                    <span class="d-block pb-1">
+                                                        <!-- svelte-ignore a11y-invalid-attribute -->
+                                                        <a href="#" class="text-decoration-none font-tab-nav-account">کمک</a>
+                                                    </span>
+                                                    <span class="d-block pb-1">
+                                                        <!-- svelte-ignore a11y-invalid-attribute -->
+                                                        <a href="#" class="text-decoration-none font-tab-nav-account">تنظیمات و شخصی سازی</a>
+                                                    </span>
+                                                </div>
+                                                <hr class="dropdown-divider">
+                                                <div class="col-12 direction text-right font ">
+                                                    <h6 class="text-bold mb-0 pb-1">
+                                                         مدیریت
+                                                    </h6>
+                                                    <span class="d-block pb-1">
+                                                        <!-- svelte-ignore a11y-invalid-attribute -->
+                                                        <a href="#" class="text-decoration-none font-tab-nav-account">مقالات و پست ها</a>
+                                                    </span>
+                                                    
+                                                </div>
+                                                <hr class="dropdown-divider">
+                                                <div class="col-12 direction text-right font ">
+                                                    <span class="d-block pb-1">
+                                                        <!-- svelte-ignore a11y-invalid-attribute -->
+                                                        <a href="#" class="text-decoration-none font-tab-nav-account">خروج</a>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

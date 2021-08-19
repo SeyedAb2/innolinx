@@ -92,9 +92,7 @@ header {
 
 .navbar {
     background: white;
-    border-bottom: 1px solid #bfbfbf;
     height: 60px;
-    color: red;
 }
 
 .nav-custome-bottom {
@@ -122,7 +120,33 @@ header {
 }
 
 .menu-item {
-    font-size: 12px;
+    font-size: 13px !important;
+    font-family: vazir;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+}
+
+.margin-logo {
+    margin-top: 0px !important;
+}
+
+.nav-logo {
+    font-size: 21.5px !important;
+}
+
+@media(max-width:768px) {
+    .margin-logo {
+        margin-top: 6px !important;
+    }
+}
+
+.menu-item-logo {
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    top: 34px;
+    right: 5px;
     font-family: vazir;
     white-space: nowrap;
     text-align: center;
@@ -150,6 +174,7 @@ header {
 .menu-icon {
     font-size: 20px;
     cursor: pointer;
+    position: relative;
 }
 
 .menu-item-link-color {
@@ -687,6 +712,33 @@ a:hover {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
 }
 
+.logo-tab-menu {
+    direction: rtl !important;
+    text-align: right;
+    width: 264px;
+    border-radius: 6px;
+    border: solid 1px #b5b5b578;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo-tab-menu.dropdown-menu {
+    top: 175%;
+    left: -120%;
+}
+
+.border-custom-view-profile {
+    border: 2px solid #0278bd;
+    transition: all 0s;
+    color: #0278bd;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.border-custom-view-profile:hover {
+    border: 3px solid #006199;
+    color: #006199;
+}
+
 .ellipsis-menu li {
     text-align: right;
     margin-right: 0px;
@@ -1158,6 +1210,32 @@ a:hover {
     border: 1px solid rgb(141, 141, 141);
     width: 35px;
     height: 35px;
+    border-radius: 50%;
+}
+
+.logo-cu-nav {
+    border: 1px solid rgb(141, 141, 141);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.font-size-custom {
+    font-size: 13px;
+    color: #313131;
+}
+
+.font-tab-nav-account,
+.font-tab-nav-account:hover {
+    font-size: 15px;
+    color: #858585;
+    margin-right: 1px;
+}
+
+.logo-cu-nav-tab {
+    border: 1px solid rgb(141, 141, 141);
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 

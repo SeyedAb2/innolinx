@@ -61,7 +61,7 @@
                         <img src="image/1.jpeg" class="logo-cu-scroll-profile" alt="">
                     </div>
                     <div class="col-10 pr-0">
-                        <h5 class="text-logo-scroll-profile mt-0 mr-0">آفرینه&nbsp;<i style="color:#048af7;font-size: 13px;" class="fas fa-check-circle"></i><br><span class="explain-about-page-scroll">مدیر شرکت آفرینه و مسپول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید</span></h5>
+                        <h5 class="text-logo-scroll-profile mt-0 mr-0">مسعودآقایی ساداتی&nbsp;<!-- <i style="color:#048af7;font-size: 13px;" class="fas fa-check-circle"></i> --><br><span class="explain-about-page-scroll">مدیر شرکت آفرینه و مسپول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید</span></h5>
                     </div>
                 </div>
             </div>
