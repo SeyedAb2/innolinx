@@ -9,6 +9,9 @@
     import home from "../pages/home.svelte";
 	export let url = "";
     export let y;
+    export let x;
+    export let h;
+    $: console.log(h);
     export let currentLocation = window.location.href;
     export let splitUrl = currentLocation.split("/");
     export let lastSugment = splitUrl[splitUrl.length - 1];
@@ -24,7 +27,7 @@
 <style>
     
 </style>
-
+<svelte:window bind:scrollY={y} bind:innerWidth={x} bind:innerHeight={h}/>
 <Router url="{url}">
 
     <header class="sticky-top " class:nav-custome-bottom={y<=768}> 
@@ -78,7 +81,7 @@
                                             <img class="ml-1 p-0 m-0 margin-logo logo-cu-nav" src="image/1.jpeg" alt="">
                                             <span class="menu-item-logo d-none d-md-inline "><i class="fas fa-sort-down "></i>&nbsp;من</span>
                                         </div>
-                                        <div class="dropdown-menu logo-tab-menu">
+                                        <div class="dropdown-menu logo-tab-menu {h<600 ? 'menu-logo-dropdown-tab' : ''}">
                                             <div class="row px-2">
                                                 <div class="col-12">
                                                     <div class="row">
@@ -142,16 +145,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 col-md-2 pl-2 ">
-                    <Link to="/">
-                        <div class="col-7 ">
-                            <div class="brand-text mx-0">
-                                <span class="brand-icon-custome" >اینولینکس</span>
-                            </div>
-                        </div>
-                        <div class="col-1 h-100">
+                <div class="col-2 col-md-1 col-lg-2 col-xl-1 ml-1 ml-md-3 ml-lg-5 ">
+                    <Link class="row direction text-decoration-none justify-content-between" to="/">
+                        <div class="col-1 h-100 ">
                             <img {src} class="brand-icon mt-2" alt="">
                         </div>
+                        <div class="col-8 pr-2 direction d-none d-lg-inline">
+                            <div class="brand-text">
+                                <span class="brand-icon-custome px-3" >اینولینکس</span>
+                            </div>
+                        </div>
+                        
                     </Link>
                     
                 </div>

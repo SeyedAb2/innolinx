@@ -114,9 +114,7 @@ header {
     direction: rtl;
     color: #475159;
     font-family: 'vazir', serif;
-    font-weight: ;
-    margin-top: 26%;
-    float: left;
+    font-weight: bold;
 }
 
 .menu-item {
@@ -253,6 +251,10 @@ header {
     }
 }
 
+.brand-text {
+    padding: 39% 0 !important;
+}
+
 @media (max-width:992px) {
     .brand-text {
         position: absolute;
@@ -265,9 +267,6 @@ header {
 }
 
 @media(max-width:1225px) {
-    .brand-icon-custome {
-        display: none;
-    }
     .brand-icon {
         margin: auto;
     }
@@ -722,8 +721,51 @@ a:hover {
 }
 
 .logo-tab-menu.dropdown-menu {
-    top: 175%;
-    left: -120%;
+    top: 176%;
+    left: -100%;
+    margin-left: 5px !important;
+}
+
+.menu-logo-dropdown-tab {
+    max-height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media(max-height:150px) {
+    .menu-logo-dropdown-tab {
+        max-height: 90px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-bottom: 100px !important;
+    }
+}
+
+@media(min-height:150px) {
+    .menu-logo-dropdown-tab {
+        top: 175% !important;
+        max-height: 200px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+@media(min-height:400px) {
+    .menu-logo-dropdown-tab {
+        top: 175% !important;
+        max-height: 340px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+@media(min-height:450px) {
+    .menu-logo-dropdown-tab {
+        top: 176% !important;
+        max-height: auto !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 }
 
 .border-custom-view-profile {
