@@ -3,6 +3,8 @@
 	import { onMount } from 'svelte';
 	import Nav from "./layout/Nav.svelte";
 	import Footer from "./layout/Footer.svelte";
+	import Login from "./pages/Log_Sign/login.svelte";
+	import Signup from "./pages/Log_Sign/signup.svelte";
 	import {fade , slide , scale , fly} from "svelte/transition";
 	import { Wave } from 'svelte-loading-spinners'
 	
@@ -11,7 +13,9 @@
 	//$: console.log(y);	
 	///
 
-
+	let currentLocation = window.location.href;
+    let splitUrl = currentLocation.split("/");
+    let lastSugment = splitUrl[splitUrl.length - 1];
 	let loading = false;
 	setTimeout(function(){
 		loading = false;
@@ -33,12 +37,19 @@
 
 
 {#if loading===false}
-<div class="class ">
-	<Nav {y}/>
-	<Footer {y}/>
+<div class="class">
+	{#if lastSugment!=='login' && lastSugment!=='login#' &&  lastSugment!=='signup#' &&  lastSugment!=='signup'}
+		<Nav {y}/>
+		<Footer {y}/>
+	{:else if lastSugment==='login'}
+		<Login />
+	{:else if lastSugment==='signup'}
+		<Signup />
+	{/if}
 </div>
 	<script src="/script.js"></script>
 {/if}
+
 	
 
 

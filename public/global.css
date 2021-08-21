@@ -329,10 +329,16 @@ header {
     .pin-parent {
         margin-top: -1px;
     }
+    .sign-parent {
+        margin-top: -1px;
+    }
 }
 
 @media(min-width:768px) {
     .pin-parent {
+        margin-top: 20px;
+    }
+    .sign-parent {
         margin-top: 20px;
     }
 }
@@ -340,6 +346,9 @@ header {
 @media(min-width:1024px) {
     .pin-parent {
         margin-top: 50px;
+    }
+    .sign-parent {
+        margin-top: 30px;
     }
 }
 
@@ -1487,6 +1496,10 @@ a:hover {
         width: 1200px;
         margin: 50px auto;
     }
+    .sign-parent {
+        width: 1200px;
+        margin: 30px auto;
+    }
     header {
         width: 1200px;
         margin: 0px auto;
@@ -2034,4 +2047,66 @@ footer .social_media h5 {
 
 footer fieldset .btn:hover {
     background-color: #ff9d2e;
+}
+
+.logo-image-signup {
+    max-width: 65px;
+}
+
+.logo-image-signup-footer {
+    max-width: 25px;
+}
+
+.webName-signup {
+    margin-right: -12px;
+    font-weight: bold;
+}
+
+.webName-signup-footer {
+    margin-right: -5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.text-color-custom {
+    color: #a80101;
+}
+
+.font-size-customize-sign {
+    font-size: 14px;
+}
+
+.form-control {
+    border-color: #535353;
+    transition: all 0.1s;
+    outline: none !important;
+}
+
+.form-control:focus {
+    border: 2px solid #424242;
+    transition: all 0.1s;
+    outline: none !important;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    box-shadow: inset 0 -1px 0 #ddd;
+}
+
+.border-radius-form-sign {
+    border-radius: 10px;
+}
+
+.font-size-footer-sign {
+    font-size: 12px;
 }
