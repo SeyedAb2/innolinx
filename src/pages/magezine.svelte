@@ -22,7 +22,7 @@
     var currentLocation = window.location.href;
     var splitUrl = currentLocation.split("/");
     var lastSugment = splitUrl[splitUrl.length - 1];
-    // $ : console.log(lastSugment);
+     $ : console.log(y);
     let map;
     
 </script>
@@ -40,8 +40,8 @@
 
 <Router url="{url}">
 
-{#if y>768}
-<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-lg-inline" > 
+{#if y>450}
+<section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-md-inline" > 
     
     <div transition:slide class="col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top">
         <div class="row justify-content-between shadow-sm mr-0">
@@ -49,7 +49,7 @@
                 <div class="row justify-content-end vm-navbar">
                     <button class="btn rounded-pill font btn-mw-scroll text-center visit-btn mx-0 "><i class="fas fa-external-link-alt padding-button ml-2 icon-size-scroll"></i>بازدید سایت </button>
 
-                    <div class="col-5 mr-0 justify-content-start navbar dropleft px-2">
+                    <div class="navbar-scroll col-5 mr-0 justify-content-start navbar dropleft px-2">
                         <button  type="button" data-toggle="dropdown" class="pt-0 pl-md-3 pr-md-3 px-lg-3 btn btn-sm btn-mw-scroll rounded-pill col-12 font text-center col-md-7 mr-2"
                         >بیشتر</button>
                         
@@ -74,8 +74,8 @@
         <div class="col-12 mt-0 scroll-main-height">
             <div class="row  mx-4 scroll-main-height">
                 <ul class="nav nav-tabs direction text-center" role="tablist">
-                    <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='post'} on:click="{() => current = 'post'}" data-toggle="tab" href="#post">پست</a></li>
                     <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='about'} on:click="{() => current = 'about'}"  data-toggle="tab" href="#about">درباره</a></li>
+                    <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='post'} on:click="{() => current = 'post'}" data-toggle="tab" href="#post">پست</a></li>
                 </ul>
             </div>
         </div>
@@ -91,12 +91,12 @@
     <div class="row justify-content-center mx-0">
         
         <aside class="col-12 col-md-3 mr-2 d-none d-lg-inline" >
-            <div class="row">
-                <div class="col-12 shadow-radius-section bg-light">
+            <div class="row mr-1">
+                <div class="col-12 shadow-radius-section bg-light px-0 py-0">
                     <div class="row ">
-                        <div class="col-12 my-1">
-                            <a href="#">
-                                <img class="w-100 dream-job-image" src="image/job.jpg" alt="">
+                        <div class="col-12 px-0">
+                           <a href="#">
+                                <img class="w-100 dream-job-image " src="image/job.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -139,8 +139,8 @@
                             <div class="col-12 tab-header-main mt-3 ">
                                 <div class="row  scroll-main-height">
                                     <ul class="nav nav-tabs direction text-center" role="tablist">
-                                        <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='post'}  on:click="{() => current = 'post'}" data-toggle="tab" href="#post">پست</a></li>
                                         <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='about'}  on:click="{() => current = 'about'}"  data-toggle="tab" href="#about">درباره</a></li>
+                                        <li class="nav-item-scroll mt-2"><a class="py-2 nav-link-scroll" class:active={current==='post'}  on:click="{() => current = 'post'}" data-toggle="tab" href="#post">پست</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -374,7 +374,7 @@
                                     زندگی به سبک نوآوری
                                 </h6>
                             </div>
-                            <div class="{x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '}" >
+                            <div class="{x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '} {y>=700 ? 'sticky-bottom' : ''}" >
                                 <div class="{x >=767 ? 'col-12 font-weight-bold pb-2 border-bottom pr-0': 'col-12 font-weight-bold'}">
                                     <!-- svelte-ignore a11y-missing-attribute -->
                                     <a type="{x<=767 ? 'button' : ''}" class="btn " data-toggle="{x<=767 ? 'modal' :''}"   data-target="{x<=767 ? '#mod2' : ''}">
@@ -401,6 +401,115 @@
                                                   </a>
                                                 </h5>
                                         </div>   
+                                        <div class="border-bottom pb-2" id="headingOne">
+                                            <h5 class="mb-0 mt-2">
+                                              <a class="p-0 d-inline  category_button collapsed " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></a>
+                                              <a href="#" class="category-main-text-link">
+                                                <p class="category-main-text d-inline">بازاریابی</p>
+                                              </a>
+                                            </h5>
+                                          </div>
+                                          <div id="collapseOne" class="collapse mr-3 " aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="border-right">
+                                                <div class=" mt-2 mr-1 col-12 p-0 ">
+                                                    <div id="accordion1">
+                                                        <div class="mb-2 pl-2">
+                                                          <div class="border-bottom pb-2" id="headingOneOne">
+                                                            <h5 class="mb-0">
+                                                              <a class="p-0 d-inline category_button collapsed " data-toggle="collapse" data-target="#collapseOneOne" aria-expanded="true" aria-controls="collapseOneOne"></a>
+                                                              <a href="#" class="category-main-text-link">
+                                                                <p class="category-main-text d-inline">کسب و کار</p>
+                                                              </a>
+                                                            </h5>
+                                                          </div>
+                                                          <div id="collapseOneOne" class="collapse mr-3 " aria-labelledby="headingOneOne" data-parent="#accordion1">
+                                                            <div class="my-1 pl-2 ">
+                                                                <div class="border-bottom pb-2" id="">
+                                                                    <h5 class="mb-0">
+                                                                      <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                                      <a href="#" class="category-main-text-link">
+                                                                        <p class="category-main-text d-inline">ورزش</p>
+                                                                      </a>
+                                                                    </h5>
+                                                                </div> 
+                                                          </div>
+                                                        </div>
+                                                        <div class="my-2 pl-2">
+                                                          <div class="border-bottom pb-2" id="headingTwoTwo">
+                                                            <h5 class="mb-0">
+                                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseTwoTwo" aria-expanded="false" aria-controls="collapseTwoTwo"></a>
+                                                              <a href="#" class="category-main-text-link">
+                                                                <p class="category-main-text d-inline">مدیریت تکنولوژی</p>
+                                                              </a>
+                                                            </h5>
+                                                          </div>
+                                                          <div id="collapseTwoTwo" class="collapse mr-3" aria-labelledby="headingTwoTwo" data-parent="#accordion1">
+                                                            <div class="border-bottom py-2" id="">
+                                                                <h5 class="mb-0">
+                                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                                  <a href="#" class="category-main-text-link">
+                                                                    <p class="category-main-text d-inline">خاورمیانه</p>
+                                                                  </a>
+                                                                </h5>
+                                                            </div> 
+                                                          </div>
+                                                        </div>
+                                                        <div class="mb-2 pl-2">
+                                                          <div class="border-bottom pb-2" id="headingThreeThree">
+                                                            <h5 class="mb-0">
+                                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseThreeThree" aria-expanded="false" aria-controls="collapseThreeThree"></a>
+                                                              <a href="#" class="category-main-text-link">
+                                                                <p class="category-main-text d-inline">آرشیو کلیپ ها</p>
+                                                              </a>
+                                                            </h5>
+                                                          </div>
+                                                          <div id="collapseThreeThree" class="collapse mr-3" aria-labelledby="headingThreeThree" data-parent="#accordion1">
+                                                            <div class="border-right">
+                                                                <div class=" mt-2 mr-1 col-12 p-0 ">
+                                                                    <div id="accordion2">
+                                                                        <div class="mb-2 pl-2">
+                                                                          <div class="border-bottom pb-2" id="headingOneOneOne">
+                                                                            <h5 class="mb-0">
+                                                                              <a class="p-0 d-inline category_button collapsed " data-toggle="collapse" data-target="#collapseOneOneOne" aria-expanded="true" aria-controls="collapseOneOneOne"></a>
+                                                                              <a href="#" class="category-main-text-link">
+                                                                                <p class="category-main-text d-inline">کسب و کار</p>
+                                                                              </a>
+                                                                            </h5>
+                                                                          </div>
+                                                                          <div id="collapseOneOneOne" class="collapse mr-3 " aria-labelledby="headingOneOneOne" data-parent="#accordion2">
+                                                                            <div class="border-bottom py-2" id="">
+                                                                                <h5 class="mb-0">
+                                                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                                                  <a href="#" class="category-main-text-link">
+                                                                                    <p class="category-main-text d-inline">فوتبال</p>
+                                                                                  </a>
+                                                                                </h5>
+                                                                            </div> 
+                                                                          </div>
+                                                                        </div>
+                                                                        <div class="border-bottom pb-2" id="">
+                                                                            <h5 class="mb-0">
+                                                                              <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                                              <a href="#" class="category-main-text-link">
+                                                                                <p class="category-main-text d-inline">خاورمیانه</p>
+                                                                              </a>
+                                                                            </h5>
+                                                                        </div> 
+                                                                          <div id="collapseTwoTwoTwo" class="collapse mr-3" aria-labelledby="headingTwoTwoTwo" data-parent="#accordion2">
+                                                                            <div class="">
+                                                                              خاورمیانه
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                </div> 
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                </div> 
+                                            </div>
+                                          </div>
                                           <div class="border-bottom pb-2" id="headingOne">
                                             <h5 class="mb-0 mt-2">
                                               <a class="p-0 d-inline  category_button collapsed " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></a>

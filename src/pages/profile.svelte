@@ -79,12 +79,12 @@
     <div class="row justify-content-center mx-0">
         
         <aside class="col-12 col-md-3 mr-2 d-none d-lg-inline" >
-            <div class="row">
-                <div class="col-12 shadow-radius-section bg-light">
+            <div class="row mr-1">
+                <div class="col-12 shadow-radius-section bg-light px-0 py-0">
                     <div class="row ">
-                        <div class="col-12 my-1">
-                            <a href="#">
-                                <img class="w-100 dream-job-image" src="image/job.jpg" alt="">
+                        <div class="col-12 px-0">
+                           <a href="#">
+                                <img class="w-100 dream-job-image " src="image/job.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -343,7 +343,7 @@
                                     <div class="row">
                                         <div class="col-10 ">
                                             <h6 class="text-bold ">مسعود آقایی ساداتی&nbsp;<!--  <i style="color:#048af7;font-size: 20px;" class="fas fa-check-circle"></i> --></h6>
-                                            <h6 class="explain-about-page-sidebar">مدیر شرکت آفرینه و مسیول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید </h6>
+                                            <h6 class="explain-about-page-sidebar pt-3">مدیر شرکت آفرینه و مسیول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید </h6>
                                             <div class="col-12 mt-4 font mx-0 px-0">
                                                 <!-- svelte-ignore a11y-invalid-attribute -->
                                                 <a href="#">

@@ -91,6 +91,10 @@ header {
     margin-right: 0;
 }
 
+.navbar-scroll.navbar {
+    background: #F8F9FA !important;
+}
+
 .navbar {
     background: white;
     height: 60px;
@@ -344,7 +348,7 @@ header {
     }
 }
 
-@media(min-width:1024px) {
+@media(min-width:992px) {
     .pin-parent {
         margin-top: 50px;
     }
@@ -634,7 +638,7 @@ a:hover {
 }
 
 .title-post {
-    background-color: #e2e2e2;
+    background-color: #b3b3b3;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
@@ -825,6 +829,8 @@ a:hover {
 
 .dream-job-image {
     height: 230px;
+    width: 100%;
+    border-radius: 7px;
 }
 
 .header-image-main {
@@ -911,10 +917,10 @@ a:hover {
 @media(min-width:992px) {
     .header-logo-image-person-sidebar {
         position: absolute;
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         z-index: 2;
-        top: -40px;
+        top: -50px;
         right: 0%;
         left: 32%;
         border: 2px solid rgb(204 203 203);
@@ -930,6 +936,20 @@ a:hover {
     position: sticky;
     top: 80px;
     z-index: 100
+}
+
+.sticky-top-category {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 170px;
+    z-index: 0
+}
+
+.sticky-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 10px;
+    z-index: 0
 }
 
 .sticky-top-custom-scroll {
@@ -958,7 +978,7 @@ a:hover {
 }
 
 .btn-mw-profile {
-    background-color: #ff9d2e;
+    background-color: #0080ff;
     color: blanchedalmond;
     font-size: 100%;
     width: auto;
@@ -967,7 +987,7 @@ a:hover {
 }
 
 .btn-mw-scroll-profile {
-    background-color: #ff9d2e;
+    background-color: #0080ff;
     color: blanchedalmond;
     font-size: 14px;
     width: auto;
@@ -1029,7 +1049,7 @@ a:hover {
 
 .header-image-person-sidebar {
     width: 100%;
-    height: 80px;
+    height: 60px;
     border-radius: 7px 7px 0 0;
 }
 
@@ -1085,8 +1105,8 @@ a:hover {
         overflow: hidden;
     }
     .header-image-person {
-        width: 100%;
-        height: 95px;
+        max-width: 100%;
+        height: auto;
         border-radius: 7px 7px 0 0;
     }
     .header-logo-image-person {
@@ -1129,7 +1149,7 @@ a:hover {
     }
     .header-image-person {
         width: 100%;
-        height: 100%;
+        height: auto;
         border-radius: 7px 7px 0 0;
     }
     .header-logo-image-person {
@@ -1155,7 +1175,7 @@ a:hover {
     }
     .header-image-person {
         width: 100%;
-        height: 120px;
+        height: auto;
         border-radius: 7px 7px 0 0;
     }
     .header-logo-image-person {
@@ -1181,7 +1201,7 @@ a:hover {
     }
     .header-image-person {
         width: 100%;
-        height: 150px;
+        height: auto;
         border-radius: 7px 7px 0 0;
     }
     .header-logo-image-person {
