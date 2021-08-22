@@ -26,20 +26,28 @@
 
 <main transition:scale class="container-fluid sign-parent  direction font-family">
     <div class="row justify-content-center mx-lg-2 ">
-        <div class="col-12 col-md-6 ">
+        <div class="col-12 col-lg-6 ">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-9">
+                <div class="col-12 col-md-9 mb-5">
                     <div class="row justify-content-start text-right ">
-                        <div class="col-12 pt-4 pt-md-0">
+                        <div class="col-12 pt-2 pt-md-0">
                             <img src="image/1.png" class="logo-image-signup" alt="">
-                            <h4 class="d-inline webName-signup">اینولینکس</h4>
+                            <h4 class="d-inline webName-signup ">اینولینکس</h4>
                         </div>
-                        <h2 class="col-12 my-4">
-                            از زندگی حرفه ای خود نهایت استفاده را ببرید
-                        </h2>
                     </div>
                 </div>
-                <div class="col-12 col-md-7 bg-white pt-4 pb-2 px-3 border-radius-form-sign">
+                <div class="col-12 col-md-7 col-lg-9 col-xl-7 bg-white pt-4 pb-2 px-4 border-radius-form-sign shadow">
+                    <div class="col-12">
+                        <div class="row justify-content-start text-right ">
+                            <h3 class="col-12 text-bold px-0">
+                                ورود
+                            </h3>
+                            <p class="col-12 px-0 mt-0 mb-4 text-secondary">
+                                از دنیای حرفه ای خود مطلع شوید
+
+                            </p>
+                        </div>
+                    </div>
                     <form action="" method="">
                         <div class="mb-3 font-size-customize-sign">
                           <label for="email" class="form-label">ایمیل</label>
@@ -47,26 +55,19 @@
                           <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                         </div>
                         <div class="mb-3 font-size-customize-sign">
-                          <label for="password" class="form-label">رمزعبور (حداقل ۶ کارکتر)</label>
+                          <label for="password" class="form-label">رمزعبور </label>
                           <input type="password" class="form-control" id="password">
                         </div>
-                        <button type="submit" class="mt-3 btn btn-primary btn-lg font rounded-circle rounded-pill col-12">ثبت نام</button>
-                        <div class="my-3 font-size-customize-sign">
-                            <div class="row">
-                                <span class="col-5 pl-0 ml-0 d-inline"><hr></span>
-                                <span class="col-2 px-0 mx-0 d-inline text-center">یا</span>
-                                <span class="col-5 pr-0 mr-0 d-inline"><hr></span>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-white border-2 border-primary btn-lg font rounded-circle text-primary rounded-pill col-12">
-                            <span>ثبت نام با اکانت گوگل</span>
-                            <i class="fab fa-google text-color-custom"></i>
-                        </button>
-                        <p class="col-12 mt-2 text-center">
-                            تاکنون ثبت نام کرده اید؟ <a href="#" class="text-bold text-primary">واردشوید</a>
+                        <p class="col-12 mt-2 text-right px-0">
+                           <a href="signup" class="text-bold text-primary">رمز عبور خود را فراموش کرده اید؟</a>
                         </p>
+                        <button type="submit" class="my-4 btn btn-primary btn-lg font rounded-circle rounded-pill col-12">وارد شوید</button>
+                        
                       </form>
                 </div>
+                <p class="col-12 mt-5 text-center">
+                    هنوز ثبت نام نکرده اید؟ <a href="signup" class="text-bold text-primary">تبت نام کنید</a>
+                </p>
             </div>
         </div>
     </div>

@@ -26,7 +26,7 @@
 
 <main transition:scale class="container-fluid sign-parent  direction font-family">
     <div class="row justify-content-center mx-lg-2 ">
-        <div class="col-12 col-md-6 ">
+        <div class="col-12 col-lg-6 ">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="row justify-content-center text-center ">
@@ -39,7 +39,7 @@
                         </h2>
                     </div>
                 </div>
-                <div class="col-12 col-md-7 bg-white pt-4 pb-2 px-3 border-radius-form-sign">
+                <div class="col-12 col-md-7 col-lg-9 col-xl-7 bg-white pt-4 pb-2 px-3 border-radius-form-sign">
                     <form action="" method="">
                         <div class="mb-3 font-size-customize-sign">
                           <label for="email" class="form-label">ایمیل</label>
@@ -63,7 +63,7 @@
                             <i class="fab fa-google text-color-custom"></i>
                         </button>
                         <p class="col-12 mt-2 text-center">
-                            تاکنون ثبت نام کرده اید؟ <a href="#" class="text-bold text-primary">واردشوید</a>
+                            تاکنون ثبت نام کرده اید؟ <a href="login" class="text-bold text-primary">واردشوید</a>
                         </p>
                       </form>
                 </div>
