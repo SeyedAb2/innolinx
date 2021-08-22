@@ -36,7 +36,7 @@
 </svelte:head>
 <Router url="{url}">
 
-{#if y>768}
+<!-- {#if y>768}
 <section class="row nav-mag-scroll pr-0 mr-0 bg-light mt-0 d-none d-lg-inline" > 
     
     <div transition:slide class="col-12 scroll-div bg-light pr-0 mr-5 nav-custome-top">
@@ -61,7 +61,7 @@
                         <img src="image/1.jpeg" class="logo-cu-scroll-profile" alt="">
                     </div>
                     <div class="col-10 pr-0">
-                        <h5 class="text-logo-scroll-profile mt-0 mr-0">مسعودآقایی ساداتی&nbsp;<!-- <i style="color:#048af7;font-size: 13px;" class="fas fa-check-circle"></i> --><br><span class="explain-about-page-scroll">مدیر شرکت آفرینه و مسپول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید</span></h5>
+                        <h5 class="text-logo-scroll-profile mt-0 mr-0">مسعودآقایی ساداتی&nbsp; <i style="color:#048af7;font-size: 13px;" class="fas fa-check-circle"></i> <br><span class="explain-about-page-scroll">مدیر شرکت آفرینه و مسپول سایت اینولینکس .به صفحه من خوش آمدید میتوانید مطالب مرتبط به شرکت آفرینه و کارآفرینی و کسب و کار را در اینجا مشاهده کنید</span></h5>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,8 @@
     </div>
     
 </section>
-{/if}
+{/if} 
+-->
 
 
 
@@ -331,7 +332,7 @@
                             </section>
                         </aside>
                         <aside  class=" col-12 col-md-3 mt-3 ">
-                            <div class="{y>100 ? 'sticky-top-custom' : ''} {y>768 ? 'sticky-top-custom-scroll' : ''} row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
+                            <div class="{y>100 ? 'sticky-top-custom' : ''} row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
                                 <div class="col-12 p-0 banner" >
                                     <img class=" header-image-person-sidebar bg-light" src="image/head.jpeg" alt="">
                                 </div>

@@ -80,6 +80,7 @@ header {
     right: 0;
     left: 0;
     height: 65px;
+    z-index: 10000;
     background-color: white;
 }
 
@@ -928,7 +929,7 @@ a:hover {
     position: -webkit-sticky;
     position: sticky;
     top: 80px;
-    z-index: 1030
+    z-index: 100
 }
 
 .sticky-top-custom-scroll {
@@ -1244,6 +1245,7 @@ a:hover {
 
 .scroll-div {
     position: fixed;
+    top: 65px!important;
     z-index: 2;
 }
 
@@ -1508,6 +1510,9 @@ a:hover {
         display: inline;
     }
     .nav-mag-scroll {
+        margin-top: 0 !important;
+        position: absolute !important;
+        top: 65px !important;
         width: 1200px;
         padding-right: 0;
         margin-right: 0;
