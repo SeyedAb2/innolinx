@@ -33,7 +33,7 @@
     <header class="sticky-top " class:nav-custome-bottom={y<=768}> 
         <nav class="container-fluid pb-0 "  >
             <div class="row justify-content-end px-0 px-md-2 px-lg-5 " >
-                <div class="col-7 col-sm-7 col-custom overflow-hidden px-0 ">
+                <div class="col col-sm-7 col-custom  px-0 ">
                     <div class="row ">
                         <div class="col-12 ">
                             
