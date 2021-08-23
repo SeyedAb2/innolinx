@@ -333,7 +333,7 @@
                         </aside>
                         <aside  class=" col-12 col-md-3 mt-3 ">
                             <div class="{y>100 ? 'sticky-top-custom' : ''} row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
-                                <div class="col-12 p-0 banner" >
+                                <div class="col-12 p-0 banner-sidebar" >
                                     <img class=" header-image-person-sidebar bg-light" src="image/head.jpeg" alt="">
                                 </div>
                                 <div class="col-12 header-image-main border-radius">

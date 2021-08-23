@@ -186,6 +186,10 @@ header {
     position: relative;
 }
 
+.menu-icon.navbar {
+    background: none !important;
+}
+
 .menu-item-link-color {
     color: #444343;
     transition: all 0.3s;
@@ -675,6 +679,21 @@ a:hover {
     padding-top: 0;
 }
 
+.tab-menu-icon.dropdown-menu {
+    right: 0 !important;
+    left: 15px;
+    top: 40px !important;
+    direction: rtl;
+}
+
+@media(max-width:1100px) {
+    .logo-tab-menu.dropdown-menu {
+        top: 176%;
+        left: -0% !important;
+        margin-left: 5px !important;
+    }
+}
+
 .report .dropdown-menu {
     top: 40% !important;
 }
@@ -888,13 +907,23 @@ a:hover {
 }
 
 .header-logo-image-person-sidebar {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+    top: -40px;
+    right: 0%;
+    left: 35%;
+    border: 2px solid rgb(204 203 203);
+}
+
+.header-banner-image-person-sidebar {
     width: 70px;
     height: 70px;
     border: 2px solid rgb(204 203 203);
 }
 
-
-/* @media(max-width:800px) {
+@media(max-width:800px) {
     .header-logo-image-person-sidebar {
         position: absolute;
         width: 70px;
@@ -931,7 +960,7 @@ a:hover {
         left: 32%;
         border: 2px solid rgb(204 203 203);
     }
-} */
+}
 
 .border-radius {
     border-radius: 50%;
@@ -991,7 +1020,7 @@ a:hover {
 }
 
 .btn-mw-profile {
-    background-color: #0080ff;
+    background-color: #0080ff !important;
     color: blanchedalmond;
     font-size: 100%;
     width: auto;
@@ -1017,7 +1046,7 @@ a:hover {
         max-width: 100% !important;
     }
     .btn-mw {
-        background-color: #0080ff;
+        background-color: #0080ff !important;
         color: blanchedalmond;
         font-size: 100%;
         width: 100%;
@@ -1069,12 +1098,17 @@ a:hover {
 }
 
 .header-image-person-sidebar {
-    width: 100%;
-    height: auto;
+    max-width: 250px;
+    max-height: 60px;
     border-radius: 7px 7px 0 0;
 }
 
 .header-detail {
+    direction: rtl;
+    margin: 55px 50px 0px -13px;
+}
+
+.header-detail-show-sidebar {
     direction: rtl;
     margin: 10px 50px 0px -13px;
 }

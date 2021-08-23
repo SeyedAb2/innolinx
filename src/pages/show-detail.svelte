@@ -34,7 +34,7 @@
 <main class="container-fluid pin-parent px-0">
     <div class="row justify-content-center mx-0">
         
-        <aside class="col-12 col-md-3 mr-2 d-none d-md-inline" >
+        <aside class="col-12 col-md-3 mr-2 d-none d-lg-inline" >
             <div class="row mr-1">
                 <div class="col-12 shadow-radius-section bg-light px-0 py-0">
                     <div class="row ">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </aside>
-        <aside class="col-12 col-md-8  px-0">   
+        <aside class="col-12 col-md-12 col-lg-8 px-0">   
             <div class="row px-0 mx-0" >
                 <aside class="col-12 col-md-9 order-first justify-content-between order-md-0 mx-0 ">
                     <section class="row mx-0 mt-1 mr-0 pt-0  ">
@@ -210,9 +210,9 @@
                     </div>
                     <div class=" row px-0 text-center shadow-radius-section bg-white mt-3">
                         <div class="col-12 mt-4 header-image-main border-radius justify-content-center">
-                            <img class="header-logo-image-person-sidebar border-radius" src="image/1.jpeg" alt="">
+                            <img class="header-banner-image-person-sidebar border-radius" src="image/1.jpeg" alt="">
                         </div>
-                        <div class="header-detail col-12 pb-3">
+                        <div class="header-detail-show-sidebar col-12 pb-3">
                             <div class="row">
                                 <div class="col-10 px-0">
                                     <h6 class="font-weight-normal author-sidebar">مسعود آقایی ساداتی&nbsp;<!--  <i style="color:#048af7;font-size: 20px;" class="fas fa-check-circle"></i> --></h6>

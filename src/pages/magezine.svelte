@@ -407,7 +407,7 @@
                                     زندگی به سبک نوآوری
                                 </h6>
                             </div>
-                            <div class=" h-auto {y>=700 ? 'sticky-top-category' : ''}">
+                            <div  class=" ">
                             <!-- <div bind:clientHeight class="stick h-auto"> -->
                               <div class="cat-stick {x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '} " >
                                 <div class="{x >=767 ? 'col-12 font-weight-bold pb-2 border-bottom pr-0': 'col-12 font-weight-bold'}">
@@ -416,7 +416,7 @@
                                         <i class="{x>=767 ? 'fas fa-list-ul category-icon-modal' : 'fas fa-caret-left'} "  class:category-fixed-icon-modal={x<=767 && y>=400} ></i>
                                     </a><span class="d-none d-md-inline">دسته بندی </span>
                                 </div>
-                                <div class="modal-category-main {x<=767 ? 'modal right fade' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'mod2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
+                                <div class="modal-category-main {x<=767 ? 'modal right ' : ''} mt-2 mr-1 col-12 p-0 d-lg-inline" id="{x<=767 ? 'mod2' : ''}" tabindex="{x<=767 ? '-1' : ''}" role="{x<=767 ? 'dialog' : ''}" aria-hidden="true">
                                     <div id="accordion" class="{x<=767 ? 'modal-dialog modal-content pr-2' : ''}" role="{x<=767 ? 'document' : ''}">
                                         {#if x<=767}
                                             <button type="button" class="close row mx-2 justify-content-end" 
