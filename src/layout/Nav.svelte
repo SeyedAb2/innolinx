@@ -33,26 +33,26 @@
     <header class="sticky-top " class:nav-custome-bottom={y<=768}> 
         <nav class="container-fluid pb-0 "  >
             <div class="row justify-content-end px-0 px-md-2 px-lg-5 " >
-                <div class="col col-sm-7 col-custom  px-0 ">
+                <div class="col col-sm-7 col-custom pr-0 pl-1 ">
                     <div class="row ">
                         <div class="col-12 ">
                             
                             <div class="menu-main-element row justify-content-start mt-1" style="direction: rtl;text-align: center;">
-                                <div class="col-2 ">
+                                <div class="col-2 {x<320 ? 'col-3' : 'col-2'}">
                                     <Link to="/" class="menu-item-link-color">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
                                             <i class="nav-logo fas fa-home  p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>خانه</span> </i>
                                         </div>
                                     </Link>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 {x<320 ? 'col-3' : 'col-2'}">
                                     <Link to="profile" class="menu-item-link-color">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
                                             <i class="nav-logo fas fa-mail-bulk p-0 m-0 mt-2 mt-md-0 " ><span class="menu-item d-none d-md-inline"><br>پروفایل فرد</span> </i>
                                         </div>
                                     </Link>
                                 </div>
-                                
+                                {#if x>320}
                                 <div class="col-2  ">
                                     <Link class="menu-item-link-color" to="show-detail">
                                         <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
@@ -75,6 +75,37 @@
                                         </div>
                                     </div>
                                 </div>
+                                {/if}
+                                {#if x<320}
+                                <div data-toggle="dropdown" style="height: 25px;" class="navbar {x<320 ? 'col-3' : 'col-2'} col-2 mt-auto text-center px-0 menu-icon pb-0 mb-0 dropdown">
+                                    <i class="fas fa-ellipsis-h -1 ml-1 p-0 m-0 " ></i>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="col-2  ">
+                                        <Link class="menu-item-link-color" to="show-detail">
+                                            <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
+                                                <i class="nav-logo fas fa-info-circle ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>جزيیات</span></i>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    
+                                    <div class="col-2  ">
+                                        <Link class="menu-item-link-color" to="magezine">
+                                            <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0">
+                                                <i class="nav-logo fas fa-feather ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br>مجله</span></i>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <div class="col-2 " data-toggle="modal" data-target="#mod1">
+                                        <div class="menu-item-link-color">
+                                            <div style="height: 25px;" class="col-12 mt-2 text-center px-0 menu-icon pb-0 mb-0 dropdown">
+                                                <i class="nav-logo fas fa-toolbox ml-1 p-0 m-0 mt-2 mt-md-0" ><span class="menu-item d-none d-md-inline"><br><i class="fas fa-sort-down"></i>&nbsp;ابزار</span></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/if}
+                                
                                 <div class="col-2">
                                     <div class="menu-item-link-color ">
                                         <div data-toggle="dropdown" style="height: 25px;" class="navbar col-12 mt-0 text-center px-0 menu-icon pb-0 mb-0 dropdown">

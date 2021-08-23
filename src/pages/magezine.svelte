@@ -397,7 +397,7 @@
                         </aside>
                         <aside  class=" col-12 col-md-3 mt-3 ">
                             <div class="row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
-                                <div class="col-10 mx-auto mt-5 mb-3 ">
+                                <div class="col-10 mx-auto mt-3 mb-3 ">
                                     <img class="company-img  w-100" src="image/afarine.jpg" alt="">
                                 </div>
                                 <h3 class="col-12">
