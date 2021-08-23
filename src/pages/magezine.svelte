@@ -1,5 +1,6 @@
 <script>
     import {onMount} from "svelte";
+    import jQuery from 'jquery';
     import {fade , slide , scale , fly} from "svelte/transition";
     import { Loader } from "@googlemaps/js-api-loader"
     import { Router, Link, Route } from "svelte-routing";
@@ -9,7 +10,9 @@
     export let url = "";
     export let y;
     export let x;
-    $: console.log(x);
+    let innerHeight;
+    let clientHeight;
+    //$: console.log(x);
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.has('id');
     console.log(id);
@@ -22,15 +25,45 @@
     var currentLocation = window.location.href;
     var splitUrl = currentLocation.split("/");
     var lastSugment = splitUrl[splitUrl.length - 1];
-     $ : console.log(y);
-    let map;
-    
+     //$ : console.log(y);
+    ////
+    //$ : console.log(clientHeight)
+		// window.jQuery = jQuery;
+		// jQuery(function(){
+    //   jQuery(".category_button").click(function(){
+    //     var h = window.innerHeight;	
+    //     var stickHeight = jQuery('.stick').height();
+    //     var windowScroll = jQuery(window).scrollTop();
+    //     var stickOffset = jQuery('.stick').offset().top;
+    //     var stickHereOffset = jQuery('.stick-here').offset().top;
+    //     console.log(jQuery(window).scrollTop())
+    //     console.log(jQuery('.stick').offset().top)
+    //     console.log(jQuery('.stick-here').offset().top)
+    //     console.log(stickHeight)
+    //     console.log(h)
+    //     console.log(jQuery('body').outerHeight())
+    //     //console.log(jQuery('.stick').scrollTop())
+    //     if(stickHeight > 500){
+    //       if (windowScroll + h > stickHereOffset + 22) {
+    //       jQuery('.stick').addClass('sticky-bottom');
+    //       jQuery('.stick-here').height(jQuery('.stick').outerHeight());
+    //     } 
+        
+    //     if (windowScroll + stickHereOffset < stickOffset + (22 * 2)) {
+    //         jQuery('.stick').removeClass('sticky-bottom');
+    //         jQuery('.stick-here').height(0);
+    //     }
+    //     }
+        
+    //   })
+    // })
+    //$ : console.log(clientHeight)
 </script>
 <style>
     @import "public/global.css";
     
 </style>
-<svelte:window bind:scrollY={y} bind:innerWidth={x}/>
+<svelte:window bind:scrollY={y} bind:innerWidth={x} bind:innerHeight/>
 
 <svelte:head>
     <title>
@@ -374,7 +407,9 @@
                                     زندگی به سبک نوآوری
                                 </h6>
                             </div>
-                            <div class="{x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '} {y>=700 ? 'sticky-bottom' : ''}" >
+                            <div class=" h-auto {y>=700 ? 'sticky-top-category' : ''}">
+                            <!-- <div bind:clientHeight class="stick h-auto"> -->
+                              <div class="cat-stick {x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '} " >
                                 <div class="{x >=767 ? 'col-12 font-weight-bold pb-2 border-bottom pr-0': 'col-12 font-weight-bold'}">
                                     <!-- svelte-ignore a11y-missing-attribute -->
                                     <a type="{x<=767 ? 'button' : ''}" class="btn " data-toggle="{x<=767 ? 'modal' :''}"   data-target="{x<=767 ? '#mod2' : ''}">
@@ -660,9 +695,72 @@
                                             </div> 
                                           </div>
                                         </div>
+                                        <div class="mb-2 pl-2">
+                                          <div class="border-bottom pb-2" id="headingThree">
+                                            <h5 class="mb-0">
+                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a>
+                                              <a href="#" class="category-main-text-link">
+                                                <p class="category-main-text d-inline">آرشیو کلیپ ها</p>
+                                              </a>
+                                            </h5>
+                                          </div>
+                                          <div id="collapseThree" class="collapse mr-3" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="border-bottom py-2" id="">
+                                                <h5 class="mb-0">
+                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                  <a href="#" class="category-main-text-link">
+                                                    <p class="category-main-text d-inline">راهیان نور</p>
+                                                  </a>
+                                                </h5>
+                                            </div> 
+                                          </div>
+                                        </div>
+                                        <div class="mb-2 pl-2">
+                                          <div class="border-bottom pb-2" id="headingThree">
+                                            <h5 class="mb-0">
+                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a>
+                                              <a href="#" class="category-main-text-link">
+                                                <p class="category-main-text d-inline">آرشیو کلیپ ها</p>
+                                              </a>
+                                            </h5>
+                                          </div>
+                                          <div id="collapseThree" class="collapse mr-3" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="border-bottom py-2" id="">
+                                                <h5 class="mb-0">
+                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                  <a href="#" class="category-main-text-link">
+                                                    <p class="category-main-text d-inline">راهیان نور</p>
+                                                  </a>
+                                                </h5>
+                                            </div> 
+                                          </div>
+                                        </div>
+                                        <div class="mb-2 pl-2">
+                                          <div class="border-bottom pb-2" id="headingThree">
+                                            <h5 class="mb-0">
+                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a>
+                                              <a href="#" class="category-main-text-link">
+                                                <p class="category-main-text d-inline">آرشیو کلیپ ها</p>
+                                              </a>
+                                            </h5>
+                                          </div>
+                                          <div id="collapseThree" class="collapse mr-3" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="border-bottom py-2" id="">
+                                                <h5 class="mb-0">
+                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
+                                                  <a href="#" class="category-main-text-link">
+                                                    <p class="category-main-text d-inline">راهیان نور</p>
+                                                  </a>
+                                                </h5>
+                                            </div> 
+                                          </div>
+                                        </div>
                                       </div>
                                 </div>
+                              </div>
+                              <div class="stick-here"></div>
                             </div>
+                            
                         </aside>
                     </div>
                 </div>
