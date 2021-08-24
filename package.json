@@ -31,6 +31,7 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.12.1",
     "sirv-cli": "^1.0.0",
+    "sticky-sidebar": "^3.3.1",
     "svelte-google-maps": "^0.2.0"
   }
 }

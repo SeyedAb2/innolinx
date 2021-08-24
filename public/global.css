@@ -969,8 +969,8 @@ a:hover {
 .sticky-top-custom {
     position: -webkit-sticky;
     position: sticky;
-    top: 80px;
-    z-index: 100
+    top: 175px;
+    z-index: 1
 }
 
 .sticky-top-show-detail-aside {
@@ -2215,3 +2215,25 @@ input[type=number]:focus,
         line-height: 20px;
     }
 }
+
+
+/* 
+.sidebar {
+    width: 100%;
+}
+
+.content {
+    height: auto;
+    
+}
+
+.sidebar {
+    will-change: min-height;
+}
+
+.sidebar__inner {
+    transform: translate(0, 0);
+    /* For browsers don't support translate3d. 
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
+} */

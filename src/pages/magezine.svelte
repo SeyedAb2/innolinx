@@ -1,63 +1,63 @@
 <script>
-    import {onMount} from "svelte";
-    import jQuery from 'jquery';
-    import {fade , slide , scale , fly} from "svelte/transition";
-    import { Loader } from "@googlemaps/js-api-loader"
-    import { Router, Link, Route } from "svelte-routing";
-    import {circIn} from "svelte/easing";
-    import showDetail from "./show-detail.svelte";
-    import profile from "./profile.svelte";
-    export let url = "";
-    export let y;
-    export let x;
-    let innerHeight;
-    let clientHeight;
-    //$: console.log(x);
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.has('id');
-    console.log(id);
-    let isOpen = false;
-    let current = 'post';
-    function toggleNav(){
-        isOpen =! isOpen;       
-    }
-    //let y=0;
-    var currentLocation = window.location.href;
-    var splitUrl = currentLocation.split("/");
-    var lastSugment = splitUrl[splitUrl.length - 1];
-     //$ : console.log(y);
-    ////
-    //$ : console.log(clientHeight)
-		// window.jQuery = jQuery;
-		// jQuery(function(){
-    //   jQuery(".category_button").click(function(){
-    //     var h = window.innerHeight;	
-    //     var stickHeight = jQuery('.stick').height();
-    //     var windowScroll = jQuery(window).scrollTop();
-    //     var stickOffset = jQuery('.stick').offset().top;
-    //     var stickHereOffset = jQuery('.stick-here').offset().top;
-    //     console.log(jQuery(window).scrollTop())
-    //     console.log(jQuery('.stick').offset().top)
-    //     console.log(jQuery('.stick-here').offset().top)
-    //     console.log(stickHeight)
-    //     console.log(h)
-    //     console.log(jQuery('body').outerHeight())
-    //     //console.log(jQuery('.stick').scrollTop())
-    //     if(stickHeight > 500){
-    //       if (windowScroll + h > stickHereOffset + 22) {
-    //       jQuery('.stick').addClass('sticky-bottom');
-    //       jQuery('.stick-here').height(jQuery('.stick').outerHeight());
-    //     } 
-        
-    //     if (windowScroll + stickHereOffset < stickOffset + (22 * 2)) {
-    //         jQuery('.stick').removeClass('sticky-bottom');
-    //         jQuery('.stick-here').height(0);
-    //     }
-    //     }
-        
-    //   })
-    // })
-    //$ : console.log(clientHeight)
+  import {onMount} from "svelte";
+  import jQuery from 'jquery';
+  import {fade , slide , scale , fly} from "svelte/transition";
+  import { Loader } from "@googlemaps/js-api-loader"
+  import { Router, Link, Route } from "svelte-routing";
+  import {circIn} from "svelte/easing";
+  import showDetail from "./show-detail.svelte";
+  import profile from "./profile.svelte";
+  export let url = "";
+  export let y;
+  export let x;
+  let innerHeight;
+  let clientHeight;
+  //$: console.log(x);
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.has('id');
+  console.log(id);
+  let isOpen = false;
+  let current = 'post';
+  function toggleNav(){
+      isOpen =! isOpen;       
+  }
+  //let y=0;
+  var currentLocation = window.location.href;
+  var splitUrl = currentLocation.split("/");
+  var lastSugment = splitUrl[splitUrl.length - 1];
+  window.jQuery = jQuery;
+   //$ : console.log(y);
+  ////
+  //$ : console.log(clientHeight)
+  // 
+  // jQuery(function(){
+  //   jQuery(".category_button").click(function(){
+  //     var h = window.innerHeight;	
+  //     var stickHeight = jQuery('.stick').height();
+  //     var windowScroll = jQuery(window).scrollTop();
+  //     var stickOffset = jQuery('.stick').offset().top;
+  //     var stickHereOffset = jQuery('.stick-here').offset().top;
+  //     console.log(jQuery(window).scrollTop())
+  //     console.log(jQuery('.stick').offset().top)
+  //     console.log(jQuery('.stick-here').offset().top)
+  //     console.log(stickHeight)
+  //     console.log(h)
+  //     console.log(jQuery('body').outerHeight())
+  //     //console.log(jQuery('.stick').scrollTop())
+  //     if(stickHeight > 500){
+  //       if (windowScroll + h > stickHereOffset + 22) {
+  //       jQuery('.stick').addClass('sticky-bottom');
+  //       jQuery('.stick-here').height(jQuery('.stick').outerHeight());
+  //     } 
+      
+  //     if (windowScroll + stickHereOffset < stickOffset + (22 * 2)) {
+  //         jQuery('.stick').removeClass('sticky-bottom');
+  //         jQuery('.stick-here').height(0);
+  //     }
+  //     }
+      
+  //   })
+  // })
 </script>
 <style>
     @import "public/global.css";
@@ -182,7 +182,7 @@
                 </div>
             </div>
             
-            <div class="tab-content w-100 mr-0">
+            <div class="tab-content w-100 mr-0 ">
                 <div id="post" class="row tab-pane" class:active="{current==='post'}">
                     <div class="row px-0 mx-0" >
                         <aside class="col-12 col-md-9 order-first justify-content-between order-md-0 mx-0 ">
@@ -234,7 +234,7 @@
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
-            نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می‌برند که متن لورم را از قسمتهای مختلف .</span>
+                                                نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می‌برند که متن لورم را از قسمتهای مختلف .</span>
                                             <!-- svelte-ignore missing-declaration -->
                                             <span class="read-more-custom" onclick="readMore(this)" style="cursor: pointer;">بیشتر بخوانید</span>
                                             <span class="read-more ">
@@ -302,7 +302,7 @@
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
-            نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می‌برند که متن لورم را از قسمتهای مختلف .</span>
+                                                نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می‌برند که متن لورم را از قسمتهای مختلف .</span>
                                             <!-- svelte-ignore missing-declaration -->
                                             <span class="read-more-custom" onclick="readMore(this)" style="cursor: pointer;">بیشتر بخوانید</span>
                                             <span class="read-more ">
@@ -370,7 +370,7 @@
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
                                                 از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است.
-            نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می‌برند که متن لورم را از قسمتهای مختلف .</span>
+                                                نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می‌برند که متن لورم را از قسمتهای مختلف .</span>
                                             <!-- svelte-ignore missing-declaration -->
                                             <span class="read-more-custom" onclick="readMore(this)" style="cursor: pointer;">بیشتر بخوانید</span>
                                             <span class="read-more ">
@@ -395,7 +395,7 @@
                                 </div>
                             </section>
                         </aside>
-                        <aside  class=" col-12 col-md-3 mt-3 ">
+                        <aside class="col-12 col-md-3 mt-3">
                             <div class="row px-0 text-center shadow-radius-section bg-light " class:d-none={x<=767}>
                                 <div class="col-10 mx-auto mt-3 mb-3 ">
                                     <img class="company-img  w-100" src="image/afarine.jpg" alt="">
@@ -407,9 +407,9 @@
                                     زندگی به سبک نوآوری
                                 </h6>
                             </div>
-                            <div  class=" ">
+                            <div class="{y>700 && x>767 ? 'sticky-top-custom':''}">
                             <!-- <div bind:clientHeight class="stick h-auto"> -->
-                              <div class="cat-stick {x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '} " >
+                              <div class=" {x >=767 ? 'row direction shadow-radius-section mt-4 py-2 bg-white': 'row direction '} " >
                                 <div class="{x >=767 ? 'col-12 font-weight-bold pb-2 border-bottom pr-0': 'col-12 font-weight-bold'}">
                                     <!-- svelte-ignore a11y-missing-attribute -->
                                     <a type="{x<=767 ? 'button' : ''}" class="btn " data-toggle="{x<=767 ? 'modal' :''}"   data-target="{x<=767 ? '#mod2' : ''}">
@@ -828,3 +828,5 @@
 <br><br>
 
 </Router>
+
+

@@ -38,3 +38,15 @@ function readMore(btn) {
         btn.style.display = 'none';
     }
 }
+/// sidebar 
+
+// var sidebar = new StickySidebar('.sidebar', {
+//     topSpacing: 150,
+//     bottomSpacing: 10,
+//     containerSelector: '.main-content',
+//     innerWrapperSelector: '.sidebar__inner'
+// });
+// $('#sidebar').stickySidebar({
+//     topSpacing: 60,
+//     bottomSpacing: 60
+// });
