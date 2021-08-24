@@ -38,6 +38,18 @@ function readMore(btn) {
         btn.style.display = 'none';
     }
 }
+
+$(window).resize(function() {
+    if ($(window).width() >= 767) {
+        $("#mod2").hide();
+        $("body").removeClass("modal-open");
+        $(".modal-backdrop").hide();
+    } else {
+        $("#mod2").add();
+        $("body").addClass("modal-open");
+        $(".modal-backdrop").show();
+    }
+});
 /// sidebar 
 
 // var sidebar = new StickySidebar('.sidebar', {

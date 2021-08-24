@@ -81,7 +81,7 @@
                                 </div>
                                 
                                 <div class="col-12 p-0">
-                                    <h3  class="title-post mt-1 mb-0 py-3 pr-3"><a class="title-post-link" href="#">به اینولینکس خوش آمدید</a></h3>
+                                    <h3 class="title-post mt-1 mb-0 py-3 pr-3"><a class="title-post-link" href="#">به اینولینکس خوش آمدید</a></h3>
                                 </div>
                                 <div class="col-12 p-0 mx-0 responsive-imagePost-height">
                                     <img src="../image/30.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">

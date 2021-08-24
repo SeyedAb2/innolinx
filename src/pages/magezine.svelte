@@ -403,7 +403,7 @@
                                 <h3 class="col-12">
                                     آفرینه
                                 </h3>
-                                <h6 class="col-12">
+                                <h6 class="col-12 slogan">
                                     زندگی به سبک نوآوری
                                 </h6>
                             </div>

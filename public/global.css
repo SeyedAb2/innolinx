@@ -1848,7 +1848,8 @@ a:hover {
 
 @media(max-width:767px) {}
 
-.mod1 {}
+
+/* .mod1 {}
 
 @media(min-width:767px) {
     .modal-backdrop.show {
@@ -1860,7 +1861,7 @@ a:hover {
     .modal-backdrop {
         z-index: -10;
     }
-}
+} */
 
 @media(max-width:313px) {
     .custome-margin-right {
