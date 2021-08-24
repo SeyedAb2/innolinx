@@ -123,7 +123,7 @@
     
     <div class="row justify-content-center mx-0">
         
-        <aside class="col-12 col-md-3 mr-2 d-none d-lg-inline" >
+        <aside class="col-12 col-md-3 mr-0 d-none d-lg-inline" >
             <div class="row mr-1">
                 <div class="col-12 shadow-radius-section bg-light px-0 py-0">
                     <div class="row ">

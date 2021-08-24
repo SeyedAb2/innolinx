@@ -14074,7 +14074,7 @@ var app = (function () {
     			add_location(div2, file$9, 38, 16, 1131);
     			attr_dev(div3, "class", "row mr-1");
     			add_location(div3, file$9, 37, 12, 1092);
-    			attr_dev(aside0, "class", "col-12 col-md-3 mr-2 d-none d-lg-inline");
+    			attr_dev(aside0, "class", "col-12 col-md-3 mr-0 d-none d-lg-inline");
     			add_location(aside0, file$9, 36, 8, 1023);
     			attr_dev(img1, "class", "cu-image-com mr-1 ");
     			if (img1.src !== (img1_src_value = "../image/afarine.jpg")) attr_dev(img1, "src", img1_src_value);
@@ -15056,7 +15056,7 @@ var app = (function () {
     			add_location(div2, file$8, 82, 16, 3412);
     			attr_dev(div3, "class", "row mr-1");
     			add_location(div3, file$8, 81, 12, 3373);
-    			attr_dev(aside0, "class", "col-12 col-md-3 mr-2 d-none d-lg-inline");
+    			attr_dev(aside0, "class", "col-12 col-md-3 mr-0 d-none d-lg-inline");
     			add_location(aside0, file$8, 80, 8, 3304);
     			attr_dev(img1, "class", " header-image-person bg-light");
     			if (img1.src !== (img1_src_value = "image/head.jpeg")) attr_dev(img1, "src", img1_src_value);
@@ -17591,7 +17591,7 @@ var app = (function () {
     			add_location(div2, file$7, 127, 16, 5146);
     			attr_dev(div3, "class", "row mr-1");
     			add_location(div3, file$7, 126, 12, 5107);
-    			attr_dev(aside0, "class", "col-12 col-md-3 mr-2 d-none d-lg-inline");
+    			attr_dev(aside0, "class", "col-12 col-md-3 mr-0 d-none d-lg-inline");
     			add_location(aside0, file$7, 125, 8, 5038);
     			attr_dev(img1, "class", " header-image bg-light");
     			if (img1.src !== (img1_src_value = "image/head.jpeg")) attr_dev(img1, "src", img1_src_value);
