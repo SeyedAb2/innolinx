@@ -33,7 +33,7 @@
     <header class="sticky-top " class:nav-custome-bottom={y<=768}> 
         <nav class="container-fluid pb-0 "  >
             <div class="row justify-content-end px-0 px-md-2 px-lg-5 " >
-                {#if x>231}
+                {#if x>175}
                 <div class="col-9 col-sm-7 col-custom pr-0 pl-2 ">
                     <div class="row ">
                         <div class="col-12 ">
@@ -98,10 +98,10 @@
                                 </div>
                                 {/if} -->
                                 {#if x<320}
-                                <div data-toggle="dropdown" style="height: 25px;" class="navbar col-2 mt-auto text-center pl-0 pr-3 menu-icon pb-0 mb-0 dropdown">
+                                <div data-toggle="dropdown" style="height: 25px;" class="navbar col-2 mt-auto text-center pl-0 pr-3 menu-icon pb-0 mb-0 dropdown ">
                                     <i class="fas fa-ellipsis-h -1 ml-1 p-0 m-0 " ></i>
                                 </div>
-                                <div class="row dropdown-menu tab-menu-icon direction mt-4">
+                                <div class="row dropdown-menu tab-menu-icon direction mt-4 px-1 shadow text-center align-baseline">
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col-3 {x<242 ? 'd-inline ' : 'd-none'}">
