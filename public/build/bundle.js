@@ -13898,54 +13898,59 @@ var app = (function () {
     	let img2;
     	let img2_src_value;
     	let t16;
-    	let p;
+    	let button0;
     	let t18;
+    	let button1;
+    	let t20;
+    	let p;
+    	let t21;
+    	let t22;
     	let div14;
     	let a6;
-    	let button0;
-    	let t20;
+    	let button2;
+    	let t24;
     	let div16;
     	let a7;
     	let img3;
     	let img3_src_value;
-    	let t21;
+    	let t25;
     	let span1;
-    	let t23;
-    	let t24;
+    	let t27;
+    	let t28;
     	let div15;
     	let i6;
-    	let t25;
-    	let t26;
+    	let t29;
+    	let t30;
     	let aside2;
     	let div19;
     	let div18;
     	let img4;
     	let img4_src_value;
-    	let t27;
-    	let h31;
-    	let t29;
-    	let h61;
     	let t31;
+    	let h31;
+    	let t33;
+    	let h61;
+    	let t35;
     	let div25;
     	let div20;
     	let img5;
     	let img5_src_value;
-    	let t32;
+    	let t36;
     	let div24;
     	let div23;
     	let div22;
     	let h62;
-    	let t34;
+    	let t38;
     	let div21;
     	let a8;
-    	let button1;
+    	let button3;
     	let aside2_class_value;
-    	let t36;
+    	let t40;
     	let br0;
     	let br1;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[2]);
+    	add_render_callback(/*onwindowscroll*/ ctx[4]);
 
     	const block = {
     		c: function create() {
@@ -14011,217 +14016,227 @@ var app = (function () {
     			div13 = element("div");
     			img2 = element("img");
     			t16 = space();
-    			p = element("p");
-    			p.textContent = "طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.";
+    			button0 = element("button");
+    			button0.textContent = "+";
     			t18 = space();
+    			button1 = element("button");
+    			button1.textContent = "-";
+    			t20 = space();
+    			p = element("p");
+    			t21 = text("طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.\n                                   \n                                    طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                     صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                     برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی \n                                    برای پر کردن صفحه و ارایه اولیه شکل \n                                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،\n                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود،\n                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.");
+    			t22 = space();
     			div14 = element("div");
     			a6 = element("a");
-    			button0 = element("button");
-    			button0.textContent = "ادامه مطلب";
-    			t20 = space();
+    			button2 = element("button");
+    			button2.textContent = "ادامه مطلب";
+    			t24 = space();
     			div16 = element("div");
     			a7 = element("a");
     			img3 = element("img");
-    			t21 = space();
+    			t25 = space();
     			span1 = element("span");
     			span1.textContent = "مسعودآقایی ساداتی";
-    			t23 = text("  ");
-    			t24 = space();
+    			t27 = text("  ");
+    			t28 = space();
     			div15 = element("div");
     			i6 = element("i");
-    			t25 = text(" ۵۶");
-    			t26 = space();
+    			t29 = text(" ۵۶");
+    			t30 = space();
     			aside2 = element("aside");
     			div19 = element("div");
     			div18 = element("div");
     			img4 = element("img");
-    			t27 = space();
+    			t31 = space();
     			h31 = element("h3");
     			h31.textContent = "آفرینه";
-    			t29 = space();
+    			t33 = space();
     			h61 = element("h6");
     			h61.textContent = "زندگی به سبک نوآوری";
-    			t31 = space();
+    			t35 = space();
     			div25 = element("div");
     			div20 = element("div");
     			img5 = element("img");
-    			t32 = space();
+    			t36 = space();
     			div24 = element("div");
     			div23 = element("div");
     			div22 = element("div");
     			h62 = element("h6");
     			h62.textContent = "مسعود آقایی ساداتی ";
-    			t34 = space();
+    			t38 = space();
     			div21 = element("div");
     			a8 = element("a");
-    			button1 = element("button");
-    			button1.textContent = "ارتباط بگیرید";
-    			t36 = space();
+    			button3 = element("button");
+    			button3.textContent = "ارتباط بگیرید";
+    			t40 = space();
     			br0 = element("br");
     			br1 = element("br");
     			document.title = "\n       جزییات مقاله\n    ";
     			attr_dev(img0, "class", "w-100 h-auto dream-job-image ");
     			if (img0.src !== (img0_src_value = "image/job.jpg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$9, 42, 32, 1354);
+    			add_location(img0, file$9, 44, 32, 1400);
     			attr_dev(a0, "href", "#");
-    			add_location(a0, file$9, 41, 27, 1309);
+    			add_location(a0, file$9, 43, 27, 1355);
     			attr_dev(div0, "class", "col-12 px-0");
-    			add_location(div0, file$9, 40, 24, 1256);
+    			add_location(div0, file$9, 42, 24, 1302);
     			attr_dev(div1, "class", "row ");
-    			add_location(div1, file$9, 39, 20, 1213);
+    			add_location(div1, file$9, 41, 20, 1259);
     			attr_dev(div2, "class", "col-12 shadow-radius-section bg-light px-0 py-0");
-    			add_location(div2, file$9, 38, 16, 1131);
+    			add_location(div2, file$9, 40, 16, 1177);
     			attr_dev(div3, "class", "row mr-1");
-    			add_location(div3, file$9, 37, 12, 1092);
+    			add_location(div3, file$9, 39, 12, 1138);
     			attr_dev(aside0, "class", "col-12 col-md-3 mr-0 d-none d-lg-inline");
-    			add_location(aside0, file$9, 36, 8, 1023);
+    			add_location(aside0, file$9, 38, 8, 1069);
     			attr_dev(img1, "class", "cu-image-com mr-1 ");
     			if (img1.src !== (img1_src_value = "../image/afarine.jpg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$9, 60, 52, 2457);
+    			add_location(img1, file$9, 62, 52, 2503);
     			attr_dev(div4, "class", "col-2 col-sm-1 col-md-1 col-lg-1 p-0 pt-1 custom-width");
-    			add_location(div4, file$9, 59, 48, 2335);
+    			add_location(div4, file$9, 61, 48, 2381);
     			set_style(i0, "color", "#048af7");
     			attr_dev(i0, "class", "fas fa-check-circle");
-    			add_location(i0, file$9, 64, 133, 2963);
+    			add_location(i0, file$9, 66, 133, 3009);
     			attr_dev(a1, "href", "magezine");
     			attr_dev(a1, "class", "title-post-link");
-    			add_location(a1, file$9, 64, 60, 2890);
-    			add_location(h60, file$9, 64, 56, 2886);
+    			add_location(a1, file$9, 66, 60, 2936);
+    			add_location(h60, file$9, 66, 56, 2932);
     			attr_dev(i1, "class", "fas fa-clock");
-    			add_location(i1, file$9, 65, 88, 3119);
+    			add_location(i1, file$9, 67, 88, 3165);
     			attr_dev(span0, "class", "show-time-custome");
-    			add_location(span0, file$9, 65, 56, 3087);
+    			add_location(span0, file$9, 67, 56, 3133);
     			attr_dev(div5, "class", "cu-intro mt-2");
-    			add_location(div5, file$9, 63, 52, 2802);
+    			add_location(div5, file$9, 65, 52, 2848);
     			attr_dev(div6, "class", "col-9 px-0 mr-1 mr-sm-4 mr-md-0 pr-md-4 mr-lg-2 mr-xl-0 pr-xl-3 justify-content-center custome-margin-right ");
-    			add_location(div6, file$9, 62, 48, 2627);
+    			add_location(div6, file$9, 64, 48, 2673);
     			attr_dev(div7, "class", "row ");
-    			add_location(div7, file$9, 58, 44, 2268);
+    			add_location(div7, file$9, 60, 44, 2314);
     			attr_dev(div8, "class", "col-11 col-md-11");
-    			add_location(div8, file$9, 57, 40, 2192);
+    			add_location(div8, file$9, 59, 40, 2238);
     			attr_dev(i2, "class", "fas fa-ellipsis-h -1 ");
     			attr_dev(i2, "type", "button");
     			attr_dev(i2, "data-toggle", "dropdown");
-    			add_location(i2, file$9, 72, 44, 3586);
+    			add_location(i2, file$9, 74, 44, 3632);
     			attr_dev(i3, "class", "far fa-bookmark");
-    			add_location(i3, file$9, 74, 128, 3874);
+    			add_location(i3, file$9, 76, 128, 3920);
     			attr_dev(a2, "class", "dropdown-item");
     			attr_dev(a2, "href", "#");
-    			add_location(a2, file$9, 74, 93, 3839);
-    			add_location(li0, file$9, 74, 48, 3794);
+    			add_location(a2, file$9, 76, 93, 3885);
+    			add_location(li0, file$9, 76, 48, 3840);
     			attr_dev(i4, "class", "fas fa-share-alt");
-    			add_location(i4, file$9, 75, 86, 4017);
+    			add_location(i4, file$9, 77, 86, 4063);
     			attr_dev(a3, "class", "dropdown-item");
     			attr_dev(a3, "href", "#");
-    			add_location(a3, file$9, 75, 52, 3983);
-    			add_location(li1, file$9, 75, 48, 3979);
+    			add_location(a3, file$9, 77, 52, 4029);
+    			add_location(li1, file$9, 77, 48, 4025);
     			attr_dev(i5, "class", "fas fa-flag");
-    			add_location(i5, file$9, 76, 86, 4160);
+    			add_location(i5, file$9, 78, 86, 4206);
     			attr_dev(a4, "class", "dropdown-item");
     			attr_dev(a4, "href", "#");
-    			add_location(a4, file$9, 76, 52, 4126);
-    			add_location(li2, file$9, 76, 48, 4122);
+    			add_location(a4, file$9, 78, 52, 4172);
+    			add_location(li2, file$9, 78, 48, 4168);
     			attr_dev(ul, "class", "dropdown-menu ellipsis-menu");
-    			add_location(ul, file$9, 73, 44, 3705);
+    			add_location(ul, file$9, 75, 44, 3751);
     			attr_dev(div9, "class", "report col-1 ml-0 pl-0 pr-3 navbar pr-sm-4 pr-md-3 pr-lg-3 pr-xl-4 ");
-    			add_location(div9, file$9, 71, 40, 3460);
+    			add_location(div9, file$9, 73, 40, 3506);
     			attr_dev(div10, "class", "row justify-content-between p-2 pl-4 pl-md-2");
-    			add_location(div10, file$9, 56, 36, 2093);
+    			add_location(div10, file$9, 58, 36, 2139);
     			attr_dev(div11, "class", "col-12");
-    			add_location(div11, file$9, 55, 32, 2036);
+    			add_location(div11, file$9, 57, 32, 2082);
     			attr_dev(a5, "class", "title-post-link");
     			attr_dev(a5, "href", "#");
-    			add_location(a5, file$9, 83, 79, 4556);
+    			add_location(a5, file$9, 85, 79, 4602);
     			attr_dev(h30, "class", "title-post mt-1 mb-0 py-3 pr-3");
-    			add_location(h30, file$9, 83, 36, 4513);
+    			add_location(h30, file$9, 85, 36, 4559);
     			attr_dev(div12, "class", "col-12 p-0");
-    			add_location(div12, file$9, 82, 32, 4452);
+    			add_location(div12, file$9, 84, 32, 4498);
     			if (img2.src !== (img2_src_value = "../image/30.jpg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "class", "p-0 mr-0 w-100 responsive-imagePost-height");
     			attr_dev(img2, "alt", "");
-    			add_location(img2, file$9, 86, 36, 4789);
+    			add_location(img2, file$9, 88, 36, 4835);
+    			add_location(button0, file$9, 89, 36, 4957);
+    			add_location(button1, file$9, 90, 36, 5070);
     			attr_dev(div13, "class", "col-12 p-0 mx-0 responsive-imagePost-height");
-    			add_location(div13, file$9, 85, 32, 4695);
+    			add_location(div13, file$9, 87, 32, 4741);
+    			set_style(p, "font-size", /*fontSize*/ ctx[1] + "px");
+    			set_style(p, "line-height", /*lineHeight*/ ctx[2] + "px");
     			attr_dev(p, "class", "col-12 mt-3 post-text");
-    			add_location(p, file$9, 89, 32, 4979);
-    			attr_dev(button0, "id", "read-more");
-    			attr_dev(button0, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
-    			add_location(button0, file$9, 183, 40, 15103);
+    			add_location(p, file$9, 94, 32, 5288);
+    			attr_dev(button2, "id", "read-more");
+    			attr_dev(button2, "class", "btn btn-sm btn-danger col-12 col-md-2 my-1 p-1 offset-0 offset-md-10");
+    			add_location(button2, file$9, 188, 40, 15483);
     			attr_dev(a6, "href", "#");
-    			add_location(a6, file$9, 182, 36, 15050);
+    			add_location(a6, file$9, 187, 36, 15430);
     			attr_dev(div14, "class", "col-12 ");
-    			add_location(div14, file$9, 181, 32, 14992);
+    			add_location(div14, file$9, 186, 32, 15372);
     			attr_dev(img3, "class", "personal-img");
     			if (img3.src !== (img3_src_value = "../image/1.jpeg")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "");
-    			add_location(img3, file$9, 189, 40, 15522);
+    			add_location(img3, file$9, 194, 40, 15902);
     			attr_dev(span1, "class", "personal-name");
-    			add_location(span1, file$9, 190, 40, 15618);
+    			add_location(span1, file$9, 195, 40, 15998);
     			attr_dev(a7, "class", "a-clicked");
     			attr_dev(a7, "href", "#");
-    			add_location(a7, file$9, 188, 36, 15451);
+    			add_location(a7, file$9, 193, 36, 15831);
     			attr_dev(i6, "class", "fas fa-eye");
-    			add_location(i6, file$9, 192, 60, 15785);
+    			add_location(i6, file$9, 197, 60, 16165);
     			attr_dev(div15, "class", "view-count");
-    			add_location(div15, file$9, 192, 36, 15761);
+    			add_location(div15, file$9, 197, 36, 16141);
     			attr_dev(div16, "class", "col-12 mb-1 author-show-box pt-1");
-    			add_location(div16, file$9, 187, 32, 15368);
+    			add_location(div16, file$9, 192, 32, 15748);
     			attr_dev(article, "class", "p-0  shadow-radius-section shadow-section mb-4 bg-light");
-    			add_location(article, file$9, 54, 28, 1930);
+    			add_location(article, file$9, 56, 28, 1976);
     			attr_dev(div17, "class", "col-12 p-0 main-article ");
-    			add_location(div17, file$9, 53, 24, 1863);
+    			add_location(div17, file$9, 55, 24, 1909);
     			attr_dev(section, "class", "row mx-0 mt-1 mr-0 pt-0  ");
-    			add_location(section, file$9, 52, 20, 1795);
+    			add_location(section, file$9, 54, 20, 1841);
     			attr_dev(aside1, "class", "col-12 col-md-9 order-first justify-content-between order-md-0 mx-0 ");
-    			add_location(aside1, file$9, 51, 16, 1690);
+    			add_location(aside1, file$9, 53, 16, 1736);
     			attr_dev(img4, "class", "company-img  w-100");
     			if (img4.src !== (img4_src_value = "image/afarine.jpg")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
-    			add_location(img4, file$9, 201, 28, 16289);
+    			add_location(img4, file$9, 206, 28, 16669);
     			attr_dev(div18, "class", "col-10 mx-auto mt-3 mb-3 ");
-    			add_location(div18, file$9, 200, 24, 16221);
+    			add_location(div18, file$9, 205, 24, 16601);
     			attr_dev(h31, "class", "col-12");
-    			add_location(h31, file$9, 203, 24, 16408);
+    			add_location(h31, file$9, 208, 24, 16788);
     			attr_dev(h61, "class", "col-12 slogan");
-    			add_location(h61, file$9, 206, 24, 16517);
+    			add_location(h61, file$9, 211, 24, 16897);
     			attr_dev(div19, "class", "row px-0 text-center shadow-radius-section bg-white ");
-    			add_location(div19, file$9, 199, 20, 16130);
+    			add_location(div19, file$9, 204, 20, 16510);
     			attr_dev(img5, "class", "header-banner-image-person-sidebar border-radius");
     			if (img5.src !== (img5_src_value = "image/1.jpeg")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "");
-    			add_location(img5, file$9, 212, 28, 16874);
+    			add_location(img5, file$9, 217, 28, 17254);
     			attr_dev(div20, "class", "col-12 mt-4 header-image-main border-radius justify-content-center");
-    			add_location(div20, file$9, 211, 24, 16765);
+    			add_location(div20, file$9, 216, 24, 17145);
     			attr_dev(h62, "class", "font-weight-normal author-sidebar");
-    			add_location(h62, file$9, 217, 36, 17211);
-    			attr_dev(button1, "class", "btn-sidebar px-0 mx-0 btn-sm col-12 font btn btn-danger text-white rounded-circle rounded-pill");
-    			add_location(button1, file$9, 221, 44, 17631);
+    			add_location(h62, file$9, 222, 36, 17591);
+    			attr_dev(button3, "class", "btn-sidebar px-0 mx-0 btn-sm col-12 font btn btn-danger text-white rounded-circle rounded-pill");
+    			add_location(button3, file$9, 226, 44, 18011);
     			attr_dev(a8, "href", "#");
-    			add_location(a8, file$9, 220, 40, 17574);
+    			add_location(a8, file$9, 225, 40, 17954);
     			attr_dev(div21, "class", "col-12 mt-4 font mx-0 px-0");
-    			add_location(div21, file$9, 218, 36, 17407);
+    			add_location(div21, file$9, 223, 36, 17787);
     			attr_dev(div22, "class", "col-10 px-0");
-    			add_location(div22, file$9, 216, 32, 17149);
+    			add_location(div22, file$9, 221, 32, 17529);
     			attr_dev(div23, "class", "row");
-    			add_location(div23, file$9, 215, 28, 17099);
+    			add_location(div23, file$9, 220, 28, 17479);
     			attr_dev(div24, "class", "header-detail-show-sidebar col-12 pb-3");
-    			add_location(div24, file$9, 214, 24, 17018);
+    			add_location(div24, file$9, 219, 24, 17398);
     			attr_dev(div25, "class", " row px-0 text-center shadow-radius-section bg-white mt-3");
-    			add_location(div25, file$9, 210, 20, 16669);
+    			add_location(div25, file$9, 215, 20, 17049);
     			attr_dev(aside2, "class", aside2_class_value = "" + ((/*y*/ ctx[0] > 40 ? "sticky-top-show-detail-aside " : "") + " mt-1 h-100 col-12 col-md-3 d-none d-md-inline"));
-    			add_location(aside2, file$9, 198, 16, 16002);
+    			add_location(aside2, file$9, 203, 16, 16382);
     			attr_dev(div26, "class", "row px-0 mx-0");
-    			add_location(div26, file$9, 50, 12, 1645);
+    			add_location(div26, file$9, 52, 12, 1691);
     			attr_dev(aside3, "class", "col-12 col-md-12 col-lg-8 px-0");
-    			add_location(aside3, file$9, 49, 8, 1583);
+    			add_location(aside3, file$9, 51, 8, 1629);
     			attr_dev(div27, "class", "row justify-content-center mx-0");
-    			add_location(div27, file$9, 34, 4, 960);
+    			add_location(div27, file$9, 36, 4, 1006);
     			attr_dev(main, "class", "container-fluid pin-parent px-0");
-    			add_location(main, file$9, 33, 0, 909);
-    			add_location(br0, file$9, 235, 0, 18159);
-    			add_location(br1, file$9, 235, 4, 18163);
+    			add_location(main, file$9, 35, 0, 955);
+    			add_location(br0, file$9, 240, 0, 18539);
+    			add_location(br1, file$9, 240, 4, 18543);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14287,56 +14302,67 @@ var app = (function () {
     			append_dev(article, t15);
     			append_dev(article, div13);
     			append_dev(div13, img2);
-    			append_dev(article, t16);
+    			append_dev(div13, t16);
+    			append_dev(div13, button0);
+    			append_dev(div13, t18);
+    			append_dev(div13, button1);
+    			append_dev(article, t20);
     			append_dev(article, p);
-    			append_dev(article, t18);
+    			append_dev(p, t21);
+    			append_dev(article, t22);
     			append_dev(article, div14);
     			append_dev(div14, a6);
-    			append_dev(a6, button0);
-    			append_dev(article, t20);
+    			append_dev(a6, button2);
+    			append_dev(article, t24);
     			append_dev(article, div16);
     			append_dev(div16, a7);
     			append_dev(a7, img3);
-    			append_dev(a7, t21);
+    			append_dev(a7, t25);
     			append_dev(a7, span1);
-    			append_dev(a7, t23);
-    			append_dev(div16, t24);
+    			append_dev(a7, t27);
+    			append_dev(div16, t28);
     			append_dev(div16, div15);
     			append_dev(div15, i6);
-    			append_dev(div15, t25);
-    			append_dev(div26, t26);
+    			append_dev(div15, t29);
+    			append_dev(div26, t30);
     			append_dev(div26, aside2);
     			append_dev(aside2, div19);
     			append_dev(div19, div18);
     			append_dev(div18, img4);
-    			append_dev(div19, t27);
+    			append_dev(div19, t31);
     			append_dev(div19, h31);
-    			append_dev(div19, t29);
+    			append_dev(div19, t33);
     			append_dev(div19, h61);
-    			append_dev(aside2, t31);
+    			append_dev(aside2, t35);
     			append_dev(aside2, div25);
     			append_dev(div25, div20);
     			append_dev(div20, img5);
-    			append_dev(div25, t32);
+    			append_dev(div25, t36);
     			append_dev(div25, div24);
     			append_dev(div24, div23);
     			append_dev(div23, div22);
     			append_dev(div22, h62);
-    			append_dev(div22, t34);
+    			append_dev(div22, t38);
     			append_dev(div22, div21);
     			append_dev(div21, a8);
-    			append_dev(a8, button1);
-    			insert_dev(target, t36, anchor);
+    			append_dev(a8, button3);
+    			insert_dev(target, t40, anchor);
     			insert_dev(target, br0, anchor);
     			insert_dev(target, br1, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(window_1$6, "scroll", () => {
-    					scrolling = true;
-    					clearTimeout(scrolling_timeout);
-    					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[2]();
-    				});
+    				dispose = [
+    					listen_dev(window_1$6, "scroll", () => {
+    						scrolling = true;
+    						clearTimeout(scrolling_timeout);
+    						scrolling_timeout = setTimeout(clear_scrolling, 100);
+    						/*onwindowscroll*/ ctx[4]();
+    					}),
+    					listen_dev(button0, "click", /*click_handler*/ ctx[5], false, false, false),
+    					listen_dev(button0, "click", /*click_handler_1*/ ctx[6], false, false, false),
+    					listen_dev(button1, "click", /*click_handler_2*/ ctx[7], false, false, false),
+    					listen_dev(button1, "click", /*click_handler_3*/ ctx[8], false, false, false)
+    				];
 
     				mounted = true;
     			}
@@ -14349,6 +14375,14 @@ var app = (function () {
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
     			}
 
+    			if (dirty & /*fontSize*/ 2) {
+    				set_style(p, "font-size", /*fontSize*/ ctx[1] + "px");
+    			}
+
+    			if (dirty & /*lineHeight*/ 4) {
+    				set_style(p, "line-height", /*lineHeight*/ ctx[2] + "px");
+    			}
+
     			if (dirty & /*y*/ 1 && aside2_class_value !== (aside2_class_value = "" + ((/*y*/ ctx[0] > 40 ? "sticky-top-show-detail-aside " : "") + " mt-1 h-100 col-12 col-md-3 d-none d-md-inline"))) {
     				attr_dev(aside2, "class", aside2_class_value);
     			}
@@ -14358,11 +14392,11 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
-    			if (detaching) detach_dev(t36);
+    			if (detaching) detach_dev(t40);
     			if (detaching) detach_dev(br0);
     			if (detaching) detach_dev(br1);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -14382,6 +14416,8 @@ var app = (function () {
     	validate_slots("Show_detail", slots, []);
     	let { url = "" } = $$props;
     	let { y } = $$props;
+    	let fontSize = 13.5;
+    	let lineHeight = 27;
     	const urlParams = new URLSearchParams(window.location.search);
     	const id = urlParams.has("id");
     	console.log(id);
@@ -14410,8 +14446,13 @@ var app = (function () {
     		$$invalidate(0, y = window_1$6.pageYOffset);
     	}
 
+    	const click_handler = e => $$invalidate(1, fontSize++, fontSize);
+    	const click_handler_1 = e => $$invalidate(2, lineHeight++, lineHeight);
+    	const click_handler_2 = e => $$invalidate(1, fontSize--, fontSize);
+    	const click_handler_3 = e => $$invalidate(2, lineHeight--, lineHeight);
+
     	$$self.$$set = $$props => {
-    		if ("url" in $$props) $$invalidate(1, url = $$props.url);
+    		if ("url" in $$props) $$invalidate(3, url = $$props.url);
     		if ("y" in $$props) $$invalidate(0, y = $$props.y);
     	};
 
@@ -14428,6 +14469,8 @@ var app = (function () {
     		circIn,
     		url,
     		y,
+    		fontSize,
+    		lineHeight,
     		urlParams,
     		id,
     		isOpen,
@@ -14439,8 +14482,10 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("url" in $$props) $$invalidate(1, url = $$props.url);
+    		if ("url" in $$props) $$invalidate(3, url = $$props.url);
     		if ("y" in $$props) $$invalidate(0, y = $$props.y);
+    		if ("fontSize" in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ("lineHeight" in $$props) $$invalidate(2, lineHeight = $$props.lineHeight);
     		if ("isOpen" in $$props) isOpen = $$props.isOpen;
     		if ("currentLocation" in $$props) currentLocation = $$props.currentLocation;
     		if ("splitUrl" in $$props) splitUrl = $$props.splitUrl;
@@ -14452,13 +14497,23 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [y, url, onwindowscroll];
+    	return [
+    		y,
+    		fontSize,
+    		lineHeight,
+    		url,
+    		onwindowscroll,
+    		click_handler,
+    		click_handler_1,
+    		click_handler_2,
+    		click_handler_3
+    	];
     }
 
     class Show_detail extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { url: 1, y: 0 });
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { url: 3, y: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,

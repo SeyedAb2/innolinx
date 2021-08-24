@@ -719,8 +719,7 @@ a:hover {
     text-align: justify;
     direction: rtl;
     font-weight: normal;
-    font-size: 13.5px;
-    line-height: 27px;
+    /* line-height: 27px; */
     word-spacing: -1px;
 }
 

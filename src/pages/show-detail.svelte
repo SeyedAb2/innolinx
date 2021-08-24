@@ -6,6 +6,8 @@
     import {circIn} from "svelte/easing";
     export let url = "";
     export let y;
+    let fontSize=13.5;
+    let lineHeight=27;
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.has('id');
     console.log(id);
@@ -85,9 +87,12 @@
                                 </div>
                                 <div class="col-12 p-0 mx-0 responsive-imagePost-height">
                                     <img src="../image/30.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
+                                    <button on:click={e => fontSize++ } on:click={e => lineHeight++ }>+</button>
+                                    <button on:click={e => fontSize-- } on:click={e => lineHeight-- }>-</button>
+                                    
                                 </div>
                                 
-                                <p class="col-12 mt-3 post-text">
+                                <p style="font-size: {fontSize + 'px'}; line-height: {lineHeight + 'px'}" class="col-12 mt-3 post-text">
                                     طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
                                      صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
                                      برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
