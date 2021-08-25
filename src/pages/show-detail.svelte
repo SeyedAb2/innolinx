@@ -10,7 +10,7 @@
     let lineHeight=27;
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.has('id');
-    console.log(id);
+    //console.log(id);
     let isOpen = false;
     function toggleNav(){
         isOpen =! isOpen;       
