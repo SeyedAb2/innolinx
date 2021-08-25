@@ -715,7 +715,7 @@ a:hover {
 }
 
 .post-text {
-    padding: 0 25px !important;
+    /* padding: 0 25px !important; */
     text-align: justify;
     direction: rtl;
     font-weight: normal;
@@ -973,6 +973,13 @@ a:hover {
     z-index: 1
 }
 
+.sticky-top-text-option {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 65px;
+    z-index: 1
+}
+
 .sticky-top-show-detail-aside {
     position: -webkit-sticky;
     position: sticky;
@@ -1088,8 +1095,9 @@ a:hover {
 }
 
 .header-image {
-    width: 820px;
-    height: 135px;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
     border-radius: 7px 7px 0 0;
 }
 
@@ -1155,6 +1163,10 @@ a:hover {
 
 .font {
     font-family: vazir;
+}
+
+.text-font-size {
+    font-size: 1.5 rem !important;
 }
 
 .font-weight-normal {
@@ -2219,6 +2231,14 @@ input[type=number]:focus,
         font-size: 15px;
         line-height: 20px;
     }
+}
+
+.font-icon-plus {
+    font-size: 18px;
+}
+
+.font-icon-minus {
+    font-size: 13px;
 }
 
 

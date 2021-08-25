@@ -119,17 +119,17 @@
 
 
 
-<main transition:scale class="container-fluid pin-parent px-0 px-md-3">
+<main transition:scale class="container-fluid pin-parent px-0">
     
     <div class="row justify-content-center mx-0">
         
-        <aside class="col-12 col-md-3 mr-0 d-none d-lg-inline" >
-            <div class="row mr-1">
+        <aside class="col-12 col-md-3 mr-1 d-none d-lg-inline px-0" >
+            <div class="row mx-0 w-100">
                 <div class="col-12 shadow-radius-section bg-light px-0 py-0">
-                    <div class="row ">
+                    <div class="row w-100 mx-0">
                         <div class="col-12 px-0">
                            <a href="#">
-                                <img class="w-100 dream-job-image " src="image/job.jpg" alt="">
+                                <img class="h-auto w-100 dream-job-image " src="image/job.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
             </div>
         </aside>
         <aside class="col-12 col-lg-8  ">
-            <div class="row ml-md-1 ">
+            <div class="row ml-lg-0 ">
                 <div class="col-12 ">
                     <div class="row p-0 shadow-radius-section bg-white" >
                         <div class="col-12 p-0 banner" style="overflow: hidden;">
@@ -149,8 +149,8 @@
                         <div class="header-detail col-12">
                             <div class="row">
                                 <div class="col-10">
-                                    <h3 class="text-bold text-font-size">آفرینه&nbsp;<i style="color:#048af7;font-size: 20px;" class="fas fa-check-circle"></i></h3>
-                                    <h6 class="text-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;تهران,شهرک طالقانی,ساحتمان نگین</h6>
+                                    <h4 class="font-weight-normal text-font-size">آفرینه&nbsp;<i style="color:#048af7;font-size: 20px;" class="fas fa-check-circle"></i></h4>
+                                    <h6 class="text-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;تهران,میدان شیخ بهایی,ساختمان اوستا</h6>
                                     <h6 class="explain-about-page">به آفرینه محلق شوید و بروز باشید.میتوانید مطالب مرتبط به کارآفرینی و بازاریابی رو از اینجا دنبال کنید اگر از محتوای ما خوشتان اومد آنرابا دیگران به اشتراک بگذارید.</h6>
                                     <div class="col-12 mt-4 font">
                                         <div class="row vm-navbar">

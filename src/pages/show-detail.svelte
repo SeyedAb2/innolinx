@@ -33,13 +33,14 @@
     </title>
 </svelte:head>
 
-<main class="container-fluid pin-parent px-0">
+<main transition:scale class="container-fluid pin-parent px-0">
+    
     <div class="row justify-content-center mx-0">
         
-        <aside class="col-12 col-md-3 mr-0 d-none d-lg-inline" >
-            <div class="row mr-1">
+        <aside class="col-12 col-md-3 mr-1 d-none d-lg-inline px-0" >
+            <div class="row mx-0 w-100">
                 <div class="col-12 shadow-radius-section bg-light px-0 py-0">
-                    <div class="row ">
+                    <div class="row w-100 mx-0">
                         <div class="col-12 px-0">
                            <a href="#">
                                 <img class="w-100 h-auto dream-job-image " src="image/job.jpg" alt="">
@@ -86,13 +87,13 @@
                                     <h3 class="title-post mt-1 mb-0 py-3 pr-3"><a class="title-post-link" href="#">به اینولینکس خوش آمدید</a></h3>
                                 </div>
                                 <div class="col-12 p-0 mx-0 responsive-imagePost-height">
-                                    <img src="../image/30.jpg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
-                                    <button on:click={e => fontSize++ } on:click={e => lineHeight++ }>+</button>
-                                    <button on:click={e => fontSize-- } on:click={e => lineHeight-- }>-</button>
-                                    
+                                    <img src="../image/head.jpeg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
                                 </div>
-                                
-                                <p style="font-size: {fontSize + 'px'}; line-height: {lineHeight + 'px'}" class="col-12 mt-3 post-text">
+                                <div class="col-12 mt-2 px-4 bg-danger {y>500 ? 'sticky-top-text-option' : ''}">
+                                    <i class="font-icon-plus fas fa-font" on:click={e => fontSize++ } on:click={e => lineHeight+= 1.5 }></i>&nbsp;
+                                    <i class="font-icon-minus fas fa-font fa-sm"  on:click={e => fontSize-- } on:click={e => lineHeight-= 1.5 }></i>
+                                </div>
+                                <p style="font-size: {fontSize + 'px'}; line-height: {lineHeight + 'px'}" class="col-12 mt-1 px-4 post-text">
                                     طرح‌نما یا لورم ایپسوم(به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
                                      صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
                                      برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی 
