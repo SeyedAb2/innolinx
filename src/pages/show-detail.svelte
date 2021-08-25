@@ -20,7 +20,6 @@
     var splitUrl = currentLocation.split("/");
     var lastSugment = splitUrl[splitUrl.length - 1];
     // $ : console.log(lastSugment);
-    let map;
 </script>
 <style>
     @import "public/global.css";

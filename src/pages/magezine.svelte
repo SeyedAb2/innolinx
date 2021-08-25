@@ -15,7 +15,7 @@
   //$: console.log(x);
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.has('id');
-  console.log(id);
+  //console.log(id);
   let isOpen = false;
   let current = 'post';
   function toggleNav(){
