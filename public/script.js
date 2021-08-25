@@ -46,7 +46,7 @@ $(window).resize(function() {
         $(".modal-backdrop").hide();
     } else {
         $("#mod2").add();
-        $("body").addClass("modal-open");
+        $("body").removeClass("modal-open");
         $(".modal-backdrop").show();
     }
 });
