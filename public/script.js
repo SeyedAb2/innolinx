@@ -40,15 +40,16 @@ function readMore(btn) {
 }
 
 $(window).resize(function() {
-    if ($(window).width() >= 767) {
-        $("#mod2").hide();
-        $("body").removeClass("modal-open");
-        $(".modal-backdrop").hide();
-    } else {
-        $("#mod2").add();
-        $("body").removeClass("modal-open");
-        $(".modal-backdrop").show();
-    }
+    $("#mod2").click(function() {
+        console.log("1")
+    })
+});
+$("#menu").stickOnScroll({
+    topOffset: $("header").outerHeight(),
+    //bottomOffset: 0,
+    //footerElement: $(".author-show-box "),
+    setParentOnStick: true,
+    setWidthOnStick: true
 });
 /// sidebar 
 

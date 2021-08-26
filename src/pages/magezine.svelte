@@ -2,6 +2,7 @@
   import {onMount} from "svelte";
   import jQuery from 'jquery';
   import {fade , slide , scale , fly} from "svelte/transition";
+  import { quill } from 'svelte-quill';
   import { Loader } from "@googlemaps/js-api-loader"
   import { Router, Link, Route } from "svelte-routing";
   import {circIn} from "svelte/easing";
@@ -10,6 +11,7 @@
   export let url = "";
   export let y;
   export let x;
+  let options = { placeholder: "مطلب خود را بنویسید ...", }
   let innerHeight;
   let clientHeight;
   //$: console.log(x);
@@ -63,12 +65,14 @@
     @import "public/global.css";
     
 </style>
+
 <svelte:window bind:scrollY={y} bind:innerWidth={x} bind:innerHeight/>
 
 <svelte:head>
     <title>
         مجله
     </title>
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </svelte:head>
 
 <Router url="{url}">
@@ -185,7 +189,43 @@
             <div class="tab-content w-100 mr-0 ">
                 <div id="post" class="row tab-pane" class:active="{current==='post'}">
                     <div class="row px-0 mx-0" >
+                        
                         <aside class="col-12 col-md-9 order-first justify-content-between order-md-0 mx-0 ">
+                          <div class="col-12 mx-0 mt-3 bg-white py-3 shadow-radius-section">
+                            <button class="col-12 text-right direction font-family border-custom-color pr-3 btn btn-white rounded-pill shadow-section text-secondary" data-toggle="modal" data-target="#sendPost">
+                                ارسال مطلب جدید ...
+                            </button>
+                          </div>
+                          <!-- Modal -->
+                          <div style="height:85%;border-radius: 7px;" class="modal my-auto box-radius fade direction" id="sendPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div style="overflow-y: auto; position: absolute;top:auto" class="modal-content box-radius ">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="sendPost">مودال</h5>
+                                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <form action="#" method="post" >
+                                  <div class="modal-body">
+                                    <div class="form-group">
+                                      <label for="sendPostTitle" class="">عنوان</label>
+                                      <input type="text" class="form-control font-family" id="sendPostTitle" placeholder="عنوان مطلب را وارد کنید">
+                                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="sendPostText" class="">محتوا</label>
+                                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                      <div class="form-control font-family editor direction font-family" use:quill={options} id="sendPostText"/>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="modal-footer">
+                                    <input type="reset" value="انصراف" class="btn btn-secondary font-family" data-dismiss="modal">
+                                    <input type="submit" value="ارسال" class="btn btn-primary font-family">
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
                             <section class="row mx-0 mt-3 mr-0 pt-0  ">
                                 <div class="col-12 p-0 main-article ">
                                     <article class="p-0  shadow-radius-section shadow-section mb-4 bg-light">

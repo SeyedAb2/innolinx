@@ -48,6 +48,7 @@
 	{/if}
 </div>
 	<script src="/script.js"></script>
+	<script src="/js/dev.debug.js"></script>
 {/if}
 
 	

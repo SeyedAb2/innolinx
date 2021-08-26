@@ -24,7 +24,7 @@
 {/if}
 <svelte:window bind:scrollY={y} bind:innerWidth={x} bind:innerHeight={h}/>
 
-<main transition:scale class="container-fluid sign-parent  direction font-family">
+<main transition:scale class="container-fluid sign-parent sign direction font-family">
     <div class="row justify-content-center mx-lg-2 ">
         <div class="col-12 col-lg-6 ">
             <div class="row justify-content-center">

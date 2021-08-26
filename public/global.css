@@ -547,6 +547,10 @@ a:hover {
     background-color: #fff;
 }
 
+.box-radius {
+    border-radius: 7px !important;
+}
+
 .shadow-section {
     transition: all 0.5s;
 }
@@ -2068,7 +2072,7 @@ footer a:focus {
     border-bottom: 1px solid #0073b1;
 }
 
-footer .form-control {
+footer .sign .form-control {
     background-color: #fdfdfd;
     outline: 1px solid rgb(207, 207, 207);
     border-radius: 5px;
@@ -2178,30 +2182,43 @@ footer fieldset .btn:hover {
     font-size: 14px;
 }
 
-.form-control {
+.sign .form-control {
     border-color: #535353;
     transition: all 0.1s;
     outline: none !important;
 }
 
-.form-control:focus {
+.sign .form-control:focus {
     border: 2px solid #424242;
     transition: all 0.1s;
     outline: none !important;
 }
 
+.form-control {
+    border-radius: 7px;
+    border: 2px solid rgb(221, 220, 220);
+    transition: all 0.1s;
+    outline: none !important;
+}
+
+.form-control:focus {
+    border: 2px solid #ccc;
+    transition: all 0.1s;
+    outline: none !important;
+}
+
 textarea:focus,
-textarea.form-control:focus,
-input.form-control:focus,
+textarea.sign .form-control:focus,
+input.sign .form-control:focus,
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
-[type=text].form-control:focus,
-[type=password].form-control:focus,
-[type=email].form-control:focus,
-[type=tel].form-control:focus,
-[contenteditable].form-control:focus {
+[type=text].sign .form-control:focus,
+[type=password].sign .form-control:focus,
+[type=email].sign .form-control:focus,
+[type=tel].sign .form-control:focus,
+[contenteditable].sign .form-control:focus {
     box-shadow: inset 0 -1px 0 #ddd;
 }
 
@@ -2263,3 +2280,15 @@ input[type=number]:focus,
     transform: translate3d(0, 0, 0);
     will-change: position, transform;
 } */
+
+
+/* Text Editor Option */
+
+.ql-toolbar.ql-snow {
+    direction: ltr !important;
+}
+
+.ql-editor {
+    height: 150px !important;
+    text-align: right !important;
+}
