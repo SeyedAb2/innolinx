@@ -199,9 +199,9 @@
                           <!-- Modal -->
                           <div style="height:85%;border-radius: 7px;" class="modal my-auto box-radius fade direction" id="sendPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                              <div style="overflow-y: auto; position: absolute;top:auto" class="modal-content box-radius ">
+                              <div style="overflow-y: auto; position: absolute;" class="modal-content box-radius ">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="sendPost">مودال</h5>
+                                  <h5 class="modal-title" id="sendPost">افزودن مطلب</h5>
                                   <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <form action="#" method="post" >
@@ -216,7 +216,19 @@
                                       <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                       <div class="form-control font-family editor direction font-family" use:quill={options} id="sendPostText"/>
                                     </div>
-                                    
+                                    <div class="form-check form-check">
+                                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                      <label class="form-check-label" for="inlineCheckbox1">نمایش نام نویسنده</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <label class="form-check-label ml-4" for="inlineRadio1">منتشرکننده : </label>
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                      <label class="form-check-label" for="inlineRadio1">نویسنده</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                      <label class="form-check-label" for="inlineRadio2">ویرایشگر</label>
+                                    </div>
                                   </div>
                                   <div class="modal-footer">
                                     <input type="reset" value="انصراف" class="btn btn-secondary font-family" data-dismiss="modal">
