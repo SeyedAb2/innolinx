@@ -230,6 +230,11 @@
                                       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                       <label class="form-check-label" for="inlineRadio2">ویرایشگر</label>
                                     </div>
+                                    <div class="form-group">
+                                      <label for="file-upload" class="custom-file-upload">
+                                        <i class="fas fa-cloud-upload-alt"></i> آپلود فایل
+                                      </label>
+                                      <input id="file-upload" type="file"/>                                    </div>
                                   </div>
                                   <div class="modal-footer">
                                     <input type="reset" value="انصراف" class="btn btn-secondary font-family" data-dismiss="modal">
