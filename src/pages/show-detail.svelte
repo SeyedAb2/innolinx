@@ -88,7 +88,7 @@
                                 <div class="col-12 p-0 mx-0 h-auto">
                                     <img src="../image/12.jpeg" class="p-0 mr-0 w-100 responsive-imagePost-height" alt="">
                                 </div>
-                                <div  id="menu" data-stickyType="window" data-stickonscroll="responsive-imagePost-height" class="col-12 mt-2 px-4 shadow-sm bg-light pt-1" style="z-index: 3;">
+                                <div id="menu" data-stickyType="window" data-stickonscroll="responsive-imagePost-height" class="col-12 mt-2 px-4 shadow-sm bg-light pt-1" style="z-index: 3;">
                                     <i class="font-icon-plus fas fa-font" on:click={e => fontSize++ } on:click={e => lineHeight+= 1.5 }></i>&nbsp;
                                     <i class="font-icon-minus fas fa-font fa-sm"  on:click={e => fontSize-- } on:click={e => lineHeight-= 1.5 }></i>
                                 </div>

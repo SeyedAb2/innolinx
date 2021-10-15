@@ -3,7 +3,7 @@
   import jQuery from 'jquery';
   import {fade , slide , scale , fly} from "svelte/transition";
   import { quill } from 'svelte-quill';
-  import { Loader } from "@googlemaps/js-api-loader"
+  import { Loader } from "@googlemaps/js-api-loader";
   import { Router, Link, Route } from "svelte-routing";
   import {circIn} from "svelte/easing";
   import showDetail from "./show-detail.svelte";
@@ -234,7 +234,8 @@
                                       <label for="file-upload" class="custom-file-upload">
                                         <i class="fas fa-cloud-upload-alt"></i> آپلود فایل
                                       </label>
-                                      <input id="file-upload" type="file"/>                                    </div>
+                                      <input id="file-upload" type="file"/>
+                                    </div>
                                   </div>
                                   <div class="modal-footer">
                                     <input type="reset" value="انصراف" class="btn btn-secondary font-family" data-dismiss="modal">
@@ -603,14 +604,7 @@
                                                 </div> 
                                             </div>
                                           </div>
-                                          <div class="border-bottom pb-2" id="headingOne">
-                                            <h5 class="mb-0 mt-2">
-                                              <a class="p-0 d-inline  category_button collapsed " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></a>
-                                              <a href="#" class="category-main-text-link">
-                                                <p class="category-main-text d-inline">بازاریابی</p>
-                                              </a>
-                                            </h5>
-                                          </div>
+                            
                                           <div id="collapseOne" class="collapse mr-3 " aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="border-right">
                                                 <div class=" mt-2 mr-1 col-12 p-0 ">
@@ -753,66 +747,7 @@
                                             </div> 
                                           </div>
                                         </div>
-                                        <div class="mb-2 pl-2">
-                                          <div class="border-bottom pb-2" id="headingThree">
-                                            <h5 class="mb-0">
-                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a>
-                                              <a href="#" class="category-main-text-link">
-                                                <p class="category-main-text d-inline">آرشیو کلیپ ها</p>
-                                              </a>
-                                            </h5>
-                                          </div>
-                                          <div id="collapseThree" class="collapse mr-3" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div class="border-bottom py-2" id="">
-                                                <h5 class="mb-0">
-                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
-                                                  <a href="#" class="category-main-text-link">
-                                                    <p class="category-main-text d-inline">راهیان نور</p>
-                                                  </a>
-                                                </h5>
-                                            </div> 
-                                          </div>
-                                        </div>
-                                        <div class="mb-2 pl-2">
-                                          <div class="border-bottom pb-2" id="headingThree">
-                                            <h5 class="mb-0">
-                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a>
-                                              <a href="#" class="category-main-text-link">
-                                                <p class="category-main-text d-inline">آرشیو کلیپ ها</p>
-                                              </a>
-                                            </h5>
-                                          </div>
-                                          <div id="collapseThree" class="collapse mr-3" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div class="border-bottom py-2" id="">
-                                                <h5 class="mb-0">
-                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
-                                                  <a href="#" class="category-main-text-link">
-                                                    <p class="category-main-text d-inline">راهیان نور</p>
-                                                  </a>
-                                                </h5>
-                                            </div> 
-                                          </div>
-                                        </div>
-                                        <div class="mb-2 pl-2">
-                                          <div class="border-bottom pb-2" id="headingThree">
-                                            <h5 class="mb-0">
-                                              <a href="#" class="p-0 d-inline category_button collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a>
-                                              <a href="#" class="category-main-text-link">
-                                                <p class="category-main-text d-inline">آرشیو کلیپ ها</p>
-                                              </a>
-                                            </h5>
-                                          </div>
-                                          <div id="collapseThree" class="collapse mr-3" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div class="border-bottom py-2" id="">
-                                                <h5 class="mb-0">
-                                                  <i class="fas fa-dot-circle p-0 d-inline category_button-non" ></i>
-                                                  <a href="#" class="category-main-text-link">
-                                                    <p class="category-main-text d-inline">راهیان نور</p>
-                                                  </a>
-                                                </h5>
-                                            </div> 
-                                          </div>
-                                        </div>
+                                        
                                       </div>
                                 </div>
                               </div>
